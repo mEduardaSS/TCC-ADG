@@ -1,0 +1,7 @@
+{
+  "name": "TCC-AbrigoDosGatos",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
