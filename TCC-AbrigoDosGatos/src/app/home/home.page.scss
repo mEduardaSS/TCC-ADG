@@ -7,21 +7,42 @@
   list-style: none;
   color: #000;
 }
-:root{
-  --bg-color: #222327;
-  --text-color: #fff;
-  --main-color: #29fd53;
+
+ion-toolbar{
+  position: relative;
 }
 
-.ion-padding{
-  min-height: 100vh;
-  background: var(--bg-color);
-  color: var(--text-color);
+.container-gato{
+  display: flex;
+  height: 300px;
+  background-color: #8c8c8c;
+  padding: 2em;
+
 
 }
-.menu{
 
+.gato {
+  width: 20px;
 }
+
+.miaudote {
+  font-size: 30px;
+  color: #3F0912;
+  top: 2em;
+  bottom: 2em;
+}
+
+.card-gatos {
+  padding: 1em;
+  top: 3em;
+}
+
+.menu-icon {
+  display: flex;
+  position: absolute;
+}
+
+
 
 #container {
   text-align: center;
