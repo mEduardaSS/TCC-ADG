@@ -5,21 +5,35 @@
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   list-style: none;
-  color: #000;
+
 }
 
-ion-toolbar{
-  position: relative;
-}
-
-.container-gato{
+.banner-gato{
   display: flex;
   height: 300px;
   background-color: #8c8c8c;
   padding: 2em;
-
-
 }
+
+.text {
+  color: white;
+}
+
+.h1{
+  font-style: italic;
+  margin-top: 0.5em;
+}
+
+.texto {
+  margin-top: 0.5em;
+}
+
+.sobre-nos {
+  --background: #A61C35;
+  --color: white;
+  margin-top: 0.6em;
+}
+
 
 .gato {
   width: 20px;
@@ -28,8 +42,9 @@ ion-toolbar{
 .miaudote {
   font-size: 30px;
   color: #3F0912;
-  top: 2em;
-  bottom: 2em;
+  top: 0.5em;
+  text-align: center;
+  font-weight: bold;
 }
 
 .card-gatos {
@@ -37,13 +52,23 @@ ion-toolbar{
   top: 3em;
 }
 
-.menu-icon {
-  display: flex;
-  position: absolute;
+.espaco1{
+  height: 15px;
+
+}
+ ion-button{
+  --color: rgb(49, 47, 47);
+}
+.entrar{
+  --background: #A61C35;
+  --color: white;
 }
 
+.elemento {
+  --color: black;
+  padding-left: 20px;
 
-
+}
 #container {
   text-align: center;
   position: absolute;
@@ -51,6 +76,11 @@ ion-toolbar{
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.logo-tcc {
+  width: 150px;
+  padding: 20px;
 }
 
 #container strong {
