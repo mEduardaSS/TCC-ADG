@@ -5,14 +5,15 @@
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   list-style: none;
-
 }
 
 .banner-gato{
   display: flex;
-  height: 300px;
+  height: 20em;
   background-color: #8c8c8c;
   padding: 2em;
+  flex-wrap: wrap;
+
 }
 
 .text {
@@ -39,12 +40,13 @@
   width: 20px;
 }
 
-.miaudote {
+#miaudote {
   font-size: 30px;
   color: #3F0912;
   top: 0.5em;
   text-align: center;
   font-weight: bold;
+  margin: 10px;
 }
 
 .card-gatos {
@@ -69,6 +71,21 @@
   padding-left: 20px;
 
 }
+
+.img-gato {
+  height: 200px;
+  width: 200px;
+  border-radius: 20%;
+  margin: 5px;
+
+}
+
+.footer {
+  background-color: #3F0912;
+  justify-content: center;
+  display: flex;
+}
+
 #container {
   text-align: center;
   position: absolute;
@@ -97,4 +114,10 @@
 
 #container a {
   text-decoration: none;
+}
+
+@media (max-width: 557px ){
+  .img-gato{
+    display: none;
+  }
 }
