@@ -1,14 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
-import { VoluntarioRoutingModule } from './voluntario-routing.module';
+import { IonicModule } from '@ionic/angular';
 
+import { VoluntarioPageRoutingModule } from './voluntario-routing.module';
+
+import { VoluntarioPage } from './voluntario.page';
 
 @NgModule({
-  declarations: [],
   imports: [
     CommonModule,
-    VoluntarioRoutingModule
-  ]
+    FormsModule,
+    IonicModule,
+    VoluntarioPageRoutingModule
+  ],
+  declarations: [VoluntarioPage]
 })
-export class VoluntarioModule { }
+export class VoluntarioPageModule {}

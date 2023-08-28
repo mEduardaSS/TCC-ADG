@@ -1,17 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
-import { SobreRoutingModule } from './sobre-routing.module';
-import { SobrePipe } from '../sobre.pipe';
+import { IonicModule } from '@ionic/angular';
 
+import { SobrePageRoutingModule } from './sobre-routing.module';
+
+import { SobrePage } from './sobre.page';
 
 @NgModule({
-  declarations: [
-    SobrePipe
-  ],
   imports: [
     CommonModule,
-    SobreRoutingModule
-  ]
+    FormsModule,
+    IonicModule,
+    SobrePageRoutingModule
+  ],
+  declarations: [SobrePage]
 })
-export class SobreModule { }
+export class SobrePageModule {}

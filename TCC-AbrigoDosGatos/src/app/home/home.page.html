@@ -6,14 +6,14 @@
     
         <ion-row  fill="solid" class="ion-justify-content-center ion-align-items-center"> <!-- menu -->
          <ion-col size="3" class="ion-justify-content-center">
-          <ion-img class="logo-tcc" src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp">
-          </ion-img>
+          <img class="logo-tcc" alt="hjj"  src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp">
+        
          </ion-col>
          
          <ion-col fill="solid" size="6" class="ion-justify-content-center ion-align-items-center">
-           <ion-item fill="clear" class="elemento" [routerLink]="['./pages/sobre']">Sobre nós</ion-item>
-           <ion-button fill="clear" class="elemento" [routerLink]="['/ajuda']">Quero Ajudar</ion-button>
-           <ion-button fill="clear" class="elemento" [routerLink]="['/voluntario']">Seja voluntário</ion-button>
+           <ion-button fill="clear" class="elemento" routerLink="sobre" routerLinkActive="active-link">Sobre nós</ion-button>
+           <ion-button fill="clear" class="elemento" routerLink="ajuda" routerLinkActive="active-link">Quero Ajudar</ion-button>
+           <ion-button fill="clear" class="elemento" routerLink="voluntario" routerLinkActive="active-link">Seja voluntário</ion-button>
            <ion-button fill="clear" class="elemento">Contato</ion-button>
          </ion-col>
 
@@ -24,17 +24,17 @@
        </ion-row>
       </ion-header>
 
-      <ion-content class="banner"> 
+      <ion-content> 
       <ion-row class="banner-gato">
-        <ion-col size="6" class="gato ion-justify-content-center">
-           <ion-img class="img-gato" src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"> 
-           </ion-img> 
+        <ion-col size="6" class="col-img-gato" >
+           <img class="img-gato" alt="hjj" src="https://catland.org.br/wp-content/uploads/elementor/thumbs/Cinna-CarolPrado-20230603-8267-scaled-q8p61sc5jhbyv9uhw16ux22aqfovs1vtqykrux3y4o.jpg"> 
+           
         </ion-col>
 
-        <ion-col size="6" class="ion-text-center ion-justify-content-center">
+        <ion-col size="6" class="ion-text-center ion-justify-content-center text">
           <ion-text class="text" >
             <h1 class="h1">
-              Salvando Vidas!
+              Salvando vidas!
             </h1>
 
             <p class="texto">
@@ -59,26 +59,37 @@
       </ion-row>
 
       
-        <ion-row> 
-          <ion-col>
+        <ion-row class="card-gatos ion-padding ion-justify-content-center"> 
+          <ion-col size="4">
             <ion-list lines="inset">
               <ion-item>
-                 <ion-card>
-                  <img alt="Silhouette of mountains" src="https://images.pexels.com/photos/2113332/pexels-photo-2113332.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+                 <ion-card class="ion-margin">
+                  <img class="img-card" alt="Silhouette of mountains" src="https://images.pexels.com/photos/2113332/pexels-photo-2113332.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
                   <ion-card-header>
+                  
+                   
                     <ion-card-title>Macho, 8 meses</ion-card-title>
                     <ion-card-subtitle>Joe</ion-card-subtitle>
+
+                    <ion-col>
+                      <ion-card-content>
+                        Negativo para FIV e FELV, castrado, sociável com outros animais e humanos. Gosta muito de companhia.
+                      </ion-card-content>
+                    </ion-col>
+
+                    <ion-col>
+                      <ion-button class="button">Custom Button</ion-button>
+                    </ion-col>
+                  
                   </ion-card-header>
                 
-                  <ion-card-content>
-                    Negativo para FIV e FELV, castrado, sociável com outros animais e humanos. Gosta muito de companhia.
-                  </ion-card-content>
+                
                 </ion-card>
               </ion-item>
   
               <ion-item>
-                <ion-card>
-                  <img alt="Silhouette of mountains" src="https://images.pexels.com/photos/384555/pexels-photo-384555.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+                <ion-card >
+                  <img class="img-card" alt="Silhouette of mountains" src="https://images.pexels.com/photos/384555/pexels-photo-384555.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
                   <ion-card-header>
                     <ion-card-title>Card Title</ion-card-title>
                     <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
@@ -91,7 +102,7 @@
               </ion-item>
               <ion-item>
                 <ion-card>
-                  <img alt="Silhouette of mountains" src="https://images.pexels.com/photos/160755/kittens-cats-foster-playing-160755.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+                  <img class="img-card" alt="Silhouette of mountains" src="https://images.pexels.com/photos/160755/kittens-cats-foster-playing-160755.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
                   <ion-card-header>
                     <ion-card-title>Card Title</ion-card-title>
                     <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
@@ -105,11 +116,11 @@
             </ion-list>
           </ion-col>
   
-          <ion-col>
+          <ion-col size="4">
             <ion-list lines="inset">
               <ion-item>
                 <ion-card>
-                  <img alt="Silhouette of mountains" src="https://images.pexels.com/photos/2558605/pexels-photo-2558605.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+                  <img class="img-card" alt="Silhouette of mountains" src="https://images.pexels.com/photos/2558605/pexels-photo-2558605.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
                   <ion-card-header>
                     <ion-card-title>Card Title</ion-card-title>
                     <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
@@ -122,7 +133,7 @@
               </ion-item>
               <ion-item>
                 <ion-card>
-                  <img alt="Silhouette of mountains" src="https://images.pexels.com/photos/1543793/pexels-photo-1543793.jpeg" />
+                  <img  class="img-card" alt="Silhouette of mountains" src="https://images.pexels.com/photos/1543793/pexels-photo-1543793.jpeg" />
                   <ion-card-header>
                     <ion-card-title>Card Title</ion-card-title>
                     <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
@@ -135,7 +146,7 @@
               </ion-item>
               <ion-item>
                 <ion-card>
-                  <img alt="Silhouette of mountains" src="https://images.pexels.com/photos/979503/pexels-photo-979503.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+                  <img class="img-card" alt="Silhouette of mountains" src="https://images.pexels.com/photos/979503/pexels-photo-979503.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
                   <ion-card-header>
                     <ion-card-title>Card Title</ion-card-title>
                     <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
@@ -151,51 +162,53 @@
         </ion-row>
     
      
-     
-
+     <div class="col-lg-2" id="footer">
       <ion-row>
-      <ion-col>
-      <ion-list>
-        <ion-item>
-        <ion-text>
-          <ion-label>Contato</ion-label>
-        </ion-text>
-        </ion-item>
-            <ion-item>
-        <ion-text>
-      
-          <ion-label><ion-icon name="logo-whatsapp"></ion-icon>WhatsApp</ion-label>
-        </ion-text>
-        </ion-item>
-            <ion-item>
-        <ion-text>
-          <ion-label><ion-icon name="mail"></ion-icon>E-mail</ion-label>
-        </ion-text>
-        </ion-item>
-      </ion-list>
-      </ion-col>
+        <ion-col id="footer">
+        <ion-list>
+          <ion-item>
+          <ion-text>
+            <ion-label>Contato</ion-label>
+          </ion-text>
+          </ion-item>
+              <ion-item>
+          <ion-text>
+        
+            <ion-label><ion-icon name="logo-whatsapp"></ion-icon>WhatsApp</ion-label>
+          </ion-text>
+          </ion-item>
+              <ion-item>
+          <ion-text>
+            <ion-label><ion-icon name="mail"></ion-icon>E-mail</ion-label>
+          </ion-text>
+          </ion-item>
+        </ion-list>
+        </ion-col>
+  
+        <ion-col id="footer">
+        <ion-list>
+          <ion-item>
+          <ion-text>
+            <ion-label>Redes Sociais</ion-label>
+          </ion-text>
+          </ion-item>
+              <ion-item>
+          <ion-text>
+            <ion-label><ion-icon name= "logo-facebook"></ion-icon>/abrigodosgatos</ion-label>
+          </ion-text>
+          </ion-item>
+              <ion-item>
+          <ion-text>
+            <ion-label><ion-icon name="logo-instagram"></ion-icon>abrigo.dosgatos</ion-label>
+          </ion-text>
+          </ion-item>
+        </ion-list>
+        </ion-col>
+        
+        </ion-row>
+     </div>
 
-      <ion-col>
-      <ion-list>
-        <ion-item>
-        <ion-text>
-          <ion-label>Redes Sociais</ion-label>
-        </ion-text>
-        </ion-item>
-            <ion-item>
-        <ion-text>
-          <ion-label><ion-icon name="logo-facebook"></ion-icon>/abrigodosgatos</ion-label>
-        </ion-text>
-        </ion-item>
-            <ion-item>
-        <ion-text>
-          <ion-label><ion-icon name="logo-instagram"></ion-icon>abrigo.dosgatos</ion-label>
-        </ion-text>
-        </ion-item>
-      </ion-list>
-      </ion-col>
       
-      </ion-row>
 
 
 
