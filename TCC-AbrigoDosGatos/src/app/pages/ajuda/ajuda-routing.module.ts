@@ -8,10 +8,8 @@ import { LoginPage } from '../login/login.page';
 
 
   const routes: Routes = [
-    { path: '', component: SobrePage },
-    { path: 'ajuda', component: AjudaPage },
-    { path: 'voluntario', component: VoluntarioPage },
-    { path: 'login', component: LoginPage },
+    { path: '', component: AjudaPage },
+   
      
   ];
 
