@@ -14,24 +14,29 @@
     --border-radius: 20px;
     
   }
+
   .logo-tcc{
     height: 85px;
   }
+
   .conteudo{
     border-radius: 30px;
     border-color:  rgb(163, 50, 50);
     border-style: solid;
     border-width: 8px;
     background:white;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5em;
+    
   }
   .titulo{
     color:rgb(97, 36, 36);
     font-size: 20px;
     text-shadow: 0.1em 0.1em 0.2em rgb(131, 131, 131);
   }
-  .redor{
-    background: rgb(226, 226, 226);
-  }
+
   #dois{
     background:white;
   }

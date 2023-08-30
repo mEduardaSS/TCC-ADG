@@ -52,12 +52,58 @@
     transform: translateY(-50%);
   }
   
+  #footer{
+    // top: 1.2em;
+    border-radius: 2500px 2005px 0 0;
+    background: #D9D9D9;
+    text-align: center;
+    // height: 15%;
+    // width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .footer-content{
+    margin: auto;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+    
+  }
+  .footer-title {
+    font-size: 20px;
+  }
+  
+  .footer-content ion-text{
+    margin-top: 3em;
+  }
+  
+  .icon-{
+    &whatsapp{
+      color: green;
+      margin-right: 0.2em;
+    }
+    &facebook{
+      color: blue;
+      margin-right: 0.2em;
+    }
+    &instagram{
+      color: purple;
+      margin-right: 0.2em;
+    }
+    &mail{
+    
+      margin-right: 0.2em;
+    }
+  }
+
+
   .logo-tcc {
    height: 85px;
   }
   
   .redor{
-    background: rgb(226, 226, 226);
+   
     padding: 2em;
   }
 
