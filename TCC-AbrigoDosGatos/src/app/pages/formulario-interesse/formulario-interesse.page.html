@@ -2,9 +2,10 @@
 
   <ion-header><!-- menu -->
     <ion-row  fill="solid" class="ion-justify-content-center ion-align-items-center"> 
-      <ion-item [routerLink]="['/home']" routerLinkActive="active-link">
-        <img class="logo-tcc" alt="logo-tcc" src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp" >
-      </ion-item>
+     <ion-col size="3" class="ion-justify-content-center">
+      <ion-img class="logo-tcc" src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp">
+      </ion-img>
+     </ion-col>
      
      <ion-col fill="solid" size="6" class="ion-justify-content-center ion-align-items-center">
       <ion-button fill="clear" class="elemento" [routerLink]="['/sobre']" routerLinkActive="active-link">Sobre nós</ion-button>
@@ -13,9 +14,10 @@
       <ion-button fill="clear" class="elemento">Contato</ion-button>
     </ion-col>
 
-    <ion-col size="3">
-      <ion-button class="entrar" shape="round" [routerLink]="['/login']">Entrar</ion-button>
+     <ion-col size="3">
+      <ion-button class="entrar" shape="round">Entrar</ion-button>
      </ion-col>
+
    </ion-row>
   </ion-header>
 
@@ -24,8 +26,13 @@
 <ion-row  class="ion-padding ion-justify-content-center">
   <ion-col size=6 class="ion-padding conteudo">
     <ion-img class="logo-tcc" src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp"></ion-img>
+   
     <ion-row class="titulo ion-justify-content-center">
-       <b>Seja voluntário!</b> <!-- Título -->
+       <b>Formulario de interesse!</b> <!-- Título -->
+    </ion-row>
+
+    <ion-row class="ion-padding">
+      <b>Animal: [Nome do gato]</b>
     </ion-row>
 
     <ion-item>
@@ -46,28 +53,52 @@
      <!-- <ion-input class="phone-ddd-mask" placeholder="Enter phone number"></ion-input> -->
      <ion-input type="text" name="telefone" id="telefone" placeholder="Digite um número de telefone" maxlength="15"></ion-input>
    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">Endereço</ion-label> 
+     <!-- <ion-input class="phone-ddd-mask" placeholder="Enter phone number"></ion-input> -->
+     <ion-input type="text" name="endereço" id="endereço" placeholder="Digite seu endereço" maxlength="15"></ion-input>
+   </ion-item>
     <ion-row class="espaco2" id="dois"></ion-row>
-    <ion-label position="floating">Disponibilidade</ion-label>
+
+
+  <ion-label position="floating" class="ion-padding" id="info">Informações da residência</ion-label>
+
+    <br>
+    <ion-label position="floating" class="ion-padding">Há outros animais em sua residência?</ion-label>
     <ion-col>
       <ion-item>
         <ion-checkbox class="checkbox"></ion-checkbox> <!-- Checkboxes-->
-        <ion-label>Dom.</ion-label>
+        <ion-label>Sim</ion-label>
         <ion-checkbox class="checkbox"></ion-checkbox>
-        <ion-label>Seg.</ion-label>
-        <ion-checkbox class="checkbox"></ion-checkbox>
-      <ion-label>Ter.</ion-label>
-      <ion-checkbox class="checkbox"></ion-checkbox>
-      <ion-label>Qua.</ion-label>
+        <ion-label>Não</ion-label>
       </ion-item>
+      
+      <ion-label position="floating" class="ion-padding">Você possui tempo suficiente para dar cuidados necessários?</ion-label>
       <ion-item>
         <ion-checkbox class="checkbox"></ion-checkbox>
-        <ion-label>Qui.</ion-label>
+        <ion-label>Tenho bastante tempo</ion-label>
         <ion-checkbox class="checkbox"></ion-checkbox>
-      <ion-label>Sex.</ion-label>
+      <ion-label>Não tenho muito tempo</ion-label>
       <ion-checkbox class="checkbox"></ion-checkbox>
-      <ion-label>Sáb.</ion-label>
-  </ion-item>
-</ion-col>
+      <ion-label>tenho tempo suficiente</ion-label>
+    </ion-item>
   </ion-col>
+
+      <ion-row size="3" class="ion-padding">
+        <ion-button class="button_voltar" shape="round" [routerLink]="['/home']">Voltar</ion-button>
+       </ion-row>
+    
+       <ion-row size="3" class="ion-padding">
+        <ion-button class="button_confirmar" shape="round" [routerLink]="['/login']">Confirmar</ion-button>
+       </ion-row>
+  
+
+  </ion-col>
+
+  
   </ion-row>
+
+
 </ion-content>
+

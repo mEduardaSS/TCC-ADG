@@ -2,10 +2,9 @@
   <ion-header> <!-- espaço entre o menu e o topo -->
 
     <ion-row  fill="solid" class="ion-justify-content-center ion-align-items-center"> <!-- menu -->
-     <ion-col size="3" class="ion-justify-content-center">
-      <img class="logo-tcc" alt="hjj"  src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp">
-    
-     </ion-col>
+      <ion-item [routerLink]="['/home']" routerLinkActive="active-link">
+        <img class="logo-tcc" alt="logo-tcc" src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp" >
+      </ion-item>
      
      <ion-col fill="solid" size="6" class="ion-justify-content-center ion-align-items-center">
        <ion-button fill="clear" class="elemento" [routerLink]="['/sobre']" routerLinkActive="active-link">Sobre nós</ion-button>

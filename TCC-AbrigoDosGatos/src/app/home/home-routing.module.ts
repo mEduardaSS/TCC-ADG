@@ -5,6 +5,7 @@ import { SobrePage } from '../pages/sobre/sobre.page';
 import { AjudaPage } from '../pages/ajuda/ajuda.page';
 import { VoluntarioPage } from '../pages/voluntario/voluntario.page';
 import { LoginPage } from '../pages/login/login.page';
+import { FormularioInteressePage } from '../pages/formulario-interesse/formulario-interesse.page';
 
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'ajuda', component: AjudaPage },
   { path: 'voluntario', component: VoluntarioPage },
   { path: 'login', component: LoginPage },
+  { path: 'formulario-interesse', component: FormularioInteressePage },
    
 ];
 

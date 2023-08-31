@@ -1,0 +1,46 @@
+.espaco2{
+    height: 50px;
+    background: rgb(226, 226, 226);
+  }
+  ion-button{
+    --color: black;
+  }
+  .entrar{
+    --background: rgb(163, 50, 50);
+    --color: white;
+  }
+  .checkbox{
+    margin: 10px;
+    --border-radius: 20px;
+    
+  }
+  .logo-tcc{
+    height: 85px;
+  }
+
+  #id {
+    margin-bottom: 1.2em;
+  }
+
+  .conteudo{
+    border-radius: 30px;
+    border-color:  rgb(163, 50, 50);
+    border-style: solid;
+    border-width: 8px;
+    background:white;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5em;
+    
+  }
+  .titulo{
+    color:rgb(97, 36, 36);
+    font-size: 20px;
+    text-shadow: 0.1em 0.1em 0.2em rgb(131, 131, 131);
+    margin-top: 0.5em;
+  }
+
+  #dois{
+    background:white;
+  }
