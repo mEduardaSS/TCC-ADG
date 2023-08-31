@@ -1,17 +1,19 @@
-<div class="ion-page" id="main-content"> 
-  <ion-header> <!-- espaço entre o menu e o topo -->
+<ion-content [fullscreen]="true">
 
-    <ion-row  fill="solid" class="ion-justify-content-center ion-align-items-center"> <!-- menu -->
-      <ion-item [routerLink]="['/home']" routerLinkActive="active-link">
-        <img class="logo-tcc" alt="logo-tcc" src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp" >
-      </ion-item>
-     
+  <ion-header><!-- menu -->
+    <ion-row  fill="solid" class="ion-justify-content-center ion-align-items-center"> 
+      <ion-col size="3" class="ion-justify-content-center">
+        <ion-item [routerLink]="['/home']" routerLinkActive="active-link">
+          <img class="logo-tcc" alt="logo-tcc" src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp" >
+        </ion-item>
+      </ion-col>
+
      <ion-col fill="solid" size="6" class="ion-justify-content-center ion-align-items-center">
-       <ion-button fill="clear" class="elemento" [routerLink]="['/sobre']" routerLinkActive="active-link">Sobre nós</ion-button>
-       <ion-button fill="clear" class="elemento" [routerLink]="['/ajuda']" routerLinkActive="active-link">Quero Ajudar</ion-button>
-       <ion-button fill="clear" class="elemento" [routerLink]="['/voluntario']" routerLinkActive="active-link">Seja voluntário</ion-button>
-       <ion-button fill="clear" class="elemento">Contato</ion-button>
-     </ion-col>
+      <ion-button fill="clear" class="elemento" [routerLink]="['/sobre']" routerLinkActive="active-link">Sobre nós</ion-button>
+      <ion-button fill="clear" class="elemento" [routerLink]="['/ajuda']" routerLinkActive="active-link">Quero Ajudar</ion-button>
+      <ion-button fill="clear" class="elemento" [routerLink]="['/voluntario']" routerLinkActive="active-link">Seja voluntário</ion-button>
+      <ion-button fill="clear" class="elemento">Contato</ion-button>
+    </ion-col>
 
      <ion-col size="3">
       <ion-button class="entrar" shape="round" [routerLink]="['/login']">Entrar</ion-button>
@@ -20,84 +22,64 @@
    </ion-row>
   </ion-header>
 
-  <ion-content> 
-  <ion-row>
-    <ion-col size="12" class="ion-text-center" id="miaudote">
-      <ion-text>
-        <ion-label>
-          Sobre o Abrigo dos gatos!
-        </ion-label>
-      </ion-text>
-    </ion-col>
-  </ion-row>
-
+  <ion-row  class="ion-padding ion-justify-content-center">
+    <ion-col size=6 class="ion-padding conteudo">
+      <ion-img class="logo-tcc" src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp"></ion-img>
+     
+      <ion-row class="titulo ion-justify-content-center">
+         <b>Quero ajudar!!</b> <!-- Título -->
+      </ion-row>
   
-    <ion-row>
-      <ion-grid class=" ion-justify-content-center" id="text">
-        <ion-row>
-          <ion-col size="12" class="ion-text-center" id="texto"> 
-            <ion-text >
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-            </ion-text>
-            
-            
-           </ion-col>
-         
-        </ion-row>
-      </ion-grid>
+      <ion-row class="ion-padding">
+        <b>PIX: 15 99713-0703</b>
+      </ion-row>
+      <ion-row class="ion-padding">
+        <b>[Dados da conta]</b>
+      </ion-row>
+
+
+      <ion-row class="espaco2" id="dois"></ion-row>
+
+      <ion-row size="12" class="ion-padding">
+        <ion-button class="button_voltar" shape="round" [routerLink]="['/home']">Voltar</ion-button>
+       </ion-row>
+
+      </ion-col>
     </ion-row>
-    
 
- 
- <div id="footer">
-  <ion-row>
-    <ion-col>
-    <ion-list>
-      <ion-item>
-      <ion-text>
-        <ion-label>Contato</ion-label>
-      </ion-text>
-      </ion-item>
-          <ion-item>
-      <ion-text>
-    
-        <ion-label><ion-icon name="logo-whatsapp"></ion-icon>WhatsApp</ion-label>
-      </ion-text>
-      </ion-item>
-          <ion-item>
-      <ion-text>
-        <ion-label><ion-icon name="mail"></ion-icon>E-mail</ion-label>
-      </ion-text>
-      </ion-item>
-    </ion-list>
-    </ion-col>
+    <ion-row id="footer">
+      <ion-col class="footer-content">
+        <ion-text>
+          <ion-label class="footer-title">Contato <br></ion-label>
+          
+        </ion-text>
 
-    <ion-col>
-    <ion-list>
-      <ion-item>
-      <ion-text>
-        <ion-label>Redes Sociais</ion-label>
-      </ion-text>
-      </ion-item>
-          <ion-item>
-      <ion-text>
-        <ion-label><ion-icon name= "logo-facebook"></ion-icon>/abrigodosgatos</ion-label>
-      </ion-text>
-      </ion-item>
-          <ion-item>
-      <ion-text>
-        <ion-label><ion-icon name="logo-instagram"></ion-icon>abrigo.dosgatos</ion-label>
-      </ion-text>
-      </ion-item>
-    </ion-list>
-    </ion-col>
-    
-    </ion-row>
- </div>
+        <ion-text>
+        
+          <ion-label><ion-icon name="logo-whatsapp" class="icon-whatsapp"></ion-icon>WhatsApp</ion-label>
+          <br>
+        </ion-text>
 
-  </ion-content>
+        <ion-text>
+          <ion-label><ion-icon name="mail-outline" class="icon-mail"></ion-icon>E-mail</ion-label>
+          <br>
+        </ion-text>
+      </ion-col>
 
+      <ion-col class="footer-content">
+        <ion-text>
+          <ion-label class="footer-title">Redes Sociais</ion-label>
+          <br>
+        </ion-text>
 
+        <ion-text>
+          <ion-label><ion-icon name= "logo-facebook" class="icon-facebook"></ion-icon>/abrigodosgatos</ion-label>
+          <br>
+        </ion-text>
+        <ion-text>
+          <ion-label><ion-icon name="logo-instagram" class="icon-instagram"></ion-icon>abrigo.dosgatos</ion-label>
+          <br>
+        </ion-text>
+      </ion-col>
+     </ion-row>
+     

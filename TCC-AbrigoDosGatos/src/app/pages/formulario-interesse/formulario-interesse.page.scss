@@ -44,3 +44,25 @@
   #dois{
     background:white;
   }
+
+  .button_voltar {
+    justify-content: center;
+    width: 20%;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 20px;
+    --background: #A61C35;
+    --color: white;
+    left: 20em;
+  }
+
+  .button_confirmar {
+    justify-content: center;
+    width: 20%;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 20px;
+    --background: #A61C35;
+    --color: white;
+    
+  }
