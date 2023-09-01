@@ -5,9 +5,8 @@
   }
   .logo-tcc{
     width: 180px;
-    height: 178px;
     flex-shrink: 0;
-    margin-top:50px;
+    margin-top: 50px;
   }  
 
   #btnEntrar{
@@ -25,4 +24,15 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+  }
+  .input{
+    width: 385px;
+    height: 29px;
+    flex-shrink: 0;
+    background-color: #D9D9D9;
+    border-radius: 20px;
+
+    
+   
+
   }
