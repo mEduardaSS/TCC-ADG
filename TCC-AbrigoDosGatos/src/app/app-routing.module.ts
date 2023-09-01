@@ -31,6 +31,22 @@ const routes: Routes = [
     path: 'formulario-interesse',
     loadChildren: () => import('./pages/formulario-interesse/formulario-interesse.module').then( m => m.FormularioInteressePageModule)
   },
+  {
+    path: 'home',
+    loadChildren: () => import('./admin/home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./admin/home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'ajuda',
+    loadChildren: () => import('./admin/ajuda/ajuda.module').then( m => m.AjudaPageModule)
+  },
+  {
+    path: 'cadastro-animal',
+    loadChildren: () => import('./admin/cadastro-animal/cadastro-animal.module').then( m => m.CadastroAnimalPageModule)
+  },
 ];
 
 @NgModule({
