@@ -44,3 +44,23 @@
   .redor{
     background: #f2f2f2;
   }
+
+  .button_voltar {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 20px;
+    --background: #A61C35;
+    --color: white;
+  }
+
+  .input{
+    width: 385px;
+    height: 29px;
+    background-color: #D9D9D9;
+    border-radius: 20px;
+
+  }
