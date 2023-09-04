@@ -1,32 +1,28 @@
-
-<div id="container">
-   <ion-row class="justify-content-center">
-    <ion-col size="12" class="ion-text-center">
-      <img class="logo-tcc" alt="logo-tcc" src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp" >
-    </ion-col>
+<div class="container">  <!-- container da tela toda -->
+  <ion-item [routerLink]="['/home']" routerLinkActive="active-link" class="voltar">
+  <ion-icon name="return-down-back-outline" class="voltarIcon"></ion-icon>VOLTAR</ion-item>
+  <div class="containerForm" style="border: 5px solid #A61C35; border-radius: 20px;">  <!-- container que guarda o formulário -->
+    <ion-row class="row_logo justify-content-center">
   </ion-row>
 
 
-  <div id="formulario">
-  <ion-label id="h1">Faça seu login!</ion-label>
-  <ion-item>
-    <label for="email">Email</label>
-    <ion-input id="email" class="input"></ion-input>
-  </ion-item>
-  <ion-item>
-    <label for="senha">Senha</label>
-    <ion-input id="senha" type="password" class="input"></ion-input>
-  </ion-item>
-  </div>
- 
-  <div id="botao">
-  <div class="linha"><ion-button id="btnEntrar">Entrar</ion-button>
+  <div class="formulario" style="margin: 12px;">
+    <ion-item class="input" lines="none">
+      <ion-text class="h1">
+        Faça seu login!
+      </ion-text>
+    </ion-item>
+    <ion-item class="input_cont" lines="none">
+      <label for="email">Email</label>
+      <ion-input id="email" class="input" style="width: 400px;"></ion-input>
+    </ion-item>
+    <ion-item class="input_cont" lines="none">
+      <label for="senha">Senha</label>
+      <ion-input id="senha" type="password" class="input" style="width: 400px;"></ion-input>
+    </ion-item>
+    <div id="botao">
+      <ion-button id="btnEntrar">Entrar</ion-button>
     </div>
-        
-
-  <div> 
-    <ion-item>
-        <ion-label id="forgetpass">Esqueceu sua senha?</ion-label>
-    </ion-item></div>
   </div>
-  
+</div>
+</div>
