@@ -36,15 +36,15 @@ const routes: Routes = [
     loadChildren: () => import('./admin/home/home.module').then( m => m.HomePageModule)
   },
   {
-    path: 'home',
+    path: 'admin/home',
     loadChildren: () => import('./admin/home/home.module').then( m => m.HomePageModule)
   },
   {
-    path: 'ajuda',
+    path: 'admin/ajuda',
     loadChildren: () => import('./admin/ajuda/ajuda.module').then( m => m.AjudaPageModule)
   },
   {
-    path: 'cadastro-animal',
+    path: 'admin/cadastro-animal',
     loadChildren: () => import('./admin/cadastro-animal/cadastro-animal.module').then( m => m.CadastroAnimalPageModule)
   },
 ];
