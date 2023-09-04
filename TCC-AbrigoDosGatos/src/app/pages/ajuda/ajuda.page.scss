@@ -44,6 +44,20 @@ ion-button{
 #dois{
   background:white;
 }
+
+.entrar{
+  --background: #A61C35;
+  --color: white;
+  margin-left: 150px ;
+}
+
+.elemento {
+  --color: black;
+  padding: 10px 25px;
+	text-decoration: none;
+  position: relative;
+
+}
   
 .button_voltar {
   justify-content: center;
