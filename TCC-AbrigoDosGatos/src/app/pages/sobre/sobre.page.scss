@@ -34,7 +34,6 @@
     position: relative;
 
   }
-
   
   .footer {
     background-color: #3F0912;
@@ -48,7 +47,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: 50%;
+    top: 100em;
     transform: translateY(-50%);
   }
   
@@ -101,13 +100,11 @@
     }
   }
 
-
   .logo-tcc {
    height: 85px;
   }
   
   .redor{
-   
     padding: 2em;
   }
 
@@ -120,7 +117,6 @@
     padding: 2em;
     top: -2em;
     font-size: 20px;
-   
   }
 
   #container strong {
@@ -139,8 +135,3 @@
     text-decoration: none;
   }
   
-  @media (max-width: 557px ){
-    .img-gato{
-      display: none;
-    }
-  }
