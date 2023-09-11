@@ -25,25 +25,25 @@
       <!-- Conteúdo   -->
       <ion-content> 
       <ion-row class="banner-gato">
-        <div id="estrela">
+        <!-- <div id="estrela">
           <img alt="lo" src="https://i2.wp.com/multarte.com.br/wp-content/uploads/2020/05/estrela-fundo-transparente3.png?fit=696%2C708&ssl=1" >
         </div>
 
         <div id="estrela-2">
           <img alt="lo" src="https://i2.wp.com/multarte.com.br/wp-content/uploads/2020/05/estrela-fundo-transparente3.png?fit=696%2C708&ssl=1" >
-        </div>
+        </div>  -->
 
         <ion-col size="6" class="col-img-gato" >
            <img class="img-gato" alt="img-gato" src="https://i.pinimg.com/750x/a9/2a/78/a92a785cbc96f57a44c4a2eea03a92b1.jpg"> 
         </ion-col>
 
-        <ion-col size="6" class="ion-text-center ion-justify-content-center text">
-          <ion-text class="text" >
-            <h1 class="h1">
+        <ion-col size="6" class="ion-text-center ion-justify-content-center ion-align-items-center">
+          <ion-text class="text">
+            <h1>
               Salvando vidas!
             </h1>
 
-            <p class="texto">
+            <p>
               O "Abrigo dos Gatos" é uma ONG que reside no interior de São Paulo, na
               cidade de Tatuí. Tem como seu principal foco, resgatar felinos em situações
               precárias os tratando para deixá-los saudáveis e abrigando eles até que possam ser
@@ -53,6 +53,7 @@
           <ion-button class="sobre-nos" shape="round" [routerLink]="['/sobre']" routerLinkActive="active-link">Sobre nós</ion-button>
         </ion-text>
         </ion-col>
+
       </ion-row>
         
       <ion-row>
@@ -71,16 +72,16 @@
               <ion-item>
                  <ion-card class="ion-margin">
                   <img class="img-card" alt="Silhouette of mountains" src="https://i.pinimg.com/750x/a1/41/6a/a1416afca3818d681d8325d44f62fad2.jpg" />
-                  <ion-card-header class="conteudo_card">
+                  <ion-card-header>
                    
-                    <ion-card-title>Macho, 8 meses</ion-card-title>
-                    <ion-card-subtitle>Joe</ion-card-subtitle>
+                    <ion-card-title>Joe</ion-card-title>
+                    <ion-card-subtitle>Macho, 8 meses</ion-card-subtitle>
 
                     
-                      <ion-card-content class="conteudo_card">
+                      <ion-card-content>
                         <ion-button class="button_adotar" [routerLink]="['/formulario-interesse']">Adotar</ion-button>
-                        <p>
-                          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        <p class="texto">
+                          Negativo para FIV e FELV, castrado, sociável com outros animais e humanos. Gosta muito de companhia.
                         </p>
                       </ion-card-content>
                   </ion-card-header>
@@ -90,54 +91,36 @@
               <ion-item>
                 <ion-card class="ion-margin">
                  <img class="img-card" alt="Silhouette of mountains" src="https://i.pinimg.com/750x/2b/52/d1/2b52d19d9f303ddfae437ee29fe8180c.jpg" />
-                 <ion-card-header class="conteudo_card">
+                 <ion-card-header>
                   
-                   <ion-card-title>Macho, 8 meses</ion-card-title>
-                   <ion-card-subtitle>Joe</ion-card-subtitle>
-                     <ion-card-content class="conteudo_card">
+                   <ion-card-title>Brisa</ion-card-title>
+                   <ion-card-subtitle>Femêa, 2 anos</ion-card-subtitle>
+                     <ion-card-content>
                        <ion-button class="button_adotar" [routerLink]="['/formulario-interesse']">Adotar</ion-button>
-                       <p>
-                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                       <p class="texto">
+                        Negativo para FIV e FELV, castrado, sociável com outros animais e humanos. Gosta muito de companhia.
                        </p>
                      </ion-card-content>
                  </ion-card-header>
                </ion-card>
              </ion-item>
-
-             <ion-item>
-              <ion-card class="ion-margin">
-               <img class="img-card" alt="Silhouette of mountains" src="https://i.pinimg.com/750x/bb/b7/6d/bbb76dd20dc0cb29ffe4427b37eb470a.jpg" />
-               <ion-card-header class="conteudo_card">
-                 <ion-card-title>Macho, 8 meses</ion-card-title>
-                 <ion-card-subtitle>Joe</ion-card-subtitle>
-                   <ion-card-content class="conteudo_card">
-                     <ion-button class="button_adotar" [routerLink]="['/formulario-interesse']">Adotar</ion-button>
-                     <p>
-                       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                     </p>
-                   </ion-card-content>
-               </ion-card-header>
-             </ion-card>
-           </ion-item>
             </ion-list>
           </ion-col>
   
-          <ion-col size="4" class="conteudo_card">
+          <ion-col size="4">
             <ion-list lines="inset">
               <ion-item>
                 <ion-card class="ion-margin">
                  <img class="img-card" alt="Silhouette of mountains" src="https://i.pinimg.com/750x/0e/b1/3c/0eb13c583efc671b4a9fb612acfcb7bb.jpg" />
-                 <ion-card-header class="conteudo_card">
+                 <ion-card-header>
                   
-                   <ion-card-title>Macho, 8 meses</ion-card-title>
-                   <ion-card-subtitle>Joe</ion-card-subtitle>
+                   <ion-card-title>Miro</ion-card-title>
+                   <ion-card-subtitle>Macho, 5 meses</ion-card-subtitle>
 
-                  
-                   
-                     <ion-card-content class="conteudo_card">
+                     <ion-card-content>
                        <ion-button class="button_adotar" [routerLink]="['/formulario-interesse']" >Adotar</ion-button>
-                       <p>
-                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                       <p class="texto">
+                        Negativo para FIV e FELV, castrado, sociável com outros animais e humanos. Gosta muito de companhia.
                        </p>
                      </ion-card-content>
                  </ion-card-header>
@@ -147,46 +130,24 @@
              <ion-item>
               <ion-card class="ion-margin">
                <img class="img-card" alt="Silhouette of mountains" src="https://i.pinimg.com/750x/e8/aa/d1/e8aad123fa323d74f287cd904505f531.jpg" />
-               <ion-card-header class="conteudo_card">
+               <ion-card-header>
                  <ion-card-title>Macho, 8 meses</ion-card-title>
                  <ion-card-subtitle>Joe</ion-card-subtitle>
-                   <ion-card-content class="conteudo_card">
+                   <ion-card-content>
                      <ion-button class="button_adotar" [routerLink]="['/formulario-interesse']">Adotar</ion-button>
-                     <p>
-                       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                     <p class="texto">
+                      Negativo para FIV e FELV, castrado, sociável com outros animais e humanos. Gosta muito de companhia.
                      </p>
                    </ion-card-content>
                </ion-card-header>
              </ion-card>
            </ion-item>
-
-           <ion-item>
-            <ion-card class="ion-margin">
-             <img class="img-card" alt="Silhouette of mountains" src="https://i.pinimg.com/750x/7a/75/2c/7a752c77851d8170526a148a571393af.jpg" />
-             <ion-card-header class="conteudo_card">
-              
-               <ion-card-title>Macho, 8 meses</ion-card-title>
-               <ion-card-subtitle>Joe</ion-card-subtitle>
-
-               
-                 <ion-card-content class="conteudo_card">
-                   <ion-button class="button_adotar" [routerLink]="['/formulario-interesse']">Adotar</ion-button>
-                   <p>
-                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                   </p>
-                 </ion-card-content>
-             </ion-card-header>
-           </ion-card>
-         </ion-item>
             </ion-list>
-            
           </ion-col>
-
-          
         </ion-row>
 
         <ion-row size="12" class="ion-padding">
-          <ion-button class="button_conheca" shape="round" [routerLink]="['/login']">Conheça gatinhos disponivéis</ion-button>
+          <ion-button class="button_conheca" shape="round">Conheça gatinhos disponivéis</ion-button>
          </ion-row>
     
 

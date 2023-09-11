@@ -2,6 +2,7 @@
   height: 200px;
   background: rgb(226, 226, 226);
 }
+
 ion-button{
   --color: black;
 }
@@ -65,7 +66,7 @@ ion-button{
   // height: 15%;
   // width: 100%;
   text-align: center;
-  padding: 30px;
+  padding: 15px;
 }
 
 .footer-content{
@@ -103,4 +104,18 @@ ion-button{
 }
 .redor{
   background: #f2f2f2;
+}
+
+.entrar{
+  --background: #A61C35;
+  --color: white;
+  margin-left: 150px ;
+}
+
+.elemento {
+  --color: black;
+  padding: 10px 20px;
+	text-decoration: none;
+  position: relative;
+
 }
