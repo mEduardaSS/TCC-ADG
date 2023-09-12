@@ -3,7 +3,7 @@
       <ion-header>
         <ion-row  fill="solid" class="ion-justify-content-center ion-align-items-center"> <!-- menu -->
          <ion-col size="3">
-          <ion-item [routerLink]="['/home']" routerLinkActive="active-link">
+          <ion-item lines="none" [routerLink]="['/home']" routerLinkActive="active-link">
             <img class="logo-tcc" alt="logo-tcc" src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp" >
           </ion-item>
         </ion-col>
@@ -37,22 +37,25 @@
            <img class="img-gato" alt="img-gato" src="https://i.pinimg.com/750x/a9/2a/78/a92a785cbc96f57a44c4a2eea03a92b1.jpg"> 
         </ion-col>
 
-        <ion-col size="6" class="ion-text-center ion-justify-content-center ion-align-items-center">
-          <ion-text class="text">
-            <h1>
-              Salvando vidas!
-            </h1>
-
-            <p>
-              O "Abrigo dos Gatos" é uma ONG que reside no interior de São Paulo, na
-              cidade de Tatuí. Tem como seu principal foco, resgatar felinos em situações
-              precárias os tratando para deixá-los saudáveis e abrigando eles até que possam ser
-              adotados. 
-            </p>
         
-          <ion-button class="sobre-nos" shape="round" [routerLink]="['/sobre']" routerLinkActive="active-link">Sobre nós</ion-button>
-        </ion-text>
-        </ion-col>
+          <ion-col size="6" class="ion-text-center ion-justify-content-center ion-align-items-center">
+            <ion-text class="text">
+              <h1>
+                Salvando vidas!
+              </h1>
+  
+              <p>
+                O "Abrigo dos Gatos" é uma ONG que reside no interior de São Paulo, na
+                cidade de Tatuí. Tem como seu principal foco, resgatar felinos em situações
+                precárias os tratando para deixá-los saudáveis e abrigando eles até que possam ser
+                adotados. 
+              </p>
+          
+            <ion-button class="sobre-nos" shape="round" [routerLink]="['/sobre']" routerLinkActive="active-link">Sobre nós</ion-button>
+          </ion-text>
+          </ion-col>
+       
+      
 
       </ion-row>
         

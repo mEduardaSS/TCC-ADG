@@ -38,6 +38,7 @@ p {
   margin-top: 10px;
   padding-right: 20px;
   font-size: 20px;
+
 }
 
 .text {
@@ -251,31 +252,35 @@ ion-card-subtitle{
   text-decoration: none;
 }
 
-// @media (max-width: 600px ){
-//   .img-gato{
-//    object-fit: cover;
-//    object-position: 50% 50%;
-   
-  
-//   align-items: center;
-//   justify-content: center;
-//   right: 0;
-//   margin-top: 0.5em;
- 
+@media (max-width: 600px ){
+  .img-gato{
+   object-fit: cover;
+   object-position: 50% 50%;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  margin-top: 0.5em;
 
-//   } 
-//   h1 {
-//    display: none;
+  } 
+
+  h1 {
+   display: none;
     
-//   }
-//   .text{
-//     display: none;
-//   }
-//   p {
-//     display: none;
-//   }
-//   .banner-gato {
-//     width: auto;
-//   }
-// }
+  }
+  .text{
+    display: none;
+  }
 
+  p {
+    display: none;
+  }
+
+  .banner-gato {
+    width: auto;
+  }
+
+  #text_miautode {
+    top: 20em;
+  
+  }
+}
