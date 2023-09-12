@@ -4,13 +4,12 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
-  list-style: none;
 }
 
 .banner-gato{
   display: flex;
   height: 50%;
-  background: #A61C35;
+  background: #A6A39F;
   padding: 1em;
   margin-top: 15px;
 }
@@ -19,6 +18,7 @@
   height: 250px;
   width: 250px;
   border-radius: 25% 10%;
+  border: 5px solid #A61C35;
   align-items: center;
   justify-content: center;
   right: 0;
@@ -27,30 +27,31 @@
 
 }
 
+h1 {
+  font-style: italic;
+  color: #D9D9D9;
+  text-align: center;
+  margin-top: 2.0em;
+}
+
+p {
+  margin-top: 10px;
+  padding-right: 20px;
+  font-size: 20px;
+}
+
 .text {
   color: white;
   justify-content: center;
   text-align: center;
   align-items: center;
-  margin-top: 1.2em;
+  display: inline-block;
 }
-
-h1{
-  font-style: italic;
-  font-weight: bold;
-  text-align: center;
-}
-
-// // p{
-//   margin-top: 10px;
-//   padding-right: 20px;
-//   font-size: 20px;
-// }
 
 .sobre-nos {
-  --background: white;
-  --color: black;
-  margin-top: 15px;
+  --background: #A61C35;
+  --color: white;
+  margin-top: 20px;
   justify-content: center;
   align-items: center;
   
@@ -250,9 +251,31 @@ ion-card-subtitle{
   text-decoration: none;
 }
 
-@media (max-width: 557px ){
-  .img-gato{
-    display: none;
-  } 
+// @media (max-width: 600px ){
+//   .img-gato{
+//    object-fit: cover;
+//    object-position: 50% 50%;
+   
+  
+//   align-items: center;
+//   justify-content: center;
+//   right: 0;
+//   margin-top: 0.5em;
+ 
 
-}
+//   } 
+//   h1 {
+//    display: none;
+    
+//   }
+//   .text{
+//     display: none;
+//   }
+//   p {
+//     display: none;
+//   }
+//   .banner-gato {
+//     width: auto;
+//   }
+// }
+
