@@ -6,29 +6,34 @@
   text-decoration: none;
 }
 
-// ion-header {
-//   padding: 20px 0;
-// }
+ion-header {
+ width: auto;
+ 
+}
 
-// #menu_component {
-//   width: 100%;
-//   text-align: center;
-// }
+.menu_component {
+  max-width: 800px;
+  list-style: none;
+  padding: 0;
+}
 
-// .entrar{
-//   --background: #A61C35;
-//   --color: white;
-//   float: right;
+.elemento {
+  float: left;
+  color: #333; 
+  text-decoration: none; 
+  padding-right: 20px;
+  display: inline-block;
+  list-style: none;
+}
+
+
+.entrar{
+  --background: #A61C35;
+  --color: white;
+  float: right;
   
-// }
+}
 
-// .elemento {
-//   color: #333; 
-//   text-decoration: none; 
-//   padding-right: 20px;
-//   display: inline-block;
-//   list-style: none;
-// }
 
 
 

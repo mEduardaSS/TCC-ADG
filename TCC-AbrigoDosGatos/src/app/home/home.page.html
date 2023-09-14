@@ -1,26 +1,27 @@
-<!-- HEADER  -->
       <ion-header>
-        <ion-row  fill="solid">
+        <ion-row fill="solid">
          <ion-col size="3">
-          <ion-item lines="none" [routerLink]="['/home']" routerLinkActive="active-link">
-            <img class="logo-tcc" alt="logo-tcc" src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp" >
+          <ion-item lines="none">
+            <img class="logo-tcc" alt="logo" [routerLink]="['/home']" routerLinkActive="active-link" src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp" >
           </ion-item>
         </ion-col>
        
-         
-         <ion-col fill="solid" size="6" id="menu_c">
+         <ion-col fill="solid" size="6" class="menu_component">
            <ion-button fill="clear" class="elemento" routerLink="sobre" routerLinkActive="active-link">Sobre nós</ion-button>
            <ion-button fill="clear" class="elemento" routerLink="ajuda" routerLinkActive="active-link">Quero Ajudar</ion-button>
            <ion-button fill="clear" class="elemento" routerLink="voluntario" routerLinkActive="active-link">Seja voluntário</ion-button>
            <ion-button fill="clear" class="elemento">Contato</ion-button>
+
+           <ion-button class="entrar" shape="round" [routerLink]="['/login']">Entrar</ion-button>
          </ion-col>
 
-         <ion-col size="3" class="ion-justify-content-center">
+         <!-- <ion-col size="3" class="ion-justify-content-center">
           <ion-button class="entrar" shape="round" [routerLink]="['/login']">Entrar</ion-button>
-         </ion-col>
+         </ion-col> -->
        </ion-row>
-
       </ion-header>
+
+
 
       <ion-content> 
       <ion-row class="banner-gato">
