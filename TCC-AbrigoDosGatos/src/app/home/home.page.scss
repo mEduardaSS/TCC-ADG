@@ -6,15 +6,17 @@
   text-decoration: none;
 }
 
+
+
 ion-header {
- width: auto;
- 
+  padding-left: 4em;
+  width: auto;
 }
 
 .menu_component {
-  max-width: 800px;
-  list-style: none;
-  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .elemento {
@@ -26,14 +28,22 @@ ion-header {
   list-style: none;
 }
 
-
 .entrar{
-  --background: #A61C35;
-  --color: white;
-  float: right;
-  
+  --background: #A61C35; 
+  --color: white;  
 }
 
+.entrar-component{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-component{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
 
 
 
@@ -44,6 +54,7 @@ ion-header {
   padding: 1em;
   margin-top: 15px;
 }
+
 
 .img-gato {
   height: 250px;
@@ -232,7 +243,7 @@ ion-card-subtitle{
 }
 
 .logo-tcc {
-  height: 85px;
+  width: 85px;
 }
 
 #container strong {
