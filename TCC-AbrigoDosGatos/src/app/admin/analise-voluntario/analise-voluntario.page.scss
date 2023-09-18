@@ -1,6 +1,6 @@
-.espaco2{
+.containerBtn{
     height: 200px;
-    background: rgb(226, 226, 226);
+    background:white;
   }
   
   ion-button{
@@ -22,7 +22,27 @@
   #id {
     margin-bottom: 1.2em;
   }
-  
+  .button-native {
+    --background: #D9D9D9;
+  }
+  .btnRecusar{
+    display: flex;
+    justify-content: center;
+    margin-left: 30px;
+    --background: #D9D9D9;
+}
+  .btnAprovar{
+        display: flex;
+        justify-content: center;
+        margin-left: 230px;
+        --background: #D9D9D9;
+  }
+  .dadosVoluntario{
+    margin-top: 1px;
+  }
+  .ion-padding{
+    margin-top: 25px;
+  }
   .conteudo{
     border-radius: 30px;
     border-color:  rgb(163, 50, 50);
@@ -36,15 +56,14 @@
     
   }
   .titulo{
-    color:rgb(97, 36, 36);
-    font-size: 20px;
-    text-shadow: 0.1em 0.1em 0.2em rgb(131, 131, 131);
-    margin-top: 0.5em;
+    color: #000;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 1.100em;
   }
   
-  #dois{
-    background:white;
-  }
     
   .button_voltar {
     justify-content: center;
