@@ -6,8 +6,6 @@
   text-decoration: none;
 }
 
-
-
 ion-header {
   padding-left: 4em;
   width: auto;
@@ -17,6 +15,7 @@ ion-header {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-left: 10%;
 }
 
 .elemento {
@@ -45,18 +44,18 @@ ion-header {
   justify-content: start;
 }
 
-
-
 .banner-gato{
   display: flex;
   height: 50%;
-  background: #A6A39F;
+  // background: #A6A39F;
+  background-image: url('https://img.freepik.com/vetores-gratis/fundo-de-padrao-de-pegada-bonito-e-brincalhao-para-diversao-da-fauna_1017-44713.jpg?w=1060&t=st=1695043974~exp=1695044574~hmac=cd86ac8f03d7f14b18306fb03432dcd7189813f76e210de576174d36e6c4fd85');
   padding: 1em;
   margin-top: 15px;
 }
 
 
 .img-gato {
+  display: flex;
   height: 250px;
   width: 250px;
   border-radius: 25% 10%;
@@ -66,14 +65,16 @@ ion-header {
   right: 0;
   margin-top: 1.2em;
   left: 20em;
-
 }
 
-h1 {
+h1.title{
   font-style: italic;
-  color: #D9D9D9;
+  font-size: 30px;
+  color: #FFF;
   text-align: center;
   margin-top: 2.0em;
+  text-shadow: 2px 0 #99a1a4, -2px 0 #99a1a4, 0 2px #99a1a4, 0 -2px #99a1a4,
+             1px 1px #99a1a4, -1px -1px #99a1a4, 1px -1px #99a1a4, -1px 1px #99a1a4;
 }
 
 p {
@@ -84,11 +85,18 @@ p {
 }
 
 .text {
-  color: white;
+  font-weight: bold;
+  color: #fff;
   justify-content: center;
   text-align: center;
   align-items: center;
   display: inline-block;
+  text-shadow: 2px 0 #99a1a4, -2px 0 #99a1a4, 0 2px #99a1a4, 0 -2px #99a1a4,
+  1px 1px #99a1a4, -1px -1px #99a1a4, 1px -1px #99a1a4, -1px 1px #99a1a4;
+}
+
+#conteudo-banner{
+  margin-top: 3%;
 }
 
 .sobre-nos {
@@ -142,9 +150,7 @@ ion-card-subtitle{
   
 }
 
-.conteudo-card {
-  top: 2.5em
-}
+
 
 .button_adotar{
   float: right;
@@ -219,7 +225,6 @@ ion-card-subtitle{
 .col-img-gato{
   justify-content: center;
   align-items: center;
-  padding-left: 100px;
 }
 
 
@@ -260,4 +265,101 @@ ion-card-subtitle{
 
 #container a {
   text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  ion-card-title{
+  text-align: center;
+  }
+  
+  ion-card-subtitle{
+   text-align: center;
+  }
+  
+  .texto{
+    display: none;
+  }
+  .button_adotar{
+    margin-top: auto;
+    padding: 10px 0px;   
+  }
+  .card-gatos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    
+   
+  }
+  .conteudo-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .button_conheca{
+  display: flex;
+  font-size: 10px;
+  width: 60%;
+  height: 40%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  --background: #A61C35;
+  --color: white;
+}
+
+@media (max-width: 556px) {
+  #conteudo-banner {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5em;
+    font-size: 20px;
+  }
+
+.sobre-nos {
+  --background: #A61C35;
+  --color: white;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  
+}
+.banner-gato {
+  height: 50%;
+}
+
+.img-gato {
+  display: none;
+}
+
+h1 {
+  font-style: italic;
+  color: #D9D9D9;
+  text-align: center;
+  margin-top: 2.0em;
+}
+
+p {
+  margin-top: 10px;
+  padding-right: 20px;
+  font-size: 20px;
+
+}
+
+.text {
+  color: white;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  display: inline-block;
+}
+
+
+}
+
+
 }
