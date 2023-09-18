@@ -47,6 +47,10 @@ const routes: Routes = [
     path: 'admin/cadastro-animal',
     loadChildren: () => import('./admin/cadastro-animal/cadastro-animal.module').then( m => m.CadastroAnimalPageModule)
   },
+  {
+    path: 'admin/analise-voluntario',
+    loadChildren: () => import('./admin/analise-voluntario/analise-voluntario.module').then( m => m.AnaliseVoluntarioPageModule)
+  },
 ];
 
 @NgModule({
