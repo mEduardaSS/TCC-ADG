@@ -41,7 +41,7 @@ ion-header {
 .logo-component{
   display: flex;
   align-items: center;
-  justify-content: start;
+ 
 }
 
 .banner-gato{
@@ -58,13 +58,10 @@ ion-header {
   display: flex;
   height: 250px;
   width: 250px;
-  border-radius: 25% 10%;
+  border-radius: 50% 20% / 10% 40%;
   border: 5px solid #A61C35;
-  align-items: center;
-  justify-content: center;
-  right: 0;
-  margin-top: 1.2em;
-  left: 20em;
+  
+
 }
 
 h1.title{
@@ -97,6 +94,7 @@ p {
 
 #conteudo-banner{
   margin-top: 3%;
+  font-size: 20px;
 }
 
 .sobre-nos {
@@ -149,8 +147,6 @@ ion-card-subtitle{
   margin-top: 1.5em;
   
 }
-
-
 
 .button_adotar{
   float: right;
@@ -309,32 +305,79 @@ ion-card-subtitle{
   margin-bottom: 30px;
   --background: #A61C35;
   --color: white;
+
+  #footer{
+    // top: 1.2em;
+    border-radius: 50px 50px 0 0;
+    background: #D9D9D9;
+    // height: 15%;
+    // width: 100%;
+    padding: 15px;
+  }
+  
+  .footer-content{
+    margin: auto;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+    
+  }
+  .footer-title {
+    font-size: 20px;
+  }
+  
+  .footer-content ion-text{
+    margin-top: 3em;
+  }
+  
+  .icon-{
+    &whatsapp{
+      color: green;
+      margin-right: 0.2em;
+    }
+    &facebook{
+      color: blue;
+      margin-right: 0.2em;
+    }
+    &instagram{
+      color: purple;
+      margin-right: 0.2em;
+    }
+    &mail{
+    
+      margin-right: 0.2em;
+    }
+  }
+
+
+
+
 }
 
-@media (max-width: 556px) {
+@media (max-width: 750px) {
   #conteudo-banner {
     text-align: center;
     align-items: center;
     justify-content: center;
     font-size: 15px;
-    margin-top: -10%;
+    margin-top: -3em;
+   
   }
 
 .sobre-nos {
   --background: #A61C35;
   --color: white;
-  margin-top: 20px;
+  margin-top: 0.5em;
   justify-content: center;
   align-items: center;
   
 }
 .banner-gato {
-  height: 50%;
+  height: 60%;
 }
 
 .img-gato {
-  margin-top: 25em;
-  width: 100%;
+  width: 80%;
   max-width: 150px;
   height: auto;
 }
@@ -343,11 +386,12 @@ h1 {
   font-style: italic;
   color: #D9D9D9;
   text-align: center;
-  margin-top: 2.0em;
+  margin-top: 1.8em;
+ 
 }
 
 p {
-  margin-top: 10px;
+  margin-top: 5px;
   padding-right: 20px;
   font-size: 15px;
 
@@ -361,7 +405,39 @@ p {
   display: inline-block;
 }
 
+.col-img-gato{
+  justify-content: center;
+  align-items: center;
+ 
+}
 
+}
+
+@media (max-width: 280px){
+  p {
+    margin-top: 5px;
+    padding-right: 20px;
+    font-size: 14px;
+  
+  }
+  
+  .col-img-gato {
+    margin-top: -1.2em;
+  }
+
+  .sobre-nos {
+    --background: #A61C35;
+    --color: white;
+    margin-top: 0.3em;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .button_conheca{
+    width: 80%;
+    
+  }
 }
 
 
