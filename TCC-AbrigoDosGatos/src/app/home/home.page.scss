@@ -316,8 +316,8 @@ ion-card-subtitle{
     text-align: center;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.5em;
-    font-size: 20px;
+    font-size: 15px;
+    margin-top: -10%;
   }
 
 .sobre-nos {
@@ -333,7 +333,10 @@ ion-card-subtitle{
 }
 
 .img-gato {
-  display: none;
+  margin-top: 25em;
+  width: 100%;
+  max-width: 150px;
+  height: auto;
 }
 
 h1 {
@@ -346,7 +349,7 @@ h1 {
 p {
   margin-top: 10px;
   padding-right: 20px;
-  font-size: 20px;
+  font-size: 15px;
 
 }
 
