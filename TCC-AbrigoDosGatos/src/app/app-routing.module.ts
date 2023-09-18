@@ -48,7 +48,7 @@ const routes: Routes = [
     loadChildren: () => import('./admin/cadastro-animal/cadastro-animal.module').then( m => m.CadastroAnimalPageModule)
   },
   {
-    path: 'analise-voluntario',
+    path: 'admin/analise-voluntario',
     loadChildren: () => import('./admin/analise-voluntario/analise-voluntario.module').then( m => m.AnaliseVoluntarioPageModule)
   },
 ];

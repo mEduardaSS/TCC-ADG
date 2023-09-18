@@ -1,13 +1,82 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>analiseVoluntario</ion-title>
-  </ion-toolbar>
-</ion-header>
+ <ion-content [fullscreen]="true">
+  <ion-header>
+    <ion-row  fill="solid" class="ion-justify-content-center ion-align-items-center"> <!-- menu -->
+     <ion-col size="3">
+      <ion-item [routerLink]="['/home']" routerLinkActive="active-link">
+        <img class="logo-tcc" alt="logo-tcc" src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp" >
+      </ion-item>
+    </ion-col>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">analiseVoluntario</ion-title>
-    </ion-toolbar>
+     <ion-col fill="solid" size="6">
+       <ion-button fill="clear" class="elemento" routerLink="ajuda" routerLinkActive="active-link">Quero Ajudar</ion-button>
+       <ion-button fill="clear" class="elemento" routerLink="voluntario" routerLinkActive="active-link">Seja voluntário</ion-button>
+       <ion-button fill="clear" class="elemento" >Contato</ion-button>
+       
+     </ion-col>
+
+     <ion-col size="3">
+      <ion-button fill="clear" class="admin">Olá, admin</ion-button>
+     </ion-col>
+   </ion-row>
   </ion-header>
-</ion-content>
+
+  <ion-row  class="redor ion-padding ion-justify-content-center">
+    <ion-col size=6 class="ion-padding conteudo">
+      <ion-row class="ion-justify-content-center">
+         <b>Formulário de interesse</b> 
+      </ion-row>
+  
+      <ion-row class="ion-padding">
+        <b>PIX: 15 99713-0703</b>
+      </ion-row>
+      <ion-row class="ion-padding">
+        <b>[Dados da conta]</b>
+      </ion-row>
+
+
+      <ion-row class="espaco2" id="dois"></ion-row>
+
+      <ion-row size="12" class="ion-padding">
+        <ion-button class="button_voltar" shape="round" [routerLink]="['/home']">Voltar</ion-button>
+       </ion-row>
+
+      </ion-col>
+    </ion-row>
+
+    <ion-row id="footer">
+      <ion-col class="footer-content">
+        <ion-text>
+          <ion-label class="footer-title">Contato <br></ion-label>
+          
+        </ion-text>
+
+        <ion-text>
+        
+          <ion-label><ion-icon name="logo-whatsapp" class="icon-whatsapp"></ion-icon>WhatsApp</ion-label>
+          <br>
+        </ion-text>
+
+        <ion-text>
+          <ion-label><ion-icon name="mail-outline" class="icon-mail"></ion-icon>E-mail</ion-label>
+          <br>
+        </ion-text>
+      </ion-col>
+
+      <ion-col class="footer-content">
+        <ion-text>
+          <ion-label class="footer-title">Redes Sociais</ion-label>
+          <br>
+        </ion-text>
+
+        <ion-text>
+          <ion-label><ion-icon name= "logo-facebook" class="icon-facebook"></ion-icon>/abrigodosgatos</ion-label>
+          <br>
+        </ion-text>
+        <ion-text>
+          <ion-label><ion-icon name="logo-instagram" class="icon-instagram"></ion-icon>abrigo.dosgatos</ion-label>
+          <br>
+        </ion-text>
+      </ion-col>
+     </ion-row>
+  
+    
