@@ -1,8 +1,5 @@
-<ion-header>
-  <ion-row class="desktop-header" fill="solid">
 
-
-    <ion-col size="1" class="logo-component">
+    <!-- <ion-col size="1" class="logo-component">
       <ion-item lines="none" [routerLink]="['/home']" routerLinkActive="active-link">
         <img class="logo-tcc" alt="logo"
           src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp">
@@ -21,178 +18,192 @@
 
     <ion-col size="2" class="entrar-component">
       <ion-button class="entrar" shape="round" [routerLink]="['/login']">Entrar</ion-button>
-    </ion-col>
-  </ion-row>
-</ion-header>
+    </ion-col> -->
+   
+      <ion-menu contentId="main-content">
+        <ion-header>
+          <ion-toolbar color="#A61C35">
+            <ion-title>Menu Content</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content>Components</ion-content>
+      </ion-menu>
+      <div class="ion-page" id="main-content">
+        <ion-header class="menu">
+          <ion-toolbar>
+            <ion-buttons slot="start">
+              <ion-menu-button></ion-menu-button>
+            </ion-buttons>
+            <ion-title>Abrigo dos Gatos</ion-title>
+          </ion-toolbar>
+        </ion-header>
 
-
-
-<ion-content>
-  <ion-row class="banner-gato">
-    <ion-col size="12" size-md="6" class="col-img-gato" >
-      <img class="img-gato" alt="img-gato" style="margin: 0 auto;"
-        src="https://i.pinimg.com/750x/a9/2a/78/a92a785cbc96f57a44c4a2eea03a92b1.jpg">
-    </ion-col>
-
-
-    <ion-col size="12" size-md="6"md class="ion-text-center ion-justify-content-center ion-align-items-center"
-      id="conteudo-banner">
-      <ion-text class="text">
-        <h1 class="titulo">
-          Salvando vidas!
-        </h1>
-
-        <p>
-          O "Abrigo dos Gatos" é uma ONG que reside no interior de São Paulo, na
-          cidade de Tatuí. Tem como seu principal foco, resgatar felinos em situações
-          precárias os tratando para deixá-los saudáveis e abrigando eles até que possam ser
-          adotados.
-        </p>
-
-      </ion-text>
-      <ion-button class="sobre-nos" shape="round" [routerLink]="['/sobre']" routerLinkActive="active-link">Sobre
-        nós</ion-button>
-    </ion-col>
-
-
-
-  </ion-row>
-
-  <ion-row>
-    <ion-col size="12" class="ion-text-center" id="text_miaudote">
-      <ion-text>
-        <ion-label>
-          Miaudote!
-        </ion-label>
-      </ion-text>
-    </ion-col>
-  </ion-row>
-
-  <ion-row class="card-gatos ion-padding ion-justify-content-center">
-    <ion-col size="8" size-sm="4">
-      <ion-list lines="inset">
-        <ion-item>
-          <ion-card class="ion-margin">
-            <img class="img-card" alt="Silhouette of mountains"
-              src="https://i.pinimg.com/750x/a1/41/6a/a1416afca3818d681d8325d44f62fad2.jpg" />
-            <ion-card-header>
-
-              <ion-card-title>Joe</ion-card-title>
-              <ion-card-subtitle>Macho, 8 meses</ion-card-subtitle>
-
-
-              <ion-card-content class="conteudo-card">
-                <ion-button class="button_adotar" [routerLink]="['/formulario-interesse']">Adotar</ion-button>
-                <p class="texto">
-                  Negativo para FIV e FELV, castrado, sociável com outros animais e humanos. Gosta muito de companhia.
+        <ion-content>
+          <ion-row class="banner-gato">
+            <ion-col size="12" size-md="6" class="col-img-gato" >
+              <img class="img-gato" alt="img-gato" style="margin: 0 auto;"
+                src="https://i.pinimg.com/750x/a9/2a/78/a92a785cbc96f57a44c4a2eea03a92b1.jpg">
+            </ion-col>
+        
+        
+            <ion-col size="12" size-md="6"md class="ion-text-center ion-justify-content-center ion-align-items-center"
+              id="conteudo-banner">
+              <ion-text class="text">
+                <h1 class="titulo">
+                  Salvando vidas!
+                </h1>
+        
+                <p>
+                  O "Abrigo dos Gatos" é uma ONG que reside no interior de São Paulo, na
+                  cidade de Tatuí. Tem como seu principal foco, resgatar felinos em situações
+                  precárias os tratando para deixá-los saudáveis e abrigando eles até que possam ser
+                  adotados.
                 </p>
-              </ion-card-content>
-            </ion-card-header>
-          </ion-card>
-        </ion-item>
-
-        <ion-item>
-          <ion-card class="ion-margin">
-            <img class="img-card" alt="Silhouette of mountains"
-              src="https://i.pinimg.com/750x/2b/52/d1/2b52d19d9f303ddfae437ee29fe8180c.jpg" />
-            <ion-card-header>
-
-              <ion-card-title>Brisa</ion-card-title>
-              <ion-card-subtitle>Femêa, 2 anos</ion-card-subtitle>
-              <ion-card-content class="conteudo-card">
-                <ion-button class="button_adotar" [routerLink]="['/formulario-interesse']">Adotar</ion-button>
-                <p class="texto">
-                  Negativo para FIV e FELV, castrado, sociável com outros animais e humanos. Gosta muito de companhia.
-                </p>
-              </ion-card-content>
-            </ion-card-header>
-          </ion-card>
-        </ion-item>
-      </ion-list>
-    </ion-col>
-
-    <ion-col size="8" size-sm="4">
-      <ion-list lines="inset">
-        <ion-item>
-          <ion-card class="ion-margin">
-            <img class="img-card" alt="Silhouette of mountains"
-              src="https://i.pinimg.com/750x/0e/b1/3c/0eb13c583efc671b4a9fb612acfcb7bb.jpg" />
-            <ion-card-header>
-
-              <ion-card-title>Miro</ion-card-title>
-              <ion-card-subtitle>Macho, 5 meses</ion-card-subtitle>
-
-              <ion-card-content class="conteudo-card">
-                <ion-button class="button_adotar" [routerLink]="['/formulario-interesse']">Adotar</ion-button>
-                <p class="texto">
-                  Negativo para FIV e FELV, castrado, sociável com outros animais e humanos. Gosta muito de companhia.
-                </p>
-              </ion-card-content>
-            </ion-card-header>
-          </ion-card>
-        </ion-item>
-
-        <ion-item>
-          <ion-card class="ion-margin">
-            <img class="img-card" alt="Silhouette of mountains"
-              src="https://i.pinimg.com/750x/e8/aa/d1/e8aad123fa323d74f287cd904505f531.jpg" />
-            <ion-card-header>
-              <ion-card-title>Macho, 8 meses</ion-card-title>
-              <ion-card-subtitle>Joe</ion-card-subtitle>
-              <ion-card-content class="conteudo-card">
-                <ion-button class="button_adotar" [routerLink]="['/formulario-interesse']">Adotar</ion-button>
-                <p class="texto">
-                  Negativo para FIV e FELV, castrado, sociável com outros animais e humanos. Gosta muito de companhia.
-                </p>
-              </ion-card-content>
-            </ion-card-header>
-          </ion-card>
-        </ion-item>
-      </ion-list>
-    </ion-col>
-  </ion-row>
-
-  <ion-row size="3" size-sm="6" class="ion-padding">
-    <ion-button class="button_conheca" shape="round">Conheça gatinhos disponivéis</ion-button>
-  </ion-row>
-
-
-  <ion-row id="footer">
-    <ion-col class="footer-content">
-      <ion-text>
-        <ion-label class="footer-title">Contato <br></ion-label>
-
-      </ion-text>
-
-      <ion-text>
-
-        <ion-label><ion-icon name="logo-whatsapp" class="icon-whatsapp"></ion-icon>WhatsApp</ion-label>
-        <br>
-      </ion-text>
-
-      <ion-text>
-        <ion-label><ion-icon name="mail-outline" class="icon-mail"></ion-icon>E-mail</ion-label>
-        <br>
-      </ion-text>
-    </ion-col>
-
-    <ion-col class="footer-content">
-      <ion-text>
-        <ion-label class="footer-title">Redes Sociais</ion-label>
-        <br>
-      </ion-text>
-
-      <ion-text>
-        <ion-label><ion-icon name="logo-facebook" class="icon-facebook"></ion-icon>/abrigodosgatos</ion-label>
-        <br>
-      </ion-text>
-      <ion-text>
-        <ion-label><ion-icon name="logo-instagram" class="icon-instagram"></ion-icon>abrigo.dosgatos</ion-label>
-        <br>
-      </ion-text>
-    </ion-col>
-  </ion-row>
-
-
-
-</ion-content>
+        
+              </ion-text>
+              <ion-button class="sobre-nos" shape="round" [routerLink]="['/sobre']" routerLinkActive="active-link">Sobre
+                nós</ion-button>
+            </ion-col>
+        
+        
+        
+          </ion-row>
+        
+          <ion-row>
+            <ion-col size="12" class="ion-text-center" id="text_miaudote">
+              <ion-text>
+                <ion-label>
+                  Miaudote!
+                </ion-label>
+              </ion-text>
+            </ion-col>
+          </ion-row>
+        
+          <ion-row class="card-gatos ion-padding ion-justify-content-center">
+            <ion-col size="8" size-sm="4">
+              <ion-list lines="inset">
+                <ion-item>
+                  <ion-card class="ion-margin">
+                    <img class="img-card" alt="Silhouette of mountains"
+                      src="https://i.pinimg.com/750x/a1/41/6a/a1416afca3818d681d8325d44f62fad2.jpg" />
+                    <ion-card-header>
+        
+                      <ion-card-title>Joe</ion-card-title>
+                      <ion-card-subtitle>Macho, 8 meses</ion-card-subtitle>
+        
+        
+                      <ion-card-content class="conteudo-card">
+                        <ion-button class="button_adotar" [routerLink]="['/formulario-interesse']">Adotar</ion-button>
+                        <p class="texto">
+                          Negativo para FIV e FELV, castrado, sociável com outros animais e humanos. Gosta muito de companhia.
+                        </p>
+                      </ion-card-content>
+                    </ion-card-header>
+                  </ion-card>
+                </ion-item>
+        
+                <ion-item>
+                  <ion-card class="ion-margin">
+                    <img class="img-card" alt="Silhouette of mountains"
+                      src="https://i.pinimg.com/750x/2b/52/d1/2b52d19d9f303ddfae437ee29fe8180c.jpg" />
+                    <ion-card-header>
+        
+                      <ion-card-title>Brisa</ion-card-title>
+                      <ion-card-subtitle>Femêa, 2 anos</ion-card-subtitle>
+                      <ion-card-content class="conteudo-card">
+                        <ion-button class="button_adotar" [routerLink]="['/formulario-interesse']">Adotar</ion-button>
+                        <p class="texto">
+                          Negativo para FIV e FELV, castrado, sociável com outros animais e humanos. Gosta muito de companhia.
+                        </p>
+                      </ion-card-content>
+                    </ion-card-header>
+                  </ion-card>
+                </ion-item>
+              </ion-list>
+            </ion-col>
+        
+            <ion-col size="8" size-sm="4">
+              <ion-list lines="inset">
+                <ion-item>
+                  <ion-card class="ion-margin">
+                    <img class="img-card" alt="Silhouette of mountains"
+                      src="https://i.pinimg.com/750x/0e/b1/3c/0eb13c583efc671b4a9fb612acfcb7bb.jpg" />
+                    <ion-card-header>
+        
+                      <ion-card-title>Miro</ion-card-title>
+                      <ion-card-subtitle>Macho, 5 meses</ion-card-subtitle>
+        
+                      <ion-card-content class="conteudo-card">
+                        <ion-button class="button_adotar" [routerLink]="['/formulario-interesse']">Adotar</ion-button>
+                        <p class="texto">
+                          Negativo para FIV e FELV, castrado, sociável com outros animais e humanos. Gosta muito de companhia.
+                        </p>
+                      </ion-card-content>
+                    </ion-card-header>
+                  </ion-card>
+                </ion-item>
+        
+                <ion-item>
+                  <ion-card class="ion-margin">
+                    <img class="img-card" alt="Silhouette of mountains"
+                      src="https://i.pinimg.com/750x/e8/aa/d1/e8aad123fa323d74f287cd904505f531.jpg" />
+                    <ion-card-header>
+                      <ion-card-title>Macho, 8 meses</ion-card-title>
+                      <ion-card-subtitle>Joe</ion-card-subtitle>
+                      <ion-card-content class="conteudo-card">
+                        <ion-button class="button_adotar" [routerLink]="['/formulario-interesse']">Adotar</ion-button>
+                        <p class="texto">
+                          Negativo para FIV e FELV, castrado, sociável com outros animais e humanos. Gosta muito de companhia.
+                        </p>
+                      </ion-card-content>
+                    </ion-card-header>
+                  </ion-card>
+                </ion-item>
+              </ion-list>
+            </ion-col>
+          </ion-row>
+        
+          <ion-row size="3" size-sm="6" class="ion-padding">
+            <ion-button class="button_conheca" shape="round">Conheça gatinhos disponivéis</ion-button>
+          </ion-row>
+        
+        
+          <ion-row id="footer">
+            <ion-col class="footer-content">
+              <ion-text>
+                <ion-label class="footer-title">Contato <br></ion-label>
+              </ion-text>
+        
+              <ion-text>
+                <ion-label><ion-icon name="logo-whatsapp" class="icon-whatsapp"></ion-icon>WhatsApp</ion-label>
+                <br>
+              </ion-text>
+        
+              <ion-text>
+                <ion-label><ion-icon name="mail-outline" class="icon-mail"></ion-icon>E-mail</ion-label>
+                <br>
+              </ion-text>
+            </ion-col>
+        
+            <ion-col class="footer-content">
+              <ion-text>
+                <ion-label class="footer-title">Redes Sociais</ion-label>
+                <br>
+              </ion-text>
+        
+              <ion-text>
+                <ion-label><ion-icon name="logo-facebook" class="icon-facebook" ></ion-icon>/abrigodosgatos</ion-label>
+                <br>
+              </ion-text>
+              <ion-text>
+                <ion-label><ion-icon name="logo-instagram" class="icon-instagram"></ion-icon>abrigo.dosgatos</ion-label>
+                <br>
+              </ion-text>
+            </ion-col>
+          </ion-row>
+       
+        
+         </ion-content>
+      </div>
+   
+      

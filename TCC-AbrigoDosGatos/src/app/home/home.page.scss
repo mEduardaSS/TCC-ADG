@@ -6,43 +6,63 @@
   text-decoration: none;
 }
 
-ion-header {
-  padding-left: 4em;
-  width: auto;
+ion-menu::part(backdrop) {
+  background-color: rgba(51, 46, 51, 0.5);
 }
 
-.menu_component {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 10%;
+ion-menu::part(container) {
+  border-radius: 0 20px 20px 0;
+
+  box-shadow: 4px 0px 16px rgba(255, 0, 255, 0.18);
 }
 
-.elemento {
-  float: left;
-  color: #333; 
-  text-decoration: none; 
-  padding-right: 20px;
-  display: inline-block;
-  list-style: none;
+.menu {
+  position: absolute;
 }
 
-.entrar{
-  --background: #A61C35; 
-  --color: white;  
+
+.menu ion-title{
+  color: #A61C35;
 }
 
-.entrar-component{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.logo-component{
-  display: flex;
-  align-items: center;
+// ion-header {
+//   padding-left: 4em;
+//   width: auto;
+// }
+
+// .menu_component {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   padding-left: 10%;
+// }
+
+// .elemento {
+//   float: left;
+//   color: #333; 
+//   text-decoration: none; 
+//   padding-right: 20px;
+//   display: inline-block;
+//   list-style: none;
+// }
+
+// .entrar{
+//   --background: #A61C35; 
+//   --color: white;  
+// }
+
+// .entrar-component{
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// .logo-component{
+//   display: flex;
+//   align-items: center;
  
-}
+// }
 
 .banner-gato{
   display: flex;
@@ -50,7 +70,7 @@ ion-header {
   // background: #A6A39F;
   background-image: url('https://img.freepik.com/vetores-gratis/fundo-de-padrao-de-pegada-bonito-e-brincalhao-para-diversao-da-fauna_1017-44713.jpg?w=1060&t=st=1695043974~exp=1695044574~hmac=cd86ac8f03d7f14b18306fb03432dcd7189813f76e210de576174d36e6c4fd85');
   padding: 1em;
-  margin-top: 15px;
+  margin-top: 5em;
 }
 
 
@@ -118,7 +138,7 @@ p {
 
 .card-gatos {
   padding: 1em;
-  top: 4em;
+  top: 4em; 
 }
 
 ion-card-title{
@@ -192,6 +212,7 @@ ion-card-subtitle{
 
 .footer-content ion-text{
   margin-top: 3em;
+  font-size: medium;
 }
 
 .icon-{
@@ -323,31 +344,15 @@ ion-card-subtitle{
     
   }
   .footer-title {
-    font-size: 20px;
+    font-size: 5px;
   }
   
   .footer-content ion-text{
     margin-top: 3em;
+    font-size: 5em;
   }
   
-  .icon-{
-    &whatsapp{
-      color: green;
-      margin-right: 0.2em;
-    }
-    &facebook{
-      color: blue;
-      margin-right: 0.2em;
-    }
-    &instagram{
-      color: purple;
-      margin-right: 0.2em;
-    }
-    &mail{
-    
-      margin-right: 0.2em;
-    }
-  }
+  
 
 
 
