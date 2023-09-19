@@ -7,64 +7,73 @@
     list-style: none;
   }
 
-  #footer {
-  padding: 20px 10px;
+  .logo-component{
+    display: flex;
+    align-items: center; 
   }
 
-  #miaudote {
+  .menu_component {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10%;
+  }
+
+  .elemento {
+    float: left;
+    color: #333; 
+    text-decoration: none; 
+    padding-right: 20px;
+    display: inline-block;
+    list-style: none;
+  }
+
+  .entrar-component{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .entrar{
+    --background: #A61C35; 
+    --color: white;  
+  }
+
+  .redor{
+    padding: 2em;
+  }
+
+  #titulo {
     font-size: 30px;
     color: #3F0912;
     text-align: center;
     font-weight: bold;
+    margin: 15px;
   }
 
-   ion-button{
-    --color: rgb(49, 47, 47);
-  }
-  .entrar{
-    --background: #A61C35;
-    --color: white;
-    margin-left: 150px ;
-  }
-  
-  .elemento {
-    --color: black;
-    padding: 10px 25px;
-    text-decoration: none;
-    position: relative;
-
-  }
-  
-  .footer {
-    background-color: #3F0912;
+  .conteudo {
+    border-radius: 30px;
+    border-color:  rgb(163, 50, 50);
+    border-style: solid;
+    border-width: 8px;
+    background:white;
+    padding: 2em;
+    top: -2em;
+    font-size: 20px;
+    margin: auto;
     justify-content: center;
-    display: flex;
-    padding: auto;
-  }
-  
-  #container {
-    text-align: center;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 100em;
-    transform: translateY(-50%);
-  }
-  
-  .redor{
-    background: #f2f2f2;
+    align-items: center;
+    margin-top: 1.5em;
   }
 
-  #footer{
-    // top: 1.2em;
-    border-radius: 50px 50px 0 0;
-    background: #D9D9D9;
-    text-align: center;
-    // height: 15%;
-    // width: 100%;
-    text-align: center;
-    padding: 20px;
-  }
+  #footer {
+  padding: 20px 10px;
+  border-radius: 50px 50px 0 0;
+  background: #D9D9D9;
+  text-align: center;
+  text-align: center;
+  padding: 20px;
+}
   
   .footer-content{
     margin: auto;
@@ -73,10 +82,18 @@
     font-weight: bold;
     
   }
+
+  .footer {
+    background-color: #3F0912;
+    justify-content: center;
+    display: flex;
+    padding: auto;
+  }
+  
   .footer-title {
     font-size: 20px;
   }
-  
+
   .footer-content ion-text{
     margin-top: 3em;
   }
@@ -99,39 +116,3 @@
       margin-right: 0.2em;
     }
   }
-
-  .logo-tcc {
-   height: 85px;
-  }
-  
-  .redor{
-    padding: 2em;
-  }
-
-  .conteudo {
-    border-radius: 30px;
-    border-color:  rgb(163, 50, 50);
-    border-style: solid;
-    border-width: 8px;
-    background:white;
-    padding: 2em;
-    top: -2em;
-    font-size: 20px;
-  }
-
-  #container strong {
-    font-size: 20px;
-    line-height: 26px;
-  }
-  
-  #container p {
-    font-size: 16px;
-    line-height: 22px;
-    color: #8c8c8c;
-    margin: 0;
-  }
-  
-  #container a {
-    text-decoration: none;
-  }
-  
