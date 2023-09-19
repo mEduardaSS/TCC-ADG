@@ -7,13 +7,12 @@
 }
 
 ion-menu::part(backdrop) {
-  background-color: rgba(51, 46, 51, 0.5);
+  background-color: rgba(19, 17, 19, 0.5);
 }
 
 ion-menu::part(container) {
   border-radius: 0 20px 20px 0;
-
-  box-shadow: 4px 0px 16px rgba(255, 0, 255, 0.18);
+  box-shadow: 4px 0px 16px rgba(77, 74, 77, 0.18);
 }
 
 .menu {
@@ -23,8 +22,8 @@ ion-menu::part(container) {
 
 .menu ion-title{
   color: #A61C35;
-}
 
+}
 
 // ion-header {
 //   padding-left: 4em;
@@ -38,7 +37,7 @@ ion-menu::part(container) {
 //   padding-left: 10%;
 // }
 
-// .elemento {
+// elemento {
 //   float: left;
 //   color: #333; 
 //   text-decoration: none; 
@@ -73,6 +72,15 @@ ion-menu::part(container) {
   margin-top: 5em;
 }
 
+.elemento {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  float: left;
+ 
+}
 
 .img-gato {
   display: flex;
@@ -229,9 +237,17 @@ ion-card-subtitle{
     margin-right: 0.2em;
   }
   &mail{
-  
     margin-right: 0.2em;
   }
+  &pessoa{
+    --color: #A61C35;
+    padding: 10px;
+  }
+}
+
+.entrar {
+  --color: #A61C35;
+    padding: 10px;
 }
 
  ion-button{
@@ -266,6 +282,9 @@ ion-card-subtitle{
 
 .logo-tcc {
   width: 85px;
+  justify-content: center;
+  align-items: center;
+ 
 }
 
 #container strong {

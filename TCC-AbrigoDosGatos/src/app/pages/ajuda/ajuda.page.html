@@ -1,6 +1,6 @@
-<ion-content [fullscreen]="true">
+<!-- <ion-content [fullscreen]="true">
 
-  <ion-header><!-- menu -->
+  <ion-header>
     <ion-row  fill="solid" class="ion-justify-content-center ion-align-items-center"> 
       <ion-col size="3" class="ion-justify-content-center">
         <ion-item [routerLink]="['/home']" routerLinkActive="active-link">
@@ -27,7 +27,7 @@
       <ion-img class="logo-tcc" src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp"></ion-img>
      
       <ion-row class="titulo ion-justify-content-center">
-         <b>Quero ajudar!!</b> <!-- Título -->
+         <b>Quero ajudar!!</b> 
       </ion-row>
   
       <ion-row class="ion-padding">
@@ -82,4 +82,92 @@
         </ion-text>
       </ion-col>
      </ion-row>
-     
+      -->
+
+
+      <ion-menu contentId="main-content">
+        <ion-header>
+          <ion-toolbar color="#A61C35">
+            <ion-title>Menu Content</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content [routerLink]="['/login']" >login</ion-content>
+        <ion-content [routerLink]="['/ajuda']" >Quero Ajudar</ion-content>
+      </ion-menu>
+      <div class="ion-page" id="main-content">
+        <ion-header class="menu">
+          <ion-toolbar>
+            <ion-buttons slot="start">
+              <ion-menu-button autoHide="false"></ion-menu-button>
+            </ion-buttons>
+            <ion-title>Abrigo dos Gatos</ion-title>
+          </ion-toolbar>
+        </ion-header>
+
+        <ion-content>
+          <ion-row  class=" redor ion-padding ion-justify-content-center">
+            <ion-col size=6 class="ion-padding conteudo">
+              <ion-img class="logo-tcc" src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp"></ion-img>
+             
+              <ion-row class="titulo ion-justify-content-center">
+                 <b>Quero ajudar!!</b> 
+              </ion-row>
+          
+              <ion-row class="ion-padding">
+                <b>PIX: 15 99713-0703</b>
+              </ion-row>
+              <ion-row class="ion-padding">
+                <b>[Dados da conta]</b>
+              </ion-row>
+        
+        
+              <ion-row class="espaco2" id="dois"></ion-row>
+        
+              <ion-row size="12" class="ion-padding">
+                <ion-button class="button_voltar" shape="round" [routerLink]="['/home']">Voltar</ion-button>
+               </ion-row>
+        
+              </ion-col>
+            </ion-row>
+        
+            <ion-row id="footer">
+              <ion-col class="footer-content">
+                <ion-text>
+                  <ion-label class="footer-title">Contato <br></ion-label>
+                  
+                </ion-text>
+        
+                <ion-text>
+                
+                  <ion-label><ion-icon name="logo-whatsapp" class="icon-whatsapp"></ion-icon>WhatsApp</ion-label>
+                  <br>
+                </ion-text>
+        
+                <ion-text>
+                  <ion-label><ion-icon name="mail-outline" class="icon-mail"></ion-icon>E-mail</ion-label>
+                  <br>
+                </ion-text>
+              </ion-col>
+        
+              <ion-col class="footer-content">
+                <ion-text>
+                  <ion-label class="footer-title">Redes Sociais</ion-label>
+                  <br>
+                </ion-text>
+        
+                <ion-text>
+                  <ion-label><ion-icon name= "logo-facebook" class="icon-facebook"></ion-icon>/abrigodosgatos</ion-label>
+                  <br>
+                </ion-text>
+                <ion-text>
+                  <ion-label><ion-icon name="logo-instagram" class="icon-instagram"></ion-icon>abrigo.dosgatos</ion-label>
+                  <br>
+                </ion-text>
+              </ion-col>
+             </ion-row>
+       
+        
+         </ion-content>
+      </div>
+   
+      
