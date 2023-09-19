@@ -1,33 +1,29 @@
-<!-- HEADER  -->
-<div class="ion-page" id="main-content"> 
-  <ion-header> <!-- espaço entre o menu e o topo -->
+<ion-header>
+  <ion-row class="desktop-header" fill="solid">
+    <ion-col size="1" class="logo-component">
+      <ion-item lines="none" [routerLink]="['/home']" routerLinkActive="active-link">
+        <img class="logo-tcc" alt="logo"
+          src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp">
+      </ion-item>
+    </ion-col>
 
-    <ion-row  fill="solid" class="ion-justify-content-center ion-align-items-center"> <!-- menu -->
-      <ion-col size="3" class="ion-justify-content-center">
-        <ion-item>
-          <img class="logo-tcc" alt="logo-tcc" [routerLink]="['/home']" routerLinkActive="active-link"src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp" >
-        </ion-item>
-      </ion-col>
-     
-     
-     <ion-col fill="solid" size="6" class="ion-justify-content-center ion-align-items-center">
-       <ion-button fill="clear" class="elemento" [routerLink]="['/sobre']" routerLinkActive="active-link">Sobre nós</ion-button>
-       <ion-button fill="clear" class="elemento" [routerLink]="['/ajuda']" routerLinkActive="active-link">Quero Ajudar</ion-button>
-       <ion-button fill="clear" class="elemento" [routerLink]="['/voluntario']" routerLinkActive="active-link">Seja voluntário</ion-button>
-       <ion-button fill="clear" class="elemento">Contato</ion-button>
-     </ion-col>
+    <ion-col fill="solid" size="9" class="menu_component">
+      <ion-button fill="clear" class="elemento" routerLink="sobre" routerLinkActive="active-link">Sobre nós</ion-button>
+      <ion-button fill="clear" class="elemento" routerLink="ajuda" routerLinkActive="active-link">Quero Ajudar</ion-button>
+      <ion-button fill="clear" class="elemento" routerLink="voluntario" routerLinkActive="active-link">Seja voluntário</ion-button>
+      <ion-button fill="clear" class="elemento">Contato</ion-button>
+    </ion-col>
 
-     <ion-col size="3">
+    <ion-col size="2" class="entrar-component">
       <ion-button class="entrar" shape="round" [routerLink]="['/login']">Entrar</ion-button>
-     </ion-col>
-
-   </ion-row>
-  </ion-header>
+    </ion-col>
+  </ion-row>
+</ion-header>
 
   <ion-content> 
 
-  <ion-row class="redor ion-justify-content-center">
-    <ion-col size="12" class="ion-text-center" id="miaudote">
+  <ion-row class="redor ion-padding ion-justify-content-center">
+    <ion-col size="12" class="ion-text-center" id="titulo">
       <ion-text>
         <ion-label>
           Sobre o Abrigo dos gatos!
@@ -37,7 +33,7 @@
   </ion-row>
 
     <ion-row class=" ion-justify-content-center">
-          <ion-col size="12" class="conteudo ion-text-center"> 
+          <ion-col size="10" class="ion-padding conteudo ion-text-center"> 
             <ion-text >
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
