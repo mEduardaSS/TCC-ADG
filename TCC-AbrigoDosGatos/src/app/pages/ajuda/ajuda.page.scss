@@ -1,26 +1,53 @@
-.espaco2{
-  height: 200px;
-  background: rgb(226, 226, 226);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  list-style: none;
 }
 
-ion-button{
-  --color: black;
+.logo-component{
+  display: flex;
+  align-items: center; 
 }
-.entrar{
-  --background: rgb(163, 50, 50);
-  --color: white;
-}
-.checkbox{
-  margin: 10px;
-  --border-radius: 20px;
-  
-}
+
 .logo-tcc{
   height: 85px;
 }
 
-#id {
-  margin-bottom: 1.2em;
+.menu_component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10%;
+}
+
+.elemento {
+  float: left;
+  color: #333; 
+  text-decoration: none; 
+  padding-right: 20px;
+  display: inline-block;
+  list-style: none;
+}
+
+.entrar-component{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.entrar{
+  --background: #A61C35; 
+  --color: white;  
+}
+
+.titulo{
+  color: #3F0912;
+  font-size: 25px;
+  text-shadow: 0.1em 0.1em 0.2em rgb(131, 131, 131);
+  margin-top: 0.5em;
 }
 
 .conteudo{
@@ -33,19 +60,15 @@ ion-button{
   justify-content: center;
   align-items: center;
   margin-top: 1.5em;
-  
-}
-.titulo{
-  color:rgb(97, 36, 36);
-  font-size: 20px;
-  text-shadow: 0.1em 0.1em 0.2em rgb(131, 131, 131);
-  margin-top: 0.5em;
 }
 
-#dois{
-  background:white;
+#conteudo{
+  display: flex;
+  flex-direction: column;
+  margin: 25px;
+  margin-bottom: 200px;
 }
-  
+
 .button_voltar {
   justify-content: center;
   align-items: center;
@@ -59,12 +82,9 @@ ion-button{
 }
 
 #footer{
-  // top: 1.2em;
   border-radius: 50px 50px 0 0;
   background: #D9D9D9;
   text-align: center;
-  // height: 15%;
-  // width: 100%;
   text-align: center;
   padding: 15px;
 }
@@ -74,14 +94,10 @@ ion-button{
   align-items: center;
   color: black;
   font-weight: bold;
-  
-}
-.footer-title {
-  font-size: 20px;
 }
 
-.footer-content ion-text{
-  margin-top: 3em;
+.footer-title {
+  font-size: 20px;
 }
 
 .icon-{
@@ -102,20 +118,37 @@ ion-button{
     margin-right: 0.2em;
   }
 }
-.redor{
-  background: #f2f2f2;
-}
 
-.entrar{
-  --background: #A61C35;
-  --color: white;
-  margin-left: 150px ;
-}
+@media (max-width: 651px){
+  .titulo{
+    font-size: 20px;
+  }
 
-.elemento {
-  --color: black;
-  padding: 10px 20px;
-	text-decoration: none;
-  position: relative;
+  .conteudo{
+    border-radius: 30px;
+    border-color:  rgb(163, 50, 50);
+    border-style: solid;
+    border-width: 6px;
+    background:white;
+    margin: 2em;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+  }
 
+  #conteudo{
+    margin-bottom: 150px;
+  }
+
+  .button_voltar {
+    width: 30%;
+  }
+
+  .footer-title {
+    font-size: 15px;
+  }
+
+  .footer-content{
+    font-size: 13px;
+  }
 }

@@ -1,29 +1,27 @@
-<!-- <ion-content [fullscreen]="true">
+<ion-header>
+  <ion-row class="desktop-header" fill="solid">
+    <ion-col size="1" class="logo-component">
+      <ion-item lines="none" [routerLink]="['/home']" routerLinkActive="active-link">
+        <img class="logo-tcc" alt="logo"
+          src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp">
+      </ion-item>
+    </ion-col>
 
-  <ion-header>
-    <ion-row  fill="solid" class="ion-justify-content-center ion-align-items-center"> 
-      <ion-col size="3" class="ion-justify-content-center">
-        <ion-item [routerLink]="['/home']" routerLinkActive="active-link">
-          <img class="logo-tcc" alt="logo-tcc" src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp" >
-        </ion-item>
-      </ion-col>
-
-     <ion-col fill="solid" size="6" class="ion-justify-content-center ion-align-items-center">
-      <ion-button fill="clear" class="elemento" [routerLink]="['/sobre']" routerLinkActive="active-link">Sobre nós</ion-button>
-      <ion-button fill="clear" class="elemento" [routerLink]="['/ajuda']" routerLinkActive="active-link">Quero Ajudar</ion-button>
-      <ion-button fill="clear" class="elemento" [routerLink]="['/voluntario']" routerLinkActive="active-link">Seja voluntário</ion-button>
+    <ion-col fill="solid" size="9" class="menu_component">
+      <ion-button fill="clear" class="elemento" routerLink="sobre" routerLinkActive="active-link">Sobre nós</ion-button>
+      <ion-button fill="clear" class="elemento" routerLink="ajuda" routerLinkActive="active-link">Quero Ajudar</ion-button>
+      <ion-button fill="clear" class="elemento" routerLink="voluntario" routerLinkActive="active-link">Seja voluntário</ion-button>
       <ion-button fill="clear" class="elemento">Contato</ion-button>
     </ion-col>
 
-     <ion-col size="3">
+    <ion-col size="2" class="entrar-component">
       <ion-button class="entrar" shape="round" [routerLink]="['/login']">Entrar</ion-button>
-     </ion-col>
-
-   </ion-row>
-  </ion-header>
+    </ion-col>
+  </ion-row>
+</ion-header>
 
   <ion-row  class=" redor ion-padding ion-justify-content-center">
-    <ion-col size=6 class="ion-padding conteudo">
+    <ion-col size-md=6 size="10" class="ion-padding conteudo">
       <ion-img class="logo-tcc" src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp"></ion-img>
      
       <ion-row class="titulo ion-justify-content-center">
@@ -31,14 +29,11 @@
       </ion-row>
   
       <ion-row class="ion-padding">
-        <b>PIX: 15 99713-0703</b>
+        <ion-col id="conteudo">
+          <b>PIX: 15 99713-0703</b><br>
+          <b>[Dados da conta]</b>
+        </ion-col>
       </ion-row>
-      <ion-row class="ion-padding">
-        <b>[Dados da conta]</b>
-      </ion-row>
-
-
-      <ion-row class="espaco2" id="dois"></ion-row>
 
       <ion-row size="12" class="ion-padding">
         <ion-button class="button_voltar" shape="round" [routerLink]="['/home']">Voltar</ion-button>

@@ -1,80 +1,76 @@
 <ion-content [fullscreen]="true">
-
-  <ion-header><!-- menu -->
-    <ion-row  fill="solid" class="ion-justify-content-center ion-align-items-center"> 
-      <ion-item [routerLink]="['/home']" routerLinkActive="active-link">
-        <img class="logo-tcc" alt="logo-tcc" src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp" >
-      </ion-item>
-     
-     <ion-col fill="solid" size="6" class="ion-justify-content-center ion-align-items-center">
-      <ion-button fill="clear" class="elemento" [routerLink]="['/sobre']" routerLinkActive="active-link">Sobre nós</ion-button>
-      <ion-button fill="clear" class="elemento" [routerLink]="['/ajuda']" routerLinkActive="active-link">Quero Ajudar</ion-button>
-      <ion-button fill="clear" class="elemento" [routerLink]="['/voluntario']" routerLinkActive="active-link">Seja voluntário</ion-button>
-      <ion-button fill="clear" class="elemento">Contato</ion-button>
-    </ion-col>
-
-    <ion-col size="3">
-      <ion-button class="entrar" shape="round" [routerLink]="['/login']">Entrar</ion-button>
-     </ion-col>
-   </ion-row>
+  <ion-header>
+    <ion-row class="desktop-header" fill="solid">
+      <ion-col size="1" class="logo-component">
+        <ion-item lines="none" [routerLink]="['/home']" routerLinkActive="active-link">
+          <img class="logo-tcc" alt="logo"
+            src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp">
+        </ion-item>
+      </ion-col>
+  
+      <ion-col fill="solid" size="9" class="menu_component">
+        <ion-button fill="clear" class="elemento" routerLink="sobre" routerLinkActive="active-link">Sobre nós</ion-button>
+        <ion-button fill="clear" class="elemento" routerLink="ajuda" routerLinkActive="active-link">Quero Ajudar</ion-button>
+        <ion-button fill="clear" class="elemento" routerLink="voluntario" routerLinkActive="active-link">Seja voluntário</ion-button>
+        <ion-button fill="clear" class="elemento">Contato</ion-button>
+      </ion-col>
+  
+      <ion-col size="2" class="entrar-component">
+        <ion-button class="entrar" shape="round" [routerLink]="['/login']">Entrar</ion-button>
+      </ion-col>
+    </ion-row>
   </ion-header>
 
-<!-- espaço entre menu e conteudo -->
-
 <ion-row  class=" redor ion-padding ion-justify-content-center">
-  <ion-col size=6 class="ion-padding conteudo">
+  <ion-col size-md=6 size="10" class="ion-padding conteudo">
     <ion-img class="logo-tcc" src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp"></ion-img>
     <ion-row class="titulo ion-justify-content-center">
-       <b>Seja voluntário!</b> <!-- Título -->
+       <b>Seja voluntário!</b>
     </ion-row>
 
-    <ion-item>
-       <ion-label position="floating">Nome</ion-label> <!-- Início Formulário -->
-      <ion-input placeholder="Enter name" class="input"></ion-input>
+    <ion-item class="input_cont" lines="none">
+       <ion-label class="nome"><b>Nome</b></ion-label>
+      <ion-input class="input" ></ion-input>
     </ion-item>
-    <ion-item>
-      <ion-label position="initial">Email</ion-label>
-      <ion-input type="email" ngModel email></ion-input>
+
+    <ion-item class="input_cont" lines="none">
+      <ion-label class="nome"><b>E-mail</b></ion-label>
+      <ion-input class="input" type="email" ngModel email></ion-input>
       <ion-note slot="error">Invalid email</ion-note>
     </ion-item>
-    <ion-item>
-      <ion-label position="floating">Data de nascimento</ion-label>
-      <ion-input type="date" placeholder="Enter birthday date"></ion-input>
+
+    <ion-item class="input_cont" lines="none">
+      <ion-label class="nome"><b>Data de nascimento</b></ion-label>
+      <ion-input class="input" type="date"></ion-input>
     </ion-item>
-    <ion-item>
-      <ion-label position="floating">Telefone</ion-label> 
-     <!-- <ion-input class="phone-ddd-mask" placeholder="Enter phone number"></ion-input> -->
-     <ion-input type="text" name="telefone" id="telefone" placeholder="Digite um número de telefone" maxlength="15"></ion-input>
+
+    <ion-item class="input_cont" lines="none">
+      <ion-label class="nome"><b>Telefone</b></ion-label> 
+     <ion-input class="input" type="phonenumber" name="telefone" maxlength="15"></ion-input>
    </ion-item>
-    <ion-row class="espaco2" id="dois"></ion-row>
-    <ion-label position="floating">Disponibilidade</ion-label>
+
+    <ion-item class="input_cont" lines="none"><b>Disponibilidade</b></ion-item>
     <ion-col>
-      <ion-item>
-        <ion-checkbox class="checkbox"></ion-checkbox> <!-- Checkboxes-->
-        <ion-label>Dom.</ion-label>
-        <ion-checkbox class="checkbox"></ion-checkbox>
-        <ion-label>Seg.</ion-label>
-        <ion-checkbox class="checkbox"></ion-checkbox>
-      <ion-label>Ter.</ion-label>
-      <ion-checkbox class="checkbox"></ion-checkbox>
-      <ion-label>Qua.</ion-label>
+      <ion-item class="input_cont" lines="none">
+        <ion-checkbox class="checkbox"></ion-checkbox><ion-label><b>Dom.</b></ion-label>
+        <ion-checkbox class="checkbox"></ion-checkbox><ion-label><b>Seg.</b></ion-label>
+        <ion-checkbox class="checkbox"></ion-checkbox><ion-label><b>Ter.</b></ion-label>
+        </ion-item>
+        <ion-item class="input_cont" lines="none">
+        <ion-checkbox class="checkbox"></ion-checkbox><ion-label><b>Qua.</b></ion-label>
+        <ion-checkbox class="checkbox"></ion-checkbox><ion-label><b>Qui.</b></ion-label>
+        <ion-checkbox class="checkbox"></ion-checkbox><ion-label><b>Sex.</b></ion-label>
       </ion-item>
-      <ion-item>
-        <ion-checkbox class="checkbox"></ion-checkbox>
-        <ion-label>Qui.</ion-label>
-        <ion-checkbox class="checkbox"></ion-checkbox>
-      <ion-label>Sex.</ion-label>
-      <ion-checkbox class="checkbox"></ion-checkbox>
-      <ion-label>Sáb.</ion-label>
-  </ion-item>
-</ion-col>
+      <ion-item class="input_cont" lines="none">
+        <ion-checkbox class="checkbox"></ion-checkbox><ion-label><b>Sáb.</b></ion-label>
+      </ion-item>
+    </ion-col>
 
-<ion-row size="12" class="ion-padding">
-  <ion-button class="button_voltar" shape="round" [routerLink]="['/home']">Voltar</ion-button>
-  <ion-button class="button_voltar" shape="round" [routerLink]="['/home']">Confirmar</ion-button>
- </ion-row>
+    <ion-row size="12" class="ion-padding">
+      <ion-button class="button_voltar" shape="round" [routerLink]="['/home']">Voltar</ion-button>
+      <ion-button class="button_voltar" shape="round" [routerLink]="['/home']">Confirmar</ion-button>
+    </ion-row>
 
-
-  </ion-col>
+    </ion-col>
   </ion-row>
 </ion-content>

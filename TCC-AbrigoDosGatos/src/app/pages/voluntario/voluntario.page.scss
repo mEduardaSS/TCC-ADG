@@ -1,72 +1,106 @@
-.espaco2{
-    height: 50px;
-    background: rgb(226, 226, 226);
-  }
-  ion-button{
-    --color: black;
-  }
-  .entrar{
-    --background: rgb(163, 50, 50);
-    --color: white;
-  }
-  .checkbox{
-    margin: 10px;
-    --border-radius: 20px;
-    
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+.logo-component{
+  display: flex;
+  align-items: center; 
+}
+
+.logo-tcc{
+  height: 85px;
+}
+
+.menu_component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10%;
+}
+
+.elemento {
+  float: left;
+  color: #333; 
+  text-decoration: none; 
+  padding-right: 20px;
+  display: inline-block;
+  list-style: none;
+}
+
+.entrar-component{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.entrar{
+  --background: #A61C35; 
+  --color: white;  
+}
+
+.conteudo{
+  border-radius: 30px;
+  border-color:  rgb(163, 50, 50);
+  border-style: solid;
+  border-width: 8px;
+  background:white;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5em;
+}
+
+.titulo{
+  color: #3F0912;
+  font-size: 25px;
+  text-shadow: 0.1em 0.1em 0.2em rgb(131, 131, 131);
+  margin-top: 0.5em;
+}
+
+.input{
+  border-radius: 20px;
+  background: #D9D9D9;
+}
+
+.input_cont{
+  margin: 20px;
+}
+
+.nome{
+margin-right: 25px;
+}
+
+.checkbox{
+  margin: 10px;
+  --border-radius: 20px;
+}
+
+.button_voltar {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 20%;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 20px;
+  --background: #A61C35;
+  --color: white;
   }
 
-  .logo-tcc{
-    height: 85px;
-  }
-
-  .conteudo{
-    border-radius: 30px;
-    border-color:  rgb(163, 50, 50);
-    border-style: solid;
-    border-width: 8px;
-    background:white;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1.5em;
-    
-  }
-  .titulo{
-    color:rgb(97, 36, 36);
-    font-size: 20px;
-    text-shadow: 0.1em 0.1em 0.2em rgb(131, 131, 131);
-  }
-
-  #dois{
-    background:white;
-  }
-
-  .redor{
-    background: #f2f2f2;
-  }
-
-  .button_voltar {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    width: 20%;
-    flex-direction: column;
-    margin: auto;
-    margin-bottom: 20px;
-    --background: #A61C35;
-    --color: white;
-  }
-
-  .entrar{
-    --background: #A61C35;
-    --color: white;
-    margin-left: 150px ;
-  }
+  @media (max-width:768px){
+    *{
+      font-size: 13px;
+    }
+    #conteudo{
+      margin-bottom: 150px;
+    }
   
-  .elemento {
-    --color: black;
-    padding: 10px 20px;
-    text-decoration: none;
-    position: relative;
-  
+    .button_voltar {
+      width: 35%;
+    }
   }
