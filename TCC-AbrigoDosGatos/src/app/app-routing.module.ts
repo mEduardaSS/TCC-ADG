@@ -51,6 +51,10 @@ const routes: Routes = [
     path: 'admin/analise-voluntario',
     loadChildren: () => import('./admin/analise-voluntario/analise-voluntario.module').then( m => m.AnaliseVoluntarioPageModule)
   },
+  {
+    path: 'analise-adocao',
+    loadChildren: () => import('./admin/analise-adocao/analise-adocao.module').then( m => m.AnaliseAdocaoPageModule)
+  },
 ];
 
 @NgModule({
