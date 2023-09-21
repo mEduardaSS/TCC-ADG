@@ -53,6 +53,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 .titulo{
@@ -90,12 +91,24 @@ margin-right: 25px;
   margin-bottom: 20px;
   --background: #A61C35;
   --color: white;
-  }
+}
 
   @media (max-width:768px){
-    *{
-      font-size: 13px;
+    .titulo{
+      font-size: 18px;
     }
+    .nome{
+      font-size:13px;
+    }
+
+    .input_cont{
+      font-size:13px;
+    }
+
+    .button_voltar {
+      font-size: 12px;
+      }
+
     #conteudo{
       margin-bottom: 150px;
     }
