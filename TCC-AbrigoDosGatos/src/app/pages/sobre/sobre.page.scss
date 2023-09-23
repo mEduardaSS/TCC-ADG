@@ -7,36 +7,22 @@
     list-style: none;
   }
 
-  .logo-component{
-    display: flex;
-    align-items: center; 
+  ion-menu::part(backdrop) {
+    background-color: rgba(19, 17, 19, 0.5);
   }
-
-  .menu_component {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 10%;
+  
+  ion-menu::part(container) {
+    border-radius: 0 20px 20px 0;
+    box-shadow: 4px 0px 16px rgba(77, 74, 77, 0.18);
   }
-
-  .elemento {
-    float: left;
-    color: #333; 
-    text-decoration: none; 
-    padding-right: 20px;
-    display: inline-block;
-    list-style: none;
+  
+  .menu {
+    position: absolute;
   }
-
-  .entrar-component{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .entrar{
-    --background: #A61C35; 
-    --color: white;  
+  
+  .menu ion-title{
+    color: #A61C35;
+  
   }
 
   .redor{
@@ -44,6 +30,7 @@
   }
 
   #titulo {
+    top: 1em;
     font-size: 30px;
     color: #3F0912;
     text-align: center;

@@ -1,27 +1,38 @@
-<ion-header>
-  <ion-row class="desktop-header" fill="solid">
-    <ion-col size="1" class="logo-component">
-      <ion-item lines="none" [routerLink]="['/home']" routerLinkActive="active-link">
-        <img class="logo-tcc" alt="logo"
-          src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp">
-      </ion-item>
-    </ion-col>
+ <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <img class="logo-tcc ion-justify-content-center ion-align-items-center" alt="logo"
+        src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp">
+      </ion-toolbar>
+      
+      <ion-button fill="clear" routerLink="sobre">Sobre nós</ion-button>
+      <ion-button fill="clear" routerLink="ajuda">Quero
+        Ajudar</ion-button>
+      <ion-button fill="clear" routerLink="voluntario">Seja
+        voluntário</ion-button>
+      <ion-button fill="clear" >Contato</ion-button>
+    </ion-header>
 
-    <ion-col fill="solid" size="9" class="menu_component">
-      <ion-button fill="clear" class="elemento" routerLink="sobre" routerLinkActive="active-link">Sobre nós</ion-button>
-      <ion-button fill="clear" class="elemento" routerLink="ajuda" routerLinkActive="active-link">Quero Ajudar</ion-button>
-      <ion-button fill="clear" class="elemento" routerLink="voluntario" routerLinkActive="active-link">Seja voluntário</ion-button>
-      <ion-button fill="clear" class="elemento">Contato</ion-button>
-    </ion-col>
+  </ion-menu>
+  <div class="ion-page" id="main-content">
+    <ion-header class="menu">
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button autoHide="false"></ion-menu-button>
+        </ion-buttons>
+        <ion-title class="ion-text-center">Abrigo dos Gatos</ion-title>
 
-    <ion-col size="2" class="entrar-component">
-      <ion-button class="entrar" shape="round" [routerLink]="['/login']">Entrar</ion-button>
-    </ion-col>
-  </ion-row>
-</ion-header>
+        <ion-buttons slot="end">
+          <ion-button [routerLink]="['/login']">
+            <ion-icon slot="icon-only" name="person-circle" ></ion-icon>
+          </ion-button>
+       </ion-buttons>
 
-  <ion-content> 
+      </ion-toolbar>
+    </ion-header>
 
+    <ion-content>
+     
   <ion-row class="redor ion-padding ion-justify-content-center">
     <ion-col size="12" class="ion-text-center" id="titulo">
       <ion-text>
@@ -79,7 +90,7 @@
         </ion-text>
       </ion-col>
      </ion-row>
-
-  </ion-content>
-
-
+   
+    
+     </ion-content>
+  </div>
