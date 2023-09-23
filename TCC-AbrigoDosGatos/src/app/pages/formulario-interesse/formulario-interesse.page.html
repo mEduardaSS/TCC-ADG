@@ -1,94 +1,93 @@
-<ion-content [fullscreen]="true">
-  <ion-header>
-    <ion-row class="desktop-header" fill="solid">
-      <ion-col size="1" class="logo-component">
-        <ion-item lines="none" [routerLink]="['/home']" routerLinkActive="active-link">
-          <img class="logo-tcc" alt="logo"
-            src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp">
-        </ion-item>
-      </ion-col>
-  
-      <ion-col fill="solid" size="9" class="menu_component">
-        <ion-button fill="clear" class="elemento" routerLink="sobre" routerLinkActive="active-link">Sobre nós</ion-button>
-        <ion-button fill="clear" class="elemento" routerLink="ajuda" routerLinkActive="active-link">Quero Ajudar</ion-button>
-        <ion-button fill="clear" class="elemento" routerLink="voluntario" routerLinkActive="active-link">Seja voluntário</ion-button>
-        <ion-button fill="clear" class="elemento">Contato</ion-button>
-      </ion-col>
-  
-      <ion-col size="2" class="entrar-component">
-        <ion-button class="entrar" shape="round" [routerLink]="['/login']">Entrar</ion-button>
-      </ion-col>
-    </ion-row>
+<div class="ion-page" id="main-content">
+  <ion-header class="menu">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button autoHide="false"></ion-menu-button>
+      </ion-buttons>
+      <ion-title class="ion-text-center">Abrigo dos Gatos</ion-title>
+
+      <ion-buttons slot="end">
+        <ion-button [routerLink]="['/login']">
+          <ion-icon slot="icon-only" name="person-circle" ></ion-icon>
+        </ion-button>
+     </ion-buttons>
+
+    </ion-toolbar>
   </ion-header>
 
+  <ion-content>
 <ion-row  class="ion-padding ion-justify-content-center">
-  <ion-col size=6 class="ion-padding conteudo">
-    <ion-img class="logo-tcc" src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp"></ion-img>
-   
-    <ion-row class="titulo ion-justify-content-center">
-       <b>Formulario de interesse!</b>
-    </ion-row>
+<ion-col size=6 class="ion-padding conteudo">
+<ion-img class="logo-tcc" src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp"></ion-img>
 
-    <ion-row class="ion-padding">
-      <ion-col id="cont"><b>Animal: [Nome do gato]</b></ion-col>
-    </ion-row>
+<ion-row class="titulo ion-justify-content-center">
+ <b>Formulario de interesse!</b>
+</ion-row>
 
-    <ion-item  lines="none">
-       <ion-label class="cont"><b>Nome</b></ion-label>
-      <ion-input class="input"></ion-input>
-    </ion-item>
+<ion-row class="ion-padding">
+<ion-col id="cont"><b>Animal: [Nome do gato]</b></ion-col>
+</ion-row>
 
-    <ion-item  lines="none">
-      <ion-label class="cont"><b>Email</b></ion-label>
-      <ion-input class="input" type="email" ngModel email></ion-input>
-      <ion-note slot="error">Invalid email</ion-note>
-    </ion-item>
+<ion-item  lines="none">
+ <ion-label class="cont"><b>Nome</b></ion-label>
+<ion-input class="input"></ion-input>
+</ion-item>
 
-    <ion-item  lines="none">
-      <ion-label class="cont"><b>Data de nascimento</b></ion-label>
-      <ion-input class="input" type="date"></ion-input>
-    </ion-item>
+<ion-item  lines="none">
+<ion-label class="cont"><b>Email</b></ion-label>
+<ion-input class="input" type="email" ngModel email></ion-input>
+<ion-note slot="error">Invalid email</ion-note>
+</ion-item>
 
-    <ion-item  lines="none">
-      <ion-label class="cont"><b>Telefone</b></ion-label> 
-     <ion-input class="input" type="text" name="telefone" maxlength="15"></ion-input>
-   </ion-item>
-    
-    <ion-item  lines="none">
-      <ion-label class="cont"><b>Endereço</b></ion-label> 
-     <ion-input class="input" type="text" name="endereço"></ion-input>
-    </ion-item>
+<ion-item  lines="none">
+<ion-label class="cont"><b>Data de nascimento</b></ion-label>
+<ion-input class="input" type="date"></ion-input>
+</ion-item>
 
-  <ion-row id="cont"><b>Informações da residência</b></ion-row>
+<ion-item  lines="none">
+<ion-label class="cont"><b>Telefone</b></ion-label> 
+<ion-input class="input" type="text" name="telefone" maxlength="15"></ion-input>
+</ion-item>
 
-    <ion-label id="cont"><b>Há outros animais em sua residência?</b></ion-label>
+<ion-item  lines="none">
+<ion-label class="cont"><b>Endereço</b></ion-label> 
+<ion-input class="input" type="text" name="endereço"></ion-input>
+</ion-item>
 
-      <ion-item id="cont" lines="none">
-        <ion-checkbox class="checkbox"></ion-checkbox>
-        <ion-label><b>Sim</b></ion-label>
-        <ion-checkbox class="checkbox"></ion-checkbox>
-        <ion-label><b>Não</b></ion-label>
-      </ion-item>
+<ion-row id="cont"><b>Informações da residência</b></ion-row>
 
-      
-      <ion-label id="cont"><b>Você possui tempo suficiente para dar cuidados necessários?</b></ion-label>
-      <ion-item id="cont" lines="none">
-        <ion-checkbox class="checkbox"></ion-checkbox>
-        <ion-label><b>Tenho bastante tempo</b></ion-label>
-        <ion-checkbox class="checkbox"></ion-checkbox>
-      <ion-label><b>Não tenho muito tempo</b></ion-label>
-      <ion-checkbox class="checkbox"></ion-checkbox>
-      <ion-label><b>Tenho tempo suficiente</b></ion-label>
-    </ion-item>
+<ion-label id="cont"><b>Há outros animais em sua residência?</b></ion-label>
 
-      <ion-row size="6" class="ion-padding">
-        <ion-button class="button_voltar" shape="round" [routerLink]="['/home']">Voltar</ion-button>
-        <ion-button class="button_confirmar" shape="round" [routerLink]="['/login']">Confirmar</ion-button>
-       </ion-row>
-    
+<ion-item id="cont" lines="none">
+  <ion-checkbox class="checkbox"></ion-checkbox>
+  <ion-label><b>Sim</b></ion-label>
+  <ion-checkbox class="checkbox"></ion-checkbox>
+  <ion-label><b>Não</b></ion-label>
+</ion-item>
+
+
+<ion-label id="cont"><b>Você possui tempo suficiente para dar cuidados necessários?</b></ion-label>
+<ion-item id="cont" lines="none">
+  <ion-checkbox class="checkbox"></ion-checkbox>
+  <ion-label><b>Tenho bastante tempo</b></ion-label>
+  <ion-checkbox class="checkbox"></ion-checkbox>
+<ion-label><b>Não tenho muito tempo</b></ion-label>
+<ion-checkbox class="checkbox"></ion-checkbox>
+<ion-label><b>Tenho tempo suficiente</b></ion-label>
+</ion-item>
+
+<ion-row size="6" class="ion-padding">
+  <ion-button class="button_voltar" shape="round" [routerLink]="['/home']">Voltar</ion-button>
+  <ion-button class="button_confirmar" shape="round" [routerLink]="['/login']">Confirmar</ion-button>
+ </ion-row>
+
+
+
+</ion-col>
+</ion-row>
   
+   </ion-content>
+</div>
 
-  </ion-col>
-  </ion-row>
-</ion-content>
+
 

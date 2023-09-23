@@ -6,78 +6,12 @@
   text-decoration: none;
 }
 
-ion-menu::part(backdrop) {
-  background-color: rgba(19, 17, 19, 0.5);
-}
-
-ion-menu::part(container) {
-  border-radius: 0 20px 20px 0;
-  box-shadow: 4px 0px 16px rgba(77, 74, 77, 0.18);
-}
-
-.menu {
-  position: absolute;
-}
-
-.menu ion-title{
-  color: #A61C35;
-
-}
-
-// ion-header {
-//   padding-left: 4em;
-//   width: auto;
-// }
-
-// .menu_component {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   padding-left: 10%;
-// }
-
-// elemento {
-//   float: left;
-//   color: #333; 
-//   text-decoration: none; 
-//   padding-right: 20px;
-//   display: inline-block;
-//   list-style: none;
-// }
-
-// .entrar{
-//   --background: #A61C35; 
-//   --color: white;  
-// }
-
-// .entrar-component{
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// }
-
-// .logo-component{
-//   display: flex;
-//   align-items: center;
- 
-// }
-
 .banner-gato{
   height: 50%;
   // background: #A6A39F;
   background-image: url('https://img.freepik.com/vetores-gratis/impressao-de-pata-e-fundo-de-padrao-de-coracao_1017-36754.jpg?w=1060&t=st=1695172592~exp=1695173192~hmac=20ffdb8bf78a6a7dec76a0d991902d71d94025cc47f48014f6249b240e636e3d');
   padding: 1em;
-  margin-top: 5em;
-}
-
-.elemento {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  float: left;
- 
+  margin-top: 1em;
 }
 
 .img-gato {
@@ -243,11 +177,6 @@ ion-card-subtitle{
   }
 }
 
-.entrar {
-  --color: #A61C35;
-    padding: 10px;
-}
-
  ion-button{
   --color: rgb(49, 47, 47);
 }
@@ -323,8 +252,6 @@ ion-card-subtitle{
     align-items: center;
     justify-content: center;
     width: 100%;
-    
-   
   }
   .conteudo-card {
     display: flex;
