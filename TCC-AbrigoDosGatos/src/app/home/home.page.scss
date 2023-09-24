@@ -6,34 +6,39 @@
   text-decoration: none;
 }
 
+.title-page{
+  font-family: 'Caveat', cursive;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 24px;
+  color: #A61C35;
+}
+
 .banner-gato{
   height: 50%;
-  // background: #A6A39F;
+  padding-top: 3.0em;
   background-image: url('https://i.pinimg.com/750x/a5/51/f4/a551f4bb08efedd8beacbe5f475dbe26.jpg');
 }
 
 .img-gato {
   display: flex;
-  height: 250px;
-  width: 250px;
-  border-radius: 50% 20% / 10% 40%;
-  border: 5px solid #A61C35;
-  
+  height: 230px;
+  width: 230px;
+  border-radius: 25% 10%;
+  border: 7px solid #A61C35;  
+  box-shadow: #000;
 }
 
 h1.title{
   font-style: italic;
   font-size: 30px;
-  color: #FFF;
+  color: #fff;
   text-align: center;
-  margin-top: 2.0em;
-  text-shadow: 2px 0 #99a1a4, -2px 0 #99a1a4, 0 2px #99a1a4, 0 -2px #99a1a4,
-             1px 1px #99a1a4, -1px -1px #99a1a4, 1px -1px #99a1a4, -1px 1px #99a1a4;
+  margin-top: 0.2em;
+  margin-right: 20em;
 }
 
 p {
   margin-top: 10px;
-  padding-right: 20px;
   font-size: 20px;
 
 }
@@ -41,17 +46,14 @@ p {
 .text {
   font-weight: bold;
   color: #fff;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  display: inline-block;
-  text-shadow: 2px 0 #99a1a4, -2px 0 #99a1a4, 0 2px #99a1a4, 0 -2px #99a1a4,
-  1px 1px #99a1a4, -1px -1px #99a1a4, 1px -1px #99a1a4, -1px 1px #99a1a4;
+  text-shadow: 1px 0 #A61C35, -0px 0 #A61C35, 0 1px #A61C35, 0 -2px #A61C35,
+  1px 1px #A61C35, -1px -1px #A61C35, 1px -1px #A61C35, -1px 1px #A61C35; 
 }
 
 #conteudo-banner{
-  margin-top: 3%;
+  margin-top: 1.2em;
   font-size: 20px;
+  padding-right: 10em;
 }
 
 .sobre-nos {
@@ -60,6 +62,7 @@ p {
   margin-top: 20px;
   justify-content: center;
   align-items: center;
+ 
 }
 
 #text_miaudote {
@@ -69,7 +72,7 @@ p {
   text-align: center;
   font-weight: bold;
   margin-bottom: 10px;
-  text-shadow: 0.1em 0.1em 0.2em rgb(131, 131, 131);
+  // text-shadow: 0.1em 0.1em 0.2em rgb(131, 131, 131);
 }
 
 .card-gatos {
@@ -291,11 +294,6 @@ ion-card-subtitle{
     margin-top: 3em;
     font-size: 5em;
   }
-  
-  
-
-
-
 
 }
 
@@ -304,21 +302,22 @@ ion-card-subtitle{
     text-align: center;
     align-items: center;
     justify-content: center;
-    font-size: 15px;
-    margin-top: -3em;
+    margin-top: 0.2em;
+    padding-right: 0;
    
   }
 
 .sobre-nos {
   --background: #A61C35;
   --color: white;
-  margin-top: 0.5em;
+  margin-top: 1em;
   justify-content: center;
   align-items: center;
   
 }
 .banner-gato {
-  height: 60%;
+  height: 70%;
+  padding-top: 1em;
 }
 
 .img-gato {
@@ -331,7 +330,7 @@ h1 {
   font-style: italic;
   color: #D9D9D9;
   text-align: center;
-  margin-top: 1.8em;
+  margin-top: em;
  
 }
 
@@ -344,15 +343,17 @@ p {
 
 .text {
   color: white;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
+  margin: 0.9em;
   display: inline-block;
+  font-size: 9px;
+  text-align: center;
+  padding-left: 1em;
 }
 
 .col-img-gato{
   justify-content: center;
   align-items: center;
+  margin-top: 1em;
  
 }
 
