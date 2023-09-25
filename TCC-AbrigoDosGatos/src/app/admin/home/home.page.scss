@@ -28,15 +28,21 @@ ion-menu::part(container) {
   top: 6em;
   margin: auto;
   padding: 2em;
-  width: 90%;
+  width: 70%;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
   border: #D9D9D9 10px solid;
 }
 
-.name {
-  padding-right: 20em;
+ion-card-title {
+  margin: 1em
+}
+
+.olho{
+  padding-top: -1em;
+margin: 1em;
+font-size: 2em;
 }
 
 .conteudo-caard {
@@ -60,8 +66,14 @@ ion-card .card{
   text-shadow: 0.1em 0.1em 0.2em rgb(131, 131, 131);
 }
 
+.title-page{
+  font-family: 'Caveat', cursive;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 24px;
+  color: #A61C35;
+}
 
-ion-card-title{
+.name{
   font-weight: bold;
   font-size: 20px;
 }

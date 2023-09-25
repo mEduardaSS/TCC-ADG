@@ -1,19 +1,23 @@
-<div class="ion-page" id="main-content">
-  <ion-header class="menu">
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-menu-button autoHide="false"></ion-menu-button>
-      </ion-buttons>
-      <ion-title class="ion-text-center">Abrigo dos Gatos</ion-title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Philosopher:ital,wght@1,700&display=swap" rel="stylesheet">
+      
+      <div class="ion-page" id="main-content">
+        <ion-header class="menu">
+          <ion-toolbar>
+            <ion-buttons slot="start">
+              <ion-menu-button autoHide="false"></ion-menu-button>
+            </ion-buttons>
+            <ion-title class="ion-text-center title-page">Abrigo dos Gatos</ion-title>
 
-      <ion-buttons slot="end">
-        <ion-button [routerLink]="['/login']">
-          <ion-icon slot="icon-only" name="person-circle" ></ion-icon>
-        </ion-button>
-     </ion-buttons>
+            <ion-buttons slot="end">
+              <ion-button [routerLink]="['/login']">
+                <ion-icon slot="icon-only" name="person-circle" ></ion-icon>
+              </ion-button>
+           </ion-buttons>
 
-    </ion-toolbar>
-  </ion-header>
+          </ion-toolbar>
+        </ion-header>
 
   <ion-content>
    <ion-row  class=" redor ion-padding ion-justify-content-center">
@@ -38,7 +42,9 @@
 </ion-col>
 </ion-row>
 
-<ion-row id="footer">
+
+<ion-footer>
+  <ion-row id="footer">
 <ion-col class="footer-content">
   <ion-text>
     <ion-label class="footer-title">Contato <br></ion-label>
@@ -73,6 +79,8 @@
   </ion-text>
 </ion-col>
 </ion-row>
+</ion-footer>
+
  
   
    </ion-content>
