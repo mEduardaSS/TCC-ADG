@@ -21,7 +21,7 @@
 
   <ion-content>
 <ion-row  class="ion-padding ion-justify-content-center">
-<ion-col size=6 class="ion-padding conteudo">
+<ion-col size=10 size-md="6" class="ion-padding conteudo">
 <ion-img class="logo-tcc" src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp"></ion-img>
 
 <ion-row class="titulo ion-justify-content-center">
@@ -58,11 +58,11 @@
 <ion-input class="input" type="text" name="endereço"></ion-input>
 </ion-item>
 
-<ion-row id="cont"><b>Informações da residência</b></ion-row>
+<ion-row id="cont"><b>Informações da residência:</b></ion-row>
 
 <ion-label id="cont"><b>Há outros animais em sua residência?</b></ion-label>
 
-<ion-item id="cont" lines="none">
+<ion-item class="cont" lines="none">
   <ion-checkbox class="checkbox"></ion-checkbox>
   <ion-label><b>Sim</b></ion-label>
   <ion-checkbox class="checkbox"></ion-checkbox>
@@ -71,7 +71,7 @@
 
 
 <ion-label id="cont"><b>Você possui tempo suficiente para dar cuidados necessários?</b></ion-label>
-<ion-item id="cont" lines="none">
+<ion-item class="cont" lines="none">
   <ion-checkbox class="checkbox"></ion-checkbox>
   <ion-label><b>Tenho bastante tempo</b></ion-label>
   <ion-checkbox class="checkbox"></ion-checkbox>
@@ -82,7 +82,7 @@
 
 <ion-row size="6" class="ion-padding">
   <ion-button class="button_voltar" shape="round" [routerLink]="['/home']">Voltar</ion-button>
-  <ion-button class="button_confirmar" shape="round" [routerLink]="['/login']">Confirmar</ion-button>
+  <ion-button class="button_voltar" shape="round" [routerLink]="['/login']">Confirmar</ion-button>
  </ion-row>
 
 
