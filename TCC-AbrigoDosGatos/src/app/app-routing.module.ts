@@ -33,16 +33,9 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: () => import('./admin/home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
-  {
-    path: 'admin/home',
-    loadChildren: () => import('./admin/home/home.module').then( m => m.HomePageModule)
-  },
-  {
-    path: 'admin/ajuda',
-    loadChildren: () => import('./admin/ajuda/ajuda.module').then( m => m.AjudaPageModule)
-  },
+ 
   {
     path: 'admin/cadastro-animal',
     loadChildren: () => import('./admin/cadastro-animal/cadastro-animal.module').then( m => m.CadastroAnimalPageModule)
@@ -55,6 +48,15 @@ const routes: Routes = [
     path: 'analise-adocao',
     loadChildren: () => import('./admin/analise-adocao/analise-adocao.module').then( m => m.AnaliseAdocaoPageModule)
   },
+  {
+    path: 'ajuda-admin',
+    loadChildren: () => import('./admin/ajuda-admin/ajuda-admin.module').then( m => m.AjudaAdminPageModule)
+  },
+  {
+    path: 'home-admin',
+    loadChildren: () => import('./admin/home-admin/home-admin.module').then( m => m.HomeAdminPageModule)
+  },
+
 ];
 
 @NgModule({

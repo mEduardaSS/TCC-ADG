@@ -1,0 +1,140 @@
+.containerBtn{
+    height: 200px;
+    background:white;
+  }
+  
+  ion-button{
+    --color: black;
+  }
+  .entrar{
+    --background: rgb(163, 50, 50);
+    --color: white;
+  }
+  .checkbox{
+    margin: 10px;
+    --border-radius: 20px;
+    
+  }
+  .logo-tcc{
+    height: 85px;
+  }
+  
+  #id {
+    margin-bottom: 1.2em;
+  }
+  .button-native {
+    --background: #D9D9D9;
+  }
+  .btnRecusar{
+    display: flex;
+    justify-content: center;
+    margin-left: 30px;
+    --background: #D9D9D9;
+}
+  .btnAprovar{
+        display: flex;
+        justify-content: center;
+        margin-left: 230px;
+        --background: #D9D9D9;
+  }
+  .dadosVoluntario{
+    margin-top: 1px;
+  }
+  .ion-padding{
+    margin-top: 25px;
+  }
+  .conteudo{
+    border-radius: 30px;
+    border-color:  rgb(163, 50, 50);
+    border-style: solid;
+    border-width: 8px;
+    background:white;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5em;
+    
+  }
+  .titulo{
+    color: #000;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 1.100em;
+  }
+  
+    
+  .button_voltar {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 20px;
+    --background: #A61C35;
+    --color: white;
+  }
+  
+  #footer{
+    // top: 1.2em;
+    border-radius: 50px 50px 0 0;
+    background: #D9D9D9;
+    text-align: center;
+    // height: 15%;
+    // width: 100%;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  .footer-content{
+    margin: auto;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+    
+  }
+  .footer-title {
+    font-size: 20px;
+  }
+  
+  .footer-content ion-text{
+    margin-top: 3em;
+  }
+  
+  .icon-{
+    &whatsapp{
+      color: green;
+      margin-right: 0.2em;
+    }
+    &facebook{
+      color: blue;
+      margin-right: 0.2em;
+    }
+    &instagram{
+      color: purple;
+      margin-right: 0.2em;
+    }
+    &mail{
+    
+      margin-right: 0.2em;
+    }
+  }
+  .redor{
+    background: #f2f2f2;
+  }
+  
+  .entrar{
+    --background: #A61C35;
+    --color: white;
+    margin-left: 150px ;
+  }
+  
+  .elemento {
+    --color: black;
+    padding: 10px 20px;
+      text-decoration: none;
+    position: relative;
+  
+  }
