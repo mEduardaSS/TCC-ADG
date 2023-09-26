@@ -24,7 +24,7 @@ export class LoginPage implements OnInit {
       let res=await this.post(dados);
       if(res){
         alert("Logado com sucesso");
-        this.router.navigate(['/admin/home']);
+        this.router.navigate(['/home-admin']);
       }else{
         alert("Email ou senha incorretos")
       }
