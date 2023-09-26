@@ -23,8 +23,8 @@ export class LoginPage implements OnInit {
       }
       let res=await this.post(dados);
       if(res){
-        this.router.navigate(['/admin/home']);
         alert("Logado com sucesso");
+        this.router.navigate(['/admin/home']);
       }else{
         alert("Email ou senha incorretos")
       }
