@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { MenuAdmComponent } from "./menu-adm/menu-adm.component";
+// import { MenuAdmComponent } from "./menu-adm/menu-adm.component";
 import { IonicModule } from "@ionic/angular";
 
 @NgModule({
@@ -8,7 +8,7 @@ import { IonicModule } from "@ionic/angular";
         CommonModule, IonicModule
     ],
     exports: [
-        MenuAdmComponent
+        // MenuAdmComponent,
     ]
 })
 export class SharedComponentModule {}

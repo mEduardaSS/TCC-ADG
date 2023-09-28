@@ -1,5 +1,5 @@
 
-  <ion-menu contentId="main-content">
+  <ion-menu contentId="main-content" >
     <ion-header class="ion-no-border">
       <ion-toolbar>
         <div>
@@ -11,13 +11,9 @@
     <ion-content>
       <ion-row>
         <ion-col size="12">
-          <ion-list (click)="closeMenu()" lines="none">
-            <ion-item  [routerLink]="['/home']">Home</ion-item>
-            <ion-item [routerLink]="['/sobre']">Sobre nós</ion-item>
-            <ion-item [routerLink]="['/ajuda']">Quero
-              Ajudar</ion-item>
-            <ion-item [routerLink]="['/voluntario']">Seja
-              voluntário</ion-item>
+          <ion-list [ngSwitch]="active" [ngClass]="{'opened': menuOpened}" lines="none">
+            <ion-item [routerLink]="['/sobre']">Analise adoção</ion-item>
+            <ion-item [routerLink]="['/ajuda']">Analise voluntárior</ion-item>
             <ion-item>Contato</ion-item>
           </ion-list>
         </ion-col>
