@@ -1,5 +1,5 @@
 <?php
-
+// Fazer uma variavel que guarda a descrição do sobre e onclick ela muda quando eu clico no botao(ou faz uma acao)
 if ($acao == '' && $parametro == '') { echo json_encode(['ERRO' => 'Caminho não encontrado!']); exit; }
 
 if ($acao == 'adiciona' && $parametro == '') {
