@@ -24,11 +24,6 @@
   background: #D9D9D9;
 }
 
-.formulario{
-  display:flex;
-  flex-direction: column;
-}
-
 .checkbox{
   margin: 10px;
   --border-radius: 20px;
@@ -56,6 +51,11 @@
 
   .cont{
     margin:20px;
+    font-size:20px;
+  }
+
+  .cont_check{
+    font-size:16px;
   }
   #cont{
     margin:35px;
@@ -65,7 +65,6 @@
   .button_voltar {
     justify-content: center;
     width: 20%;
-    flex-direction: column;
     margin: auto;
     margin-bottom: 20px;
     --background: #A61C35;
@@ -81,14 +80,29 @@
       .button_voltar {
       width: 35%;
       font-size:70%;
+      margin-top: 40px;
     }
 
     #cont{
       font-size:13px;
-      margin-top:60px;
-    }
-    .cont{
-      font-size:13px;
+      margin-top: 30px;
     }
 
+    .cont_check{
+      font-size:13px;
+    }
+    .cont{
+      font-size:17px;
+      margin: 17px;
+      margin-top: 20px;
+      margin-left: 0px;
+    }
+    
+    .conteudo{
+      text-align: center;
+    }
+    #checkbox{
+      display: flex;
+      flex-direction: column;
+    }
   }
