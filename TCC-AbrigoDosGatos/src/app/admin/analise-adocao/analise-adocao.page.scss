@@ -1,6 +1,8 @@
 .containerBtn{
-    height: 200px;
     background:white;
+    margin-top: 1.2em;
+    justify-content: center;
+    align-items: center;
   }
   
   ion-button{
@@ -22,6 +24,7 @@
   #id {
     margin-bottom: 1.2em;
   }
+
   .button-native {
     --background: #D9D9D9;
   }
@@ -52,18 +55,8 @@
     margin: auto;
     justify-content: center;
     align-items: center;
-    margin-top: 1.5em;
-    
+bottom: 1.0em;
   }
-  .titulo{
-    color: #000;
-    font-size: 19px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin-top: 1.100em;
-  }
-  
     
   .button_voltar {
     justify-content: center;
@@ -88,6 +81,7 @@
     padding: 15px;
   }
   
+
   .footer-content{
     margin: auto;
     align-items: center;
@@ -120,9 +114,6 @@
     
       margin-right: 0.2em;
     }
-  }
-  .redor{
-    background: #f2f2f2;
   }
   
   .entrar{

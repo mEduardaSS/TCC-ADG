@@ -1,4 +1,4 @@
-<div class="container"> 
+
   <div class="menu">
     <ion-header>
       <ion-row  fill="solid" class="ion-justify-content-center ion-align-items-center"> <!-- menu -->
@@ -21,13 +21,14 @@
     </ion-row>
     </ion-header>
   </div>
-    <ion-row  class="redor ion-padding ion-justify-content-center">
+  
+    <ion-row  class="ion-padding ion-justify-content-center">
       <ion-col size=6 class="ion-padding conteudo">
-        <ion-row class="titulo ion-justify-content-center">
+        <ion-row class="ion-justify-content-center">
           <b>Formulário de Adoção</b> 
         </ion-row>
   
-          
+          <ion-col class="teste">
           <div class="dadosAdocao">
             <div class="dataCadTutor"><b>Data de preenchimento: 12/06/2023</b></div>
 
@@ -36,21 +37,23 @@
             <div class="dtNasc"><b>Data de Nascimento: 08/04/1997</b></div>
             <div class="telTutor"><b>Telefone: 15 9999-3409</b></div>
             <div class="endereco"><b>Endereço: Antônio Guimarões, 204</b></div>
-
+            <br>
             <b>Informações Residênciais:</b>
-
+            <br>
+            <br>
             <b>Há outros Animais eu sua residência?</b>
             <div class="respostaUm"><b>"Sim"</b></div>
+            <br>
             <b>Você possui tempo suficiente para dar cuidados necessários?</b>
             <div class="respostaDois"><b>"Tenho bastante Tempo"</b></div>
         </div>
+        </ion-col>
 
-        <ion-row class="containerBtn" id="dois"></ion-row>
-        <ion-row size="12" class="ion-padding">
+        <ion-row class="containerBtn" size="6">
           <ion-button class="btnRecusar" shape="round" [routerLink]="['/home']">Recusar</ion-button>
           <ion-button class="btnAprovar" shape="round" [routerLink]="['/home']">Aprovar</ion-button>
-
         </ion-row>
+  
 
         </ion-col>
       </ion-row>
@@ -92,4 +95,3 @@
      
       </ion-row>
    
-    </div>
