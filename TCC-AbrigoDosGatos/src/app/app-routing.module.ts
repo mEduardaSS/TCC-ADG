@@ -56,7 +56,8 @@ const routes: Routes = [
     path: 'home-admin',
     loadChildren: () => import('./admin/home-admin/home-admin.module').then( m => m.HomeAdminPageModule)
   },
-
+  
+   
 ];
 
 @NgModule({

@@ -7,9 +7,10 @@ import { MenuController } from '@ionic/angular';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
+  menu_admin: boolean = true;
   constructor(private menu: MenuController) {}
 
-  closeMenu (){
+  Clickmenu (){
     this.menu.close();
   }
 }

@@ -15,7 +15,6 @@ import { HomeAdminPage } from './home-admin.page';
     FormsModule,
     IonicModule,
     HomeAdminPageRoutingModule,
-    // SharedComponentModule
   ],
   declarations: [HomeAdminPage]
 })
