@@ -60,6 +60,10 @@ const routes: Routes = [
     path: 'controle-voluntarios',
     loadChildren: () => import('./admin/controle-voluntarios/controle-voluntarios.module').then( m => m.ControleVoluntariosPageModule)
   },
+  {
+    path: 'editar-voluntario',
+    loadChildren: () => import('./admin/editar-voluntario/editar-voluntario.module').then( m => m.EditarVoluntarioPageModule)
+  },
   
    
 ];
