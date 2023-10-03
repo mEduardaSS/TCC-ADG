@@ -19,6 +19,20 @@
   align-items: center; 
 }
 
+.cont{
+  margin:20px;
+  font-size:20px;
+}
+
+.cont_check{
+  font-size:16px;
+}
+
+#cont{
+  margin:35px;
+  margin-top: 70px;
+}
+
 .logo-tcc{
   height: 85px;
 }
@@ -105,7 +119,8 @@ margin-right: 25px;
       font-size: 18px;
     }
     .nome{
-      font-size:13px;
+      font-size:16px;
+      margin-bottom: 10px;
     }
 
     .input_cont{
@@ -119,8 +134,26 @@ margin-right: 25px;
     #conteudo{
       margin-bottom: 150px;
     }
-  
     .button_voltar {
       width: 35%;
+      margin-top: 75px;
+    }
+    #checkbox{
+      display: flex;
+      flex-direction: column;
+    }
+    .cont_check{
+      font-size:13px;
+    }
+    .cont{
+      font-size:17px;
+      margin: 17px;
+      margin-top: 20px;
+      margin-left: 0px;
+    }
+
+    #cont{
+      font-size:13px;
+      margin-top: 30px;
     }
   }
