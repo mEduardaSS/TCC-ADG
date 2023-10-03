@@ -56,6 +56,14 @@ const routes: Routes = [
     path: 'home-admin',
     loadChildren: () => import('./admin/home-admin/home-admin.module').then( m => m.HomeAdminPageModule)
   },
+  {
+    path: 'controle-voluntarios',
+    loadChildren: () => import('./admin/controle-voluntarios/controle-voluntarios.module').then( m => m.ControleVoluntariosPageModule)
+  },
+  {
+    path: 'editar-voluntario',
+    loadChildren: () => import('./admin/editar-voluntario/editar-voluntario.module').then( m => m.EditarVoluntarioPageModule)
+  },
   
    
 ];
