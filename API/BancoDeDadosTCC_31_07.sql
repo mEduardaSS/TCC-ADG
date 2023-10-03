@@ -20,8 +20,13 @@ create table Admin
     emailAdmin varchar(50) unique not null,
     fk_IdUsuario int
     senhaAdmin varchar(10) not null,
-    
 );
+    INSERT INTO `admin` (`idAdmin`, `ativoAdmin`, `emailAdmin`, `fk_IdUsuario`, `senhaAdmin`)
+    VALUES (NULL, '1', 'admin@admin.com', NULL, '123');
+
+    INSERT INTO `admin` (`idAdmin`, `ativoAdmin`, `emailAdmin`, `fk_IdUsuario`, `senhaAdmin`)
+    VALUES (NULL, '1', 'gabrielaXavier', NULL, 'teste01');
+
 
 
 create table InformacaoAbrigo							
