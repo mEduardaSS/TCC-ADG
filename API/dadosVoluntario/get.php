@@ -26,4 +26,5 @@ if ($acao == 'lista' && $parametro != '') {
     } else {
         echo json_encode(["dados" => 'Não existem dados para retornar']);
     }
+    // g
 }

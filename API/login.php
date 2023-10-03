@@ -7,8 +7,8 @@ header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
+// a
 
-// Inclua a lógica de autenticação aqui (use o código anterior para autenticar)
 // Configurações do banco de dados
 $host = "localhost"; // Host do banco de dados
 $usuario = "root"; // Nome de usuário do banco de dados

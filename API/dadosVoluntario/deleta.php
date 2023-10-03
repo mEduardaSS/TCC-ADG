@@ -1,5 +1,5 @@
 <?php
-
+// d
 if ($acao == '' && $parametro == '') { echo json_encode(['ERRO' => 'Caminho não encontrado!']); exit; }
 
 if ($acao == 'delete' && $parametro == '') { echo json_encode(['ERRO' => "É necessário informar um cliente."]); exit; }

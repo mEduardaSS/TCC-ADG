@@ -10,7 +10,7 @@ if (isset($_GET['path'])) {
     echo "Caminho não existe1"; exit;
 }
 
-echo "aaa";
+echo "aaaa";
 
 // if (isset($path[0])) { $api = $path[0]; } else { echo "Caminho não existe2"; exit; }
 // if (isset($path[1])) { $acao = $path[1]; } else { $acao = ''; }

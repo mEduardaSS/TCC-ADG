@@ -1,4 +1,4 @@
---Criar banco de dados
+--Criando o banco de dados
 create database AbrigoGatos
 
 --Acessar banco
