@@ -5,6 +5,13 @@
     align-items: center;
   }
   
+.title-page{
+  font-family: 'Caveat', cursive;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 24px;
+  color: #A61C35;
+}
+  
   ion-button{
     --color: black;
   }
@@ -40,9 +47,20 @@
         margin-left: 230px;
         --background: #D9D9D9;
   }
-  .dadosVoluntario{
-    margin-top: 1px;
+  
+
+  .dataCadTutor, 
+  .nomeAnimal,
+   .emailVoluntario,
+   .nomeTutor, 
+   .dtNasc, 
+   .telTutor, 
+   .endereco{
+    margin-top: 1em;
+    color: #000;
+    font-size: 17px;
   }
+
   .ion-padding{
     margin-top: 25px;
   }
@@ -56,6 +74,7 @@
     justify-content: center;
     align-items: center;
 bottom: 1.0em;
+
   }
     
   .button_voltar {
@@ -70,62 +89,3 @@ bottom: 1.0em;
     --color: white;
   }
   
-  #footer{
-    // top: 1.2em;
-    border-radius: 50px 50px 0 0;
-    background: #D9D9D9;
-    text-align: center;
-    // height: 15%;
-    // width: 100%;
-    text-align: center;
-    padding: 15px;
-  }
-  
-
-  .footer-content{
-    margin: auto;
-    align-items: center;
-    color: black;
-    font-weight: bold;
-    
-  }
-  .footer-title {
-    font-size: 20px;
-  }
-  
-  .footer-content ion-text{
-    margin-top: 3em;
-  }
-  
-  .icon-{
-    &whatsapp{
-      color: green;
-      margin-right: 0.2em;
-    }
-    &facebook{
-      color: blue;
-      margin-right: 0.2em;
-    }
-    &instagram{
-      color: purple;
-      margin-right: 0.2em;
-    }
-    &mail{
-    
-      margin-right: 0.2em;
-    }
-  }
-  
-  .entrar{
-    --background: #A61C35;
-    --color: white;
-    margin-left: 150px ;
-  }
-  
-  .elemento {
-    --color: black;
-    padding: 10px 20px;
-      text-decoration: none;
-    position: relative;
-  
-  }

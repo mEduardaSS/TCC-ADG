@@ -1,13 +1,74 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>cadastro_animal</ion-title>
-  </ion-toolbar>
-</ion-header>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Philosopher:ital,wght@1,700&display=swap" rel="stylesheet">
+      
+      <div class="ion-page" id="main-content">
+        <ion-header class="menu">
+          <ion-toolbar>
+            <ion-buttons slot="start">
+              <ion-menu-button autoHide="false"></ion-menu-button>
+            </ion-buttons>
+            <ion-title class="ion-text-center title-page">Abrigo dos Gatos</ion-title>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">cadastro_animal</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
+            <ion-buttons slot="end">
+              <ion-button [routerLink]="['/login']">
+                <ion-icon slot="icon-only" name="person-circle" ></ion-icon>
+              </ion-button>
+           </ion-buttons>
+
+          </ion-toolbar>
+        </ion-header>
+
+    <ion-content>
+      <ion-row  class=" redor ion-padding ion-justify-content-center">
+        <ion-col size-md=6 size="10" class="ion-padding conteudo">
+          <ion-row class="titulo ion-justify-content-center">
+            <b>Cadastro/Edição de Animal</b>
+         </ion-row>
+
+          <ion-img class="logo-tcc" src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp"></ion-img>
+        
+      
+          <ion-item class="input_cont" lines="none">
+             <ion-label position="stacked" class="nome"><b>Nome</b></ion-label>
+            <ion-input class="input" ></ion-input>
+          </ion-item>
+      
+          <ion-item class="input_cont" lines="none">
+            <ion-label position="stacked" class="nome"><b>Cor</b></ion-label>
+            <ion-input class="input"></ion-input>
+        
+          </ion-item>
+
+          <ion-item class="input_cont" lines="none">
+            <ion-label position="stacked" class="nome"><b>Idade</b></ion-label>
+            <ion-input class="input"></ion-input>
+          </ion-item>
+
+          <ion-item class="input_cont" lines="none">
+            <ion-label position="stacked" class="nome"><b>Sexo</b></ion-label>
+            <ion-input class="input"></ion-input>
+          </ion-item>
+
+          <ion-item class="input_cont" lines="none">
+            <ion-label position="stacked" class="nome"><b>Raça</b></ion-label>
+            <ion-input class="input"></ion-input>
+          </ion-item>
+
+          <ion-item class="input_cont" lines="none">
+            <ion-label position="stacked" class="nome"><b>Descrição</b></ion-label>
+            <ion-input class="input"></ion-input>
+          </ion-item>
+
+          <ion-row class="ion-padding">
+            <ion-button class="button_voltar" shape="round" [routerLink]="['/home']">Cancelar</ion-button>
+            <ion-button class="button_voltar" shape="round" [routerLink]="['/home']">Cadastrar</ion-button>
+          </ion-row>
+      
+          </ion-col>
+        </ion-row>
+   
+    
+ 
+     </ion-content>
+  </div>

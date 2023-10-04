@@ -5,24 +5,7 @@
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
   }
-  
-  ion-menu::part(backdrop) {
-    background-color: rgba(19, 17, 19, 0.5);
-  }
-  
-  ion-menu::part(container) {
-    border-radius: 0 20px 20px 0;
-    box-shadow: 4px 0px 16px rgba(77, 74, 77, 0.18);
-  }
-  
-  .menu {
-    position: absolute;
-  }
-  
-  .menu ion-title{
-    color: #A61C35;
-  
-  }
+
   
   .card {
     top: 6em;

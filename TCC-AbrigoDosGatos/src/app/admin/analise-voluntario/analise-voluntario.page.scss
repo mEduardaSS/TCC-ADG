@@ -1,7 +1,15 @@
-
 .containerBtn{
-    height: 200px;
+  margin-top: 4.0em;
+  justify-content: center;
+  align-items: center;
     background:white;
+  }
+
+  .title-page{
+    font-family: 'Caveat', cursive;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 24px;
+    color: #A61C35;
   }
   
   ion-button{
@@ -12,7 +20,9 @@
     --color: white;
   }
   .checkbox{
-    margin: 10px;
+   justify-content: center;
+   align-items: center;
+  
     --border-radius: 20px;
     
   }
@@ -43,16 +53,14 @@
     left: 50%;
     margin-right: -50%;
   }
-  .dataCadVoluntario{
-    margin-bottom: 5vh;
-   
-  }
 
-  .dataCadVoluntario, .nomeVoluntario, .emailVoluntario,.dtNascVoluntario, .telVoluntario, .dispoVoluntario{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 49.5%;
+  .dataCadVoluntario, 
+  .nomeVoluntario,
+   .emailVoluntario,
+   .dtNascVoluntario, 
+   .telVoluntario, 
+   .dispoVoluntario{
+    margin-top: 1em;
     color: #000;
     font-size: 17px;
   }
@@ -65,22 +73,20 @@
     border-style: solid;
     border-width: 8px;
     background:white;
-    margin: auto;
     justify-content: center;
     align-items: center;
-    margin-top: 1.5em;
+    margin-top: 1.0em;
     
   }
   .titulo{
     color: #000;
-    font-size: 30px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin-top: 1.100em;
+    margin-top: 1.000em;
   }
   
-    
   .button_voltar {
     justify-content: center;
     align-items: center;
@@ -93,63 +99,5 @@
     --color: white;
   }
   
-  #footer{
-    // top: 1.2em;
-    border-radius: 50px 50px 0 0;
-    background: #D9D9D9;
-    text-align: center;
-    // height: 15%;
-    // width: 100%;
-    text-align: center;
-    padding: 15px;
-  }
+
   
-  .footer-content{
-    margin: auto;
-    align-items: center;
-    color: black;
-    font-weight: bold;
-    
-  }
-  .footer-title {
-    font-size: 20px;
-  }
-  
-  .footer-content ion-text{
-    margin-top: 3em;
-  }
-  
-  .icon-{
-    &whatsapp{
-      color: green;
-      margin-right: 0.2em;
-    }
-    &facebook{
-      color: blue;
-      margin-right: 0.2em;
-    }
-    &instagram{
-      color: purple;
-      margin-right: 0.2em;
-    }
-    &mail{
-    
-      margin-right: 0.2em;
-    }
-  }
-  .redor{
-    background: #f2f2f2;
-  }
-  
-  .entrar{
-    --background: #A61C35;
-    --color: white;
-    margin-left: 150px ;
-  }
-  
-  .elemento {
-    --color: black;
-    padding: 10px 20px;
-      text-decoration: none;
-    position: relative;
-  }

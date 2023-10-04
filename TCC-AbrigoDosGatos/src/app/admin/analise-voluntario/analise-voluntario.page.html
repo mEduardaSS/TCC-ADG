@@ -1,88 +1,76 @@
-<div class="container"> 
-  <div class="menu">
-    <ion-header>
-      <ion-row  fill="solid" class="ion-justify-content-center ion-align-items-center"> <!-- menu -->
-      <ion-col size="3">
-        <ion-item [routerLink]="['/home']" routerLinkActive="active-link">
-          <img class="logo-tcc" alt="logo-tcc" src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp" >
-        </ion-item>
-      </ion-col>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Philosopher:ital,wght@1,700&display=swap" rel="stylesheet">
+      
+      <div class="ion-page" id="main-content">
+        <ion-header class="menu">
+          <ion-toolbar>
+            <ion-buttons slot="start">
+              <ion-menu-button autoHide="false"></ion-menu-button>
+            </ion-buttons>
+            <ion-title class="ion-text-center title-page">Abrigo dos Gatos</ion-title>
 
-      <ion-col fill="solid" size="6">
-        <ion-button fill="clear" class="elemento" routerLink="ajuda" routerLinkActive="active-link">Quero Ajudar</ion-button>
-        <ion-button fill="clear" class="elemento" routerLink="voluntario" routerLinkActive="active-link">Seja voluntário</ion-button>
-        <ion-button fill="clear" class="elemento" >Contato</ion-button>
-       
-      </ion-col>
+            <ion-buttons slot="end">
+              <ion-button [routerLink]="['/login']">
+                <ion-icon slot="icon-only" name="person-circle" ></ion-icon>
+              </ion-button>
+           </ion-buttons>
 
-      <ion-col size="3">
-        <ion-button fill="clear" class="admin">Olá, admin</ion-button>
-      </ion-col>
-    </ion-row>
-    </ion-header>
-  </div>
-    <ion-row  class="redor ion-padding ion-justify-content-center">
-      <ion-col size=6 class="ion-padding conteudo">
-        <ion-row class="titulo ion-justify-content-center">
-          <b>Formulário de voluntário</b> 
-        </ion-row>
+          </ion-toolbar>
+        </ion-header>
+
+    <ion-content>
+      <ion-row  class="ion-padding ion-justify-content-center">
+        <ion-col size= "6" class="ion-padding conteudo">
+          <ion-row class="titulo ion-justify-content-center">
+            <b>Formulário de voluntário</b> 
+          </ion-row>
   
-          
-          <div class="dadosVoluntario ">
-            <div class="dataCadVoluntario"><b>Data do cadastro: 12/06/2023</b></div>
-            <div class="nomeVoluntario"><b>Nome: Felipe Vieira</b></div>
-            <div class="emailVoluntario"><b>Email: felipe.vieira08@gmail.com</b></div>
-            <div class="dtNascVoluntario"><b>Data de Nascimento: 08/04/1997</b></div>
-            <div class="telVoluntario"><b>Telefone: 15 9999-0000</b></div>
-            <div class="dispoVoluntario"><b>Disponibilidade: Manhã 08h-11h</b></div>
-        </div>
+            <div class="dadosVoluntario">
+              <div class="dataCadVoluntario"><b>Data do cadastro: 12/06/2023</b></div>
+              <div class="nomeVoluntario"><b>Nome: Felipe Vieira</b></div>
+              <div class="emailVoluntario"><b>Email: felipe.vieira08@gmail.com</b></div>
+              <div class="dtNascVoluntario"><b>Data de Nascimento: 08/04/1997</b></div>
+              <div class="telVoluntario"><b>Telefone: 15 9999-0000</b></div>
+              <div class="dispoVoluntario"><b>Disponibilidade: Manhã 08h-11h</b></div>
+          </div>
 
-        <ion-row class="containerBtn" id="dois"></ion-row>
-        <ion-row size="12" class="ion-padding">
-          <ion-button class="btnRecusar" shape="round" [routerLink]="['/home']">Recusar</ion-button>
-          <ion-button class="btnAprovar" shape="round" [routerLink]="['/home']">Aprovar</ion-button>
-
+          <ion-row size="12" class="ion-text-center" style="margin-top: 4.0em;">
+            <ion-col>
+              <ion-checkbox class="checkbox"></ion-checkbox>
+              <ion-label style="padding: 10px;"><b>Adicionar voluntario como administrador</b></ion-label>
+            </ion-col>
+            
+          </ion-row>
+  
+          <ion-row class="containerBtn" size="12">
+            <ion-button class="btnRecusar" shape="round" [routerLink]="['/home']">Recusar</ion-button>
+            <ion-button class="btnAprovar" shape="round" [routerLink]="['/home']">Aprovar</ion-button>
+          </ion-row>
+         
+          </ion-col>
         </ion-row>
+ 
+     </ion-content>
+  </div>
 
-        </ion-col>
-      </ion-row>
 
-      <ion-row id="footer">
-        <ion-col class="footer-content">
-          <ion-text>
-            <ion-label class="footer-title">Contato <br></ion-label>
-          
-          </ion-text>
 
-          <ion-text>
-        
-            <ion-label><ion-icon name="logo-whatsapp" class="icon-whatsapp"></ion-icon>WhatsApp</ion-label>
-            <br>
-          </ion-text>
 
-          <ion-text>
-            <ion-label><ion-icon name="mail-outline" class="icon-mail"></ion-icon>E-mail</ion-label>
-            <br>
-          </ion-text>
-        </ion-col>
 
-        <ion-col class="footer-content">
-          <ion-text>
-            <ion-label class="footer-title">Redes Sociais</ion-label>
-            <br>
-          </ion-text>
 
-          <ion-text>
-            <ion-label><ion-icon name= "logo-facebook" class="icon-facebook"></ion-icon>/abrigodosgatos</ion-label>
-            <br>
-          </ion-text>
-          <ion-text>
-            <ion-label><ion-icon name="logo-instagram" class="icon-instagram"></ion-icon>abrigo.dosgatos</ion-label>
-           <br>
-         </ion-text>
-        </ion-col>
-     
-      </ion-row>
-   
-    </div>
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
