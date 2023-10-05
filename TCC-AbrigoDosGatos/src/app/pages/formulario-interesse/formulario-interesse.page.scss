@@ -19,18 +19,33 @@
 }
 
 
-.input{
-  border-radius: 20px;
-  background: #D9D9D9;
-}
+// .input{
+//   border-radius: 20px;
+//   background: #D9D9D9;
+// }
 
 .input_cont{
   margin: 20px;
+  font-size:18px;
+}
+
+ion-input{
+  border-radius: 15px;
+  --background: #D9D9D9;
+  --color: #373737;
 }
 
 .checkbox{
   margin-right: 10px;
-  --border-radius: 20px;
+}
+
+ion-checkbox{
+  --checkbox-background-checked: rgb(163, 50, 50);
+}
+
+ion-checkbox::part(container) {
+  border-radius: 20px;
+  border: 2px solid rgb(163, 50, 50);
 }
 
 .conteudo{
@@ -55,7 +70,6 @@
 
   .cont{
     margin-left:30px;
-    font-size:20px;
   }
   
   .nome{
@@ -80,7 +94,7 @@
     --background: #A61C35;
     --color: white;
     left: 20em;
-    margin-top: 65px;
+    margin-top: 80px;
   }
 
   @media (max-width:768px){
@@ -91,7 +105,7 @@
       .button_voltar {
       width: 35%;
       font-size:70%;
-      margin-top: 40px;
+      margin-top: 50px;
     }
 
     #cont{

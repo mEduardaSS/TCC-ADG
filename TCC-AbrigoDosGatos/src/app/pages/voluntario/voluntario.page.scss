@@ -91,6 +91,7 @@
 
 .input_cont{
   margin: 20px;
+  font-size:18px;
 }
 
 .nome{
@@ -100,7 +101,15 @@ margin-bottom: 10px;
 
 .checkbox{
   margin: 10px;
-  --border-radius: 20px;
+}
+
+ion-checkbox{
+  --checkbox-background-checked: rgb(163, 50, 50);
+}
+
+ion-checkbox::part(container) {
+  border-radius: 20px;
+  border: 2px solid rgb(163, 50, 50);
 }
 
 .button_voltar {
