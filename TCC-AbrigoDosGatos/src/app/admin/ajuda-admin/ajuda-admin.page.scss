@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    list-style: none;
+  }
+  
+  .title-page{
+    font-family: 'Caveat', cursive;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 24px;
+    color: #A61C35;
+  }
+  
+  .logo-tcc{
+    height: 85px;
+  }
+  
+  .topo{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .logo-pet{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .botaoEditar{
+    display: flex;
+    justify-content: flex-end;
+  }
+  .titulo{
+    color: #3F0912;
+    font-size: 25px;
+    text-shadow: 0.1em 0.1em 0.2em rgb(131, 131, 131);
+    margin-top: 0.5em;
+  }
+  
+  .conteudo{
+    border-radius: 30px;
+    border-color:  rgb(163, 50, 50);
+    border-style: solid;
+    border-width: 8px;
+    background:white;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5em;
+    position: relative;
+  }
+  
+  #conteudo{
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+    margin-bottom: 200px;
+  }
+  
+  .button_voltar {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 20px;
+    --background: #A61C35;
+    --color: white;
+  }
+  
+  #footer{
+    border-radius: 50px 50px 0 0;
+    background: #D9D9D9;
+    text-align: center;
+    text-align: center;
+    margin-top: auto;
+    padding: 15px;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  ion-footer{
+    position: absolute;
+    bottom: 0;
+  }
+  .icon-{
+    &whatsapp{
+      color: green;
+      margin-right: 0.2em;
+    }
+    &facebook{
+      color: blue;
+      margin-right: 0.2em;
+    }
+    &instagram{
+      color: purple;
+      margin-right: 0.2em;
+    }
+    &mail{
+      margin-right: 0.2em;
+    }
+    &pessoa{
+      --color: #A61C35;
+      padding: 10px;
+    }
+  }
