@@ -17,22 +17,38 @@
   .logo-tcc{
     height: 85px;
   }
+// @media (max-width:600px) {
+//   .botao-editar{
+//     z-index: 9999;
+//     float: right;
+//     left: 0%;
+//     top: 10%;
+//     position: absolute;
+//   }
+// }
+  .botao-editar{
+    z-index: 9999;
+    float: right;
+    left: 80%;
+    top: 10%;
+    position: absolute;
+  }
   
-  .topo{
-    display: flex;
-    flex-direction: row;
-  }
+  // .topo{
+  //   display: flex;
+  //   flex-direction: row;
+  // }
 
-  .logo-pet{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  // .logo-pet{
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  // }
 
-  .botaoEditar{
-    display: flex;
-    justify-content: flex-end;
-  }
+  // .botaoEditar{
+  //   display: flex;
+  //   justify-content: flex-end;
+  // }
   .titulo{
     color: #3F0912;
     font-size: 25px;
