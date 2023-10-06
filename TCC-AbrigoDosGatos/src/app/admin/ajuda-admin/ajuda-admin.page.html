@@ -1,106 +1,109 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Philosopher:ital,wght@1,700&display=swap" rel="stylesheet">
-      
-      <div class="ion-page" id="main-content">
-        <ion-header class="menu">
-          <ion-toolbar>
-            <ion-buttons slot="start">
-              <ion-menu-button autoHide="false"></ion-menu-button>
-            </ion-buttons>
-            <ion-title class="ion-text-center title-page">Abrigo dos Gatos</ion-title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Philosopher:ital,wght@1,700&display=swap"
+  rel="stylesheet">
 
-            <ion-buttons slot="end">
-              <ion-button [routerLink]="['/login']">
-                <ion-icon slot="icon-only" name="person-circle" ></ion-icon>
-              </ion-button>
-           </ion-buttons>
+<!-- <app-menu-adm></app-menu-adm> -->
 
-          </ion-toolbar>
-        </ion-header>
+<div class="ion-page" id="main-content-adm">
+  <ion-header class="menu">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button autoHide="false"></ion-menu-button>
+      </ion-buttons>
+      <ion-title class="ion-text-center title-page">Abrigo dos Gatos</ion-title>
 
+      <ion-buttons slot="end">
+        <ion-button [routerLink]="['/login']">
+          <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+
+    </ion-toolbar>
+  </ion-header>
   <ion-content>
-   <ion-row  class=" redor ion-padding ion-justify-content-center">
-<ion-col size-md=6 size="10" class="ion-padding conteudo">
-  <!-- <ion-row> -->
-    <!-- <ion-col class="ion-justify-content-center">
-      <ion-img class="logo-tcc" src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp"></ion-img>
-     </ion-col>
-    
-     <ion-col>
+    <ion-row class=" redor ion-padding ion-justify-content-center">
+      <ion-col size-md=6 size="10" class="ion-padding conteudo">
+        <!-- <ion-row> -->
+        <!-- <ion-col class="ion-justify-content-center">
+                  <ion-img class="logo-tcc" src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp"></ion-img>
+                </ion-col>
+                
+                <ion-col>
       <ion-button class="ion-justify-content-center" shape="round" style="margin-top: 10px;">Editar</ion-button>
      </ion-col>
      </ion-row> -->
 
-     <div class="topo">
-      <div class="logo-pet">
-        <ion-img class="logo-tcc" src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp"></ion-img>
-      </div>
-      <div class="botaoEditar">
-        <ion-button shape="round" style="margin-top: 10px;">Editar</ion-button>
-      </div>
-     </div>
- 
+        <div class="topo">
+          <div class="logo-pet">
+            <ion-img class="logo-tcc"
+              src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp"></ion-img>
+          </div>
+          <div class="botaoEditar">
+            <ion-button shape="round" style="margin-top: 10px;">Editar</ion-button>
+          </div>
+        </div>
 
 
-<ion-row class="titulo ion-justify-content-center">
-   <b>Quero ajudar!!</b> 
-</ion-row>
 
-<ion-row class="ion-padding">
-  <ion-col id="conteudo">
-    <b>PIX: 15 99713-0703</b><br>
-    <b>[Dados da conta]</b>
-  </ion-col>
-</ion-row>
+        <ion-row class="titulo ion-justify-content-center">
+          <b>Quero ajudar!!</b>
+        </ion-row>
 
-<ion-row size="12" class="ion-padding">
-  <ion-button class="button_voltar" shape="round" [routerLink]="['/home']">Voltar</ion-button>
- </ion-row>
+        <ion-row class="ion-padding">
+          <ion-col id="conteudo">
+            <b>PIX: 15 99713-0703</b><br>
+            <b>[Dados da conta]</b>
+          </ion-col>
+        </ion-row>
 
-</ion-col>
-</ion-row>
+        <ion-row size="12" class="ion-padding">
+          <ion-button class="button_voltar" shape="round" [routerLink]="['/home']">Voltar</ion-button>
+        </ion-row>
+
+      </ion-col>
+    </ion-row>
 
 
-<ion-footer>
-  <ion-row id="footer">
-<ion-col class="footer-content">
-  <ion-text>
-    <ion-label class="footer-title">Contato <br></ion-label>
-    
-  </ion-text>
+    <ion-footer>
+      <ion-row id="footer">
+        <ion-col class="footer-content">
+          <ion-text>
+            <ion-label class="footer-title">Contato <br></ion-label>
 
-  <ion-text>
-  
-    <ion-label><ion-icon name="logo-whatsapp" class="icon-whatsapp"></ion-icon>WhatsApp</ion-label>
-    <br>
-  </ion-text>
+          </ion-text>
 
-  <ion-text>
-    <ion-label><ion-icon name="mail-outline" class="icon-mail"></ion-icon>E-mail</ion-label>
-    <br>
-  </ion-text>
-</ion-col>
+          <ion-text>
 
-<ion-col class="footer-content">
-  <ion-text>
-    <ion-label class="footer-title">Redes Sociais</ion-label>
-    <br>
-  </ion-text>
+            <ion-label><ion-icon name="logo-whatsapp" class="icon-whatsapp"></ion-icon>WhatsApp</ion-label>
+            <br>
+          </ion-text>
 
-  <ion-text>
-    <ion-label><ion-icon name= "logo-facebook" class="icon-facebook"></ion-icon>/abrigodosgatos</ion-label>
-    <br>
-  </ion-text>
-  <ion-text>
-    <ion-label><ion-icon name="logo-instagram" class="icon-instagram"></ion-icon>abrigo.dosgatos</ion-label>
-    <br>
-  </ion-text>
-</ion-col>
-</ion-row>
-</ion-footer>
+          <ion-text>
+            <ion-label><ion-icon name="mail-outline" class="icon-mail"></ion-icon>E-mail</ion-label>
+            <br>
+          </ion-text>
+        </ion-col>
 
- 
-  
-   </ion-content>
+        <ion-col class="footer-content">
+          <ion-text>
+            <ion-label class="footer-title">Redes Sociais</ion-label>
+            <br>
+          </ion-text>
+
+          <ion-text>
+            <ion-label><ion-icon name="logo-facebook" class="icon-facebook"></ion-icon>/abrigodosgatos</ion-label>
+            <br>
+          </ion-text>
+          <ion-text>
+            <ion-label><ion-icon name="logo-instagram" class="icon-instagram"></ion-icon>abrigo.dosgatos</ion-label>
+            <br>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+    </ion-footer>
+
+
+
+  </ion-content>
 </div>
