@@ -5,11 +5,22 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './voluntario.page.html',
   styleUrls: ['./voluntario.page.scss'],
 })
-export class VoluntarioPage implements OnInit {
 
+export class VoluntarioPage implements OnInit {
+  isLoading: boolean = false;
+  voluntario: Voluntario = new Voluntario();
+  
   constructor() { }
 
   ngOnInit() {
+    this.voluntario = new Voluntario();
   }
 
 }
+
+class Voluntario{
+  nome: string = '';
+  email: string = '';
+  telefone: string = '';
+}
+
