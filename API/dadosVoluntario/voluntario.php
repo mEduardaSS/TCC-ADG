@@ -20,9 +20,6 @@ if ($api == 'voluntario') {
     if ($method == "POST" && isset($_POST['_method']) && $_POST['_method'] == "PUT") {
         include_once "altera.php";
         var_dump('metodo put');
-        // i
+        
     }
-
-    
-
 }

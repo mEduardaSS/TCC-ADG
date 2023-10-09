@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormAdocaoService } from '../../services/formAdocao/form-adocao.service';
 
 @Component({
   selector: 'app-formulario-interesse',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioInteressePage implements OnInit {
 
-  constructor() { }
+  constructor(private FormAdocaoService:FormAdocaoService) {}
 
   ngOnInit() {
   }
+
+  submit_formAdocao(form: any){
+    console.log(form);
+
+    this.FormAdocaoService.insert(form);
+  }
+
 
 }
