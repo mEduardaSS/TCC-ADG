@@ -89,6 +89,10 @@
   --background: #D9D9D9;
 }
 
+ion-label b{
+  color:#3F0912;
+}
+
 .input_cont{
   margin: 20px;
   font-size:18px;
@@ -143,9 +147,14 @@ ion-checkbox::part(container) {
     }
     .button_voltar {
       width: 35%;
-      margin-top: 45px;
-      font-size: 12px;
+      font-size:70%;
+      margin-top: 50px;
+    }  
+
+    .checkbox{
+      margin: 8px;
     }
+    
     #checkbox{
       display: flex;
       flex-direction: column;
