@@ -6,4 +6,10 @@ import { Injectable } from '@angular/core';
 export class FormAdocaoService {
 
   constructor() { }
+
+  // const API = `http://aula/API/dadosAdocao/`; 
+
+  insert(form: any){
+    console.log("papapa");
+  }
 }
