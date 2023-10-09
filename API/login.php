@@ -18,24 +18,11 @@ $banco = "abrigogatos"; // Nome do banco de dados
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
-    $data = file_get_contents('php://input');
-    $data = json_decode($data, true);
-    // Captura os dados do formulário
-    $emailAdmin =$data["email"];
-    $senhaAdmin =$data["senha"];
-        // Conectando ao banco de dados
-        $conexao = new PDO('mysql:host=localhost;dbname=abrigogatos', $usuarioBd, $senhaBd);
-
-        // // Verificando a conexão
-        // if ($conexao->connect_error) {
-        //     die("Erro na conexão: " . $conexao->connect_error);
-        // }
-        // Consulta SQL
-        $query = "SELECT * FROM `admin` WHERE emailAdmin = :emailAdmin AND senhaAdmin = :senhaAdmin";
-        // Executando a consulta
-        $stmt = $conexao->prepare($query);
-        $stmt->bindValue(':emailAdmin', $emailAdmin);
-        $stmt->bindValue(':senhaAdmin', $senhaAdmin);
+// Exemplo de endpoint de autenticação
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["email"]) && isset($_POST["senha"])) {
+    $email = $_POST["email"];
+    $senha = $_POST["senha"];
+    // ...
 
         $stmt->execute();
     // password_hash()
