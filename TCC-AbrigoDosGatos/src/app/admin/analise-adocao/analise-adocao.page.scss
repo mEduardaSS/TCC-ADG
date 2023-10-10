@@ -41,6 +41,7 @@
     margin-left: 30px;
     --background: #A61C35;
     --color: white;
+    size: 100%;
 }
   .btnAprovar{
         display: flex;
@@ -48,6 +49,7 @@
         // margin-left: 230px;
         --background: #A61C35;
         --color: white;
+        
   }
   
 
@@ -77,6 +79,13 @@
     align-items: center;
 bottom: 1.0em;
   }
+  .tema-pag {
+    font-size: 140%;
+}
+
+  .moc{
+    font-size: 100%;
+  }
 
   @media screen and (max-width:600px){
     .conteudo{
@@ -97,6 +106,7 @@ bottom: 1.0em;
       margin-top:20px;
       --background: #A61C35;
       --color: white;
+      size: 30%;
 
   }
     .btnAprovar{
@@ -106,23 +116,13 @@ bottom: 1.0em;
           --background: #A61C35;
           --color: white;
     }
-
     .tema-pag {
-      font-size: 10px;
-    }
+      font-size: 100%;
   }
-  .tema-pag {
-      font-size: 20px;
+  .moc{
+    font-size: 70%;
   }
-  .button_voltar {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    width: 20%;
-    flex-direction: column;
-    margin: auto;
-    margin-bottom: 20px;
-    --background: #A61C35;
-    --color: white;
+    
   }
+ 
   
