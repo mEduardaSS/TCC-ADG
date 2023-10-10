@@ -1,0 +1,36 @@
+.title-page{
+    font-family: 'Caveat', cursive;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 24px;
+    color: #A61C35;
+  }
+
+  .conteudo{
+    border-radius: 30px;
+    border-color:  rgb(163, 50, 50);
+    border-style: solid;
+    border-width: 8px;
+    background:white;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+  }
+
+  .cont{
+    margin-top: 40px;
+  }
+
+  .button_voltar {
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 20px;
+    --background: #A61C35;
+    --color: white;
+    left: 20em;
+    margin-top: 80px;
+  }
+  .checkbox{
+    margin-right: 10px;
+  }
