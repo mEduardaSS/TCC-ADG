@@ -38,8 +38,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["email"]) && isset($_POST["senha"])) {
     $email = $_POST["email"];
     $senha = $_POST["senha"];
-
-    // Conectando ao banco de dados e executando a consulta de autenticação
     // ...
 
     if (/* Verifique a autenticação com sucesso */) {
