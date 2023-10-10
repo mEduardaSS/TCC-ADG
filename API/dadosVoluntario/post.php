@@ -34,5 +34,4 @@ if ($acao == 'adiciona' && $parametro == '') {
     } else {
         echo json_encode(["dados" => 'Houve algum erro ao inseris os dados.']);
     }
-    // v
 }

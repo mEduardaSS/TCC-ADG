@@ -30,10 +30,10 @@
             <div class="dadosAdocao">
               <div class="dataCadTutor"><b>Data de preenchimento: 12/06/2023</b></div>
               <div class="nomeAnimal"><b>Nome: [Nome Animal]</b></div>
-              <div class="nomeTutor"><b>Nome: João Carlos</b></div>
-              <div class="dtNasc"><b>Data de Nascimento: 08/04/1997</b></div>
-              <div class="telTutor"><b>Telefone: 15 9999-3409</b></div>
-              <div class="endereco"><b>Endereço: Antônio Guimarões, 204</b></div>
+              <div class="nomeTutor"><b>Nome: {{tutorSelecionado.nomeAdocao}}</b></div>
+              <div class="dtNasc"><b>Data de Nascimento: {{tutorSelecionado.dataNascAdocao}}</b></div>
+              <div class="telTutor"><b>Telefone: {{tutorSelecionado.telefoneAdocao}}</b></div>
+              <div class="endereco"><b>Endereço: {{tutorSelecionado.endereco}}</b></div>
               <br>
               <b>Informações Residênciais:</b>
               <br>
@@ -47,8 +47,8 @@
           </ion-col>
   
           <ion-row class="containerBtn" size="6">
-            <ion-button class="btnRecusar" shape="round" [routerLink]="['/home']">Recusar</ion-button>
-            <ion-button class="btnAprovar" shape="round" [routerLink]="['/home']">Aprovar</ion-button>
+            <ion-button class="btnRecusar" shape="round" [routerLink]="['/home-admin']">Recusar</ion-button>
+            <ion-button class="btnAprovar" shape="round" [routerLink]="['/home-admin']">Aprovar</ion-button>
           </ion-row>
     
   </ion-col>

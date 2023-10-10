@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormAdocaoService } from '../../services/formAdocao/form-adocao.service';
+
 
 @Component({
   selector: 'app-analise-adocao',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./analise-adocao.page.scss'],
 })
 export class AnaliseAdocaoPage implements OnInit {
-
-  constructor() { }
+  tutorSelecionado:any = [];
+  constructor(private FormAdocaoService:FormAdocaoService) {
+    this.tutorSelecionado = this.FormAdocaoService.tutorSelecionado;
+  
+   }
 
   ngOnInit() {
+    console.log(this.tutorSelecionado);
   }
 
 }

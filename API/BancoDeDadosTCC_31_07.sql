@@ -1,8 +1,8 @@
---Criando o banco de dados
-create database AbrigoGatos
+# Criar banco de dados
+create database AbrigoGatos;
 
---Acessar banco
-use AbrigoGatos
+# Acessar banco
+use AbrigoGatos;
 
 create table DadosDoacao
 (
@@ -12,7 +12,6 @@ create table DadosDoacao
  
 );
 
-
 create table Admin
 (
     idAdmin  int(11) primary key auto_increment,
@@ -20,14 +19,8 @@ create table Admin
     emailAdmin varchar(50) unique not null,
     fk_IdUsuario int
     senhaAdmin varchar(10) not null,
+    
 );
-    INSERT INTO `admin` (`idAdmin`, `ativoAdmin`, `emailAdmin`, `fk_IdUsuario`, `senhaAdmin`)
-    VALUES (NULL, '1', 'admin@admin.com', NULL, '123');
-
-    INSERT INTO `admin` (`idAdmin`, `ativoAdmin`, `emailAdmin`, `fk_IdUsuario`, `senhaAdmin`)
-    VALUES (NULL, '1', 'gabrielaXavier', NULL, 'teste01');
-
-
 
 create table InformacaoAbrigo							
 (
@@ -76,25 +69,20 @@ create table  Usuario
     endereco varchar(50)
 );
 
-
---CRIANDO AS FOREIGN KEY
-
--- admin, (Usuario/idUsuario)
 alter table Admin
 add constraint fk_IdUsuario
 foreign key (fk_IdUsuario)
 references Usuario(idUsuario);
 
---  solicitacaoAdocao, (Gato/IdGato)
+
 alter table SolicitacaoAdocao 
 add constraint fk_IdGato
 foreign key (fk_IdGato)
 references Gato(idGato);
 
--- checando se as tabelas foram criadas
+
 show tables;
 
--- exibindo a estrutura de uma tabela
 describe admin; 
 describe InformacaoAbrigo;
 describe Gato;
@@ -102,5 +90,4 @@ describe SolicitacaoVoluntario;
 describe Usuario; 
 describe SolicitacaoAdocao;
 describe DadosDoacao; 
-								
-								
+						

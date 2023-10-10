@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,11 +6,18 @@ import { Injectable } from '@angular/core';
 })
 export class FormAdocaoService {
 
-  constructor() { }
+  constructor(private HttpClient: HttpClient) { }
 
-  // const API = `http://aula/API/dadosAdocao/`; 
+  tutorSelecionado:any = [];
 
-  insert(form: any){
-    console.log("papapa");
+  private readonly API = `http://aula/API/dadosAdocao/`; 
+
+  insert(dadosTutor: any){
+    console.log(dadosTutor);
+    return this.HttpClient.post(this.API+`insert_dadosTutor.php`, dadosTutor);
+  }
+
+  select(){
+    return this.HttpClient.get(this.API+'select_dadosTutor.php');
   }
 }
