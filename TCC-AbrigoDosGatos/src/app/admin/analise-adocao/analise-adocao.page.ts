@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormAdocaoService } from '../../services/formAdocao/form-adocao.service';
 
-
 @Component({
   selector: 'app-analise-adocao',
   templateUrl: './analise-adocao.page.html',
@@ -18,4 +17,9 @@ export class AnaliseAdocaoPage implements OnInit {
     console.log(this.tutorSelecionado);
   }
 
+  indiceDel: any;
+  apagar(indice: any) {
+    this.FormAdocaoService.delete(indice).subscribe();
+    // console.log(indice);
+  }
 }

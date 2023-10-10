@@ -20,4 +20,11 @@ export class FormAdocaoService {
   select(){
     return this.HttpClient.get(this.API+'select_dadosTutor.php');
   }
+
+  delete(id: any) {
+    console.log(id);
+    return this.HttpClient.delete(this.API+'delete_dadosTutor.php?id='+ id);
+  }
+
+
 }

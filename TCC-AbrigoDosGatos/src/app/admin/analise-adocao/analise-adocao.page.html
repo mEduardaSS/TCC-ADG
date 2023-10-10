@@ -47,7 +47,7 @@
           </ion-col>
   
           <ion-row class="containerBtn" size="6">
-            <ion-button class="btnRecusar" shape="round" [routerLink]="['/home-admin']">Recusar</ion-button>
+            <ion-button class="btnRecusar" shape="round" (click)="apagar(tutorSelecionado.idAdocao)" [routerLink]="['/home-admin']">Recusar</ion-button>
             <ion-button class="btnAprovar" shape="round" [routerLink]="['/home-admin']">Aprovar</ion-button>
           </ion-row>
     

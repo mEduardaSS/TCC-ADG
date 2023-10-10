@@ -64,9 +64,13 @@ create table  Usuario
     idAdocao  int(11) primary key auto_increment,
     telefoneAdocao  varchar(11) not null,
     nomeAdocao varchar(50) not null,
+    emailAdocao varchar(50) not null,
     dataNascAdocao date,
     fk_IdGato int, 
-    endereco varchar(50)
+    endereco varchar(50),
+    temAnimais boolean not null,
+    temTempo varchar(30),
+    aprovado boolean not null
 );
 
 alter table Admin
