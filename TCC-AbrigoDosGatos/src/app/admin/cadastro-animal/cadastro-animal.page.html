@@ -28,47 +28,49 @@
 
           <ion-img class="logo-tcc" src="https://guiatatui.top/wp-content/uploads/2023/03/Abrigo-dos-Gatos-Logo.webp"></ion-img>
         
-      
-          <ion-item class="input_cont" lines="none">
-             <ion-label position="stacked" class="nome"><b>Nome</b></ion-label>
-            <ion-input class="input" ></ion-input>
-          </ion-item>
-      
-          <ion-item class="input_cont" lines="none">
-            <ion-label position="stacked" class="nome"><b>Cor</b></ion-label>
-            <ion-input class="input"></ion-input>
-        
-          </ion-item>
-
-          <ion-item class="input_cont" lines="none">
-            <ion-label position="stacked" class="nome"><b>Idade</b></ion-label>
-            <ion-input class="input"></ion-input>
-          </ion-item>
-
-          <ion-item class="input_cont" lines="none">
-            <ion-label position="stacked" class="nome"><b>Sexo</b></ion-label>
-            <ion-input class="input"></ion-input>
-          </ion-item>
-
-          <ion-item class="input_cont" lines="none">
-            <ion-label position="stacked" class="nome"><b>Raça</b></ion-label>
-            <ion-input class="input"></ion-input>
-          </ion-item>
-
-          <ion-item class="input_cont" lines="none">
-            <ion-label position="stacked" class="nome"><b>Descrição</b></ion-label>
-            <ion-input class="input"></ion-input>
-          </ion-item>
-
-          <ion-row class="ion-padding">
-            <ion-button class="button_voltar" shape="round" [routerLink]="['/home']">Cancelar</ion-button>
-            <ion-button class="button_voltar" shape="round" [routerLink]="['/home']">Cadastrar</ion-button>
-          </ion-row>
-      
-          </ion-col>
-        </ion-row>
-   
-    
+     <form (ngSubmit)="submit_formGato(formGato.value)" #formGato="ngForm">
+      <ion-item class="input_cont" lines="none">
+        <ion-label position="stacked" class="nome"><b>Nome</b></ion-label>
+       <ion-input class="input" name="nome" ngModel></ion-input>
+     </ion-item>
  
+     <ion-item class="input_cont" lines="none">
+       <ion-label position="stacked" class="nome"><b>Cor</b></ion-label>
+       <ion-input class="input" name="cor" ngModel></ion-input>
+   
+     </ion-item>
+
+     <ion-item class="input_cont" lines="none">
+       <ion-label position="stacked" class="nome"><b>Idade</b></ion-label>
+       <ion-input class="input" name="idade" ngModel></ion-input>
+     </ion-item>
+
+     <ion-item class="input_cont" lines="none">
+       <ion-label position="stacked" class="nome"><b>Sexo</b></ion-label>
+       <ion-input class="input" name="sexo" ngModel></ion-input>
+     </ion-item>
+
+     <ion-item class="input_cont" lines="none">
+       <ion-label position="stacked" class="nome"><b>Raça</b></ion-label>
+       <ion-input class="input" name="raca" ngModel></ion-input>
+     </ion-item>
+
+     <ion-item class="input_cont" lines="none">
+       <ion-label position="stacked" class="nome"><b>Descrição</b></ion-label>
+       <ion-input class="input" name="descricao" ngModel></ion-input>
+     </ion-item>
+
+     <ion-row class="ion-padding">
+       <ion-button class="button_voltar" shape="round" [routerLink]="['/home-admin']">Cancelar</ion-button>
+       <ion-button class="button_voltar" shape="round" [routerLink]="['/home-admin']" type="submit">Cadastrar</ion-button>
+     </ion-row>
+ 
+    </form>
+
+
+
+     </ion-col>
+   </ion-row>
+
      </ion-content>
   </div>
