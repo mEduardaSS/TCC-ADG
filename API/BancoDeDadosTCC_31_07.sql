@@ -32,6 +32,7 @@ create table InformacaoAbrigo
 create table Gato							
 (
     idGato int(11) primary key auto_increment,
+    imgGato varchar(255),
     nome varchar(50) not null,
     cor varchar(20) not null,
     racaGato varchar(10) not null,

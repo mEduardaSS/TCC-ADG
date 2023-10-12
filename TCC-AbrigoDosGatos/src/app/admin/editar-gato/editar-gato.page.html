@@ -23,11 +23,10 @@
       <ion-row  class="ion-padding ion-justify-content-center">
         <ion-col size-md=6 size="10" class="ion-padding conteudo">
           <ion-row class="titulo ion-justify-content-center">
-            <b>Cadastro de Gatos</b>
+            <b>Edição de Gatos</b>
          </ion-row>
         
-     <form (ngSubmit)="submit_formGato(formGato.value)" #formGato="ngForm">
-
+     <form>
       <ion-input class="logo-tcc" type="file"></ion-input>
 
       <ion-item class="input_cont" lines="none">
@@ -62,8 +61,8 @@
      </ion-item>
 
      <ion-row class="ion-padding">
-       <ion-button class="button_voltar" shape="round" [routerLink]="['/home-admin']">Cancelar</ion-button>
-       <ion-button class="button_voltar" shape="round" [routerLink]="['/home-admin']" type="submit">Cadastrar</ion-button>
+       <ion-button class="button_voltar" shape="round" [routerLink]="['/home-admin']">Excluir</ion-button>
+       <ion-button class="button_voltar" shape="round" [routerLink]="['/home-admin']" type="submit">Alterar</ion-button>
      </ion-row>
  
     </form>
@@ -75,3 +74,4 @@
 
      </ion-content>
   </div>
+

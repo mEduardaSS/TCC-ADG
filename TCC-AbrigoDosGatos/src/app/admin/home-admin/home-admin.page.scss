@@ -6,12 +6,11 @@
     text-decoration: none;
   }
 
-  
   .card {
     top: 6em;
     margin: auto;
     padding: 2em;
-    width: 70%;
+    width: 50%;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
@@ -41,7 +40,6 @@
   }
   
   #text_miaudote {
-    top: 3.5em;
     font-size: 30px;
     color: #3F0912;
     text-align: center;
@@ -74,16 +72,22 @@
   }
   
   .card-gatos{
-    margin-top: 80px;
-    padding: 2em;
-    top: 10em; 
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 100px;
+  }
+
+  .classecard {
+    width: calc(50% - 10px); /* 50% do contêiner, com espaçamento de 10px entre as colunas */
+    margin-bottom: 20px;
   }
   
-  .img-card {
-    border-radius: 20px;
-    margin-top: 1.5em;
-    
-  }
+  // .img-card {
+  //   border-radius: 20px;
+  //   margin-top: 1.5em;
+  // }
   
   .button_adotar{
     float: right;
@@ -213,14 +217,8 @@
   }
   
   @media (max-width: 600px) {
-    ion-card-title{
-    text-align: center;
-    }
     
-    ion-card-subtitle{
-     text-align: center;
-    }
-    
+
     .texto{
       display: none;
     }
@@ -228,20 +226,25 @@
       margin-top: auto;
       padding: 10px 0px;   
     }
+
     .card-gatos {
-      display: flex;
+     margin-top: 10em;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      padding: 10px;
       width: 100%;
-      
-     
     }
+
+    .name {
+     text-align: center;
+     margin: 0;
+    }
+
     .conteudo-card {
       display: flex;
       justify-content: center;
       align-items: center;
-      
     }
   
     .button_conheca{
@@ -289,7 +292,6 @@
       justify-content: center;
       font-size: 15px;
       margin-top: -3em;
-     
     }
   
   .sobre-nos {

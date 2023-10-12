@@ -64,8 +64,11 @@ const routes: Routes = [
     path: 'editar-voluntario',
     loadChildren: () => import('./admin/editar-voluntario/editar-voluntario.module').then( m => m.EditarVoluntarioPageModule)
   },
-  
-   
+  {
+    path: 'editar-gato',
+    loadChildren: () => import('./admin/editar-gato/editar-gato.module').then( m => m.EditarGatoPageModule)
+  },
+
 ];
 
 @NgModule({
