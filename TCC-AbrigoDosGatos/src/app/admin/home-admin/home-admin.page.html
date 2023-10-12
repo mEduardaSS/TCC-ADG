@@ -21,40 +21,40 @@
   </ion-header>
 
   <ion-content>
+
     <ion-row>
-      <ion-col size="6" class="teste">
+      <ion-col size="6">
         <ion-card class="card">
-          <ion-card-title>
+          <ion-card-title style="text-align: center; margin: 1em;">
             Formulários de interesse para adoção
           </ion-card-title>
+
           <ion-card-header>
             <ion-row>
               <ion-col>
-                <ion-card-title>Ficha</ion-card-title>
+                <ion-card-title style="padding-right: 10px; margin: 1px;">Ficha</ion-card-title>
               </ion-col>
-              <ion-col class="name">
-                <ion-card-title>Nome</ion-card-title>
+              <ion-col>
+                <ion-card-title style="padding-left: 10px;">Nome</ion-card-title>
               </ion-col>
             </ion-row>
-
           </ion-card-header>
 
-          <ion-card-content *ngFor="let tutor of tutoresExibidos" class="conteudo-caard">
-            <ion-row>
+          <ion-card-content *ngFor="let tutor of tutoresExibidos" class="linha">
+            <ion-row style="margin: 1em;">
               <ion-col>
                 <ion-card-title>{{tutor.idAdocao}}</ion-card-title>
               </ion-col>
-              <ion-col class="name">
+              <ion-col>
                 <ion-card-title>{{tutor.nomeAdocao}}</ion-card-title>
               </ion-col>
               <ion-icon name="eye-outline" class="olho" (click)="analisar_tutor(tutor.idAdocao)"></ion-icon>
-
             </ion-row>
           </ion-card-content>
         </ion-card>
       </ion-col>
 
-      <ion-col size="6" class="teste">
+      <ion-col size="6">
         <ion-card class="card">
           <ion-card-title>
             Formulários de interesse para voluntários
@@ -71,7 +71,7 @@
 
           </ion-card-header>
 
-          <ion-card-content class="conteudo-caard">
+          <ion-card-content class="linha">
             <ion-row>
               <ion-col>
                 <ion-card-title>001</ion-card-title>
@@ -84,19 +84,19 @@
             </ion-row>
           </ion-card-content>
 
-
         </ion-card>
       </ion-col>
+
     </ion-row>
 
-    <ion-row>
-      <ion-col size="12" class="ion-text-center" >
+    <!-- <ion-row>
+      <ion-col size="6" class="ion-text-center" >
          <ion-label id="text_miaudote" style="font-size: 20px; top: 20em;">
             Gatos disponivéis
           </ion-label>
     
       </ion-col>
-    </ion-row>
+    </ion-row> -->
 
     <ion-row class="ion-padding ion-justify-content-center">
       <div class="card-gatos">

@@ -26,6 +26,7 @@ export class CadastroAnimalPage implements OnInit {
       sexo: new FormControl(''),
       idade: new FormControl(''),
       descricao: new FormControl(''),
+      imgGato: new FormControl(''),
     })
   }
 
@@ -48,6 +49,13 @@ export class CadastroAnimalPage implements OnInit {
     return this.FormGato.get('descricao')!;
   }
 
+onFileSelected(event: any) {
+  const file: File = event.target.files[0];
+
+  this.FormGato.patchValue({image: file});
+
+}
+
   submit_formGato(form:any){
     console.log(form);
     let dadosGato = [];
@@ -57,11 +65,11 @@ export class CadastroAnimalPage implements OnInit {
       raca: form.raca,
       idade: form.idade,
       descricao: form.descricao,
-      sexo: form.sexo
+      sexo: form.sexo,
+      imgGato: form.imgGato,
     };
-
+    console.log(this.FormGato.value);
     this.FormGatoService.insert(dadosGato[0]).subscribe();
-
   }
 
 }
