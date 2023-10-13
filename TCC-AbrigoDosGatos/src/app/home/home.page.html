@@ -57,30 +57,25 @@
             </ion-col>
           </ion-row>
         
-          <ion-row class="card-gatos ion-padding ion-justify-content-center">
-            <ion-col size="8" size-sm="4">
-              <ion-list lines="inset">
-                <ion-item *ngFor="let gato of gatosExibidos">
-                  <ion-card class="ion-margin" >
-                    <img class="img-card" alt="Silhouette of mountains"
-                      src="https://i.pinimg.com/750x/a1/41/6a/a1416afca3818d681d8325d44f62fad2.jpg" />
-                    <ion-card-header>
-        
-                      <ion-card-title>{{gato.nome}}</ion-card-title>
-                      <ion-card-subtitle>{{gato.sexo}}, {{gato.idade}}</ion-card-subtitle>
-        
-        
-                      <ion-card-content class="conteudo-card">
-                        <ion-button class="button_adotar" [routerLink]="['/formulario-interesse']">Adotar</ion-button>
-                        <p class="texto">
-                          {{gato.descricao}}
-                        </p>
-                      </ion-card-content>
-                    </ion-card-header>
-                  </ion-card>
-                </ion-item> 
-              </ion-list>
-            </ion-col>
+          <ion-row class="ion-padding ion-justify-content-center">
+            <div class="card-gatos">
+              <ion-card class="classecard" *ngFor="let gato of gatosExibidos">
+                <img class="img-card" alt="Gato"
+                  src="https://i.pinimg.com/750x/a1/41/6a/a1416afca3818d681d8325d44f62fad2.jpg" />
+                <ion-card-header>
+      
+                  <ion-card-title class="name">{{gato.nome}}</ion-card-title>
+                  <ion-card-subtitle class="name">{{gato.sexo}}, {{gato.idade}}</ion-card-subtitle>
+      
+                  <ion-card-content class="conteudo-card">
+                    <ion-button class="button_adotar" [routerLink]="['/formulario-interesse']">Adotar</ion-button>
+                    <p class="texto">
+                       {{gato.descricao}}
+                    </p>
+                  </ion-card-content>
+                </ion-card-header>
+              </ion-card>
+            </div>
           </ion-row>
         
           <ion-row size="3" size-sm="6" class="ion-padding">

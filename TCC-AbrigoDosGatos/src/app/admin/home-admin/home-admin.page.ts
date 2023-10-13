@@ -39,4 +39,12 @@ export class HomeAdminPage implements OnInit {
     this.router.navigate(['/analise-adocao'])
   }
 
+  segmentModel = 'tutor'; // Valor inicial do ion-segment
+
+  segmentChanged() {
+    // Função acionada quando a seleção do ion-segment muda
+    console.log('Opção selecionada:', this.segmentModel);
+
+    // Aqui você pode realizar ações específicas com base na opção selecionada, se necessário
+  }
 }

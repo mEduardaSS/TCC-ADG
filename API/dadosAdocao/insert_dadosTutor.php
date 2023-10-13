@@ -31,7 +31,7 @@ try {
     $stmt->bindValue(':nomeAdocao', $tutor_nome, PDO::PARAM_STR);
     $stmt->bindValue(':telefoneAdocao', $tutor_telefone, PDO::PARAM_STR);
     $stmt->bindValue(':dataNascAdocao', $tutor_dataNasc, PDO::PARAM_STR);
-    $stmt->bindValue('fk_IdGato', $fk_IdGato, PDO::PARAM_STR);
+    $stmt->bindValue(':fk_IdGato', $fk_IdGato, PDO::PARAM_STR);
     $stmt->bindValue(':endereco', $tutor_endereco, PDO::PARAM_STR);
 
 

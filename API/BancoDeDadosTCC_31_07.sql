@@ -1,7 +1,7 @@
-# Criar banco de dados
+drop database AbrigoGatos;
+
 create database AbrigoGatos;
 
-# Acessar banco
 use AbrigoGatos;
 
 create table DadosDoacao
@@ -9,7 +9,6 @@ create table DadosDoacao
     idDoacao  int(11) primary key auto_increment,
     infoDoacao	varchar(80) not null,	
     imgDadosDoacao varchar(100)				
- 
 );
 
 create table Admin
@@ -17,8 +16,8 @@ create table Admin
     idAdmin  int(11) primary key auto_increment,
     ativoAdmin tinyint(1) not null,	
     emailAdmin varchar(50) unique not null,
-    fk_IdUsuario int
-    senhaAdmin varchar(10) not null,
+    fk_IdUsuario int,
+    senhaAdmin varchar(10) not null
     
 );
 
@@ -32,7 +31,6 @@ create table InformacaoAbrigo
 create table Gato							
 (
     idGato int(11) primary key auto_increment,
-    imgGato varchar(255),
     nome varchar(50) not null,
     cor varchar(20) not null,
     racaGato varchar(10) not null,
@@ -60,7 +58,7 @@ create table  Usuario
     emailUsuario varchar(50)
 );
 
-   create table SolicitacaoAdocao
+create table SolicitacaoAdocao
 (
     idAdocao  int(11) primary key auto_increment,
     telefoneAdocao  varchar(11) not null,
@@ -68,10 +66,7 @@ create table  Usuario
     emailAdocao varchar(50) not null,
     dataNascAdocao date,
     fk_IdGato int, 
-    endereco varchar(50),
-    temAnimais boolean not null,
-    temTempo varchar(30),
-    aprovado boolean not null
+    endereco varchar(50)
 );
 
 alter table Admin

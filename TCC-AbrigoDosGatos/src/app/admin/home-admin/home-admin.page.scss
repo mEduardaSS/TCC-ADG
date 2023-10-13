@@ -7,27 +7,27 @@
   }
 
   .card {
-    margin: 1em;
-    top: 2em;
-    margin: auto;
-    padding: 1em;
-    width: 80%;
+    margin: 10px;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
-    border: #D9D9D9 10px solid;
+    width: 50%;
+  }
+
+  .testando {
+    border-radius: 10px;
+    border: #A61C35 10px solid;
   }
 
   .linha {
-    border-top: #1D1D1D solid;
+    border-top: #A61C35 solid;
   }
   
   .olho{
-
+    font-size: 20px;
   }
-  
+
   #text_miaudote {
-    top: 5em;
+    top: 1.5em;
     font-size: 30px;
     color: #3F0912;
     text-align: center;
@@ -79,24 +79,12 @@
   
   .button_adotar{
     float: right;
-    margin-left: 2%;
-    margin-top: -36px;
+    padding: 1em;
+    margin-top: -50px;
     --background: #D9D9D9;
     --color: black;
   }
-  
-  .button_conheca{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    width: 20%;
-    flex-direction: column;
-    margin: auto;
-    margin-bottom: 30px;
-    --background: #A61C35;
-    --color: white;
-  }
-  
+
   #footer{
     // top: 1.2em;
     border-radius: 50px 50px 0 0;
@@ -146,24 +134,9 @@
     }
   }
   
-  .entrar {
-    --color: #A61C35;
-      padding: 10px;
-  }
   
    ion-button{
     --color: rgb(49, 47, 47);
-  }
-  
-  
-  .col-img-gato{
-    justify-content: center;
-    align-items: center;
-  }
-  
-  
-  .ion-col {
-    border-radius: 30px;
   }
   
   .footer {
@@ -205,14 +178,22 @@
   }
   
   @media (max-width: 600px) {
+    #text_miaudote {
+      top: 0.2em;
+    }
+
     .card {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      
       width: 30%;
+      margin-top: 0 auto;
+     
     }
 
+    .testando {
+      margin: 10%;
+    }
 
     .texto{
       display: none;
@@ -223,17 +204,12 @@
     }
 
     .card-gatos {
-     margin-top: 10em;
+     margin-top: 3em;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       padding: 10px;
       width: 100%;
-    }
-
-    .name {
-     text-align: center;
-     margin: 0;
     }
 
     .conteudo-card {
@@ -281,12 +257,13 @@
   }
   
   @media (max-width: 750px) {
+
     #conteudo-banner {
       text-align: center;
       align-items: center;
       justify-content: center;
       font-size: 15px;
-      margin-top: -3em;
+  
     }
   
   .sobre-nos {
@@ -297,44 +274,9 @@
     align-items: center;
     
   }
-  .banner-gato {
-    height: 60%;
-  }
+
+
   
-  .img-gato {
-    width: 80%;
-    max-width: 150px;
-    height: auto;
-  }
-  
-  h1 {
-    font-style: italic;
-    color: #D9D9D9;
-    text-align: center;
-    margin-top: 1.8em;
-   
-  }
-  
-  p {
-    margin-top: 5px;
-    padding-right: 20px;
-    font-size: 15px;
-  
-  }
-  
-  .text {
-    color: white;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    display: inline-block;
-  }
-  
-  .col-img-gato{
-    justify-content: center;
-    align-items: center;
-   
-  }
   
   }
   
@@ -346,9 +288,6 @@
     
     }
     
-    .col-img-gato {
-      margin-top: -1.2em;
-    }
   
     .sobre-nos {
       --background: #A61C35;
