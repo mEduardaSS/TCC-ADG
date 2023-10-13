@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormAdocaoService } from '../../services/formAdocao/form-adocao.service';
 import { FormGroup , FormControl , Validators} from '@angular/forms';
+import { ToastController } from '@ionic/angular';
 import { HttpClient } from '@angular/common/http';
 
 
@@ -11,7 +12,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class FormularioInteressePage implements OnInit {
 
-  constructor(private FormAdocaoService:FormAdocaoService) {}
+  constructor(private FormAdocaoService:FormAdocaoService, private toastController: ToastController) {}
 
 
   FormAdocao!: FormGroup;
@@ -22,13 +23,22 @@ export class FormularioInteressePage implements OnInit {
 
   createFormAdocao(){
     this.FormAdocao = new FormGroup({
-      id: new FormControl(''),
-      nome: new FormControl(''),
-      email: new FormControl(''),
-      data_nascimento: new FormControl(''),
-      telefone: new FormControl(''),
-      endereco: new FormControl(''),
+      id: new FormControl('',[Validators.required]),
+      nome: new FormControl('',[Validators.required]),
+      email: new FormControl('',[Validators.required]),
+      data_nascimento: new FormControl('',[Validators.required]),
+      telefone: new FormControl('',[Validators.required]),
+      endereco: new FormControl('',[Validators.required]),
     })
+  }
+
+  async presentToast(message: any) {
+    const toast = await this.toastController.create({
+      message: message,
+      duration: 1500,
+      position: 'bottom',
+    });
+    await toast.present();
   }
 
   get nome() {
@@ -47,18 +57,31 @@ export class FormularioInteressePage implements OnInit {
     return this.FormAdocao.get('endereco')!;
   }
 
-  submit_formAdocao(form: any){
-    console.log(form);
-    let dadosTutor = [];
-    dadosTutor[0] = {
-      nome: form.nome,
-      email: form.email,
-      data_nascimento: form.data_nascimento,
-      telefone: form.telefone,
-      endereco: form.endereco
-    };
+  message: String = "";
 
-    this.FormAdocaoService.insert(dadosTutor[0]).subscribe();
+  submit_formAdocao(form: any){
+    let dadosTutor = [];
+
+    // if (this.FormAdocao.valid){
+      console.log(form);
+      dadosTutor[0] = {
+        nome: form.nome,
+        email: form.email,
+        data_nascimento: form.data_nascimento,
+        telefone: form.telefone,
+        endereco: form.endereco
+      };
+      this.FormAdocaoService.insert(dadosTutor[0]).subscribe((dados:any)=>{
+        if (dados.success == "1"){
+          this.message = dados.message;
+          this.presentToast(this.message);
+        }
+      });
+
+
+    // }
+
+  
   }
 
   

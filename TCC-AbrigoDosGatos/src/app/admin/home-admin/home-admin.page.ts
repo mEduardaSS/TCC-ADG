@@ -11,9 +11,13 @@ import { Router } from '@angular/router';
 
 export class HomeAdminPage implements OnInit {
 
-  constructor(private FormAdocaoService:FormAdocaoService, private router: Router, private FormGatoService:FormGatoService ) { }
+  constructor(private FormAdocaoService:FormAdocaoService, private router: Router, private FormGatoService:FormGatoService ) {}
 
   ngOnInit() {
+
+  }
+
+  ionViewDidEnter(){
     this.listDadosTutor();
     this.listDadosGato();
   }
