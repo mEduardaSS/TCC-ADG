@@ -34,7 +34,7 @@
   
     <ion-row>
       <ion-col size="12" size-sm="6" *ngIf="segmentModel === 'tutor'" class="card" style="margin: auto; margin-top: 2em;">
-        <ion-card class="testando">
+        <ion-card *ngIf="tutoresExibidos && tutoresExibidos.length > 0; else noTutor" class="testando">
           <ion-card-title style="text-align: center; margin: 1em;">
             Formulários de interesse para adoção
           </ion-card-title>
@@ -62,6 +62,30 @@
             </ion-row>
           </ion-card-content>
         </ion-card>
+
+        <!-- Caso nenhum tutor esteja cadastrado -->
+        <ng-template #noTutor>
+          <ion-card>
+            <ion-card-header>
+              <ion-row>
+                <ion-col>
+                  <ion-card-title style="margin-left: 15px;">Ficha</ion-card-title>
+                </ion-col>
+                <ion-col>
+                  <ion-card-title style="margin-left: -10px;">Nome</ion-card-title>
+                </ion-col>
+              </ion-row>
+            </ion-card-header>
+            <ion-card-content class="linha">
+              <ion-row style="margin: 1em;">
+                <ion-col>
+                  <ion-card-title>Nenhum tutor cadastrado</ion-card-title>
+                </ion-col>
+              </ion-row>
+            </ion-card-content>
+          </ion-card>
+        </ng-template>
+
       </ion-col>
 
       <ion-col size="12" size-sm="6" *ngIf="segmentModel === 'voluntario'" class="card" style="margin: auto; margin-top: 2em;">
