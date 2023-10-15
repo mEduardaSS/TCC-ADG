@@ -7,10 +7,11 @@ import { FormAdocaoService } from '../../services/formAdocao/form-adocao.service
   styleUrls: ['./analise-adocao.page.scss'],
 })
 export class AnaliseAdocaoPage implements OnInit {
+
   tutorSelecionado:any = [];
+
   constructor(private FormAdocaoService:FormAdocaoService) {
     this.tutorSelecionado = this.FormAdocaoService.tutorSelecionado;
-  
    }
 
   ngOnInit() {

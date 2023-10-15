@@ -9,6 +9,7 @@ export class FormAdocaoService {
   constructor(private HttpClient: HttpClient) { }
 
   tutorSelecionado:any = [];
+  
 
   private readonly API = `http://aula/API/dadosAdocao/`; 
 

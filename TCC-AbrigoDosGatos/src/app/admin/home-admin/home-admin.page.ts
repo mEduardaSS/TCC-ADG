@@ -13,9 +13,7 @@ export class HomeAdminPage implements OnInit {
 
   constructor(private FormAdocaoService:FormAdocaoService, private router: Router, private FormGatoService:FormGatoService ) {}
 
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 
   ionViewDidEnter(){
     this.listDadosTutor();
@@ -36,6 +34,12 @@ export class HomeAdminPage implements OnInit {
       this.gatosExibidos = dadosGato.message;
       console.log(this.gatosExibidos);
     })
+  }
+
+  analisar_gato(id:any){
+    console.log(id);
+    this.FormGatoService.gatoSelecionado = this.gatosExibidos.find((gato:any)=> gato.idGato == id);
+    this.router.navigate(['/editar-gato'])
   }
 
   analisar_tutor(id:any){

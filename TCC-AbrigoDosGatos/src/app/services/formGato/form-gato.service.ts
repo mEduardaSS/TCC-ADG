@@ -8,6 +8,8 @@ export class FormGatoService {
 
   constructor(private HttpClient: HttpClient) { }
 
+  gatoSelecionado:any = [];
+
   private readonly API = `http://aula/API/dadosGato/`; 
 
   insert(dadosGato: any){
@@ -17,6 +19,11 @@ export class FormGatoService {
 
   select(){
     return this.HttpClient.get(this.API+'select_dadosGato.php');
+  }
+
+  delete(id: any) {
+    console.log(id);
+    return this.HttpClient.delete(this.API+'delete_dadosGato.php?id='+ id);
   }
 
 

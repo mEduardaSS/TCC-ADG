@@ -16,7 +16,8 @@
 .banner-gato{
   height: 50%;
   padding-top: 3.0em;
-  background-image: url('https://i.pinimg.com/750x/a5/51/f4/a551f4bb08efedd8beacbe5f475dbe26.jpg');
+ background-image: url('https://i.pinimg.com/750x/a5/51/f4/a551f4bb08efedd8beacbe5f475dbe26.jpg');
+
 }
 
 .img-gato {
@@ -81,7 +82,7 @@ p {
 #text_miaudote {
   font-size: 30px;
   color: #3F0912;
-  top: 0.9em;
+  top: 0.5em;
   text-align: center;
   font-weight: bold;
   margin-bottom: 10px;
@@ -112,12 +113,6 @@ ion-card-subtitle{
 
 .card-gatos{
   margin-top: 0.5em;
-}
-
-.img-card {
-  border-radius: 20px;
-  margin-top: 1.5em;
-  
 }
 
 .button_adotar{

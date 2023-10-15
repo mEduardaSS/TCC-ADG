@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGatoService } from 'src/app/services/formGato/form-gato.service';
 
 @Component({
   selector: 'app-editar-gato',
@@ -7,9 +8,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditarGatoPage implements OnInit {
 
-  constructor() { }
+  gatoSelecionado: any = [];
+
+  constructor(private FormGatoService:FormGatoService) {
+    this.gatoSelecionado = this.FormGatoService.gatoSelecionado;
+   }
 
   ngOnInit() {
+    console.log(this.gatoSelecionado);
+  }
+
+  indiceList: any;
+  listar(indice: any) {
+    this.FormGatoService.select().subscribe();
+    // console.log(indice);
+  }
+
+  indiceDel: any;
+  apagar(indice: any) {
+    this.FormGatoService.delete(indice).subscribe();
+    // console.log(indice);
   }
 
 }
+
+
+

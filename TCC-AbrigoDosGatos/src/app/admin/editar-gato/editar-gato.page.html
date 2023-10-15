@@ -61,7 +61,7 @@
      </ion-item>
 
      <ion-row class="ion-padding">
-       <ion-button class="button_voltar" shape="round" [routerLink]="['/home-admin']">Excluir</ion-button>
+       <ion-button class="button_voltar" shape="round" [routerLink]="['/home-admin']" (click)="apagar(gatoSelecionado.idGato)">Excluir gato</ion-button>
        <ion-button class="button_voltar" shape="round" [routerLink]="['/home-admin']" type="submit">Alterar</ion-button>
      </ion-row>
  
