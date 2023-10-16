@@ -63,14 +63,24 @@
 
           <ion-row id="cont"><b>Há outros animais em sua residência?</b></ion-row>
           <ion-row>
-            <ion-col size="3.6" class="cont" lines="none">
+
+            <ion-radio-group ngModel name="possuiAnimal" class="cont">
+              <ion-radio value="sim">
+                Sim
+              </ion-radio>
+              <ion-radio value="nao">
+                nao
+              </ion-radio>
+            </ion-radio-group>
+
+            <!-- <ion-col size="3.6" class="cont" lines="none">
               <ion-checkbox class="checkbox"></ion-checkbox>
               <ion-label class="cont_check"><b>Sim</b></ion-label>
             </ion-col>
             <ion-col class="cont">
               <ion-checkbox class="checkbox"></ion-checkbox>
               <ion-label class="cont_check"><b>Não</b></ion-label>
-            </ion-col>
+            </ion-col> -->
           </ion-row>
 
           <ion-row id="cont"><b>Você possui tempo suficiente para dar cuidados necessários?</b></ion-row>
