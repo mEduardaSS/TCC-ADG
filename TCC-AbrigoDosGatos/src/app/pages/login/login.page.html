@@ -4,6 +4,7 @@
   <div class="containerForm" style="border: 5px solid #A61C35; border-radius: 20px;">  <!-- container que guarda o formulário -->
     <ion-row class="row_logo justify-content-center">
     </ion-row>
+    
 
   <div class="formulario" style="margin: 12px;">
     <ion-item class="input" lines="none">
@@ -11,19 +12,23 @@
         Faça seu login!
       </ion-text>
     </ion-item>
-    <ion-item class="input_cont" lines="none">
-      <label for="email">Email</label>
-      <ion-input id="email" class="input" style="width: 400px;" [(ngModel)]="email"></ion-input>
-    </ion-item>
-    <ion-item class="input_cont" lines="none">
-      <label for="senha">Senha</label>
-      <ion-input id="senha" type="password" class="input" style="width: 400px" [(ngModel)]="senha"></ion-input>
-    </ion-item>
-    <div id="botao">
-      <ion-button class="btnEntrar" (click)="validaLogin()">Entrar</ion-button>
-      <!-- <ion-button class="btnEntrar" [routerLink]="['/admin/home']" (click)="validaLogin()">Entrar</ion-button> -->
-
-    </div>
+    <form action="" (ngSubmit)="validaLogin()" [formGroup]="login">
+      <ion-item class="input_cont" lines="none">
+        <label for="email">Email</label>
+        <ion-input id="email" class="input" style="width: 400px;" ngModel formControlName="email"></ion-input>
+      </ion-item>
+      <ion-item class="input_cont" lines="none">
+        <label for="senha">Senha</label>
+        <ion-input id="senha" type="password" class="input" style="width: 400px" ngModel formControlName="senha"></ion-input>
+      </ion-item>
+      <div id="botao">
+        <ion-button class="btnEntrar" type="submit">Entrar</ion-button>
+        <!-- <ion-button class="btnEntrar" [routerLink]="['/admin/home']" (click)="validaLogin()">Entrar</ion-button> -->
+  
+      </div>
+    </form>
+      
+   
   </div>
 </div>
 </div>

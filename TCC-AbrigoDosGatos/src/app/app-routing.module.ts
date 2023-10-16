@@ -24,7 +24,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/voluntario/voluntario.module').then( m => m.VoluntarioPageModule)
   },
   {
-    path: 'login',
+    path: 'pages/login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
   {

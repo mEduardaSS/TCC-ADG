@@ -10,7 +10,7 @@ export class FormGatoService {
 
   gatoSelecionado:any = [];
 
-  private readonly API = `http://aula/API/dadosGato/`; 
+  private readonly API = `http://localhost/aula/API/dadosGato/`; 
 
   insert(dadosGato: any){
     console.log(dadosGato);
