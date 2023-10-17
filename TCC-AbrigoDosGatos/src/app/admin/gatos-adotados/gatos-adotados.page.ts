@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGatoService } from 'src/app/services/formGato/form-gato.service';
 
 @Component({
   selector: 'app-gatos-adotados',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GatosAdotadosPage implements OnInit {
 
-  constructor() { }
+  constructor(private FormGatoService:FormGatoService) { }
 
   ngOnInit() {
+    this.listDadosGato();
+  }
+
+  gatosExibidos: any = [];
+  listDadosGato(){
+    this.FormGatoService.selectAdotados().subscribe((dadosGato:any) => {
+      this.gatosExibidos = dadosGato.message;
+      console.log(this.gatosExibidos);
+    })
   }
 
 }

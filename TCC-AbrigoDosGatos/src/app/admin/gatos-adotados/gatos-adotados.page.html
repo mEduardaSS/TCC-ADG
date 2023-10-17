@@ -31,24 +31,27 @@
       </ion-col>
     </ion-row>
 
-    <ion-row class="ion-padding ion-justify-content-center">
+    <ion-row *ngIf="gatosExibidos && gatosExibidos.length > 0" class="ion-padding ion-justify-content-center">
       <div class="card-gatos">
-        <ion-card class="classecard">
+        <ion-card class="classecard" *ngFor="let gato of gatosExibidos">
           <img class="img-card" alt="Gato"
             src="https://i.pinimg.com/750x/a1/41/6a/a1416afca3818d681d8325d44f62fad2.jpg" />
           <ion-card-header>
-            <ion-card-title class="name">odio</ion-card-title>
+            <ion-card-title class="name">{{gato.nome}}</ion-card-title>
             <!-- <ion-card-subtitle class="name">{{gato.sexo}}</ion-card-subtitle> -->
+            <ion-card-subtitle class="name">{{gato.sexo}}, {{gato.idadeGato}}</ion-card-subtitle>
+            <ion-card-subtitle class="name">{{gato.raca}}</ion-card-subtitle>
             <ion-card-content class="conteudo-card">
               <ion-button class="button_adotar"><ion-icon name="create-outline"></ion-icon>Editar</ion-button>
               <p class="texto">
-                odio
+                {{gato.descricao}}
               </p>
             </ion-card-content>
           </ion-card-header>
         </ion-card>
       </div>
     </ion-row>
+    
     
     <ng-template>
       <!-- Exibir mensagem quando não há gatos disponíveis -->

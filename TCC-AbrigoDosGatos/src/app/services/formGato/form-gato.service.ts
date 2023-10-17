@@ -21,10 +21,15 @@ export class FormGatoService {
     return this.HttpClient.get(this.API+'select_dadosGato.php');
   }
 
+  selectAdotados(){
+    return this.HttpClient.get(this.API+'select_dadosGatoAdotados.php');
+  }
+
   delete(id: any) {
     console.log(id);
     return this.HttpClient.delete(this.API+'delete_dadosGato.php?id='+ id);
   }
+
 
   selecionarGato: any[] = [];
 

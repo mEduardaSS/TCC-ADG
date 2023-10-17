@@ -4,7 +4,7 @@ include '../conexao.php';
 
 
 try{
-    $sql = "SELECT * FROM `Gato` WHERE adotado = 0" ;
+    $sql = "SELECT * FROM `Gato` WHERE adotado = 1" ;
 
     $stmt = $connection->prepare($sql);
     $stmt->execute();
