@@ -1,15 +1,12 @@
---Criando o banco de dados
-create database AbrigoGatos
 
---Acessar banco
-use AbrigoGatos
+create database AbrigoGatos;
+use AbrigoGatos;
 
 create table DadosDoacao
 (
     idDoacao  int(11) primary key auto_increment,
     infoDoacao	varchar(80) not null,	
-    imgDadosDoacao varchar(100)				
- 
+    imgDadosDoacao varchar(100)			
 );
 
 
@@ -18,8 +15,8 @@ create table Admin
     idAdmin  int(11) primary key auto_increment,
     ativoAdmin tinyint(1) not null,	
     emailAdmin varchar(50) unique not null,
-    fk_IdUsuario int
-    senhaAdmin varchar(10) not null,
+    fk_IdUsuario int,
+    senhaAdmin varchar(10) not null
 );
     INSERT INTO `admin` (`idAdmin`, `ativoAdmin`, `emailAdmin`, `fk_IdUsuario`, `senhaAdmin`)
     VALUES (NULL, '1', 'admin@admin.com', NULL, '123');
@@ -77,7 +74,7 @@ create table  Usuario
 );
 
 
---CRIANDO AS FOREIGN KEY
+
 
 -- admin, (Usuario/idUsuario)
 alter table Admin
@@ -94,7 +91,7 @@ references Gato(idGato);
 -- checando se as tabelas foram criadas
 show tables;
 
--- exibindo a estrutura de uma tabela
+
 describe admin; 
 describe InformacaoAbrigo;
 describe Gato;
@@ -104,3 +101,4 @@ describe SolicitacaoAdocao;
 describe DadosDoacao; 
 								
 								
+                                
