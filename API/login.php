@@ -51,4 +51,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["email"]) && isset($_PO
     http_response_code(400);
     echo json_encode(array("mensagem" => "Requisição inválida"));
 }
+}
 ?>
