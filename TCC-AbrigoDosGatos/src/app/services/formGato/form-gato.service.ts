@@ -26,5 +26,7 @@ export class FormGatoService {
     return this.HttpClient.delete(this.API+'delete_dadosGato.php?id='+ id);
   }
 
+  selecionarGato: any[] = [];
+
 
 }

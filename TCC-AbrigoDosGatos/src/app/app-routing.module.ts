@@ -67,7 +67,11 @@ const routes: Routes = [
   {
     path: 'editar-gato',
     loadChildren: () => import('./admin/editar-gato/editar-gato.module').then( m => m.EditarGatoPageModule)
+  },  {
+    path: 'gatos-adotados',
+    loadChildren: () => import('./admin/gatos-adotados/gatos-adotados.module').then( m => m.GatosAdotadosPageModule)
   },
+
 
 ];
 

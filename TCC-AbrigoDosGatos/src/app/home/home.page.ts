@@ -22,4 +22,9 @@ export class HomePage {
       console.log(this.gatosExibidos);
     })
   }
+
+    selecionarGato(id:any){
+    this.FormGatoService.gatoSelecionado = this.gatosExibidos.find((gato:any)=> gato.idGato == id);
+    this.router.navigate(['/formulario-interesse'])
+  }
 }

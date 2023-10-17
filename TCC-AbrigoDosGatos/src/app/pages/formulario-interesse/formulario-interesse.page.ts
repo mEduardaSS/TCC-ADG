@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormAdocaoService } from '../../services/formAdocao/form-adocao.service';
+import { FormGatoService } from 'src/app/services/formGato/form-gato.service';
 import { FormGroup , FormControl , Validators} from '@angular/forms';
 import { ToastController } from '@ionic/angular';
 import { HttpClient } from '@angular/common/http';
@@ -12,13 +13,18 @@ import { HttpClient } from '@angular/common/http';
 })
 export class FormularioInteressePage implements OnInit {
 
-  constructor(private FormAdocaoService:FormAdocaoService, private toastController: ToastController) {}
+  gatoSelecionado:any = [];
 
+  constructor(private FormGatoService:FormGatoService, private FormAdocaoService:FormAdocaoService, private toastController: ToastController) {
+    this.gatoSelecionado = this.FormGatoService.gatoSelecionado;
+    console.log(this.gatoSelecionado);
+  }
 
   FormAdocao!: FormGroup;
 
   ngOnInit() {
     this.createFormAdocao();
+    // console.log(this.gatoSelecionado);
   }
 
   createFormAdocao(){
@@ -29,6 +35,8 @@ export class FormularioInteressePage implements OnInit {
       data_nascimento: new FormControl('',[Validators.required]),
       telefone: new FormControl('',[Validators.required]),
       endereco: new FormControl('',[Validators.required]),
+      temTempo: new FormControl('',[Validators.required]),
+      possuiAnimais: new FormControl('',[Validators.required]),
     })
   }
 
@@ -56,6 +64,12 @@ export class FormularioInteressePage implements OnInit {
   get endereco() {
     return this.FormAdocao.get('endereco')!;
   }
+  get temTempo() {
+    return this.FormAdocao.get('temTempo')!;
+  }
+  get possuiAnimais() {
+    return this.FormAdocao.get('possuiAnimais')!;
+  }
 
   message: String = "";
 
@@ -69,16 +83,19 @@ export class FormularioInteressePage implements OnInit {
         email: form.email,
         data_nascimento: form.data_nascimento,
         telefone: form.telefone,
-        endereco: form.endereco
+        endereco: form.endereco,
+        temTempo: form.temTempo,
+        possuiAnimais: form.possuiAnimais
       };
+
       this.FormAdocaoService.insert(dadosTutor[0]).subscribe((dados:any)=>{
         if (dados.success == "1"){
           this.message = dados.message;
-          this.presentToast(this.message);
         }
+        this.presentToast(this.message);
       });
 
-
+     
     // }
 
   

@@ -29,7 +29,7 @@
         </ion-row>
 
         <ion-row class="ion-padding">
-          <ion-col id="cont"><b>Animal: [Nome do gato]</b></ion-col>
+          <ion-col id="cont"><b>Nome animal: {{gatoSelecionado.nome}}</b></ion-col>
         </ion-row>
 
         <form (ngSubmit)="submit_formAdocao(formAdocao.value)" #formAdocao="ngForm">
@@ -64,7 +64,7 @@
           <ion-row id="cont"><b>Há outros animais em sua residência?</b></ion-row>
           <ion-row>
 
-            <ion-radio-group ngModel name="possuiAnimal" class="cont">
+            <ion-radio-group ngModel name="possuiAnimais" class="cont">
               <ion-radio value="sim">
                 Sim
               </ion-radio>
@@ -86,12 +86,15 @@
           <ion-row id="cont"><b>Você possui tempo suficiente para dar cuidados necessários?</b></ion-row>
           <ion-row id="checkbox">
             <ion-col class="cont">
-              <ion-radio-group>
-                <ion-radio value="sim">
-                  Sim
+              <ion-radio-group ngModel name="temTempo">
+                <ion-radio value="Tenho bastante tempo">
+                  Tenho bastante tempo
                 </ion-radio>
-                <ion-radio value="nao">
-                  nao
+                <ion-radio value="Tenho tempo o suficiente">
+                  Tenho tempo o suficiente
+                </ion-radio>
+                <ion-radio value="Não tenho muito tempo">
+                  Não tenho muito tempo
                 </ion-radio>
               </ion-radio-group>
             </ion-col>

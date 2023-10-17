@@ -1,4 +1,7 @@
 <?php
+
+include '../corss.php';
+include '../conexao.php';
 // api.php
 
 // Habilitar CORS (Cross-Origin Resource Sharing) para permitir solicitações do Ionic/Angular
