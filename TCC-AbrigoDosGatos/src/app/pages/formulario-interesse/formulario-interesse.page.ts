@@ -4,6 +4,7 @@ import { FormGatoService } from 'src/app/services/formGato/form-gato.service';
 import { FormGroup , FormControl , Validators} from '@angular/forms';
 import { ToastController } from '@ionic/angular';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -15,7 +16,7 @@ export class FormularioInteressePage implements OnInit {
 
   gatoSelecionado:any = [];
 
-  constructor(private FormGatoService:FormGatoService, private FormAdocaoService:FormAdocaoService, private toastController: ToastController) {
+  constructor(private router: Router, private FormGatoService:FormGatoService, private FormAdocaoService:FormAdocaoService, private toastController: ToastController) {
     this.gatoSelecionado = this.FormGatoService.gatoSelecionado;
     console.log(this.gatoSelecionado);
   }
@@ -85,7 +86,9 @@ export class FormularioInteressePage implements OnInit {
         telefone: form.telefone,
         endereco: form.endereco,
         temTempo: form.temTempo,
-        possuiAnimais: form.possuiAnimais
+        possuiAnimais: form.possuiAnimais,
+        nomeGato: this.gatoSelecionado.nome,
+        fk_IdGato: this.gatoSelecionado.idGato
       };
 
       this.FormAdocaoService.insert(dadosTutor[0]).subscribe((dados:any)=>{
@@ -93,9 +96,10 @@ export class FormularioInteressePage implements OnInit {
           this.message = dados.message;
         }
         this.presentToast(this.message);
+        this.router.navigate(['/home']);
+
       });
 
-     
     // }
 
   

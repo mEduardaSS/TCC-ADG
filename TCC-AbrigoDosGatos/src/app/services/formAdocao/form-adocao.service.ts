@@ -27,5 +27,8 @@ export class FormAdocaoService {
     return this.HttpClient.delete(this.API+'delete_dadosTutor.php?id='+ id);
   }
 
-
+  aprovarTutoria(dadosTutor: any){
+    console.log(dadosTutor);
+    return this.HttpClient.put(this.API+'update_dadosTutorAprovado.php', dadosTutor);
+  }
 }

@@ -2,6 +2,21 @@
 include '../corss.php';
 include '../conexao.php';
 
+$method = $_SERVER['REQUEST_METHOD'];
+
+if ($method == "OPTIONS") {
+    die();
+}
+
+if ($_SERVER['REQUEST_METHOD'] !== 'POST'){
+    http_response_code(405);
+    echo json_encode([
+        'success' => 0,
+        'message' => 'Falha na requisição!. Somente o método POST é permitido',
+    ]);
+    exit;
+}
+
 $dados = json_decode(file_get_contents("php://input"));
 
 try {
@@ -12,7 +27,8 @@ try {
     $tutor_dataNasc = htmlspecialchars(trim($dados->data_nascimento));
     $tutor_temTempo = htmlspecialchars(trim($dados->temTempo));
     $tutor_temAnimais = htmlspecialchars(trim($dados->possuiAnimais));
-    $fk_IdGato = 0;
+    $tutor_nomeGato = htmlspecialchars(trim($dados->nomeGato));
+    $fk_IdGato = htmlspecialchars(trim($dados->fk_IdGato));
     $aprovado = 0;
 
     $sql = "INSERT INTO `SolicitacaoAdocao` (
@@ -23,7 +39,9 @@ try {
     fk_IdGato,
     endereco,
     temTempo,
-    possuiAnimais
+    possuiAnimais,
+    nomeGato,
+    aprovado
     )
     VALUES (
     :telefoneAdocao,
@@ -33,7 +51,9 @@ try {
     :fk_IdGato,
     :endereco,
     :temTempo,
-    :possuiAnimais
+    :possuiAnimais,
+    :nomeGato,
+    :aprovado
     )";
 
     $stmt = $connection->prepare($sql);
@@ -46,6 +66,8 @@ try {
     $stmt->bindValue(':endereco', $tutor_endereco, PDO::PARAM_STR);
     $stmt->bindValue(':temTempo', $tutor_temTempo, PDO::PARAM_STR);
     $stmt->bindValue(':possuiAnimais', $tutor_temAnimais, PDO::PARAM_STR);
+    $stmt->bindValue(':nomeGato', $tutor_nomeGato, PDO::PARAM_STR);
+    $stmt->bindValue(':aprovado', $aprovado, PDO::PARAM_STR);
 
 
     if ($stmt->execute()) {

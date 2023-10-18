@@ -174,6 +174,7 @@ create table SolicitacaoAdocao
     endereco varchar(50),
     temTempo varchar(50),
     possuiAnimais varchar(5),
+    nomeGato varchar(50),
     aprovado boolean
     -- aprovado seria aprovado ou reprovado.
 );
