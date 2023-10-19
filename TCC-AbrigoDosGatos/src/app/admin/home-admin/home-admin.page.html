@@ -27,7 +27,7 @@
         Formulários de interesse para adoção
       </ion-segment-button>
       <ion-segment-button value="voluntario" style="margin: 0.5em;">
-        Formulários de interesse para voluntário
+        Formulários de interesse para voluntários
       </ion-segment-button>
     </ion-segment>
 
@@ -35,10 +35,9 @@
     <ion-row>
       <ion-col size="12" size-sm="6" *ngIf="segmentModel === 'tutor'" class="card" style="margin: auto; margin-top: 2em;">
         <ion-card *ngIf="tutoresExibidos && tutoresExibidos.length > 0; else noTutor" class="testando">
-          <ion-card-title style="text-align: center; margin: 1em;">
+          <ion-card-title style="text-align: center; margin: 1em;" class="teste">
             Formulários de interesse para adoção
           </ion-card-title>
-
           <ion-card-header>
             <ion-row>
               <ion-col>
