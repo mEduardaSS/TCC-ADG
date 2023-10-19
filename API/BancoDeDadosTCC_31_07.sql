@@ -130,8 +130,8 @@ create table InformacaoAbrigo
 
 create table Gato							
 (
-    imgGato varchar(255),
     idGato int primary key auto_increment,
+    imgGato varchar(255),
     nome varchar(50) not null,
     cor varchar(50) not null,
     racaGato varchar(50) not null,

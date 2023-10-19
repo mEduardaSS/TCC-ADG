@@ -135,8 +135,7 @@
     <ion-row *ngIf="gatosExibidos && gatosExibidos.length > 0" class="ion-padding ion-justify-content-center">
       <div class="card-gatos">
         <ion-card class="classecard" *ngFor="let gato of gatosExibidos">
-          <img class="img-card" alt="Gato"
-            src="https://i.pinimg.com/750x/a1/41/6a/a1416afca3818d681d8325d44f62fad2.jpg" />
+          <img class="img-card" alt="Gato" src="{{this.upload}}{{gato.imgGato}}"/>
           <ion-card-header>
             <ion-card-title class="name">{{gato.nome}}</ion-card-title>
             <!-- <ion-card-subtitle class="name">{{gato.sexo}}</ion-card-subtitle> -->
