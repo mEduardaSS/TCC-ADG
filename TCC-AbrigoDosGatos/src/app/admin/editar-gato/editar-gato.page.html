@@ -26,38 +26,38 @@
             <b>Edição de Gatos</b>
          </ion-row>
         
-     <form>
+     <form (ngSubmit)="submit_formEditGato(formEditGato.value)" #formEditGato="ngForm">
       <ion-input class="logo-tcc" type="file"></ion-input>
 
       <ion-item class="input_cont" lines="none">
         <ion-label position="stacked" class="nome"><b>Nome</b></ion-label>
-       <ion-input class="input" name="nome" ngModel></ion-input>
+       <ion-input class="input" name="nome" [(ngModel)]="gatoSelecionado.nome"></ion-input>
      </ion-item>
  
      <ion-item class="input_cont" lines="none">
        <ion-label position="stacked" class="nome"><b>Cor</b></ion-label>
-       <ion-input class="input" name="cor" ngModel></ion-input>
+       <ion-input class="input" name="cor" [(ngModel)]="gatoSelecionado.cor"></ion-input>
    
      </ion-item>
 
      <ion-item class="input_cont" lines="none">
        <ion-label position="stacked" class="nome"><b>Idade</b></ion-label>
-       <ion-input class="input" name="idade" ngModel></ion-input>
+       <ion-input class="input" name="idade" [(ngModel)]="gatoSelecionado.idadeGato"></ion-input>
      </ion-item>
 
      <ion-item class="input_cont" lines="none">
        <ion-label position="stacked" class="nome"><b>Sexo</b></ion-label>
-       <ion-input class="input" name="sexo" ngModel></ion-input>
+       <ion-input class="input" name="sexo" [(ngModel)]="gatoSelecionado.sexo"></ion-input>
      </ion-item>
 
      <ion-item class="input_cont" lines="none">
        <ion-label position="stacked" class="nome"><b>Raça</b></ion-label>
-       <ion-input class="input" name="raca" ngModel></ion-input>
+       <ion-input class="input" name="raca" [(ngModel)]="gatoSelecionado.racaGato"></ion-input>
      </ion-item>
 
      <ion-item class="input_cont" lines="none">
        <ion-label position="stacked" class="nome"><b>Descrição</b></ion-label>
-       <ion-input class="input" name="descricao" ngModel></ion-input>
+       <ion-textarea class="input" name="descricao" [(ngModel)]="gatoSelecionado.descricao"></ion-textarea>
      </ion-item>
 
      <ion-row class="ion-padding">

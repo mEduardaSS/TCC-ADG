@@ -2,21 +2,35 @@
 include '../corss.php';
 include '../conexao.php';
 
+$method = $_SERVER['REQUEST_METHOD'];
+
+if ($method == "OPTIONS") {
+    die();
+}
+
+if ($_SERVER['REQUEST_METHOD'] !== 'GET'){
+    http_response_code(405);
+    echo json_encode([
+        'success' => 0,
+        'message' => 'Falha na requisição!. Somente o método POST é permitido',
+    ]);
+    exit;
+}
 
 try{
-    $sql = "SELECT * FROM `Gato`";
+    $sql = "SELECT * FROM `Gato` WHERE adotado = 0" ;
 
     $stmt = $connection->prepare($sql);
     $stmt->execute();
 
     if($stmt->rowCount() > 0){
-        $tutores = [];
+        $gatos = [];
 
-        $tutores = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $gatos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             echo json_encode([
                 'success' => 1,
-                'message' => $tutores,
+                'message' => $gatos,
             ]);
             exit;
 

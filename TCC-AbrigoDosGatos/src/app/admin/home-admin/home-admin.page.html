@@ -27,7 +27,7 @@
         Formulários de interesse para adoção
       </ion-segment-button>
       <ion-segment-button value="voluntario" style="margin: 0.5em;">
-        Formulários de interesse para voluntário
+        Formulários de interesse para voluntários
       </ion-segment-button>
     </ion-segment>
 
@@ -35,10 +35,9 @@
     <ion-row>
       <ion-col size="12" size-sm="6" *ngIf="segmentModel === 'tutor'" class="card" style="margin: auto; margin-top: 2em;">
         <ion-card *ngIf="tutoresExibidos && tutoresExibidos.length > 0; else noTutor" class="testando">
-          <ion-card-title style="text-align: center; margin: 1em;">
+          <ion-card-title style="text-align: center; margin: 1em;" class="teste">
             Formulários de interesse para adoção
           </ion-card-title>
-
           <ion-card-header>
             <ion-row>
               <ion-col>
@@ -135,12 +134,11 @@
     <ion-row *ngIf="gatosExibidos && gatosExibidos.length > 0" class="ion-padding ion-justify-content-center">
       <div class="card-gatos">
         <ion-card class="classecard" *ngFor="let gato of gatosExibidos">
-          <img class="img-card" alt="Gato"
-            src="https://i.pinimg.com/750x/a1/41/6a/a1416afca3818d681d8325d44f62fad2.jpg" />
+          <img class="img-card" alt="Gato" src="{{this.upload}}{{gato.imgGato}}"/>
           <ion-card-header>
             <ion-card-title class="name">{{gato.nome}}</ion-card-title>
-            <ion-card-subtitle class="name">{{gato.sexo}}</ion-card-subtitle>
-            <ion-card-subtitle class="name">{{gato.idade}}, {{gato.cor}}</ion-card-subtitle>
+            <!-- <ion-card-subtitle class="name">{{gato.sexo}}</ion-card-subtitle> -->
+            <ion-card-subtitle class="name">{{gato.sexo}}, {{gato.idadeGato}}</ion-card-subtitle>
             <ion-card-subtitle class="name">{{gato.raca}}</ion-card-subtitle>
             <ion-card-content class="conteudo-card">
               <ion-button class="button_adotar" (click)="analisar_gato(gato.idGato)"><ion-icon name="create-outline"></ion-icon>Editar</ion-button>
@@ -166,41 +164,5 @@
     <!-- <ion-row size="3" size-sm="6" class="ion-padding">
       <ion-button class="button_conheca" shape="round">Conheça gatinhos disponivéis</ion-button>
     </ion-row> -->
-
-    <ion-row id="footer">
-      <ion-col class="footer-content">
-        <ion-text>
-          <ion-label class="footer-title">Contato <br></ion-label>
-        </ion-text>
-
-        <ion-text>
-          <ion-label><ion-icon name="logo-whatsapp" class="icon-whatsapp"></ion-icon>WhatsApp</ion-label>
-          <br>
-        </ion-text>
-
-        <ion-text>
-          <ion-label><ion-icon name="mail-outline" class="icon-mail"></ion-icon>E-mail</ion-label>
-          <br>
-        </ion-text>
-      </ion-col>
-
-      <ion-col class="footer-content">
-        <ion-text>
-          <ion-label class="footer-title">Redes Sociais</ion-label>
-          <br>
-        </ion-text>
-
-        <ion-text>
-          <ion-label><ion-icon name="logo-facebook" class="icon-facebook"></ion-icon>/abrigodosgatos</ion-label>
-          <br>
-        </ion-text>
-        <ion-text>
-          <ion-label><ion-icon name="logo-instagram" class="icon-instagram"></ion-icon>abrigo.dosgatos</ion-label>
-          <br>
-        </ion-text>
-      </ion-col>
-    </ion-row>
-
-
   </ion-content>
 </div>

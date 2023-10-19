@@ -11,6 +11,8 @@
   font-size: 24px;
   color: #A61C35;
 }
+
+
   
   ion-button{
     --color: black;
@@ -72,17 +74,18 @@
     border-radius: 30px;
     border-color:  rgb(163, 50, 50);
     border-style: solid;
-    border-width: 8px;
+    // border-width: 8px;
     background:white;
     margin: 30px 450px;
     justify-content: center;
     align-items: center;
-bottom: 1.0em;
+    bottom: 1.0em;
   }
+
   .tema-pag {
     font-size: 140%;
 }
-
+  
   .moc{
     font-size: 100%;
   }
@@ -92,7 +95,7 @@ bottom: 1.0em;
       border-radius: 30px;
       border-color:  rgb(163, 50, 50);
       border-style: solid;
-      border-width: 8px;
+      // border-width: 8px;
       background:white;
       margin: 30px;
       justify-content: center;
@@ -116,7 +119,7 @@ bottom: 1.0em;
           --color: white;
     }
     .tema-pag {
-      font-size: 100%;
+      font-size: 120%;
   }
   .moc{
     font-size: 70%;

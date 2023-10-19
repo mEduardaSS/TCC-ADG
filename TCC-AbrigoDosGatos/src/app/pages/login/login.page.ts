@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup , FormControl , Validators} from '@angular/forms';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -7,26 +8,42 @@ import { Router } from '@angular/router';
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> e37a67e1c87f5c0715ed85970114197a22ec8784
 export class LoginPage implements OnInit {
+  login!:FormGroup;
 
   constructor(private router: Router) { }
   senha:any
   email:any
 
   async validaLogin(){
-    let dados:any ={
-        "email": `${this.email}`,
-        "senha": `${this.senha}`
-      }
-      let res=await this.post(dados);
-      if(res){
-        alert("Logado com sucesso");
-        this.router.navigate(['/home-admin']);
-      }else{
-        alert("Email ou senha incorretos")
-      }
+    // let dados:any ={
+    //     "email": `${this.email}`,
+    //     "senha": `${this.senha}`
+    //   }
+    //   let res=await this.post(dados);
+    //   if(res){
+    //     alert("Logado com sucesso");
+    //     this.router.navigate(['/home-admin']);
+    //   }else{
+    //     alert("Email ou senha incorretos")
+    //   }
+
+    console.log(this.login.value);
 
   }
+
+  createFormLogin(){
+    this.login = new FormGroup ({
+      email: new FormControl('', Validators.required),
+      senha: new FormControl('', Validators.required)
+  })
+  }
+
   ngOnInit() {
   }
 
@@ -38,7 +55,11 @@ export class LoginPage implements OnInit {
         'Content-Type': 'application/json'
       }
     }
+<<<<<<< HEAD
     return fetch(`http://casa/server/api/voluntario/login`, options)
+=======
+    return fetch(`http://localhost/aula/API/login.php`, options)
+>>>>>>> e37a67e1c87f5c0715ed85970114197a22ec8784
     .then(res => {
       return res.json() ;
     })

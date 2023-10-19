@@ -28,7 +28,7 @@
         
      <form (ngSubmit)="submit_formGato(formGato.value)" #formGato="ngForm">
 
-      <ion-input type="file" (change)="onFileSelected($event)"></ion-input>
+      <ion-input type="file" (change)="onImageSelect($event)"></ion-input>
 
       <ion-item class="input_cont" lines="none">
         <ion-label position="stacked" class="nome"><b>Nome</b></ion-label>
@@ -58,7 +58,7 @@
 
      <ion-item class="input_cont" lines="none">
        <ion-label position="stacked" class="nome"><b>Descrição</b></ion-label>
-       <ion-input class="input" name="descricao" ngModel></ion-input>
+       <ion-textarea class="input" name="descricao" ngModel></ion-textarea>
      </ion-item>
 
      <ion-row class="ion-padding">

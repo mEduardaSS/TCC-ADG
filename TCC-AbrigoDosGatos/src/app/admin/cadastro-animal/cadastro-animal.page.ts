@@ -9,7 +9,16 @@ import { FormGroup , FormControl , Validators} from '@angular/forms';
 })
 export class CadastroAnimalPage implements OnInit {
 
-  constructor(private FormGatoService:FormGatoService) { }
+  constructor(private FormGatoService:FormGatoService, ) {}
+    selectedImage!:File;
+
+
+
+  // adicionando imgGato
+
+  onImageSelect(event: any) {
+    this.selectedImage = event.target.files[0];
+  }
 
   FormGato!: FormGroup;
 
@@ -48,28 +57,34 @@ export class CadastroAnimalPage implements OnInit {
   get descricao(){
     return this.FormGato.get('descricao')!;
   }
+  get imgGato(){
+    return this.FormGato.get('imgGato')!;
+  }
 
-onFileSelected(event: any) {
-  const file: File = event.target.files[0];
 
-  this.FormGato.patchValue({image: file});
-
-}
 
   submit_formGato(form:any){
+    console.log(this.selectedImage);
     console.log(form);
-    let dadosGato = [];
-    dadosGato[0] = {
-      nome: form.nome,
-      cor: form.cor,
-      raca: form.raca,
-      idade: form.idade,
-      descricao: form.descricao,
-      sexo: form.sexo,
-      imgGato: form.imgGato,
-    };
-    console.log(this.FormGato.value);
-    this.FormGatoService.insert(dadosGato[0]).subscribe();
+    let dadosGato = new FormData();
+    dadosGato.append('imgGato', this.selectedImage);
+    dadosGato.append('nome', form.nome);
+    dadosGato.append('cor', form.cor);
+    dadosGato.append('raca', form.raca);
+    dadosGato.append('idade', form.idade);
+    dadosGato.append('descricao', form.descricao);
+    dadosGato.append('sexo', form.sexo);
+    // dadosGato[0] = {
+    //   nome: form.nome,
+    //   cor: form.cor,
+    //   raca: form.raca,
+    //   idade: form.idade,
+    //   descricao: form.descricao,
+    //   sexo: form.sexo,
+    //   imgGato: form.imgGato,
+    // };
+    console.log(dadosGato);
+    this.FormGatoService.insert(dadosGato).subscribe();
   }
 
 }

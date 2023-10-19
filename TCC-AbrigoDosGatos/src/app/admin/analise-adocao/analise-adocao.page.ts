@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormAdocaoService } from '../../services/formAdocao/form-adocao.service';
+import { FormGatoService } from 'src/app/services/formGato/form-gato.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-analise-adocao',
@@ -10,7 +12,7 @@ export class AnaliseAdocaoPage implements OnInit {
 
   tutorSelecionado:any = [];
 
-  constructor(private FormAdocaoService:FormAdocaoService) {
+  constructor(private FormAdocaoService:FormAdocaoService, private FormGatoService:FormGatoService, private router: Router) {
     this.tutorSelecionado = this.FormAdocaoService.tutorSelecionado;
    }
 
@@ -22,5 +24,14 @@ export class AnaliseAdocaoPage implements OnInit {
   apagar(indice: any) {
     this.FormAdocaoService.delete(indice).subscribe();
     // console.log(indice);
+  }
+
+
+  aprovar(){
+    this.FormGatoService.definirAdotado(this.tutorSelecionado.fk_IdGato).subscribe();
+
+    this.FormAdocaoService.aprovarTutoria(this.tutorSelecionado.idAdocao).subscribe();
+
+    this.router.navigate(['/home-admin']);
   }
 }

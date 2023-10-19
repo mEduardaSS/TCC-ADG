@@ -23,10 +23,10 @@
           <ng-container *ngIf="this.menu_admin">
             <ion-list (click)="Clickmenu()" lines="none">
               <ion-item  [routerLink]="['/home-admin']">Home admin</ion-item>
-              <ion-item [routerLink]="['/ajuda-admin']">Quero ajudar admin</ion-item>
+              <!-- <ion-item [routerLink]="['/ajuda-admin']">Quero ajudar admin</ion-item> -->
               <ion-item [routerLink]="['/admin/cadastro-animal']">Cadastro animal</ion-item>
               <ion-item [routerLink]="['/controle-voluntarios']">Controle voluntários</ion-item>
-              <ion-item>Contato</ion-item>
+              <ion-item [routerLink]="['/gatos-adotados']">Gatos adotados</ion-item>
             </ion-list>
           </ng-container>
         </ion-col>

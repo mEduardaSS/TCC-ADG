@@ -11,7 +11,7 @@
             <ion-title class="ion-text-center title-page">Abrigo dos Gatos</ion-title>
 
             <ion-buttons slot="end">
-              <ion-button [routerLink]="['/login']">
+              <ion-button [routerLink]="['/pages/login']">
                 <ion-icon slot="icon-only" name="person-circle" ></ion-icon>
               </ion-button>
            </ion-buttons>
@@ -21,11 +21,10 @@
 
         <ion-content>
           <ion-row class="banner-gato">
-            <ion-col size="12" size-md="6" class="col-img-gato" >
-              <img class="img-gato" alt="img-gato" style="margin: auto;"
+            <ion-col size="12" size-md="6" class="col-img-gato">
+              <img id="img-gato" alt="img-gato" style="margin: auto;"
                 src="https://i.pinimg.com/750x/a9/2a/78/a92a785cbc96f57a44c4a2eea03a92b1.jpg">
             </ion-col>
-        
         
             <ion-col size="12" size-md="6"md class="ion-text-center ion-justify-content-center ion-align-items-center"
               id="conteudo-banner">
@@ -40,10 +39,10 @@
                   precárias os tratando para deixá-los saudáveis e abrigando eles até que possam ser
                   adotados.
                 </p>
-        
               </ion-text>
-              <!-- <ion-button class="sobre-nos" shape="round" [routerLink]="['/sobre']" routerLinkActive="active-link">Sobre
-                nós</ion-button> -->
+              
+              <ion-button class="sobre-nos" shape="round" [routerLink]="['/sobre']" routerLinkActive="active-link">Sobre
+                nós</ion-button>
             </ion-col>
           </ion-row>
         
@@ -68,7 +67,7 @@
                   <ion-card-subtitle class="name">{{gato.sexo}}, {{gato.idade}}</ion-card-subtitle>
       
                   <ion-card-content class="conteudo-card">
-                    <ion-button class="button_adotar" [routerLink]="['/formulario-interesse']">Adotar</ion-button>
+                    <ion-button class="button_adotar" (click)="selecionarGato(gato.idGato)">Adotar</ion-button>
                     <p class="texto">
                        {{gato.descricao}}
                     </p>
@@ -77,12 +76,7 @@
               </ion-card>
             </div>
           </ion-row>
-        
-          <ion-row size="3" size-sm="6" class="ion-padding">
-            <ion-button class="button_conheca" shape="round">Conheça gatinhos disponivéis</ion-button>
-          </ion-row>
-        
-        
+          
           <ion-row id="footer">
             <ion-col class="footer-content">
               <ion-text>
