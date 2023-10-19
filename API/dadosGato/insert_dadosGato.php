@@ -16,8 +16,25 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST'){
     ]);
     exit;
 }
-
 $dados = json_decode(file_get_contents("php://input"));
+
+// echo json_encode($dados);
+// exit;
+
+if(isset($_FILES['imgGato']) && $_FILES['imgGato']['error'] === UPLOAD_ERR_OK){
+// atribuindo dados da imgGato
+
+$uploadDirectory = 'upload/';
+
+// Gere um nome único para a imagem, por exemplo, usando timestamp
+$timestamp = time();
+$fileName = $timestamp . '_' . $_FILES['imgGato']['name'];
+$filePath = $uploadDirectory . $fileName;
+
+// Move o arquivo de imagem para o diretório de upload
+if (move_uploaded_file($_FILES['imgGato']['tmp_name'], $filePath)) {
+
+
 
 try {
     $gato_nome = htmlspecialchars(trim($dados->nome));
@@ -29,6 +46,7 @@ try {
     $adotado = 0;
 
     $sql = "INSERT INTO `Gato` (
+    imgGato,
     nome,
     cor,
     racaGato,
@@ -38,6 +56,7 @@ try {
     adotado
     )
     VALUES (
+    :imgGato,
     :nome,
     :cor,
     :racaGato,
@@ -49,6 +68,7 @@ try {
 
     $stmt = $connection->prepare($sql);
 
+    $stmt->bindValue(':imgGato', $filePath, PDO::PARAM_STR);
     $stmt->bindValue(':nome', $gato_nome, PDO::PARAM_STR);
     $stmt->bindValue(':cor', $gato_cor, PDO::PARAM_STR);
     $stmt->bindValue(':racaGato', $gato_raca, PDO::PARAM_STR);
@@ -62,7 +82,8 @@ try {
         http_response_code(201);
         echo json_encode([
             'success' => 1,
-            'message' => 'Data inserida com sucesso'
+            'message' => 'Data inserida com sucesso',
+            'imgGato' => $filePath,
         ]);
         exit;
     }
@@ -82,8 +103,8 @@ try {
     exit;
 }
 
-
-
+}
+}
 
 
 ?>

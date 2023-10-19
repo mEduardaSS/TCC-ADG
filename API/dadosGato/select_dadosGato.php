@@ -24,13 +24,13 @@ try{
     $stmt->execute();
 
     if($stmt->rowCount() > 0){
-        $tutores = [];
+        $gatos = [];
 
-        $tutores = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $gatos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             echo json_encode([
                 'success' => 1,
-                'message' => $tutores,
+                'message' => $gatos,
             ]);
             exit;
 
