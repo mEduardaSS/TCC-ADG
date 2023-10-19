@@ -7,7 +7,6 @@ import { Router } from '@angular/router';
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
-
 export class LoginPage implements OnInit {
 
   constructor(private router: Router) { }
@@ -39,9 +38,12 @@ export class LoginPage implements OnInit {
         'Content-Type': 'application/json'
       }
     }
-    return fetch(`http://aula/TCC-ADG/TCC-ADG/API/login.php`, options)
+    return fetch(`http://casa/server/api/voluntario/login`, options)
     .then(res => {
       return res.json() ;
+    })
+    .catch(err => {
+      console.log(err.json()) ;
     })
   }
 }

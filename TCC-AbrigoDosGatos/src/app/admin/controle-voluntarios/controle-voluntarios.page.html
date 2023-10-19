@@ -33,7 +33,7 @@
 
         <ion-list class="listagem">
 
-          <ion-item color="black">
+          <ion-item *ngfor="let solicitacaoVoluntario of listarVoluntarios()" color="black">
             <ion-col size-md="2" size="4">
               <ion-text><b>Código</b></ion-text>
             </ion-col>
@@ -45,66 +45,7 @@
             </ion-col>
           </ion-item>
 
-          <ion-item color="black">
-            <ion-col size-md="2" size="4">
-              <ion-text><b>001</b></ion-text>
-            </ion-col>
-            <ion-col size-md="2" size="4">
-              <ion-text><b>Houdini</b></ion-text>
-            </ion-col>
-            <ion-col size-md="8" size="4" class="ion-text-end">
-              <ion-icon name="pencil-outline"></ion-icon>
-            </ion-col>
-          </ion-item>
-
-          <ion-item color="black">
-            <ion-col size-md="2" size="4">
-              <ion-text><b>002</b></ion-text>
-            </ion-col>
-            <ion-col size-md="2" size="4">
-              <ion-text><b>Jhon Doe</b></ion-text>
-            </ion-col>
-            <ion-col size-md="8" size="4" class="ion-text-end">
-              <ion-icon name="pencil-outline"></ion-icon>
-            </ion-col>
-          </ion-item>
-
-          <ion-item color="black">
-            <ion-col size-md="2" size="4">
-              <ion-text><b>003</b></ion-text>
-            </ion-col>
-            <ion-col size-md="2" size="4">
-              <ion-text><b>Placeholder</b></ion-text>
-            </ion-col>
-            <ion-col size-md="8" size="4" class="ion-text-end">
-              <ion-icon name="pencil-outline"></ion-icon>
-            </ion-col>
-          </ion-item>
-
-          <ion-item color="black">
-            <ion-col size-md="2" size="4">
-              <ion-text><b>004</b></ion-text>
-            </ion-col>
-            <ion-col size-md="2" size="4">
-              <ion-text><b>Dummy</b></ion-text>
-            </ion-col>
-            <ion-col size-md="8" size="4" class="ion-text-end">
-              <ion-icon name="pencil-outline"></ion-icon>
-            </ion-col>
-          </ion-item>
-
-          <ion-item color="black">
-            <ion-col size-md="2" size="4">
-              <ion-text><b>005</b></ion-text>
-            </ion-col>
-            <ion-col size-md="2" size="4">
-              <ion-text><b>Houdini</b></ion-text>
-            </ion-col>
-            <ion-col size-md="8" size="4" class="ion-text-end">
-              <ion-icon name="pencil-outline"></ion-icon>
-            </ion-col>
-          </ion-item>
-
+          
         </ion-list>
       </ion-col>
     </ion-row>
