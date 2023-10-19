@@ -41,6 +41,7 @@
     justify-content: center;
     margin-left: 30px;
     --background:  #A61C35;
+    --color: white
     ;
 }
   .btnAprovar{
@@ -48,11 +49,12 @@
     justify-content: center;
     margin-left: 30px;
     --background: #A61C35;
+    --color: white;
   }
   .dadosVoluntario{
     margin-top: 8vh;
-    left: 50%;
-    margin-right: -50%;
+     margin-left: 100px;
+    // margin-right: -50%;
   }
 
   .dataCadVoluntario, 
@@ -68,6 +70,7 @@
   .ion-padding{
     margin-top: 25px;
   }
+
   .conteudo{
     border-radius: 30px;
     border-color:  rgb(163, 50, 50);
@@ -76,9 +79,9 @@
     background:white;
     justify-content: center;
     align-items: center;
-    margin-top: 1.0em;
-    
+    margin-top: 1.0em;    
   }
+  
   .titulo{
     color: #000;
     font-size: 20px;
