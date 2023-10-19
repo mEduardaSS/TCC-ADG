@@ -2,6 +2,21 @@
 include '../corss.php';
 include '../conexao.php';
 
+$method = $_SERVER['REQUEST_METHOD'];
+
+if ($method == "OPTIONS") {
+    die();
+}
+
+if ($_SERVER['REQUEST_METHOD'] !== 'POST'){
+    http_response_code(405);
+    echo json_encode([
+        'success' => 0,
+        'message' => 'Falha na requisição!. Somente o método POST é permitido',
+    ]);
+    exit;
+}
+
 $dados = json_decode(file_get_contents("php://input"));
 
 try {
@@ -11,6 +26,7 @@ try {
     $gato_idade = htmlspecialchars(trim($dados->idade));
     $gato_descricao = htmlspecialchars(trim($dados->descricao));
     $gato_raca = htmlspecialchars(trim($dados->raca));
+    $adotado = 0;
 
     $sql = "INSERT INTO `Gato` (
     nome,
@@ -18,7 +34,8 @@ try {
     racaGato,
     idadeGato, 
     descricao,
-    sexo 
+    sexo,
+    adotado
     )
     VALUES (
     :nome,
@@ -26,7 +43,8 @@ try {
     :racaGato,
     :idadeGato, 
     :descricao,
-    :sexo 
+    :sexo,
+    :adotado 
     )";
 
     $stmt = $connection->prepare($sql);
@@ -37,6 +55,7 @@ try {
     $stmt->bindValue(':idadeGato', $gato_idade, PDO::PARAM_STR);
     $stmt->bindValue(':descricao', $gato_descricao, PDO::PARAM_STR);
     $stmt->bindValue(':sexo', $gato_sexo, PDO::PARAM_STR);
+    $stmt->bindValue(':adotado', $adotado, PDO::PARAM_STR);
 
 
     if ($stmt->execute()) {

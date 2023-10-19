@@ -24,7 +24,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/voluntario/voluntario.module').then( m => m.VoluntarioPageModule)
   },
   {
-    path: 'login',
+    path: 'pages/login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
   {
@@ -67,7 +67,11 @@ const routes: Routes = [
   {
     path: 'editar-gato',
     loadChildren: () => import('./admin/editar-gato/editar-gato.module').then( m => m.EditarGatoPageModule)
+  },  {
+    path: 'gatos-adotados',
+    loadChildren: () => import('./admin/gatos-adotados/gatos-adotados.module').then( m => m.GatosAdotadosPageModule)
   },
+
 
 ];
 

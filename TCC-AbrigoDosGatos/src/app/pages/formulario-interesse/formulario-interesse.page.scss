@@ -27,6 +27,7 @@
 .input_cont{
   margin: 20px;
   font-size:18px;
+ 
 }
 
 ion-label b{
@@ -37,6 +38,7 @@ ion-input{
   border-radius: 15px;
   --background: #D9D9D9;
   --color: #373737;
+  padding-left: 2em;
 }
 
 .checkbox{
@@ -47,11 +49,13 @@ ion-input{
   margin-left: 3%;
 }
 
-ion-checkbox{
-  --checkbox-background-checked: rgb(163, 50, 50);
+ion-radio{
+  // --checkbox-background-checked: rgb(163, 50, 50);
+  --color: rgb(163, 50, 50); 
+  --color-checked: rgb(163, 50, 50); 
 }
 
-ion-checkbox::part(container) {
+ion-radio::part(container) {
   border-radius: 20px;
   border: 2px solid rgb(163, 50, 50);
 }

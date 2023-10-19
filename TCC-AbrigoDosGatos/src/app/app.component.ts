@@ -35,6 +35,6 @@ export class AppComponent implements OnInit {
   verificarMenu(){
     this.menu_admin = this.rotasAdmin.includes(this.rotaAtual) ? true : false
   }
-  rotasAdmin = ['/home-admin', '/ajuda-admin', '/editar-voluntario', '/analise-adocao', '/controle-voluntarios', '/admin/analise-voluntario', '/admin/cadastro-animal']
+  rotasAdmin = ['/home-admin', '/ajuda-admin', '/editar-voluntario', '/analise-adocao', '/controle-voluntarios', '/admin/analise-voluntario', '/admin/cadastro-animal', '/gatos-adotados']
 
 }

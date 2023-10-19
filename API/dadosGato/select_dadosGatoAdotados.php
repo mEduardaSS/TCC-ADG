@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'GET'){
 }
 
 try{
-    $sql = "SELECT * FROM `SolicitacaoAdocao` WHERE aprovado = 0";
+    $sql = "SELECT * FROM `Gato` WHERE adotado = 1" ;
 
     $stmt = $connection->prepare($sql);
     $stmt->execute();

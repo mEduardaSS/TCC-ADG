@@ -16,39 +16,50 @@
 .banner-gato{
   height: 50%;
   padding-top: 3.0em;
- background-image: url('https://i.pinimg.com/750x/a5/51/f4/a551f4bb08efedd8beacbe5f475dbe26.jpg');
-
+  position: relative;
 }
 
-.img-gato {
+.banner-gato::before{
+  content: "";
+  background-image: url('https://i.pinimg.com/750x/a5/51/f4/a551f4bb08efedd8beacbe5f475dbe26.jpg');
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+#img-gato {
   display: flex;
   height: 230px;
   width: 230px;
   border-radius: 25% 10%;
-  border: 7px solid #A61C35;  
+  border: 8px solid #A61C35;  
   box-shadow: #000;
 }
 
-h1.title{
+h1.titulo{
+  top: 1.2em;
   font-style: italic;
   font-size: 30px;
-  color: #fff;
+  font-weight: bold;
+  color: #A61C35;
   text-align: center;
-  margin-top: 0.2em;
-  margin-right: 20em;
+
 }
 
 p {
   margin-top: 10px;
   font-size: 20px;
-
 }
 
 .text {
-  font-weight: bold;
-  color: #fff;
-  text-shadow: 1px 0 #A61C35, -0px 0 #A61C35, 0 1px #A61C35, 0 -2px #A61C35,
-  1px 1px #A61C35, -1px -1px #A61C35, 1px -1px #A61C35, -1px 1px #A61C35; 
+  font-weight: bolder;
+  color: #100f0f;
+  text-shadow: 1px 0 #fff, -0px 0 #fff, 0 1px #fff, 0 -1px #fff,
+  1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff; 
 }
 
 #conteudo-banner{
@@ -63,7 +74,8 @@ p {
   margin-top: 20px;
   justify-content: center;
   align-items: center;
- 
+  height: 30px;
+  width: 150px;
 }
 
 .card-gatos{
@@ -153,7 +165,8 @@ ion-card-subtitle{
   
 }
 .footer-title {
-  font-size: 20px;
+  font-size: 16px;
+  text-align: center;
 }
 
 .footer-content ion-text{
@@ -245,13 +258,57 @@ ion-card-subtitle{
    text-align: center;
   }
   
+  #img-gato {
+    width: 50%;
+    max-width: 150px;
+    height: auto;
+    border: 5px solid #A61C35;  
+    
+  }
+
+  .sobre-nos {
+    --background: #A61C35;
+  --color: white;
+  margin: 5em;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 150px;
+    
+  }
+
+  h1.titulo{
+    top: 1.2em;
+    font-style: italic;
+    font-size: 25px;
+    font-weight: bold;
+    color: #A61C35;
+    text-align: center;
+    margin: 10px;
+  
+  }
+  
+p {
+  font-size: 15px;
+  margin: 1.0em;
+}
+
+  .text {
+    font-weight: bolder;
+    color: #100f0f;
+    text-shadow: 1px 0 #fff, -0px 0 #fff, 0 1px #fff, 0 -1px #fff,
+    1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff; 
+  }
+
   .texto{
     display: none;
   }
+
   .button_adotar{
     margin-top: auto;
     padding: 10px 0px;   
   }
+
   .card-gatos {
     display: flex;
     flex-direction: column;
@@ -259,6 +316,7 @@ ion-card-subtitle{
     justify-content: center;
     width: 100%;
   }
+
   .conteudo-card {
     display: flex;
     justify-content: center;
@@ -266,16 +324,9 @@ ion-card-subtitle{
     
   }
 
-  .button_conheca{
-  display: flex;
-  font-size: 10px;
-  width: 60%;
-  height: 40%;
-  margin: auto;
-  margin-top: 10px;
-  margin-bottom: 30px;
-  --background: #A61C35;
-  --color: white;
+  #text_miaudote {
+    // llll
+  }
 
   #footer{
     // top: 1.2em;
@@ -284,22 +335,47 @@ ion-card-subtitle{
     // height: 15%;
     // width: 100%;
     padding: 15px;
+    width: 100%;
+    height: 80px;
+    position: relative;
+    bottom: 0;
   }
   
-  .footer-content{
-    margin: auto;
-    align-items: center;
-    color: black;
-    font-weight: bold;
-    
-  }
+
   .footer-title {
-    font-size: 5px;
+ margin-top: 1em;
   }
   
   .footer-content ion-text{
-    margin-top: 3em;
-    font-size: 5em;
+    font-size: 20px;
+  }
+
+  .footer-content ion-label {
+    font-size: 15px;
+  }
+
+  
+
+  .icon-{
+    &whatsapp{
+      color: green;
+      margin-right: 0.2em;
+    }
+    &facebook{
+      color: blue;
+      margin-right: 0.2em;
+    }
+    &instagram{
+      color: purple;
+      margin-right: 0.2em;
+    }
+    &mail{
+      margin-right: 0.2em;
+    }
+    &pessoa{
+      --color: #A61C35;
+      padding: 10px;
+    }
   }
 
 }
@@ -312,6 +388,13 @@ ion-card-subtitle{
     margin-top: 0.2em;
     padding-right: 0;
    
+  }
+
+  #img-gato {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border: 5px solid #A61C35;  
   }
 
 .sobre-nos {
@@ -333,29 +416,6 @@ ion-card-subtitle{
   height: auto;
 }
 
-h1 {
-  font-style: italic;
-  color: #D9D9D9;
-  text-align: center;
-  margin-top: em;
- 
-}
-
-p {
-  margin-top: 5px;
-  padding-right: 20px;
-  font-size: 15px;
-
-}
-
-.text {
-  color: white;
-  margin: 0.9em;
-  display: inline-block;
-  font-size: 9px;
-  text-align: center;
-  padding-left: 1em;
-}
 
 .col-img-gato{
   justify-content: center;
@@ -367,12 +427,7 @@ p {
 }
 
 @media (max-width: 280px){
-  p {
-    margin-top: 5px;
-    padding-right: 20px;
-    font-size: 14px;
-  
-  }
+
   
   .col-img-gato {
     margin-top: -1.2em;
@@ -394,4 +449,3 @@ p {
 }
 
 
-}
