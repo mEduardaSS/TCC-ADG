@@ -35,7 +35,7 @@
         <form (ngSubmit)="submit_formAdocao(formAdocao.value)" #formAdocao="ngForm">
           <ion-item class="input_cont" lines="none">
             <ion-label position="stacked" class="nome"><b>Nome</b></ion-label>
-            <ion-input class="input" name="nome" type="text" ngModel></ion-input>
+            <ion-input class="input" name="nome" type="text" style="padding:4px" ngModel></ion-input>
           </ion-item>
 
           <ion-item class="input_cont" lines="none">
@@ -65,11 +65,11 @@
           <ion-row>
 
             <ion-radio-group ngModel name="possuiAnimais" class="cont">
-              <ion-radio value="sim">
+              <ion-radio class="cont_check"  class="checkbox" value="sim">
                 Sim
               </ion-radio>
               <ion-radio value="nao">
-                nao
+                Não
               </ion-radio>
             </ion-radio-group>
 
@@ -87,13 +87,13 @@
           <ion-row id="checkbox">
             <ion-col class="cont">
               <ion-radio-group ngModel name="temTempo">
-                <ion-radio value="Tenho bastante tempo">
-                  Tenho bastante tempo
+                <ion-radio class="cont_check" class="checkbox"    value="Tenho bastante tempo">
+                  Tenho bastante tempo 
                 </ion-radio>
-                <ion-radio value="Tenho tempo o suficiente">
-                  Tenho tempo o suficiente
+                <ion-radio class="cont_check" class="checkbox" value="Tenho tempo o suficiente">
+                  Tenho tempo o suficiente 
                 </ion-radio>
-                <ion-radio value="Não tenho muito tempo">
+                <ion-radio class="cont_check" class="checkbox" value="Não tenho muito tempo">
                   Não tenho muito tempo
                 </ion-radio>
               </ion-radio-group>
