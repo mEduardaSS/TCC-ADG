@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { AjudaAdminPageRoutingModule } from './ajuda-admin-routing.module';
 
 import { AjudaAdminPage } from './ajuda-admin.page';
+// import { MenuAdmComponent } from '../menu-adm/menu-adm.component';
 
 @NgModule({
   imports: [

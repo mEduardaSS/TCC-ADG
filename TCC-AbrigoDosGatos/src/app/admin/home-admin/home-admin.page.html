@@ -1,7 +1,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Philosopher:ital,wght@1,700&display=swap" rel="stylesheet">
-      
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Philosopher:ital,wght@1,700&display=swap"
+  rel="stylesheet">
+
 <!-- <ion-menu-adm></ion-menu-adm> -->
 <div class="ion-page" id="main-content">
   <ion-header class="menu">
@@ -13,205 +14,184 @@
 
       <ion-buttons slot="end">
         <ion-button [routerLink]="['/login']">
-          <ion-icon slot="icon-only" name="person-circle" ></ion-icon>
+          <ion-icon slot="icon-only" name="person-circle"></ion-icon>
         </ion-button>
-     </ion-buttons>
+      </ion-buttons>
     </ion-toolbar>
   </ion-header>
 
   <ion-content>
-      <ion-row>
-     <ion-col size="6" class="teste">
-          <ion-card class="card">
-            <ion-card-title>
-              Formulários de interesse para adoção
-            </ion-card-title>
-            <ion-card-header>
-              <ion-row>
-                <ion-col>
-                  <ion-card-title>Ficha</ion-card-title>
-                </ion-col>
-               <ion-col class="name">
-                <ion-card-title>Nome</ion-card-title>
-               </ion-col>
-              </ion-row>
-             
-            </ion-card-header>
-          
-            <ion-card-content class="conteudo-caard">
-              <ion-row>
-                <ion-col>
-                  <ion-card-title>001</ion-card-title>
-                </ion-col>
-               <ion-col class="name">
-                <ion-card-title>Maria Eduarda</ion-card-title>
-               </ion-col>
-               <ion-icon name="eye-outline" class="olho" [routerLink]="['/analise-adocao']"></ion-icon>
-               
-              </ion-row>
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-    
-        <ion-col size="6" class="teste">
-          <ion-card class="card">
-            <ion-card-title>
-              Formulários de interesse para voluntários
-            </ion-card-title>
-            <ion-card-header>
-              <ion-row>
-                <ion-col>
-                  <ion-card-title>Ficha</ion-card-title>
-                </ion-col>
-               <ion-col class="name">
-                <ion-card-title>Nome</ion-card-title>
-               </ion-col>
-              </ion-row>
-             
-            </ion-card-header>
-          
-            <ion-card-content class="conteudo-caard">
-              <ion-row>
-                <ion-col>
-                  <ion-card-title>001</ion-card-title>
-                </ion-col>
-               <ion-col class="name">
-                <ion-card-title>Maria Eduarda</ion-card-title>
-               </ion-col>
-               <ion-icon name="eye-outline" class="olho" [routerLink]="['/admin/analise-voluntario']"></ion-icon>
-               
-              </ion-row>
-            </ion-card-content>
-          
-          
-          </ion-card>
-        </ion-col>
-      </ion-row> 
+
+    <ion-segment [(ngModel)]="segmentModel" (ionChange)="segmentChanged()" mode="ios" >
+      <ion-segment-button value="tutor" style="margin: 0.5em;">
+        Formulários de interesse para adoção
+      </ion-segment-button>
+      <ion-segment-button value="voluntario" style="margin: 0.5em;">
+        Formulários de interesse para voluntário
+      </ion-segment-button>
+    </ion-segment>
+
   
     <ion-row>
+      <ion-col size="12" size-sm="6" *ngIf="segmentModel === 'tutor'" class="card" style="margin: auto; margin-top: 2em;">
+        <ion-card *ngIf="tutoresExibidos && tutoresExibidos.length > 0; else noTutor" class="testando">
+          <ion-card-title style="text-align: center; margin: 1em;">
+            Formulários de interesse para adoção
+          </ion-card-title>
+
+          <ion-card-header>
+            <ion-row>
+              <ion-col>
+                <ion-card-title style="margin-left: 15px;">Ficha</ion-card-title>
+              </ion-col>
+              <ion-col>
+                <ion-card-title style="margin-left: -10px;">Nome</ion-card-title>
+              </ion-col>
+            </ion-row>
+          </ion-card-header>
+
+          <ion-card-content *ngFor="let tutor of tutoresExibidos" class="linha">
+            <ion-row style="margin: 1em;">
+              <ion-col>
+                <ion-card-title>{{tutor.idAdocao}}</ion-card-title>
+              </ion-col>
+              <ion-col>
+                <ion-card-title>{{tutor.nomeAdocao}}</ion-card-title>
+              </ion-col>
+              <ion-icon name="eye-outline" class="olho" (click)="analisar_tutor(tutor.idAdocao)"></ion-icon>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Caso nenhum tutor esteja cadastrado -->
+        <ng-template #noTutor>
+          <ion-card>
+            <ion-card-header>
+              <ion-row>
+                <ion-col>
+                  <ion-card-title style="margin-left: 15px;">Ficha</ion-card-title>
+                </ion-col>
+                <ion-col>
+                  <ion-card-title style="margin-left: -10px;">Nome</ion-card-title>
+                </ion-col>
+              </ion-row>
+            </ion-card-header>
+            <ion-card-content class="linha">
+              <ion-row style="margin: 1em;">
+                <ion-col>
+                  <ion-card-title>Nenhum tutor cadastrado</ion-card-title>
+                </ion-col>
+              </ion-row>
+            </ion-card-content>
+          </ion-card>
+        </ng-template>
+
+      </ion-col>
+
+      <ion-col size="12" size-sm="6" *ngIf="segmentModel === 'voluntario'" class="card" style="margin: auto; margin-top: 2em;">
+        <ion-card class="testando">
+          <ion-card-title style="text-align: center; margin: 1em;">
+            Formulários de interesse para voluntários
+          </ion-card-title>
+          <ion-card-header>
+            <ion-row>
+              <ion-col>
+                <ion-card-title style="margin-left: 15px;">Ficha</ion-card-title>
+              </ion-col>
+              <ion-col >
+                <ion-card-title style="margin-left: -10px;">Nome</ion-card-title>
+              </ion-col>
+            </ion-row>
+
+          </ion-card-header>
+
+          <ion-card-content class="linha">
+            <ion-row style="margin: 1em;">
+              <ion-col>
+                <ion-card-title>001</ion-card-title>
+              </ion-col>
+              <ion-col class="name">
+                <ion-card-title>Maria Eduarda</ion-card-title>
+              </ion-col>
+              <ion-icon name="eye-outline" class="olho" [routerLink]="['/admin/analise-voluntario']"></ion-icon>
+
+            </ion-row>
+          </ion-card-content>
+
+        </ion-card>
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row>
       <ion-col size="12" class="ion-text-center" id="text_miaudote">
-        <ion-text>
-          <ion-label>
-            Miaudote!
+         <ion-label >
+            Gatos disponíveis
           </ion-label>
-        </ion-text>
+    
       </ion-col>
     </ion-row>
-  
-    <ion-row class="card-gatos ion-padding ion-justify-content-center">
-      <ion-col size="8" size-sm="4">
-        <ion-list lines="inset">
-          <ion-item>
-            <ion-card class="ion-margin">
-              <img class="img-card" alt="Silhouette of mountains"
-                src="https://i.pinimg.com/750x/a1/41/6a/a1416afca3818d681d8325d44f62fad2.jpg" />
-              <ion-card-header>
-  
-                <ion-card-title class="name">Joe</ion-card-title>
-                <ion-card-subtitle>Macho, 8 meses</ion-card-subtitle>
-  
-  
-                <ion-card-content class="conteudo-card">
-                  <ion-button class="button_adotar" [routerLink]="['/formulario-interesse']"><ion-icon name="create-outline"></ion-icon>Editar</ion-button>
-                  <p class="texto">
-                    Negativo para FIV e FELV, castrado, sociável com outros animais e humanos. Gosta muito de companhia.
-                  </p>
-                </ion-card-content>
-              </ion-card-header>
-            </ion-card>
-          </ion-item>
-  
-          <ion-item>
-            <ion-card class="ion-margin">
-              <img class="img-card" alt="Silhouette of mountains"
-                src="https://i.pinimg.com/750x/2b/52/d1/2b52d19d9f303ddfae437ee29fe8180c.jpg" />
-              <ion-card-header>
-  
-                <ion-card-title class="name">Brisa</ion-card-title>
-                <ion-card-subtitle>Femêa, 2 anos</ion-card-subtitle>
-                <ion-card-content class="conteudo-card">
-                  <ion-button class="button_adotar" [routerLink]="['/formulario-interesse']"><ion-icon name="create-outline"></ion-icon>Editar</ion-button>
-                  <p class="texto">
-                    Negativo para FIV e FELV, castrado, sociável com outros animais e humanos. Gosta muito de companhia.
-                  </p>
-                </ion-card-content>
-              </ion-card-header>
-            </ion-card>
-          </ion-item>
-        </ion-list>
-      </ion-col>
-  
-      <ion-col size="8" size-sm="4">
-        <ion-list lines="inset">
-          <ion-item>
-            <ion-card class="ion-margin">
-              <img class="img-card" alt="Silhouette of mountains"
-                src="https://i.pinimg.com/750x/0e/b1/3c/0eb13c583efc671b4a9fb612acfcb7bb.jpg" />
-              <ion-card-header>
-  
-                <ion-card-title class="name">Miro</ion-card-title>
-                <ion-card-subtitle>Macho, 5 meses</ion-card-subtitle>
-  
-                <ion-card-content class="conteudo-card">
-                  <ion-button class="button_adotar" [routerLink]="['/formulario-interesse']"><ion-icon name="create-outline"></ion-icon>Editar</ion-button>
-                  <p class="texto">
-                    Negativo para FIV e FELV, castrado, sociável com outros animais e humanos. Gosta muito de companhia.
-                  </p>
-                </ion-card-content>
-              </ion-card-header>
-            </ion-card>
-          </ion-item>
-  
-          <ion-item>
-            <ion-card class="ion-margin">
-              <img class="img-card" alt="Silhouette of mountains"
-                src="https://i.pinimg.com/750x/e8/aa/d1/e8aad123fa323d74f287cd904505f531.jpg" />
-              <ion-card-header>
-                <ion-card-title class="name">Joe</ion-card-title>
-                <ion-card-subtitle>Macho, 8 meses</ion-card-subtitle>
-                <ion-card-content class="conteudo-card">
-                  <ion-button class="button_adotar" [routerLink]="['/formulario-interesse']"><ion-icon name="create-outline"></ion-icon>Editar</ion-button>
-                  <p class="texto">
-                    Negativo para FIV e FELV, castrado, sociável com outros animais e humanos. Gosta muito de companhia.
-                  </p>
-                </ion-card-content>
-              </ion-card-header>
-            </ion-card>
-          </ion-item>
-        </ion-list>
-      </ion-col>
+
+    <ion-row *ngIf="gatosExibidos && gatosExibidos.length > 0" class="ion-padding ion-justify-content-center">
+      <div class="card-gatos">
+        <ion-card class="classecard" *ngFor="let gato of gatosExibidos">
+          <img class="img-card" alt="Gato"
+            src="https://i.pinimg.com/750x/a1/41/6a/a1416afca3818d681d8325d44f62fad2.jpg" />
+          <ion-card-header>
+            <ion-card-title class="name">{{gato.nome}}</ion-card-title>
+            <ion-card-subtitle class="name">{{gato.sexo}}</ion-card-subtitle>
+            <ion-card-subtitle class="name">{{gato.idade}}, {{gato.cor}}</ion-card-subtitle>
+            <ion-card-subtitle class="name">{{gato.raca}}</ion-card-subtitle>
+            <ion-card-content class="conteudo-card">
+              <ion-button class="button_adotar" (click)="analisar_gato(gato.idGato)"><ion-icon name="create-outline"></ion-icon>Editar</ion-button>
+              <p class="texto">
+                {{gato.descricao}}
+              </p>
+            </ion-card-content>
+          </ion-card-header>
+        </ion-card>
+      </div>
     </ion-row>
-  
-    <ion-row size="3" size-sm="6" class="ion-padding">
+    
+    <ng-template *ngIf="!(gatosExibidos && gatosExibidos.length > 0)">
+      <!-- Exibir mensagem quando não há gatos disponíveis -->
+      <ion-row class="ion-padding ion-justify-content-center" style="color: aliceblue; position: absolute;">
+        <ion-title>
+          Nenhum gato disponível!
+        </ion-title>
+      </ion-row>
+    </ng-template>
+    
+
+    <!-- <ion-row size="3" size-sm="6" class="ion-padding">
       <ion-button class="button_conheca" shape="round">Conheça gatinhos disponivéis</ion-button>
-    </ion-row>
-  
-  
+    </ion-row> -->
+
     <ion-row id="footer">
       <ion-col class="footer-content">
         <ion-text>
           <ion-label class="footer-title">Contato <br></ion-label>
         </ion-text>
-  
+
         <ion-text>
           <ion-label><ion-icon name="logo-whatsapp" class="icon-whatsapp"></ion-icon>WhatsApp</ion-label>
           <br>
         </ion-text>
-  
+
         <ion-text>
           <ion-label><ion-icon name="mail-outline" class="icon-mail"></ion-icon>E-mail</ion-label>
           <br>
         </ion-text>
       </ion-col>
-  
+
       <ion-col class="footer-content">
         <ion-text>
           <ion-label class="footer-title">Redes Sociais</ion-label>
           <br>
         </ion-text>
-  
+
         <ion-text>
-          <ion-label><ion-icon name="logo-facebook" class="icon-facebook" ></ion-icon>/abrigodosgatos</ion-label>
+          <ion-label><ion-icon name="logo-facebook" class="icon-facebook"></ion-icon>/abrigodosgatos</ion-label>
           <br>
         </ion-text>
         <ion-text>
@@ -220,7 +200,7 @@
         </ion-text>
       </ion-col>
     </ion-row>
- 
-  
-   </ion-content>
+
+
+  </ion-content>
 </div>

@@ -17,15 +17,15 @@
   .logo-tcc{
     height: 85px;
   }
-// @media (max-width:600px) {
-//   .botao-editar{
-//     z-index: 9999;
-//     float: right;
-//     left: 0%;
-//     top: 10%;
-//     position: absolute;
-//   }
-// }
+@media screen and (max-width:600px) {
+  .botao-editar{
+    z-index: 9999;
+    float: right;
+    left: 65%!important;
+    top: 10%;
+    position: absolute;
+  }
+}
   .botao-editar{
     z-index: 9999;
     float: right;
@@ -43,11 +43,13 @@
   //   display: flex;
   //   justify-content: center;
   //   align-items: center;
+
   // }
 
   // .botaoEditar{
   //   display: flex;
   //   justify-content: flex-end;
+      // background-color: red;
   // }
   .titulo{
     color: #3F0912;
@@ -80,7 +82,7 @@
     justify-content: center;
     align-items: center;
     display: flex;
-    width: 20%;
+    width: 120px;
     flex-direction: column;
     margin: auto;
     margin-bottom: 20px;

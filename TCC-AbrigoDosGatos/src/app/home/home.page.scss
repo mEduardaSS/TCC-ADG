@@ -16,7 +16,8 @@
 .banner-gato{
   height: 50%;
   padding-top: 3.0em;
-  background-image: url('https://i.pinimg.com/750x/a5/51/f4/a551f4bb08efedd8beacbe5f475dbe26.jpg');
+ background-image: url('https://i.pinimg.com/750x/a5/51/f4/a551f4bb08efedd8beacbe5f475dbe26.jpg');
+
 }
 
 .img-gato {
@@ -65,10 +66,23 @@ p {
  
 }
 
+.card-gatos{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 100px;
+  }
+
+  .classecard {
+    width: calc(50% - 10px); /* 50% do contêiner, com espaçamento de 10px entre as colunas */
+    margin-bottom: 20px;
+  }
+
 #text_miaudote {
   font-size: 30px;
   color: #3F0912;
-  top: 0.9em;
+  top: 0.5em;
   text-align: center;
   font-weight: bold;
   margin-bottom: 10px;
@@ -101,16 +115,10 @@ ion-card-subtitle{
   margin-top: 0.5em;
 }
 
-.img-card {
-  border-radius: 20px;
-  margin-top: 1.5em;
-  
-}
-
 .button_adotar{
   float: right;
-  margin-left: 2%;
-  margin-top: -36px;
+  padding: 1em;
+  margin-top: -50px;
   --background: #D9D9D9;
   --color: black;
 }

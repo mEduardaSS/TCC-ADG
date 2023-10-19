@@ -17,4 +17,6 @@ import { EditarVoluntarioPage } from './editar-voluntario.page';
   ],
   declarations: [EditarVoluntarioPage]
 })
-export class EditarVoluntarioPageModule {}
+export class EditarVoluntarioPageModule {
+  
+}

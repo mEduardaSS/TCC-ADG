@@ -5,11 +5,16 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './voluntario.page.html',
   styleUrls: ['./voluntario.page.scss'],
 })
-export class VoluntarioPage implements OnInit {
 
+export class VoluntarioPage implements OnInit {
+  
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }
+
+
+

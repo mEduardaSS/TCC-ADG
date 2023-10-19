@@ -1,114 +1,112 @@
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Philosopher:ital,wght@1,700&display=swap" rel="stylesheet">
-      
-      <div class="ion-page" id="main-content">
-        <ion-header class="menu">
-          <ion-toolbar>
-            <ion-buttons slot="start">
-              <ion-menu-button autoHide="false"></ion-menu-button>
-            </ion-buttons>
-            <ion-title class="ion-text-center title-page">Abrigo dos Gatos</ion-title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Philosopher:ital,wght@1,700&display=swap"
+  rel="stylesheet"
+/>
 
-            <ion-buttons slot="end">
-              <ion-button [routerLink]="['/login']">
-                <ion-icon slot="icon-only" name="person-circle" ></ion-icon>
-              </ion-button>
-           </ion-buttons>
-          </ion-toolbar>
-        </ion-header>
+<div class="ion-page" id="main-content">
+  <ion-header class="menu">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button autoHide="false"></ion-menu-button>
+      </ion-buttons>
+      <ion-title class="ion-text-center title-page">Abrigo dos Gatos</ion-title>
 
-    <ion-content>
-      <ion-row class="ion-padding ion-justify-content-center" style="margin-top: 7em;">
-        <ion-col size=6 class="ion-padding conteudo">
-          <ion-row class="ion-justify-content-center" style="font-size: 20px;">
-              <ion-text><b>Controle de Admin/Voluntários</b></ion-text>
-            </ion-row>
-            
-              <ion-list class="listagem">
-                <ion-item color="black">
-                  <ion-col size="2">
-                    <ion-text><b>Código</b></ion-text>
-                    </ion-col>
-                    <ion-col size="2">
-                    <ion-text><b>Nome</b></ion-text>
-                  </ion-col>
-                    <ion-col size="8" class="ion-text-end">
-                    <ion-text><b>Editar</b></ion-text>
-                  </ion-col>
-                  </ion-item>
-          
-              
-                  <ion-item color="black">
-                    <ion-col size="2">
-                      <ion-text><b>001</b></ion-text>
-                      </ion-col>
-                      <ion-col size="2">
-                      <ion-text><b>Houdini</b></ion-text>
-                    </ion-col>
-                    <ion-col size="8" class=" ion-text-end">
-                      <ion-icon name="pencil-outline"></ion-icon>
-                    </ion-col>
-                    </ion-item>
-    
-                    <ion-item color="black">
-                      <ion-col size="2">
-                        <ion-text><b>002</b></ion-text>
-                        </ion-col>
-                        <ion-col size="2">
-                        <ion-text><b>Suzan</b></ion-text>
-                      </ion-col>
-                      <ion-col size="8" class="ion-justify-content-end ion-align-items-end ion-text-end">
-                        <ion-icon name="pencil-outline"></ion-icon>
-                      </ion-col>
-                      </ion-item>
-    
-                      <ion-item color="black">
-                        <ion-col size="2">
-                          <ion-text><b>003</b></ion-text>
-                          </ion-col>
-                          <ion-col size="2">
-                          <ion-text><b>Rodney</b></ion-text>
-                        </ion-col>
-                        <ion-col size="8" class="ion-justify-content-end ion-align-items-end ion-text-end">
-                          <ion-icon name="pencil-outline"></ion-icon>
-                        </ion-col>
-                        </ion-item>
+      <ion-buttons slot="end">
+        <ion-button [routerLink]="['/login']">
+          <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
 
-                        <ion-item color="black">
-                          <ion-col size="2">
-                            <ion-text><b>004</b></ion-text>
-                            </ion-col>
-                            <ion-col size="2">
-                            <ion-text><b>Lucas</b></ion-text>
-                          </ion-col>
-                          <ion-col size="8" class="ion-justify-content-end ion-align-items-end ion-text-end">
-                            <ion-icon name="pencil-outline"></ion-icon>
-                          </ion-col>
-                          </ion-item>
-
-                          <ion-item color="black">
-                            <ion-col size="2">
-                              <ion-text><b>005</b></ion-text>
-                              </ion-col>
-                              <ion-col size="2">
-                              <ion-text><b>Diogo</b></ion-text>
-                            </ion-col>
-                            <ion-col size="8" class="ion-justify-content-end ion-align-items-end ion-text-end">
-                              <ion-icon name="pencil-outline"></ion-icon>
-                            </ion-col>
-                            </ion-item>
-              </ion-list>
-            
-  
-          </ion-col>
+  <ion-content>
+    <ion-row
+      class="ion-padding ion-justify-content-center"
+      style="margin-top: 7em"
+    >
+      <ion-col size-md="6" size="12" class="ion-text-center  conteudo">
+        <ion-row class="ion-justify-content-center titulo" style="font-size: 1.5em">
+          <ion-text><b>Controle de Admin/Voluntários</b></ion-text>
         </ion-row>
- 
-     </ion-content>
-  </div>
 
+        <ion-list class="listagem">
 
+          <ion-item color="black">
+            <ion-col size-md="2" size="4">
+              <ion-text><b>Código</b></ion-text>
+            </ion-col>
+            <ion-col size-md="2" size="4">
+              <ion-text><b>Nome</b></ion-text>
+            </ion-col>
+            <ion-col size-md="8" size="4" class="ion-text-end">
+              <ion-text><b>Editar</b></ion-text>
+            </ion-col>
+          </ion-item>
 
-  
+          <ion-item color="black">
+            <ion-col size-md="2" size="4">
+              <ion-text><b>001</b></ion-text>
+            </ion-col>
+            <ion-col size-md="2" size="4">
+              <ion-text><b>Houdini</b></ion-text>
+            </ion-col>
+            <ion-col size-md="8" size="4" class="ion-text-end">
+              <ion-icon name="pencil-outline"></ion-icon>
+            </ion-col>
+          </ion-item>
 
+          <ion-item color="black">
+            <ion-col size-md="2" size="4">
+              <ion-text><b>002</b></ion-text>
+            </ion-col>
+            <ion-col size-md="2" size="4">
+              <ion-text><b>Jhon Doe</b></ion-text>
+            </ion-col>
+            <ion-col size-md="8" size="4" class="ion-text-end">
+              <ion-icon name="pencil-outline"></ion-icon>
+            </ion-col>
+          </ion-item>
 
+          <ion-item color="black">
+            <ion-col size-md="2" size="4">
+              <ion-text><b>003</b></ion-text>
+            </ion-col>
+            <ion-col size-md="2" size="4">
+              <ion-text><b>Placeholder</b></ion-text>
+            </ion-col>
+            <ion-col size-md="8" size="4" class="ion-text-end">
+              <ion-icon name="pencil-outline"></ion-icon>
+            </ion-col>
+          </ion-item>
+
+          <ion-item color="black">
+            <ion-col size-md="2" size="4">
+              <ion-text><b>004</b></ion-text>
+            </ion-col>
+            <ion-col size-md="2" size="4">
+              <ion-text><b>Dummy</b></ion-text>
+            </ion-col>
+            <ion-col size-md="8" size="4" class="ion-text-end">
+              <ion-icon name="pencil-outline"></ion-icon>
+            </ion-col>
+          </ion-item>
+
+          <ion-item color="black">
+            <ion-col size-md="2" size="4">
+              <ion-text><b>005</b></ion-text>
+            </ion-col>
+            <ion-col size-md="2" size="4">
+              <ion-text><b>Houdini</b></ion-text>
+            </ion-col>
+            <ion-col size-md="8" size="4" class="ion-text-end">
+              <ion-icon name="pencil-outline"></ion-icon>
+            </ion-col>
+          </ion-item>
+
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-content>
+</div>

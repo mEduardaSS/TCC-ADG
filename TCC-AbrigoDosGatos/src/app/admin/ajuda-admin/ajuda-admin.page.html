@@ -1,24 +1,26 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Philosopher:ital,wght@1,700&display=swap" rel="stylesheet">
-      
-      <div class="ion-page" id="main-content">
-        <ion-header class="menu">
-          <ion-toolbar>
-            <ion-buttons slot="start">
-              <ion-menu-button autoHide="false"></ion-menu-button>
-            </ion-buttons>
-            <ion-title class="ion-text-center title-page">Abrigo dos Gatos</ion-title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Philosopher:ital,wght@1,700&display=swap"
+  rel="stylesheet">
 
-            <ion-buttons slot="end">
-              <ion-button [routerLink]="['/login']">
-                <ion-icon slot="icon-only" name="person-circle" ></ion-icon>
-              </ion-button>
-           </ion-buttons>
+<!-- <app-menu-adm></app-menu-adm> -->
 
-          </ion-toolbar>
-        </ion-header>
+<div class="ion-page" id="main-content-adm">
+  <ion-header class="menu">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button autoHide="false"></ion-menu-button>
+      </ion-buttons>
+      <ion-title class="ion-text-center title-page">Abrigo dos Gatos</ion-title>
 
+      <ion-buttons slot="end">
+        <ion-button [routerLink]="['/login']">
+          <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+
+    </ion-toolbar>
+  </ion-header>
   <ion-content>
    <ion-row  class=" redor ion-padding ion-justify-content-center">
 <ion-col size-md=6 size="10" class="ion-padding conteudo">
@@ -32,23 +34,23 @@
      </ion-row>
 
 
-<ion-row class="titulo ion-justify-content-center">
-   <b>Quero ajudar!!</b> 
-</ion-row>
+        <ion-row class="titulo ion-justify-content-center">
+          <b>Quero ajudar!!</b>
+        </ion-row>
 
-<ion-row class="ion-padding">
-  <ion-col id="conteudo">
-    <b>PIX: 15 99713-0703</b><br>
-    <b>[Dados da conta]</b>
-  </ion-col>
-</ion-row>
+        <ion-row class="ion-padding">
+          <ion-col id="conteudo">
+            <b>PIX: 15 99713-0703</b><br>
+            <b>[Dados da conta]</b>
+          </ion-col>
+        </ion-row>
 
-<ion-row size="12" class="ion-padding">
-  <ion-button class="button_voltar" shape="round" [routerLink]="['/home']">Voltar</ion-button>
- </ion-row>
+        <ion-row size="12" class="ion-padding">
+          <ion-button class="button_voltar" shape="round" [routerLink]="['/home-admin']">Voltar</ion-button>
+        </ion-row>
 
-</ion-col>
-</ion-row>
+      </ion-col>
+    </ion-row>
 
 
 <ion-footer>
@@ -60,23 +62,23 @@
     
   </ion-text>
 
-  <ion-text>
-  
-    <ion-label><ion-icon name="logo-whatsapp" class="icon-whatsapp"></ion-icon>WhatsApp</ion-label>
-    <br>
-  </ion-text>
+          <ion-text>
 
-  <ion-text>
-    <ion-label><ion-icon name="mail-outline" class="icon-mail"></ion-icon>E-mail</ion-label>
-    <br>
-  </ion-text>
-</ion-col>
+            <ion-label><ion-icon name="logo-whatsapp" class="icon-whatsapp"></ion-icon>WhatsApp</ion-label>
+            <br>
+          </ion-text>
 
-<ion-col class="footer-content">
-  <ion-text>
-    <ion-label class="footer-title">Redes Sociais</ion-label>
-    <br>
-  </ion-text>
+          <ion-text>
+            <ion-label><ion-icon name="mail-outline" class="icon-mail"></ion-icon>E-mail</ion-label>
+            <br>
+          </ion-text>
+        </ion-col>
+
+        <ion-col class="footer-content">
+          <ion-text>
+            <ion-label class="footer-title">Redes Sociais</ion-label>
+            <br>
+          </ion-text>
 
   <ion-text>
     <ion-label><ion-icon name= "logo-facebook" class="icon-facebook"></ion-icon>/abrigodosgatos</ion-label>

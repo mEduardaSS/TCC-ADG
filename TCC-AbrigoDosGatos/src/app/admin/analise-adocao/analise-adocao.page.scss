@@ -15,10 +15,10 @@
   ion-button{
     --color: black;
   }
-  .entrar{
-    --background: rgb(163, 50, 50);
-    --color: white;
-  }
+  // .entrar{
+  //   --background: rgb(163, 50, 50);
+  //   --color: white;
+  // }
   .checkbox{
     margin: 10px;
     --border-radius: 20px;
@@ -39,13 +39,17 @@
     display: flex;
     justify-content: center;
     margin-left: 30px;
-    --background: #D9D9D9;
+    --background: #A61C35;
+    --color: white;  
+
 }
   .btnAprovar{
         display: flex;
         justify-content: center;
-        margin-left: 230px;
-        --background: #D9D9D9;
+        // margin-left: 230px;
+        --background: #A61C35;
+        --color: white;
+        
   }
   
 
@@ -61,31 +65,63 @@
     font-size: 17px;
   }
 
-  .ion-padding{
-    margin-top: 25px;
-  }
+  // .ion-padding{
+  //   margin-top: 25px;
+  // }
   .conteudo{
     border-radius: 30px;
     border-color:  rgb(163, 50, 50);
     border-style: solid;
     border-width: 8px;
     background:white;
-    margin: auto;
+    margin: 30px 450px;
     justify-content: center;
     align-items: center;
 bottom: 1.0em;
+  }
+  .tema-pag {
+    font-size: 140%;
+}
+
+  .moc{
+    font-size: 100%;
+  }
+
+  @media screen and (max-width:600px){
+    .conteudo{
+      border-radius: 30px;
+      border-color:  rgb(163, 50, 50);
+      border-style: solid;
+      border-width: 8px;
+      background:white;
+      margin: 30px;
+      justify-content: center;
+      align-items: center;
+      bottom: 1.0em;
+    }
+    .btnRecusar{
+      display: flex;
+      justify-content: center;
+      margin-left: 5px;
+      margin-top:20px;
+      --background: #A61C35;
+      --color: white;
 
   }
-    
-  .button_voltar {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    width: 20%;
-    flex-direction: column;
-    margin: auto;
-    margin-bottom: 20px;
-    --background: #A61C35;
-    --color: white;
+    .btnAprovar{
+          display: flex;
+          justify-content: center;
+          // margin-left: 230px;
+          --background: #A61C35;
+          --color: white;
+    }
+    .tema-pag {
+      font-size: 100%;
   }
+  .moc{
+    font-size: 70%;
+  }
+    
+  }
+ 
   

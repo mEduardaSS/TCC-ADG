@@ -29,6 +29,10 @@
   font-size:18px;
 }
 
+ion-label b{
+  color:#3F0912;
+}
+
 ion-input{
   border-radius: 15px;
   --background: #D9D9D9;
@@ -37,6 +41,10 @@ ion-input{
 
 .checkbox{
   margin-right: 10px;
+}
+
+.houdini{
+  margin-left: 3%;
 }
 
 ion-checkbox{
@@ -69,7 +77,7 @@ ion-checkbox::part(container) {
   }
 
   .cont{
-    margin-left:30px;
+    margin-left: 15px;
   }
   
   .nome{
@@ -77,10 +85,10 @@ ion-checkbox::part(container) {
   margin-bottom: 10px;
   }
   
-
   .cont_check{
     font-size:16px;
   }
+
   #cont{
     margin:35px;
     margin-top: 70px;
@@ -118,16 +126,16 @@ ion-checkbox::part(container) {
     }
     .cont{
       font-size:17px;
-      margin: 17px;
-      margin-top: 20px;
+      // margin: 17px;
+      // margin-top: 20px;
       margin-left: 0px;
     }
     
-    .conteudo{
-      text-align: center;
-    }
-    #checkbox{
-      display: flex;
-      flex-direction: column;
-    }
+    // .conteudo{
+    //   text-align: center;
+    // }
+    // #checkbox{
+    //   display: flex;
+    //   flex-direction: column;
+    // }
   }

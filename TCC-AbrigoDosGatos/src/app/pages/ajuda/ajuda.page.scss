@@ -45,6 +45,13 @@
   margin-bottom: 200px;
 }
 
+.qrcode{
+  // margin-bottom: 50px;
+  height: 150px;
+
+
+}
+
 .button_voltar {
   justify-content: center;
   align-items: center;
@@ -125,7 +132,9 @@ ion-footer{
   }
 
   .button_voltar {
-    width: 30%;
+    width: 35%;
+    font-size:70%;
+    margin-top: 50px;
   }
 
   .footer-title {

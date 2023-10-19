@@ -6,47 +6,32 @@
     text-decoration: none;
   }
 
-  
   .card {
-    top: 6em;
-    margin: auto;
-    padding: 2em;
-    width: 70%;
+    margin: 10px;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
-    border: #D9D9D9 10px solid;
+    width: 50%;
   }
-  
-  ion-card-title {
-    margin: 1em
+
+  .testando {
+    border-radius: 10px;
+    border: #A61C35 10px solid;
+  }
+
+  .linha {
+    border-top: #A61C35 solid;
   }
   
   .olho{
-    padding-top: -1em;
-  margin: 1em;
-  font-size: 2em;
+    font-size: 20px;
   }
-  
-  .conteudo-caard {
-    border-top: #1D1D1D solid;
-  }
-  
-  ion-card .card{
-    margin: 2em;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border: --#A61C35 10px solid;
-  }
-  
+
   #text_miaudote {
-    top: 3.5em;
+    top: 1.5em;
     font-size: 30px;
     color: #3F0912;
     text-align: center;
     font-weight: bold;
-    text-shadow: 0.1em 0.1em 0.2em rgb(131, 131, 131);
   }
   
   .title-page{
@@ -74,37 +59,31 @@
   }
   
   .card-gatos{
-    margin-top: 80px;
-    padding: 2em;
-    top: 10em; 
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 100px;
+  }
+
+  .classecard {
+    width: calc(50% - 10px); /* 50% do contêiner, com espaçamento de 10px entre as colunas */
+    margin-bottom: 20px;
   }
   
-  .img-card {
-    border-radius: 20px;
-    margin-top: 1.5em;
-    
-  }
+  // .img-card {
+  //   border-radius: 20px;
+  //   margin-top: 1.5em;
+  // }
   
   .button_adotar{
     float: right;
-    margin-left: 2%;
-    margin-top: -36px;
+    padding: 1em;
+    margin-top: -50px;
     --background: #D9D9D9;
     --color: black;
   }
-  
-  .button_conheca{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    width: 20%;
-    flex-direction: column;
-    margin: auto;
-    margin-bottom: 30px;
-    --background: #A61C35;
-    --color: white;
-  }
-  
+
   #footer{
     // top: 1.2em;
     border-radius: 50px 50px 0 0;
@@ -154,24 +133,9 @@
     }
   }
   
-  .entrar {
-    --color: #A61C35;
-      padding: 10px;
-  }
   
    ion-button{
     --color: rgb(49, 47, 47);
-  }
-  
-  
-  .col-img-gato{
-    justify-content: center;
-    align-items: center;
-  }
-  
-  
-  .ion-col {
-    border-radius: 30px;
   }
   
   .footer {
@@ -213,14 +177,23 @@
   }
   
   @media (max-width: 600px) {
-    ion-card-title{
-    text-align: center;
+    #text_miaudote {
+      top: 0.2em;
     }
-    
-    ion-card-subtitle{
-     text-align: center;
+
+    .card {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 30%;
+      margin-top: 0 auto;
+     
     }
-    
+
+    .testando {
+      margin: 10%;
+    }
+
     .texto{
       display: none;
     }
@@ -228,20 +201,20 @@
       margin-top: auto;
       padding: 10px 0px;   
     }
+
     .card-gatos {
-      display: flex;
+     margin-top: 3em;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      padding: 10px;
       width: 100%;
-      
-     
     }
+
     .conteudo-card {
       display: flex;
       justify-content: center;
       align-items: center;
-      
     }
   
     .button_conheca{
@@ -283,13 +256,13 @@
   }
   
   @media (max-width: 750px) {
+
     #conteudo-banner {
       text-align: center;
       align-items: center;
       justify-content: center;
       font-size: 15px;
-      margin-top: -3em;
-     
+  
     }
   
   .sobre-nos {
@@ -300,44 +273,9 @@
     align-items: center;
     
   }
-  .banner-gato {
-    height: 60%;
-  }
+
+
   
-  .img-gato {
-    width: 80%;
-    max-width: 150px;
-    height: auto;
-  }
-  
-  h1 {
-    font-style: italic;
-    color: #D9D9D9;
-    text-align: center;
-    margin-top: 1.8em;
-   
-  }
-  
-  p {
-    margin-top: 5px;
-    padding-right: 20px;
-    font-size: 15px;
-  
-  }
-  
-  .text {
-    color: white;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    display: inline-block;
-  }
-  
-  .col-img-gato{
-    justify-content: center;
-    align-items: center;
-   
-  }
   
   }
   
@@ -349,9 +287,6 @@
     
     }
     
-    .col-img-gato {
-      margin-top: -1.2em;
-    }
   
     .sobre-nos {
       --background: #A61C35;

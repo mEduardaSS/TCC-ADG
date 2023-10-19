@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { FormGatoService } from '../services/formGato/form-gato.service';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,17 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor( private router: Router, private FormGatoService:FormGatoService) {}
 
+  ngOnInit() {
+    this.listDadosGato();
+  }
+
+  gatosExibidos: any = [];
+  listDadosGato(){
+    this.FormGatoService.select().subscribe((dadosGato:any) => {
+      this.gatosExibidos = dadosGato.message;
+      console.log(this.gatosExibidos);
+    })
+  }
 }

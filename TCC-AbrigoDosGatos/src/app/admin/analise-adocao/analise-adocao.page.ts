@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormAdocaoService } from '../../services/formAdocao/form-adocao.service';
 
 @Component({
   selector: 'app-analise-adocao',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnaliseAdocaoPage implements OnInit {
 
-  constructor() { }
+  tutorSelecionado:any = [];
+
+  constructor(private FormAdocaoService:FormAdocaoService) {
+    this.tutorSelecionado = this.FormAdocaoService.tutorSelecionado;
+   }
 
   ngOnInit() {
+    console.log(this.tutorSelecionado);
   }
 
+  indiceDel: any;
+  apagar(indice: any) {
+    this.FormAdocaoService.delete(indice).subscribe();
+    // console.log(indice);
+  }
 }
