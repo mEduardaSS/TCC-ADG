@@ -8,11 +8,7 @@ import { Router } from '@angular/router';
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
-<<<<<<< HEAD
-=======
 
-
->>>>>>> e37a67e1c87f5c0715ed85970114197a22ec8784
 export class LoginPage implements OnInit {
   login!:FormGroup;
 
@@ -55,11 +51,11 @@ export class LoginPage implements OnInit {
         'Content-Type': 'application/json'
       }
     }
-<<<<<<< HEAD
+
     return fetch(`http://casa/server/api/voluntario/login`, options)
-=======
+
     return fetch(`http://localhost/aula/API/login.php`, options)
->>>>>>> e37a67e1c87f5c0715ed85970114197a22ec8784
+
     .then(res => {
       return res.json() ;
     })

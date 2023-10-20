@@ -23,6 +23,7 @@ export class ControleVoluntariosPage implements OnInit {
         'Content-Type': 'application/json'
       }
     }
+    
     return await fetch(`http://casa/server/api/listar`, options)
     .then(async res => {
       return  await res.json() ;

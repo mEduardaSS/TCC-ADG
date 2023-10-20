@@ -11,9 +11,7 @@ export class CadastroAnimalPage implements OnInit {
 
   constructor(private FormGatoService:FormGatoService, ) {}
     selectedImage!:File;
-
-
-
+    
   // adicionando imgGato
 
   onImageSelect(event: any) {
@@ -60,7 +58,6 @@ export class CadastroAnimalPage implements OnInit {
   get imgGato(){
     return this.FormGato.get('imgGato')!;
   }
-
 
 
   submit_formGato(form:any){
