@@ -32,8 +32,11 @@ export class HomeAdminPage implements OnInit {
   tutoresExibidos: any = [];
   listDadosTutor(){
     this.FormAdocaoService.select().subscribe((dadosTutor:any) => {
-      this.tutoresExibidos = dadosTutor.message;
-      console.log(this.tutoresExibidos);
+      if(dadosTutor.success == 1){
+        this.tutoresExibidos = dadosTutor.message;
+        console.log(this.tutoresExibidos);
+      }
+      this.tutoresExibidos = [];
     })
   }
 
@@ -41,8 +44,12 @@ export class HomeAdminPage implements OnInit {
   upload: any = 'http://aula/API/dadosGato/';
   listDadosGato(){
     this.FormGatoService.select().subscribe((dadosGato:any) => {
-      this.gatosExibidos = dadosGato.message;
-      console.log(this.gatosExibidos);
+      if(dadosGato.success == 1){
+        this.gatosExibidos = dadosGato.message;
+        console.log(this.gatosExibidos);
+        return;
+      }
+      this.gatosExibidos = [];
     })
   }
 

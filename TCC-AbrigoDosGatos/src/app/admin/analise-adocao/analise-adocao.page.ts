@@ -28,7 +28,7 @@ export class AnaliseAdocaoPage implements OnInit {
 
 
   aprovar(){
-    this.FormGatoService.definirAdotado(this.tutorSelecionado.fk_IdGato).subscribe();
+    this.FormGatoService.definirAdotado(this.tutorSelecionado.fk_IdGato, this.tutorSelecionado.nomeAdocao).subscribe();
 
     this.FormAdocaoService.aprovarTutoria(this.tutorSelecionado.idAdocao).subscribe();
 

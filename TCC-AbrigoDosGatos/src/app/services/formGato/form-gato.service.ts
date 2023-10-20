@@ -35,9 +35,10 @@ export class FormGatoService {
     return this.HttpClient.put(this.API+'update_dadosGato.php', dadosGato);
   }
 
-  definirAdotado(dadosGato: any){
-    console.log(dadosGato);
-    return this.HttpClient.put(this.API+'update_dadosGatoAdotado.php', dadosGato);
+  definirAdotado(idGato: any, nomeTutor: any){
+    console.log(idGato);
+    console.log(nomeTutor);
+    return this.HttpClient.put(this.API+'update_dadosGatoAdotado.php', {idGato:idGato, nomeTutor:nomeTutor});
   }
 
 

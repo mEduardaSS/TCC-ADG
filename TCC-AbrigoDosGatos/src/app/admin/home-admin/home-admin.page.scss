@@ -117,6 +117,13 @@
   #container a {
     text-decoration: none;
   }
+
+  .noGatos{
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%, 50%);
+  }
   
   @media (max-width: 600px) {
     #text_miaudote {
