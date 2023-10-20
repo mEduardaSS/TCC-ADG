@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST'){
     ]);
     exit;
 }
-$dados = json_decode(file_get_contents("php://input"));
+// $dados = json_decode(file_get_contents("php://input"));
 
 // echo json_encode($dados);
 // exit;
@@ -37,12 +37,12 @@ if (move_uploaded_file($_FILES['imgGato']['tmp_name'], $filePath)) {
 
 
 try {
-    $gato_nome = htmlspecialchars(trim($dados->nome));
-    $gato_cor = htmlspecialchars(trim($dados->cor));
-    $gato_sexo = htmlspecialchars(trim($dados->sexo));
-    $gato_idade = htmlspecialchars(trim($dados->idade));
-    $gato_descricao = htmlspecialchars(trim($dados->descricao));
-    $gato_raca = htmlspecialchars(trim($dados->raca));
+    $gato_nome = htmlspecialchars(trim($_POST['nome']));
+    $gato_cor = htmlspecialchars(trim($_POST['cor']));
+    $gato_sexo = htmlspecialchars(trim($_POST['sexo']));
+    $gato_idade = htmlspecialchars(trim($_POST['idade']));
+    $gato_descricao = htmlspecialchars(trim($_POST['descricao']));
+    $gato_raca = htmlspecialchars(trim($_POST['raca']));
     $adotado = 0;
 
     $sql = "INSERT INTO `Gato` (

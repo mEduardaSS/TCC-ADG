@@ -16,6 +16,7 @@ export class HomePage {
   }
 
   gatosExibidos: any = [];
+  upload: any = 'http://aula/API/dadosGato/';
   listDadosGato(){
     this.FormGatoService.select().subscribe((dadosGato:any) => {
       this.gatosExibidos = dadosGato.message;

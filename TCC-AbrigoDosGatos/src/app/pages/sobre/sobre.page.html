@@ -36,10 +36,10 @@
                 src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/da/3a/f5/img-hotel-s-rio-quente.jpg?w=700&h=-1&s=1">
             </ion-col>
           
-        <ion-col size="6" class="ion-text-center ion-justify-content-center ion-align-items-center">
-          <ion-text class="info">
-            <h1 class="titulo">O que é o Abrigo dos Gatos?</h1>
-            <p>
+        <ion-col size="6" class="info">
+          <ion-text>
+            <h1 class="titulo ion-text-center" >O que é o Abrigo dos Gatos?</h1>
+            <p class="pinfo">
               O Abrigo dos Gatos é uma dedicada organização não governamental situada na cidade de Tatuí, no interior de São Paulo, com um compromisso central de resgatar felinos em situações de vulnerabilidade. Sua missão primordial consiste em reabilitar esses animais, garantindo que estejam em perfeitas condições de saúde e proporcionando-lhes um lar temporário até que sejam adotados.
               Fundada em 1º de janeiro de 2018 por Gabriela Xavier, uma vereadora de Tatuí desde 2021 que tem se dedicado à causa animal desde 2009, o Abrigo dos Gatos teve seu início com o resgate de cinco filhotes. Atualmente, o abrigo acolhe um total de 50 gatos, refletindo seu compromisso contínuo com o bem-estar felino.
             </p>
@@ -47,30 +47,40 @@
         </ion-col>
             </ion-row>
 
-
             <ion-row id="coluna_ajuda">
-          <ion-col size="12" class="ion-text-center ion-justify-content-center ion-align-items-center">
+          <ion-col size="9" class="ion-text-center ion-justify-content-center ion-align-items-center">
             <ion-text >
-              <h1 class="titulo_ajuda">O Abrigo dos Gatos ainda faz resgate?</h1>
+              <h1 class="titulo_ajuda">O Abrigo ainda realiza resgates?</h1>
               <p class="p_ajuda">
-                É importante mencionar que, devido a limitações de espaço e à complexidade de encontrar lares para gatos adultos, o Abrigo dos Gatos não está atualmente realizando resgates de novos animais. Em vez disso, eles se concentram em cuidar daqueles já abrigados e buscar oportunidades de adoção para eles.
+                É importante mencionar que, devido a limitações de espaço e à complexidade de encontrar lares para gatos adultos, o Abrigo dos Gatos não está atualmente realizando resgates de novos animais. Em vez disso, eles se concentram em cuidar daqueles já abrigados e buscar oportunidades de adoção para eles. Caso queira ajudar o Abrigo dos Gatos de 
               </p>
             </ion-text>
+
+            <ion-button class="sobre-nos" shape="round" [routerLink]="['/ajuda']" routerLinkActive="active-link">Doe</ion-button>
+
           </ion-col>
               </ion-row>
 
               <ion-row id="coluna_voluntario">
-                <ion-col size="12" class="ion-text-center ion-justify-content-center ion-align-items-center">
+                <ion-col size="9" class="ion-text-center ion-justify-content-center ion-align-items-center">
+                  <div class="voluntario-content" style="padding: 1em;">
                   <ion-text>
-                    <!-- <h1 class="titulo_voluntario">Ajuda voluntária no abrigo</h1> -->
+                    <h1 class="titulo_voluntario">Ajuda voluntária no abrigo</h1>
                     <p class="p_voluntario">
-                      A ONG conta com o apoio valioso de um grupo de voluntários, que atualmente inclui 15 indivíduos dedicados, entre eles Gabriela Xavier. Esses voluntários desempenham uma variedade de funções essenciais, incluindo a gestão de despesas, o acompanhamento de visitas ao veterinário e a realização de outras tarefas cruciais. Diariamente, dois voluntários se revezam para monitorar os gatos e garantir que todas as suas necessidades sejam atendidas..
+                      A ONG conta com o apoio valioso de um grupo de voluntários, que atualmente inclui 15 indivíduos dedicados, entre eles Gabriela Xavier. Esses voluntários desempenham uma variedade de funções essenciais, incluindo a gestão de despesas, o acompanhamento de visitas ao veterinário e a realização de outras tarefas cruciais. Diariamente, dois voluntários se revezam para monitorar os gatos e garantir que todas as suas necessidades sejam atendidas.
                     </p>
                   </ion-text>
+                  <ion-button style="margin-top: 1em;" color="light" class="button_voluntario" shape="round" [routerLink]="['/voluntario']" routerLinkActive="active-link">
+                  <ion-text style="color: #A61C35; margin: 2em; font-weight: bold;">
+                    Seja Voluntário
+                  </ion-text>
+                </ion-button>
+                  </div>
                 </ion-col>
+                  
                     </ion-row>
 
-        
+
 
            
                               
@@ -94,6 +104,39 @@
               </p>
                -->
           
+               <ion-row id="footer">
+                <ion-col class="footer-content" style="margin-top: 2em;">
+                  <ion-text>
+                    <ion-label class="footer-title">Contato <br></ion-label>
+                  </ion-text>
+            
+                  <ion-text>
+                    <ion-label><ion-icon name="logo-whatsapp" class="icon-whatsapp"></ion-icon>WhatsApp</ion-label>
+                    <br>
+                  </ion-text>
+            
+                  <ion-text>
+                    <ion-label><ion-icon name="mail-outline" class="icon-mail"></ion-icon>E-mail</ion-label>
+                    <br>
+                  </ion-text>
+                </ion-col>
+            
+                <ion-col class="footer-content">
+                  <ion-text>
+                    <ion-label class="footer-title">Redes Sociais</ion-label>
+                    <br>
+                  </ion-text>
+            
+                  <ion-text>
+                    <ion-label><ion-icon name="logo-facebook" class="icon-facebook" ></ion-icon>/abrigodosgatos</ion-label>
+                    <br>
+                  </ion-text>
+                  <ion-text>
+                    <ion-label><ion-icon name="logo-instagram" class="icon-instagram"></ion-icon>abrigo.dosgatos</ion-label>
+                    <br>
+                  </ion-text>
+                </ion-col>
+              </ion-row>
               
           
             

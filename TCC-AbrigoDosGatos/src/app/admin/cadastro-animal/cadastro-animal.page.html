@@ -1,77 +1,96 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Philosopher:ital,wght@1,700&display=swap" rel="stylesheet">
-      
-      <div class="ion-page" id="main-content">
-        <ion-header class="menu">
-          <ion-toolbar>
-            <ion-buttons slot="start">
-              <ion-menu-button autoHide="false"></ion-menu-button>
-            </ion-buttons>
-            <ion-title class="ion-text-center title-page">Abrigo dos Gatos</ion-title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Philosopher:ital,wght@1,700&display=swap"
+  rel="stylesheet">
 
-            <ion-buttons slot="end">
-              <ion-button [routerLink]="['/login']">
-                <ion-icon slot="icon-only" name="person-circle" ></ion-icon>
-              </ion-button>
-           </ion-buttons>
+<div class="ion-page" id="main-content">
+  <ion-header class="menu">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button autoHide="false"></ion-menu-button>
+      </ion-buttons>
+      <ion-title class="ion-text-center title-page">Abrigo dos Gatos</ion-title>
 
-          </ion-toolbar>
-        </ion-header>
+      <ion-buttons slot="end">
+        <ion-button [routerLink]="['/login']">
+          <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+        </ion-button>
+      </ion-buttons>
 
-    <ion-content>
-      <ion-row  class="ion-padding ion-justify-content-center">
-        <ion-col size-md=6 size="10" class="ion-padding conteudo">
-          <ion-row class="titulo ion-justify-content-center">
-            <b>Cadastro de Gatos</b>
-         </ion-row>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-row class="ion-padding ion-justify-content-center">
+      <ion-col size-md=6 size="10" class="ion-padding conteudo">
+        <ion-row class="titulo ion-justify-content-center">
+          <b>Cadastro de Gatos</b>
+        </ion-row>
+
+        <form (ngSubmit)="submit_formGato(formGato)" #formGato="ngForm">
+
+          <ion-item>
+            <ion-input type="file" (change)="onImageSelect($event)" name="imgGato" ngModel required></ion-input>
+          </ion-item>
+
         
-     <form (ngSubmit)="submit_formGato(formGato.value)" #formGato="ngForm">
+          <ion-item class="input_cont" lines="none">
+            <ion-label position="stacked" class="nome"><b>Nome</b></ion-label>
+            <ion-input class="input" name="nome" ngModel required minlength="3" errorText="Nome inválido"></ion-input>
 
-      <ion-input type="file" (change)="onImageSelect($event)"></ion-input>
+            
 
-      <ion-item class="input_cont" lines="none">
-        <ion-label position="stacked" class="nome"><b>Nome</b></ion-label>
-       <ion-input class="input" name="nome" ngModel></ion-input>
-     </ion-item>
- 
-     <ion-item class="input_cont" lines="none">
-       <ion-label position="stacked" class="nome"><b>Cor</b></ion-label>
-       <ion-input class="input" name="cor" ngModel></ion-input>
-   
-     </ion-item>
+          </ion-item>
 
-     <ion-item class="input_cont" lines="none">
-       <ion-label position="stacked" class="nome"><b>Idade</b></ion-label>
-       <ion-input class="input" name="idade" ngModel></ion-input>
-     </ion-item>
+          <ion-item class="input_cont" lines="none">
+            <ion-label position="stacked" class="nome"><b>Cor</b></ion-label>
+            <ion-input class="input" name="cor" ngModel required errorText="Cor inválida"></ion-input>
 
-     <ion-item class="input_cont" lines="none">
-       <ion-label position="stacked" class="nome"><b>Sexo</b></ion-label>
-       <ion-input class="input" name="sexo" ngModel></ion-input>
-     </ion-item>
+            
 
-     <ion-item class="input_cont" lines="none">
-       <ion-label position="stacked" class="nome"><b>Raça</b></ion-label>
-       <ion-input class="input" name="raca" ngModel></ion-input>
-     </ion-item>
+          </ion-item>
 
-     <ion-item class="input_cont" lines="none">
-       <ion-label position="stacked" class="nome"><b>Descrição</b></ion-label>
-       <ion-textarea class="input" name="descricao" ngModel></ion-textarea>
-     </ion-item>
+          <ion-item class="input_cont" lines="none">
+            <ion-label position="stacked" class="nome"><b>Idade</b></ion-label>
+            <ion-input class="input" name="idade" ngModel required errorText="Idade inválida"></ion-input>
 
-     <ion-row class="ion-padding">
-       <ion-button class="button_voltar" shape="round" [routerLink]="['/home-admin']">Cancelar</ion-button>
-       <ion-button class="button_voltar" shape="round" [routerLink]="['/home-admin']" type="submit">Cadastrar</ion-button>
-     </ion-row>
- 
-    </form>
+            
+
+          </ion-item>
+
+          <ion-item class="input_cont" lines="none">
+            <ion-label position="stacked" class="nome"><b>Sexo</b></ion-label>
+            <ion-input class="input" name="sexo" ngModel required errorText="sexo inválido"></ion-input>
+
+            
+
+          </ion-item>
+
+          <ion-item class="input_cont" lines="none">
+            <ion-label position="stacked" class="nome"><b>Raça</b></ion-label>
+            <ion-input class="input" name="raca" ngModel required errorText="Raça inválida"></ion-input>
+
+            
+
+          </ion-item>
+
+          <ion-item class="input_cont" lines="none">
+            <ion-label position="stacked" class="nome"><b>Descrição</b></ion-label>
+            <ion-textarea class="input" name="descricao" ngModel required errotext="Descrição inválida"></ion-textarea>
+          </ion-item>
+
+          <ion-row class="ion-padding">
+            <ion-button class="button_voltar" shape="round" [routerLink]="['/home-admin']">Cancelar</ion-button>
+            <ion-button class="button_voltar" shape="round" type="submit"
+              [disabled]="!this.formGato.form.valid">Cadastrar</ion-button>
+          </ion-row>
+        </form>
 
 
 
-     </ion-col>
-   </ion-row>
 
-     </ion-content>
-  </div>
+      </ion-col>
+    </ion-row>
+
+  </ion-content>
+</div>

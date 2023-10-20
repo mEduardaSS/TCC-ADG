@@ -12,7 +12,6 @@
         Faça seu login!
       </ion-text>
     </ion-item>
-    <form action="" (ngSubmit)="validaLogin()" [formGroup]="login">
       <ion-item class="input_cont" lines="none">
         <label for="email">Email</label>
         <ion-input id="email" class="input" style="width: 400px;" ngModel formControlName="email"></ion-input>
@@ -26,7 +25,7 @@
         <!-- <ion-button class="btnEntrar" [routerLink]="['/admin/home']" (click)="validaLogin()">Entrar</ion-button> -->
   
       </div>
-    </form>
+    
       
    
   </div>

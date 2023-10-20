@@ -7,8 +7,7 @@
     list-style: none;
   }
 
-
-  .title-page{
+  .title-page {
     font-family: 'Caveat', cursive;
     font-family: 'Philosopher', sans-serif;
     font-size: 24px;
@@ -16,106 +15,110 @@
   }
 
   #img-abrigo {
-    display: flex;
-    margin-top: 2em;
-  height: 350px;
-  width: 350px;
-  border-radius: 40px;
-  border: 8px solid #fefafb;  
-  box-shadow: #000;
+    width: 400px;
+    height: 400px;
+    border-bottom: #ca3651 7px solid;
+    border-right: #ca3651 7px solid;
+    border-radius: 40px;
+  
+  // position: absolute;
+  // display: flex;
+  // margin-top: 2em;
+  // max-height: 80%;
+  // border-radius: 40px;
+  // border: 8px solid #fefafb;  
+  // box-shadow: #000;
   }
 
   .col-img-abrigo {
+    display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 150px ;
-  }
-
-  .titulo{
-    margin-top: 1.0em;
-    font-style: italic;
-    font-size: 30px;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    padding-right: 30px ;
-  }
-  
-  p {
-    margin: 20px;
-    font-size: 17px;
-    text-align: center;
+    margin-top: 2em;
   }
 
   .info {
+    margin-top: 2em;
     text-align: center;
-    padding-right: 20em ;
+    padding-right: 8em;
   }
 
-  #coluna_info {
-    background: #ca3651;
-    width: 100%;
-    height: 50%;
-    color: #fff;
+  .titulo{
+    margin-top: 2.0em;
+    font-style: italic;
+    font-size: 32px;
+    color: #ca3651;
+    text-align: center;
+    font-weight: bolder;
+  }
+  
+  .pinfo {
+    margin-top: 1.5em;
+    font-weight: bold;
+    font-size: 17px;
+    text-align: justify;
   }
 
-  #coluna_ajuda{
-    text-align: center;
-    padding: 30px;
-    font-size: 90px;
-    
-  }
+  // #coluna_info {
+  //   background: #ca3651;
+  //   width: 100%;
+  //   height: 50%;
+  //   color: #fff;
+  // }
 
   #coluna_voluntario {
-    background: #ca3651;
-    width: 80%;
-    border-radius: 70px;
-    height: 20%;
+    text-align: center;
+    margin-top: 1em;
     color: #fff;
-    justify-content: center;
-    align-items: center;
-    padding: auto;
-    margin: auto;
-    bottom: 0;
   }
 
-  .titulo_voluntario{
+  // #coluna_voluntario {
+  //   margin-top: 10em;
+  //   background: #ca3651;
+  //   width: 90%;
+  //   border-radius: 30px;
+  //   height: 30%;
+  //   color: #fff;
+  //   justify-content: center;
+  //   align-items: center;
+  // }
+
+  .titulo_voluntario {
     font-style: italic;
-    font-size: 30px;
-    color: #3F0912;
+    font-size: 35px;
+    color: #FFFFFF;
     text-align: center;
-    padding-right: 30px ;
-    font-family: "Gill Sans", sans-serif;
+    font-weight: bolder;
   }
 
-  #coluna_ajuda{
-    text-align: center;
-    padding: 40px;
-    font-size: 90px;
-    
-  }
-
-  .titulo_ajuda{
-    text-decoration: #A61C35 wavy underline 2px;
-    margin-top: 2.5em;
+  .titulo_ajuda {
+    margin-top: 2.0em;
     font-style: italic;
-    font-size: 30px;
-    color: #3F0912;
+    font-size: 35px;
+    color: #ca3651;
     text-align: center;
-    padding-right: 30px ;
-    font-family: "Gill Sans", sans-serif;
-  
+    font-weight: bolder;
+  }
+
+  .p_voluntario {
+    margin-top: -0.5em;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    padding: 20px ;
   }
 
   .p_ajuda {
-    margin: 20px;
+    padding: 20px ;
     font-size: 20px;
     text-align: center;
+    text-decoration: none;
+ 
   }
 
   #titulo {
     font-size: 30px;
-    color: #3F0912;
+    color: #A61C35;
     text-align: center;
     text-decoration: #A61C35 underline;
     font-family: "Gill Sans", sans-serif;
@@ -123,4 +126,85 @@
     margin: 20px;
   }
 
+  .sobre-nos {
+    --color: white;
+    --background: #A61C35;
+    margin-top: -1px;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 150px;
+  }
+
+  .button_voluntario {
+    --color: white;
+    --background: #A61C35;
+    margin-top: -15px;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 150px;
+  }
+
+  #coluna_voluntario, #coluna_ajuda, #coluna_info{
+    padding-left: 4em;
+    padding-right: 4em;
+    padding: 1em;
+    justify-content: center;
+  }  
+
+  .voluntario-content{
+    // padding: 0.5em;
+    background: #ca3651;
+    border-radius: 40px;
+    margin-bottom: 4em;
+  }
+
+  // footer
+  #footer{
+    border-radius: 50px 50px 0 0;
+    background: #D9D9D9;
+    text-align: center;
+    padding: 15px;
+    bottom: 0;
+    width: 100%;
+  }
   
+  .footer-content{
+    margin: auto;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+    
+  }
+  .footer-title {
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .footer-content ion-text{
+    margin-top: 3em;
+    font-size: medium;
+  }
+  
+  .icon-{
+    &whatsapp{
+      color: green;
+      margin-right: 0.2em;
+    }
+    &facebook{
+      color: blue;
+      margin-right: 0.2em;
+    }
+    &instagram{
+      color: purple;
+      margin-right: 0.2em;
+    }
+    &mail{
+      margin-right: 0.2em;
+    }
+    &pessoa{
+      --color: #A61C35;
+      padding: 10px;
+    }
+  }

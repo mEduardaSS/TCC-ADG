@@ -138,6 +138,7 @@ create table Gato
     idadeGato varchar(20) not null,
     descricao varchar(255),
     sexo varchar(20) not null,
+    nomeTutor varchar(50),
     adotado boolean
     -- adotado é booleano, sendo, true ou false, seria o estado do gato.
     -- true = ja adotado
