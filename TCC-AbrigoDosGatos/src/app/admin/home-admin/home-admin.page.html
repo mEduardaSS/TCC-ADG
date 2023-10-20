@@ -105,12 +105,12 @@
           </ion-card-header>
 
           <ion-card-content class="linha">
-            <ion-row style="margin: 1em;">
+            <ion-row *ngFor="let voluntario of listagemVoluntarios" style="margin: 1em;">
               <ion-col>
-                <ion-card-title>001</ion-card-title>
+                <ion-card-title><b>{{voluntario.idVoluntario}}</b></ion-card-title>
               </ion-col>
               <ion-col class="name">
-                <ion-card-title>Maria Eduarda</ion-card-title>
+                <ion-card-title><b>{{voluntario.nomeVoluntario}}</b></ion-card-title>
               </ion-col>
               <ion-icon name="eye-outline" class="olho" [routerLink]="['/admin/analise-voluntario']"></ion-icon>
 

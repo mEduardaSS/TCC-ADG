@@ -10,10 +10,14 @@ import { Router } from '@angular/router';
 })
 
 export class HomeAdminPage implements OnInit {
-
+  
   constructor(private FormAdocaoService:FormAdocaoService, private router: Router, private FormGatoService:FormGatoService ) {}
+  listagemVoluntarios: any[] = [];
 
-  ngOnInit() {}
+  async ngOnInit() {
+    this.listagemVoluntarios = await this.get();
+    console.log(this.listagemVoluntarios);
+  }
 
   ionViewDidEnter(){
     this.listDadosTutor();
@@ -55,5 +59,23 @@ export class HomeAdminPage implements OnInit {
     console.log('Opção selecionada:', this.segmentModel);
 
     // Aqui você pode realizar ações específicas com base na opção selecionada, se necessário
+  }
+ 
+
+  async get(){
+    const options = {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }
+    
+    return await fetch(`http://casa/server/api/listarInteresseVoluntario`, options)
+    .then(async res => {
+      return await res.json() ;
+    })
+    .catch(err => {
+      console.log(err.json()) ;
+    })
   }
 }

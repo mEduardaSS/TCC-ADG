@@ -32,21 +32,34 @@
         </ion-row>
 
         <ion-list class="listagem">
-
-          <ion-item *ngfor="let solicitacaoVoluntario of listarVoluntarios()" color="black">
-            <ion-col size-md="2" size="4">
+          <ion-item color="black">
+            <ion-col size-md="4" size="4">
               <ion-text><b>Código</b></ion-text>
             </ion-col>
             <ion-col size-md="2" size="4">
               <ion-text><b>Nome</b></ion-text>
             </ion-col>
-            <ion-col size-md="8" size="4" class="ion-text-end">
-              <ion-text><b>Editar</b></ion-text>
+          </ion-item>
+        </ion-list>
+
+        <ion-list class="listagem">
+          <ion-item *ngFor="let solicitacaoVoluntario of listagemVoluntarios" color="black">
+            <ion-col size-md="4" size="4">
+              <ion-text><b>{{solicitacaoVoluntario.idVoluntario}}</b></ion-text>
+            </ion-col>
+            <ion-col size-md="4" size="6">
+              <ion-text><b>{{solicitacaoVoluntario.nomeVoluntario}}</b></ion-text>
+            </ion-col>
+            <ion-col size-md="4" size="2" class="ion-text-end">
+              <ion-text><b><ion-icon name="create" style="font-size: 2em; "></ion-icon></b></ion-text>
             </ion-col>
           </ion-item>
-
-          
         </ion-list>
+
+
+
+
+
       </ion-col>
     </ion-row>
   </ion-content>
