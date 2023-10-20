@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormAdocaoService } from '../../services/formAdocao/form-adocao.service';
 import { FormGatoService } from '../../services/formGato/form-gato.service';
 import { Router } from '@angular/router';
+import { CompartilhaIdVoluntarioService } from '../../compartilha-id-voluntario.service';
 
 @Component({
   selector: 'app-home-admin',
@@ -10,10 +11,18 @@ import { Router } from '@angular/router';
 })
 
 export class HomeAdminPage implements OnInit {
+  compartilhaIdVoluntario: any;
+  
+  constructor(private FormAdocaoService:FormAdocaoService, private router: Router, 
+    private FormGatoService:FormGatoService, 
+    compartilhaIdVoluntario: CompartilhaIdVoluntarioService ) {}
+  listagemVoluntarios: any[] = [];
 
-  constructor(private FormAdocaoService:FormAdocaoService, private router: Router, private FormGatoService:FormGatoService ) {}
 
-  ngOnInit() {}
+  async ngOnInit() {
+    this.listagemVoluntarios = await this.get();
+    console.log(this.listagemVoluntarios);
+  }
 
   ionViewDidEnter(){
     this.listDadosTutor();
@@ -62,5 +71,28 @@ export class HomeAdminPage implements OnInit {
     console.log('Opção selecionada:', this.segmentModel);
 
     // Aqui você pode realizar ações específicas com base na opção selecionada, se necessário
+  }
+ 
+
+  async get(){
+    const options = {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+
+    }
+    
+    return await fetch(`http://casa/server/api/listarInteresseVoluntario`, options)
+    .then(async res => {
+      return await res.json() ;
+    })
+    .catch(err => {
+      console.log(err.json()) ;
+    })
+  }
+  analisarVoluntario(id:any){
+    this.compartilhaIdVoluntario.idVoluntario = id
+
   }
 }

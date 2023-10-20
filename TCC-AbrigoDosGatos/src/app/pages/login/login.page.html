@@ -14,18 +14,18 @@
     </ion-item>
       <ion-item class="input_cont" lines="none">
         <label for="email">Email</label>
-        <ion-input id="email" class="input" style="width: 400px;" ngModel formControlName="email"></ion-input>
+        <ion-input id="email" [(ngModel)]="email" class="input" style="width: 400px;"></ion-input>
       </ion-item>
       <ion-item class="input_cont" lines="none">
         <label for="senha">Senha</label>
-        <ion-input id="senha" type="password" class="input" style="width: 400px" ngModel formControlName="senha"></ion-input>
+        <ion-input id="senha" [(ngModel)]="senha" type="password" class="input" style="width: 400px"></ion-input>
       </ion-item>
       <div id="botao">
-        <ion-button class="btnEntrar" type="submit">Entrar</ion-button>
+        <ion-button class="btnEntrar" (click)="validaLogin()">Entrar</ion-button>
         <!-- <ion-button class="btnEntrar" [routerLink]="['/admin/home']" (click)="validaLogin()">Entrar</ion-button> -->
   
       </div>
-    
+  
       
    
   </div>

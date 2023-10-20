@@ -6,16 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./controle-voluntarios.page.scss'],
 })
 export class ControleVoluntariosPage implements OnInit {
-
+  listagemVoluntarios: any[] = [];
   constructor() { }
 
-  async ngOnInit() {
-    console.log( this.listarVoluntarios());
+  async ngOnInit(){
+    this.listagemVoluntarios = await this.get();
+    console.log( this.get());
   }
 
-  async listarVoluntarios(){
-     return await this.get()
-  }
   async get(){
     const options = {
       method: 'GET',
@@ -26,7 +24,7 @@ export class ControleVoluntariosPage implements OnInit {
     
     return await fetch(`http://casa/server/api/listar`, options)
     .then(async res => {
-      return  await res.json() ;
+      return await res.json() ;
     })
     .catch(err => {
       console.log(err.json()) ;

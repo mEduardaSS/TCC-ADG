@@ -17,17 +17,18 @@ export class LoginPage implements OnInit {
   email:any
 
   async validaLogin(){
-    // let dados:any ={
-    //     "email": `${this.email}`,
-    //     "senha": `${this.senha}`
-    //   }
-    //   let res=await this.post(dados);
-    //   if(res){
-    //     alert("Logado com sucesso");
-    //     this.router.navigate(['/home-admin']);
-    //   }else{
-    //     alert("Email ou senha incorretos")
-    //   }
+    let dados:any ={
+        "email": `${this.email}`,
+        "senha": `${this.senha}`
+      }
+      console.log(dados);
+      let res=await this.post(dados);
+      if(res){
+        alert("Logado com sucesso");
+        this.router.navigate(['/home-admin']);
+      }else{
+        alert("Email ou senha incorretos")
+      }
 
     console.log(this.login.value);
 
@@ -52,9 +53,7 @@ export class LoginPage implements OnInit {
       }
     }
 
-    return fetch(`http://casa/server/api/voluntario/login`, options)
-
-    return fetch(`http://localhost/aula/API/login.php`, options)
+    return fetch(`http://casa/server/api/login`, options)
 
     .then(res => {
       return res.json() ;
