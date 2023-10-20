@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormAdocaoService } from '../../services/formAdocao/form-adocao.service';
 import { FormGatoService } from '../../services/formGato/form-gato.service';
 import { Router } from '@angular/router';
+import { CompartilhaIdVoluntarioService } from '../../compartilha-id-voluntario.service';
 
 @Component({
   selector: 'app-home-admin',
@@ -10,9 +11,13 @@ import { Router } from '@angular/router';
 })
 
 export class HomeAdminPage implements OnInit {
+  compartilhaIdVoluntario: any;
   
-  constructor(private FormAdocaoService:FormAdocaoService, private router: Router, private FormGatoService:FormGatoService ) {}
+  constructor(private FormAdocaoService:FormAdocaoService, private router: Router, 
+    private FormGatoService:FormGatoService, 
+    compartilhaIdVoluntario: CompartilhaIdVoluntarioService ) {}
   listagemVoluntarios: any[] = [];
+
 
   async ngOnInit() {
     this.listagemVoluntarios = await this.get();
@@ -68,6 +73,7 @@ export class HomeAdminPage implements OnInit {
       headers: {
         'Content-Type': 'application/json'
       }
+
     }
     
     return await fetch(`http://casa/server/api/listarInteresseVoluntario`, options)
@@ -77,5 +83,9 @@ export class HomeAdminPage implements OnInit {
     .catch(err => {
       console.log(err.json()) ;
     })
+  }
+  analisarVoluntario(id:any){
+    this.compartilhaIdVoluntario.idVoluntario = id
+
   }
 }

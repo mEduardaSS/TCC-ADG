@@ -112,7 +112,7 @@
               <ion-col class="name">
                 <ion-card-title><b>{{voluntario.nomeVoluntario}}</b></ion-card-title>
               </ion-col>
-              <ion-icon name="eye-outline" class="olho" [routerLink]="['/admin/analise-voluntario']"></ion-icon>
+              <ion-icon name="eye-outline" class="olho" (click)="analisarVoluntario(voluntario.idVoluntario)" [routerLink]="['/admin/analise-voluntario']"></ion-icon>
 
             </ion-row>
           </ion-card-content>
