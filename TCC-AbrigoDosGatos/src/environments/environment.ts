@@ -3,7 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+
+  // url para API (modelo do pc da etec), Duda, etc...
+  baseApiUrl: `http://aula/API/`,
+
+  // url para o pc da Mabi
+  // baseApiUrl: `http://casa/server/API/`,
+
 };
 
 /*

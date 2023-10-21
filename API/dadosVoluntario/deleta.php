@@ -6,7 +6,7 @@ if ($acao == 'delete' && $parametro == '') { echo json_encode(['ERRO' => "É nec
 
 if ($acao == 'delete' && $parametro != '') {
 
-    $db = DB::connect();
+    $db = $conn::connect();
     $result = $db->prepare("DELETE FROM solicitacaovoluntario WHERE id={$parametro}");
     $exec = $result->execute();
 

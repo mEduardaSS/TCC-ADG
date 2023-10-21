@@ -1,3 +1,6 @@
+// import do arquivo environments
+import { environment } from 'src/environments/environment';
+
 import { Component, OnInit } from '@angular/core';
 import { FormAdocaoService } from '../../services/formAdocao/form-adocao.service';
 import { FormGatoService } from '../../services/formGato/form-gato.service';
@@ -11,6 +14,11 @@ import { CompartilhaIdVoluntarioService } from '../../compartilha-id-voluntario.
 })
 
 export class HomeAdminPage implements OnInit {
+  // Aqui, foi pego a url definida no arquivo environments.ts
+  private readonly API = environment.baseApiUrl;
+
+
+
   compartilhaIdVoluntario: any;
   
   constructor(private FormAdocaoService:FormAdocaoService, private router: Router, 
@@ -35,13 +43,15 @@ export class HomeAdminPage implements OnInit {
       if(dadosTutor.success == 1){
         this.tutoresExibidos = dadosTutor.message;
         console.log(this.tutoresExibidos);
+        return;
       }
+      console.log(this.tutoresExibidos);
       this.tutoresExibidos = [];
     })
   }
 
   gatosExibidos: any = [];
-  upload: any = 'http://aula/API/dadosGato/';
+  upload: any = this.API+'dadosGato/';
   listDadosGato(){
     this.FormGatoService.select().subscribe((dadosGato:any) => {
       if(dadosGato.success == 1){
@@ -49,6 +59,7 @@ export class HomeAdminPage implements OnInit {
         console.log(this.gatosExibidos);
         return;
       }
+      console.log(this.gatosExibidos)
       this.gatosExibidos = [];
     })
   }
@@ -83,7 +94,8 @@ export class HomeAdminPage implements OnInit {
 
     }
     
-    return await fetch(`http://casa/server/api/listarInteresseVoluntario`, options)
+    
+    return await fetch(this.API+`listarInteresseVoluntario`, options)
     .then(async res => {
       return await res.json() ;
     })

@@ -1,10 +1,13 @@
 <?php
 // var_dump('teste');
+// if( $api == "voluntario" && $method == "GET" && $acao == "lista")
+// require_once "../SQL/conn.php";
 if ($api == 'voluntario') {
     
     if ($method == "GET") {
         include_once "get.php";
-        var_dump('metodo get');
+        // echo ($parametro);
+        chamaGet($acao, $parametro);
     }
 
     if ($method == "POST" && !isset($_POST['_method'])) {

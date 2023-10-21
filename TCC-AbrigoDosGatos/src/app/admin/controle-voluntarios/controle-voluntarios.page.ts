@@ -1,3 +1,5 @@
+import { environment } from 'src/environments/environment';
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./controle-voluntarios.page.scss'],
 })
 export class ControleVoluntariosPage implements OnInit {
+  private readonly API = environment.baseApiUrl;
+
   listagemVoluntarios: any[] = [];
   constructor() { }
 
@@ -22,7 +26,7 @@ export class ControleVoluntariosPage implements OnInit {
       }
     }
     
-    return await fetch(`http://casa/server/api/listar`, options)
+    return await fetch(this.API+`listar`, options)
     .then(async res => {
       return await res.json() ;
     })

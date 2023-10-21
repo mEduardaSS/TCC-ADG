@@ -1,3 +1,5 @@
+import { environment } from 'src/environments/environment';
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class VoluntarioPage implements OnInit {
+  private readonly API = environment.baseApiUrl;
+
   nomeVoluntario: any = "";
   telefoneVoluntario: any = "";
   emailVoluntario: any = "";
@@ -42,7 +46,7 @@ export class VoluntarioPage implements OnInit {
       }
     }
 
-    return fetch(`http://casa/server/api/adicionar`, options)
+    return fetch(this.API+`adicionar`, options)
 
     .then(res => {
       return res.json() ;

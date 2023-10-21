@@ -1,3 +1,6 @@
+// import do arquivo environments
+import { environment } from 'src/environments/environment';
+
 import { Component, OnInit } from '@angular/core';
 import { FormGroup , FormControl , Validators} from '@angular/forms';
 import { Injectable } from '@angular/core';
@@ -10,6 +13,8 @@ import { Router } from '@angular/router';
 })
 
 export class LoginPage implements OnInit {
+  private readonly API = environment.baseApiUrl;
+
   login!:FormGroup;
 
   constructor(private router: Router) { }
@@ -53,7 +58,7 @@ export class LoginPage implements OnInit {
       }
     }
 
-    return fetch(`http://casa/server/api/login`, options)
+    return fetch(this.API+`login`, options)
 
     .then(res => {
       return res.json() ;
