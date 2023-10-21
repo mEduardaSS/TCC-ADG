@@ -1,3 +1,6 @@
+// import do arquivo environments
+import { environment } from 'src/environments/environment';
+
 import { Component, OnInit } from '@angular/core';
 import { FormGroup , FormControl , Validators} from '@angular/forms';
 import { Injectable } from '@angular/core';
@@ -10,6 +13,8 @@ import { Router } from '@angular/router';
 })
 
 export class LoginPage implements OnInit {
+  private readonly API = environment.baseApiUrl;
+
   login!:FormGroup;
 
   constructor(private router: Router) { }
@@ -17,17 +22,18 @@ export class LoginPage implements OnInit {
   email:any
 
   async validaLogin(){
-    // let dados:any ={
-    //     "email": `${this.email}`,
-    //     "senha": `${this.senha}`
-    //   }
-    //   let res=await this.post(dados);
-    //   if(res){
-    //     alert("Logado com sucesso");
-    //     this.router.navigate(['/home-admin']);
-    //   }else{
-    //     alert("Email ou senha incorretos")
-    //   }
+    let dados:any ={
+        "email": `${this.email}`,
+        "senha": `${this.senha}`
+      }
+      console.log(dados);
+      let res=await this.post(dados);
+      if(res){
+        alert("Logado com sucesso");
+        this.router.navigate(['/home-admin']);
+      }else{
+        alert("Email ou senha incorretos")
+      }
 
     console.log(this.login.value);
 
@@ -52,9 +58,7 @@ export class LoginPage implements OnInit {
       }
     }
 
-    return fetch(`http://casa/server/api/voluntario/login`, options)
-
-    return fetch(`http://localhost/aula/API/login.php`, options)
+    return fetch(this.API+`login`, options)
 
     .then(res => {
       return res.json() ;

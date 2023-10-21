@@ -34,7 +34,7 @@
   
     <ion-row>
       <ion-col size="12" size-sm="6" *ngIf="segmentModel === 'tutor'" class="card" style="margin: auto; margin-top: 2em;">
-        <ion-card *ngIf="tutoresExibidos && tutoresExibidos.length > 0; else noTutor" class="testando">
+        <ion-card *ngIf="tutoresExibidos && tutoresExibidos.length > 0; else noTutor;" class="testando">
           <ion-card-title style="text-align: center; margin: 1em;" class="teste">
             Formulários de interesse para adoção
           </ion-card-title>
@@ -105,14 +105,14 @@
           </ion-card-header>
 
           <ion-card-content class="linha">
-            <ion-row style="margin: 1em;">
+            <ion-row *ngFor="let voluntario of listagemVoluntarios" style="margin: 1em;">
               <ion-col>
-                <ion-card-title>001</ion-card-title>
+                <ion-card-title><b>{{voluntario.idVoluntario}}</b></ion-card-title>
               </ion-col>
               <ion-col class="name">
-                <ion-card-title>Maria Eduarda</ion-card-title>
+                <ion-card-title><b>{{voluntario.nomeVoluntario}}</b></ion-card-title>
               </ion-col>
-              <ion-icon name="eye-outline" class="olho" [routerLink]="['/admin/analise-voluntario']"></ion-icon>
+              <ion-icon name="eye-outline" class="olho" (click)="analisarVoluntario(voluntario.idVoluntario)" [routerLink]="['/admin/analise-voluntario']"></ion-icon>
 
             </ion-row>
           </ion-card-content>
@@ -131,7 +131,7 @@
       </ion-col>
     </ion-row>
 
-    <ion-row *ngIf="gatosExibidos && gatosExibidos.length > 0" class="ion-padding ion-justify-content-center">
+    <ion-row *ngIf="gatosExibidos && gatosExibidos.length > 0; else noGatos" class="ion-padding ion-justify-content-center">
       <div class="card-gatos">
         <ion-card class="classecard" *ngFor="let gato of gatosExibidos">
           <img class="img-card" alt="Gato" src="{{this.upload}}{{gato.imgGato}}"/>
@@ -151,10 +151,10 @@
       </div>
     </ion-row>
     
-    <ng-template *ngIf="!(gatosExibidos && gatosExibidos.length > 0)">
+    <ng-template #noGatos>
       <!-- Exibir mensagem quando não há gatos disponíveis -->
-      <ion-row class="ion-padding ion-justify-content-center" style="color: aliceblue; position: absolute;">
-        <ion-title>
+      <ion-row class="ion-padding ion-justify-content-center noGatos">
+        <ion-title class="ion-text-center">
           Nenhum gato disponível!
         </ion-title>
       </ion-row>

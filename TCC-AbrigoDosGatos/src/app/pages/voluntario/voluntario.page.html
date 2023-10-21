@@ -28,25 +28,25 @@
           </ion-row>
       
           <ion-item class="input_cont" lines="none">
-             <ion-label position="stacked" class="nome" ><b>Nome</b></ion-label>
-            <ion-input class="input" type="text"></ion-input>
+             <ion-label position="stacked" class="nome"><b>Nome</b></ion-label>
+            <ion-input class="input" type="text" [(ngModel)]="nomeVoluntario" ></ion-input>
            
           </ion-item>
       
           <ion-item class="input_cont" lines="none">
             <ion-label position="stacked" class="nome"><b>E-mail</b></ion-label>
-            <ion-input class="input" type="email" ></ion-input>
+            <ion-input class="input" type="email" [(ngModel)]="emailVoluntario" ></ion-input>
             <ion-note slot="error">Invalid email</ion-note>
           </ion-item>
       
           <ion-item class="input_cont" lines="none">
             <ion-label position="stacked" class="nome"><b>Data de nascimento</b></ion-label>
-            <ion-input class="input" type="date"></ion-input>
+            <ion-input class="input" type="date" [(ngModel)]="dataNascVoluntario"></ion-input>
           </ion-item>
       
           <ion-item class="input_cont" lines="none">
             <ion-label position="stacked" class="nome"><b>Telefone</b></ion-label> 
-           <ion-input class="input" type="phonenumber" name="telefone" maxlength="15"></ion-input>
+           <ion-input class="input"  [(ngModel)]="telefoneVoluntario" type="phonenumber" name="telefone" maxlength="15"></ion-input>
          </ion-item>
       
           <ion-row id="cont"><b>Disponibilidade</b></ion-row>
@@ -98,7 +98,7 @@
       
           <ion-row class="ion-padding">
             <ion-button class="button_voltar" shape="round" [routerLink]="['/home']">Voltar</ion-button>
-            <ion-button class="button_voltar" shape="round" [routerLink]="['/home'] " >Confirmar</ion-button>
+            <ion-button class="button_voltar" shape="round" [routerLink]="['/home']" (click)="insereVoluntario()">Confirmar</ion-button>
           </ion-row>
       
           </ion-col>

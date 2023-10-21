@@ -1,13 +1,29 @@
 <?php
-// Fazer uma variavel que guarda a descrição do sobre e onclick ela muda quando eu clico no botao(ou faz uma acao)
+header("Access-Control-Allow-Origin: *");  //colocar url permitidas
+header("Access-Control-Allow-Methods: GET, POST");
+header("Access-Control-Allow-Headers: Content-Type");
+
+// Configurações do banco de dados
+$host = "localhost"; // Host do banco de dados
+$usuario = "root"; // Nome de usuário do banco de dados
+$senha = ""; // Senha do banco de dados
+$banco = "abrigogatos"; // Nome do banco de dados
+
+
 if ($acao == '' && $parametro == '') { echo json_encode(['ERRO' => 'Caminho não encontrado!']); exit; }
 
-if ($acao == 'adiciona' && $parametro == '') {
+if ($acao == 'adicionar' && $parametro == '') {
+    $dados = file_get_contents('php://input');  // Dados passados por POST
+    $dados = json_decode($dados);
     $sql = "INSERT INTO solicitacaovoluntario (";
     $contador = 1;
-    foreach (array_keys($_POST) as $indice) {
-        if (count($_POST) > $contador) {
-            $sql .= "{$indice},";
+    $tamanho = 0;
+    foreach (($dados) as $indice=>$valor) {
+        $tamanho++;
+    }
+    foreach (($dados) as $indice=>$valor) {
+        if ($tamanho > $contador) {
+            $sql .= "{$indice}, ";
         } else {
             $sql .= "{$indice}";
         }
@@ -15,8 +31,8 @@ if ($acao == 'adiciona' && $parametro == '') {
     }
     $sql .= ") VALUES (";
     $contador = 1;
-    foreach (array_values($_POST) as $valor) {
-        if (count($_POST) > $contador) {
+    foreach (($dados) as $indice=>$valor) {
+        if ($tamanho> $contador) {
             $sql .= "'{$valor}',";
         } else {
             $sql .= "'{$valor}'";
@@ -24,14 +40,9 @@ if ($acao == 'adiciona' && $parametro == '') {
         $contador++;
     }
     $sql .= ")";
-
-    $db = DB::connect();
-    $result = $db->prepare($sql);
-    $exec = $result->execute();
-
-    if ($exec) {
-        echo json_encode(["dados" => 'Dados foram inseridos com sucesso.']);
-    } else {
-        echo json_encode(["dados" => 'Houve algum erro ao inseris os dados.']);
-    }
+    
+    $conexao = new mysqli($host, $usuario, $senha, $banco);
+    
+    $resultado = $conexao->query($sql);
+    echo json_encode('ok');
 }

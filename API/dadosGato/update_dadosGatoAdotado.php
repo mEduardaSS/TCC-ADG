@@ -19,7 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] !== 'PUT'){
 
 $data = json_decode(file_get_contents("php://input"));
 
-$id = $data;
+$id = $data->idGato;
+$nomeTutor = $data->nomeTutor;
 
 try{
     $put = "SELECT * FROM `Gato` WHERE idGato=:idGato";
@@ -33,12 +34,13 @@ try{
 
         $adotado = 1;
 
-        $update_gato = "UPDATE `Gato` SET adotado = :adotado
+        $update_gato = "UPDATE `Gato` SET adotado = :adotado, nomeTutor = :nomeTutor
         WHERE idGato = :idGato";
 
         $update_stmt = $connection->prepare($update_gato);
 
         $update_stmt->bindValue(':adotado', $adotado, PDO::PARAM_STR);
+        $update_stmt->bindValue(':nomeTutor', $nomeTutor, PDO::PARAM_STR);
 
         $update_stmt->bindValue(':idGato', $id, PDO::PARAM_INT);
 

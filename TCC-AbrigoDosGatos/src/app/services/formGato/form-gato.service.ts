@@ -1,3 +1,6 @@
+// import do arquivo environments
+import { environment } from 'src/environments/environment';
+
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
@@ -10,34 +13,35 @@ export class FormGatoService {
 
   gatoSelecionado:any = [];
 
-  private readonly API = `http://localhost/aula/API/dadosGato/`; 
+  private readonly API = environment.baseApiUrl;
 
   insert(dadosGato: any){
     console.log(dadosGato);
-    return this.HttpClient.post(this.API+`insert_dadosGato.php`, dadosGato);
+    return this.HttpClient.post(this.API+`dadosGato/insert_dadosGato.php`, dadosGato);
   }
 
   select(){
-    return this.HttpClient.get(this.API+'select_dadosGato.php');
+    return this.HttpClient.get(this.API+'dadosGato/select_dadosGato.php');
   }
 
   selectAdotados(){
-    return this.HttpClient.get(this.API+'select_dadosGatoAdotados.php');
+    return this.HttpClient.get(this.API+'dadosGato/select_dadosGatoAdotados.php');
   }
 
   delete(id: any) {
     console.log(id);
-    return this.HttpClient.delete(this.API+'delete_dadosGato.php?id='+ id);
+    return this.HttpClient.delete(this.API+'dadosGato/delete_dadosGato.php?id='+ id);
   }
 
   update(dadosGato: any){
     console.log(dadosGato);
-    return this.HttpClient.put(this.API+'update_dadosGato.php', dadosGato);
+    return this.HttpClient.put(this.API+'dadosGato/update_dadosGato.php', dadosGato);
   }
 
-  definirAdotado(dadosGato: any){
-    console.log(dadosGato);
-    return this.HttpClient.put(this.API+'update_dadosGatoAdotado.php', dadosGato);
+  definirAdotado(idGato: any, nomeTutor: any){
+    console.log(idGato);
+    console.log(nomeTutor);
+    return this.HttpClient.put(this.API+'dadosGato/update_dadosGatoAdotado.php', {idGato:idGato, nomeTutor:nomeTutor});
   }
 
 

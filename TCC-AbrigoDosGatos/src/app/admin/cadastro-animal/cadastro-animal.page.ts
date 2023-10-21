@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGatoService } from '../../services/formGato/form-gato.service';
 import { FormGroup , FormControl , Validators} from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro-animal',
@@ -9,13 +10,20 @@ import { FormGroup , FormControl , Validators} from '@angular/forms';
 })
 export class CadastroAnimalPage implements OnInit {
 
-  constructor(private FormGatoService:FormGatoService, ) {}
+  constructor(private FormGatoService:FormGatoService, private router:Router) {}
     selectedImage!:File;
     
   // adicionando imgGato
 
   onImageSelect(event: any) {
     this.selectedImage = event.target.files[0];
+  }
+  
+  openFileInput() {
+    const fileInput = document.getElementById('file-input');
+    if (fileInput) {
+      fileInput.click();
+    }
   }
 
   FormGato!: FormGroup;
@@ -62,15 +70,17 @@ export class CadastroAnimalPage implements OnInit {
 
   submit_formGato(form:any){
     console.log(this.selectedImage);
-    console.log(form);
+    console.log(form.value);
+
+    if(form.valid){
     let dadosGato = new FormData();
     dadosGato.append('imgGato', this.selectedImage);
-    dadosGato.append('nome', form.nome);
-    dadosGato.append('cor', form.cor);
-    dadosGato.append('raca', form.raca);
-    dadosGato.append('idade', form.idade);
-    dadosGato.append('descricao', form.descricao);
-    dadosGato.append('sexo', form.sexo);
+    dadosGato.append('nome', form.value.nome);
+    dadosGato.append('cor', form.value.cor);
+    dadosGato.append('raca', form.value.raca);
+    dadosGato.append('idade', form.value.idade);
+    dadosGato.append('descricao', form.value.descricao);
+    dadosGato.append('sexo', form.value.sexo);
     // dadosGato[0] = {
     //   nome: form.nome,
     //   cor: form.cor,
@@ -82,6 +92,8 @@ export class CadastroAnimalPage implements OnInit {
     // };
     console.log(dadosGato);
     this.FormGatoService.insert(dadosGato).subscribe();
+    this.router.navigate(['/home-admin']);
+  }
   }
 
 }

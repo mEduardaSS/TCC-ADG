@@ -23,7 +23,7 @@ if ($acao == 'update' && $parametro != '') {
 
     $sql .= "WHERE id={$parametro}";
 
-    $db = DB::connect();
+    $db = $conn::connect();
     $result = $db->prepare($sql);
     $exec = $result->execute();
 

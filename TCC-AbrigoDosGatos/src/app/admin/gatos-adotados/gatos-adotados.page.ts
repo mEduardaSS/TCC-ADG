@@ -13,7 +13,7 @@ export class GatosAdotadosPage implements OnInit {
   ngOnInit() {
     this.listDadosGato();
   }
-
+  upload: any = 'http://aula/API/dadosGato/';
   gatosExibidos: any = [];
   listDadosGato(){
     this.FormGatoService.selectAdotados().subscribe((dadosGato:any) => {

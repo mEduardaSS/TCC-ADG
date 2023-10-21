@@ -1,7 +1,11 @@
+// import do arquivo environments
+import { environment } from 'src/environments/environment';
+
 import { Component, OnInit } from '@angular/core';
 import { FormAdocaoService } from '../../services/formAdocao/form-adocao.service';
 import { FormGatoService } from '../../services/formGato/form-gato.service';
 import { Router } from '@angular/router';
+import { CompartilhaIdVoluntarioService } from '../../compartilha-id-voluntario.service';
 
 @Component({
   selector: 'app-home-admin',
@@ -10,10 +14,23 @@ import { Router } from '@angular/router';
 })
 
 export class HomeAdminPage implements OnInit {
+  // Aqui, foi pego a url definida no arquivo environments.ts
+  private readonly API = environment.baseApiUrl;
 
-  constructor(private FormAdocaoService:FormAdocaoService, private router: Router, private FormGatoService:FormGatoService ) {}
 
-  ngOnInit() {}
+
+  compartilhaIdVoluntario: any;
+  
+  constructor(private FormAdocaoService:FormAdocaoService, private router: Router, 
+    private FormGatoService:FormGatoService, 
+    compartilhaIdVoluntario: CompartilhaIdVoluntarioService ) {}
+  listagemVoluntarios: any[] = [];
+
+
+  async ngOnInit() {
+    this.listagemVoluntarios = await this.get();
+    console.log(this.listagemVoluntarios);
+  }
 
   ionViewDidEnter(){
     this.listDadosTutor();
@@ -23,17 +40,27 @@ export class HomeAdminPage implements OnInit {
   tutoresExibidos: any = [];
   listDadosTutor(){
     this.FormAdocaoService.select().subscribe((dadosTutor:any) => {
-      this.tutoresExibidos = dadosTutor.message;
+      if(dadosTutor.success == 1){
+        this.tutoresExibidos = dadosTutor.message;
+        console.log(this.tutoresExibidos);
+        return;
+      }
       console.log(this.tutoresExibidos);
+      this.tutoresExibidos = [];
     })
   }
 
   gatosExibidos: any = [];
-  upload: any = 'http://aula/API/dadosGato/';
+  upload: any = this.API+'dadosGato/';
   listDadosGato(){
     this.FormGatoService.select().subscribe((dadosGato:any) => {
-      this.gatosExibidos = dadosGato.message;
-      console.log(this.gatosExibidos);
+      if(dadosGato.success == 1){
+        this.gatosExibidos = dadosGato.message;
+        console.log(this.gatosExibidos);
+        return;
+      }
+      console.log(this.gatosExibidos)
+      this.gatosExibidos = [];
     })
   }
 
@@ -55,5 +82,29 @@ export class HomeAdminPage implements OnInit {
     console.log('Opção selecionada:', this.segmentModel);
 
     // Aqui você pode realizar ações específicas com base na opção selecionada, se necessário
+  }
+ 
+
+  async get(){
+    const options = {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+
+    }
+    
+    
+    return await fetch(this.API+`listarInteresseVoluntario`, options)
+    .then(async res => {
+      return await res.json() ;
+    })
+    .catch(err => {
+      console.log(err.json()) ;
+    })
+  }
+  analisarVoluntario(id:any){
+    this.compartilhaIdVoluntario.idVoluntario = id
+
   }
 }
