@@ -33,7 +33,7 @@
 
   
     <ion-row>
-      <ion-col size="12" size-sm="6" *ngIf="segmentModel === 'tutor'" class="card" style="margin: auto; margin-top: 2em;">
+      <ion-col size="12" size-sm="6" *ngIf="segmentModel === 'tutor'" class="card">
         <ion-card *ngIf="tutoresExibidos && tutoresExibidos.length > 0; else noTutor;" class="testando">
           <ion-card-title style="text-align: center; margin: 1em;" class="teste">
             Formulários de interesse para adoção
@@ -52,10 +52,10 @@
           <ion-card-content *ngFor="let tutor of tutoresExibidos" class="linha">
             <ion-row style="margin: 1em;">
               <ion-col>
-                <ion-card-title>{{tutor.idAdocao}}</ion-card-title>
+                <ion-card-title><b>{{tutor.idAdocao}}</b></ion-card-title>
               </ion-col>
               <ion-col>
-                <ion-card-title>{{tutor.nomeAdocao}}</ion-card-title>
+                <ion-card-title><b>{{tutor.nomeAdocao}}</b></ion-card-title>
               </ion-col>
               <ion-icon name="eye-outline" class="olho" (click)="analisar_tutor(tutor.idAdocao)"></ion-icon>
             </ion-row>
@@ -87,7 +87,7 @@
 
       </ion-col>
 
-      <ion-col size="12" size-sm="6" *ngIf="segmentModel === 'voluntario'" class="card" style="margin: auto; margin-top: 2em;">
+      <ion-col size="12" size-sm="6" *ngIf="segmentModel === 'voluntario'" class="card">
         <ion-card class="testando">
           <ion-card-title style="text-align: center; margin: 1em;">
             Formulários de interesse para voluntários
@@ -136,7 +136,7 @@
         <ion-card class="classecard" *ngFor="let gato of gatosExibidos">
           <img class="img-card" alt="Gato" src="{{this.upload}}{{gato.imgGato}}"/>
           <ion-card-header>
-            <ion-card-title class="name">{{gato.nome}}</ion-card-title>
+            <ion-card-title class="name"><b>{{gato.nome}}</b></ion-card-title>
             <!-- <ion-card-subtitle class="name">{{gato.sexo}}</ion-card-subtitle> -->
             <ion-card-subtitle class="name">{{gato.sexo}}, {{gato.idadeGato}}</ion-card-subtitle>
             <ion-card-subtitle class="name">{{gato.raca}}</ion-card-subtitle>

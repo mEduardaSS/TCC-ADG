@@ -35,33 +35,7 @@
 
 .logo-tcc{
   height: 85px;
-}
-
-.menu_component {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 10%;
-}
-
-.elemento {
-  float: left;
-  color: #333; 
-  text-decoration: none; 
-  padding-right: 20px;
-  display: inline-block;
-  list-style: none;
-}
-
-.entrar-component{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.entrar{
-  --background: #A61C35; 
-  --color: white;  
+  margin: 10px;
 }
 
 .conteudo{

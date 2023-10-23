@@ -8,10 +8,12 @@
 
 
   .card {
-    margin: 10px;
+    margin: auto;
+    margin-top: 2em;
     justify-content: center;
     align-items: center;
     width: 50%;
+   
   }
 
   .testando {
@@ -41,7 +43,7 @@
     font-size: 24px;
     color: #A61C35;
   }
-  
+
   
   
   ion-card-subtitle{
@@ -126,16 +128,25 @@
   }
   
   @media (max-width: 600px) {
+    ion-card-title{
+      text-align: center;
+      }
+      
+      ion-card-subtitle{
+       text-align: center;
+      }
+
     #text_miaudote {
       top: 0.2em;
     }
 
     .card {
+      margin: auto;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       width: 30%;
-      margin-top: 0 auto;
+      margin-top: 0;
      
     }
 
@@ -146,6 +157,7 @@
     .texto{
       display: none;
     }
+
     .button_adotar{
       margin-top: auto;
       padding: 10px 0px;   
@@ -201,6 +213,7 @@
       margin-top: 3em;
       font-size: 5em;
     }
+    
     
   }
   

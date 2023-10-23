@@ -208,3 +208,55 @@
       padding: 10px;
     }
   }
+
+  @media (max-width: 600px) {
+    #img-abrigo {
+      display: none;
+      
+    }
+
+    .info {
+      margin: 0;
+      padding: 0;
+      top: -5em;
+    }
+
+    #coluna_info{
+      justify-content: center;
+    }  
+
+    .pinfo {
+      font-size: 17px;
+      text-align: center;
+    }
+
+    #coluna_ajuda {
+      margin: 0;
+      padding: 0;
+      top: -5em;
+    }
+
+    .titulo_ajuda {
+      font-size: 30px;
+    }
+
+    .ajuda {
+      margin: 0;
+      padding: 0;
+      top: -6em;
+    }
+
+    .voluntario {
+      margin: 0;
+      padding: 0;
+      top: -4em;
+    }
+  
+   
+  
+  
+    
+    
+
+   
+  }
