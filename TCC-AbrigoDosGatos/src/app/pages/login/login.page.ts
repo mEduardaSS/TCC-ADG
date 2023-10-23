@@ -28,6 +28,7 @@ export class LoginPage implements OnInit {
       }
       console.log(dados);
       let res=await this.post(dados);
+      console.log(res);
       if(res){
         alert("Logado com sucesso");
         this.router.navigate(['/home-admin']);
@@ -58,13 +59,13 @@ export class LoginPage implements OnInit {
       }
     }
 
-    return fetch(this.API+`login`, options)
+    return fetch(this.API+'/login/login.php',  options)
 
     .then(res => {
       return res.json() ;
     })
     .catch(err => {
-      console.log(err.json()) ;
+      console.log(err) ;
     })
   }
 }

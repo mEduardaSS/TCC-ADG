@@ -1,6 +1,8 @@
 <?php
+	declare(strict_types=1);
+
 header("Access-Control-Allow-Origin: *");  //colocar url permitidas
-header("Access-Control-Allow-Methods: GET, POST");
+header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE");
 header("Access-Control-Allow-Headers: Content-Type");
 
 
@@ -20,15 +22,13 @@ if (isset($_GET['path'])) {
 if (isset($path[0])) { $acao = $path[0]; } else { echo "Caminho não existe2"; exit; }
 if (isset($path[1])) { $parametro = $path[1]; } else { $parametro = ''; }
 
-
-$method = $_SERVER['REQUEST_METHOD'];
-// $dados = file_get_contents('php://input');
-// $dados = json_decode($dados);
+echo (json_encode($acao));
+exit;
 
 // include_once "/SQL/conn.php";  //incluindo o banco
 // echo json_encode("AAA");exit;
 if($acao=="login"){
-    include_once "dadosVoluntario/login.php"; //incluindo o aqrquivo
+    include_once "login/login.php"; //incluindo o aqrquivo
 } else if($acao=="listar"){
     include_once "dadosVoluntario/listar.php"; //incluindo o aqrquivo
 } else if($acao=="adicionar"){
