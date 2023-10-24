@@ -26,7 +26,7 @@ export class ControleVoluntariosPage implements OnInit {
       }
     }
     
-    return await fetch(this.API+`listar`, options)
+    return await fetch(this.API+`dadosVoluntario/getVoluntarioAprovado.php`, options)
     .then(async res => {
       return await res.json() ;
     })

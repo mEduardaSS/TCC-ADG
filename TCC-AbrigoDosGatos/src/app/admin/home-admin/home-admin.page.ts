@@ -95,7 +95,7 @@ export class HomeAdminPage implements OnInit {
     }
     
     
-    return await fetch(this.API+`listarInteresseVoluntario`, options)
+    return await fetch(this.API+`dadosVoluntario/listarInteresseVoluntario.php`, options)
     .then(async res => {
       return await res.json() ;
     })

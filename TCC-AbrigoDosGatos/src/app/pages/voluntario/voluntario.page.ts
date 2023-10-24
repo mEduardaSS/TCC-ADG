@@ -46,7 +46,7 @@ export class VoluntarioPage implements OnInit {
       }
     }
 
-    return fetch(this.API+`adicionar`, options)
+    return fetch(this.API+`dadosVoluntario/post.php`, options)
 
     .then(res => {
       return res.json() ;
