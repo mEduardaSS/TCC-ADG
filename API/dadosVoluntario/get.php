@@ -1,7 +1,7 @@
 <?php
 
 function chamaGet($acao, $parametro){
-    $dbdrive = 'mysql';
+ $dbdrive = 'mysql';
  $dbhost = 'localhost';
  $dbname = 'AbrigoGatos';
  $dbuser = 'root';
