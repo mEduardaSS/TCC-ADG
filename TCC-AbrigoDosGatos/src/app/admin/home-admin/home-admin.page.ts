@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment';
 import { Component, OnInit } from '@angular/core';
 import { FormAdocaoService } from '../../services/formAdocao/form-adocao.service';
 import { FormGatoService } from '../../services/formGato/form-gato.service';
+import { FormVoluntarioService } from '../../services/formVoluntario/form-voluntario.service';
 import { Router } from '@angular/router';
 import { CompartilhaIdVoluntarioService } from '../../compartilha-id-voluntario.service';
 
@@ -17,13 +18,12 @@ export class HomeAdminPage implements OnInit {
   // Aqui, foi pego a url definida no arquivo environments.ts
   private readonly API = environment.baseApiUrl;
 
-
-
   compartilhaIdVoluntario: any;
   
   constructor(private FormAdocaoService:FormAdocaoService, private router: Router, 
     private FormGatoService:FormGatoService, 
-    compartilhaIdVoluntario: CompartilhaIdVoluntarioService ) {}
+    compartilhaIdVoluntario: CompartilhaIdVoluntarioService, private formVoluntarioService:FormVoluntarioService ) {}
+
   listagemVoluntarios: any[] = [];
 
 
@@ -35,6 +35,7 @@ export class HomeAdminPage implements OnInit {
   ionViewDidEnter(){
     this.listDadosTutor();
     this.listDadosGato();
+    this.listDadosVoluntarios();
   }
 
   tutoresExibidos: any = [];
@@ -64,6 +65,19 @@ export class HomeAdminPage implements OnInit {
     })
   }
 
+   voluntariosExibidos: any = [];
+  listDadosVoluntarios(){
+    this.formVoluntarioService.select().subscribe((dadosVoluntario:any) => {
+      if(dadosVoluntario.success == 1){
+        this. voluntariosExibidos = dadosVoluntario.message;
+        console.log(this. voluntariosExibidos);
+        return;
+      }
+      console.log(this. voluntariosExibidos);
+      this. voluntariosExibidos = [];
+    })
+  }
+
   analisar_gato(id:any){
     console.log(id);
     this.FormGatoService.gatoSelecionado = this.gatosExibidos.find((gato:any)=> gato.idGato == id);
@@ -73,6 +87,11 @@ export class HomeAdminPage implements OnInit {
   analisar_tutor(id:any){
     this.FormAdocaoService.tutorSelecionado = this.tutoresExibidos.find((tutor:any)=> tutor.idAdocao == id);
     this.router.navigate(['/analise-adocao'])
+  }
+
+  analisar_voluntario(id:any){
+    this.formVoluntarioService.voluntarioSelecionado = this.voluntariosExibidos.find((voluntario:any)=> voluntario.idVoluntario == id);
+    this.router.navigate(['/admin/analise-voluntario'])
   }
 
   segmentModel = 'tutor'; // Valor inicial do ion-segment

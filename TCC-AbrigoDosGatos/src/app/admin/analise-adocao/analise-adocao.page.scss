@@ -70,13 +70,15 @@
   // .ion-padding{
   //   margin-top: 25px;
   // }
+
   .conteudo{
     border-radius: 30px;
     border-color:  rgb(163, 50, 50);
     border-style: solid;
     // border-width: 8px;
+    max-width: 450px;
     background:white;
-    margin: 30px 450px;
+    margin: auto;
     justify-content: center;
     align-items: center;
     bottom: 1.0em;
@@ -97,7 +99,7 @@
       border-style: solid;
       // border-width: 8px;
       background:white;
-      margin: 30px;
+      margin: 20px;
       justify-content: center;
       align-items: center;
       bottom: 1.0em;

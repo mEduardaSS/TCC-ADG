@@ -27,11 +27,11 @@
           </ion-row>
   
             <div class="dadosVoluntario">
-              <div class="dataCadVoluntario"><b>Data do cadastro: 12/06/2023</b></div>
-              <div class="nomeVoluntario"><b>Nome: Felipe Vieira</b></div>
-              <div class="emailVoluntario"><b>Email: felipe.vieira08@gmail.com</b></div>
-              <div class="dtNascVoluntario"><b>Data de Nascimento: 08/04/1997</b></div>
-              <div class="telVoluntario"><b>Telefone: 15 9999-0000</b></div>
+              <div class="dataCadVoluntario"><b>Data do cadastro: {{ voluntarioSelecionado.dataPreenchimento   }}</b></div>
+              <div class="nomeVoluntario"><b>Nome: {{voluntarioSelecionado.nomeVoluntario}}</b></div>
+              <div class="emailVoluntario"><b>Email: {{voluntarioSelecionado.emailVoluntario}}</b></div>
+              <div class="dtNascVoluntario"><b>Data de Nascimento: {{voluntarioSelecionado.dataNascVoluntario}}</b></div>
+              <div class="telVoluntario"><b>Telefone: {{voluntarioSelecionado.telefoneVoluntario}}</b></div>
               <div class="dispoVoluntario"><b>Disponibilidade: Manhã 08h-11h</b></div>
           </div>
 
@@ -44,8 +44,8 @@
           </ion-row>
   
           <ion-row class="containerBtn" size="12">
-            <ion-button class="btnAprovar" shape="round" [routerLink]="['/home-admin']">Aprovar</ion-button>
-            <ion-button class="btnRecusar" shape="round" [routerLink]="['/home-admin']">Recusar</ion-button>
+            <ion-button class="btnAprovar" shape="round"  (click)="aprovar()">Aprovar</ion-button>
+            <ion-button class="btnRecusar" shape="round"  (click)="apagar(voluntarioSelecionado.idVoluntario)" [routerLink]="['/home-admin']">Recusar</ion-button>
           </ion-row>
          
           </ion-col>

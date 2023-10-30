@@ -1,4 +1,6 @@
 import { environment } from 'src/environments/environment';
+import { FormVoluntarioService } from 'src/app/services/formVoluntario/form-voluntario.service';
+import { Router } from '@angular/router';
 
 import { Component, OnInit } from '@angular/core';
 
@@ -11,11 +13,25 @@ export class ControleVoluntariosPage implements OnInit {
   private readonly API = environment.baseApiUrl;
 
   listagemVoluntarios: any[] = [];
-  constructor() { }
+  constructor(private FormVoluntarioService:FormVoluntarioService) { }
 
   async ngOnInit(){
     this.listagemVoluntarios = await this.get();
     console.log( this.get());
+    this.listDadosVoluntarios();
+  }
+
+  voluntariosExibidos: any = [];
+  listDadosVoluntarios(){
+    this.FormVoluntarioService.selectAprovados().subscribe((dadosVoluntario:any) => {
+      if(dadosVoluntario.success == 1){
+        this. voluntariosExibidos = dadosVoluntario.message;
+        console.log(this. voluntariosExibidos);
+        return;
+      }
+      console.log(this. voluntariosExibidos);
+      this. voluntariosExibidos = [];
+    })
   }
 
   async get(){

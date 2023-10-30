@@ -59,7 +59,8 @@ create table  SolicitacaoVoluntario
     nomeVoluntario varchar(50) not null,
     emailVoluntario varchar(50),
     dataNascVoluntario date,
-    disponibilidade  varchar(7) not null,
+    disponibilidade  varchar(50) not null,
+    dataPreenchimento date not null,
     aprovado tinyint(1) default 0 not null
 );
 
@@ -109,3 +110,4 @@ describe SolicitacaoVoluntario;
 describe Usuario; 
 describe SolicitacaoAdocao;
 describe DadosDoacao; 
+						

@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
   templateUrl: './formulario-interesse.page.html',
   styleUrls: ['./formulario-interesse.page.scss'],
 })
+
 export class FormularioInteressePage implements OnInit {
 
   gatoSelecionado:any = [];
