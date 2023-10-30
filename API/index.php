@@ -28,7 +28,7 @@ exit;
 // include_once "/SQL/conn.php";  //incluindo o banco
 // echo json_encode("AAA");exit;
 if($acao=="login"){
-    include_once "login/login.php"; //incluindo o aqrquivo
+    include_once "login.php"; //incluindo o aqrquivo
 } else if($acao=="listar"){
     include_once "dadosVoluntario/listar.php"; //incluindo o aqrquivo
 } else if($acao=="adicionar"){

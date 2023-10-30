@@ -1,8 +1,7 @@
 <?php
-header("Access-Control-Allow-Origin: *");  //colocar url permitidas
+header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET, POST");
 header("Access-Control-Allow-Headers: Content-Type");
-
 
 // Configurações do banco de dados
 $host = "localhost"; // Host do banco de dados
@@ -22,29 +21,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $dados->email;
     $pass = $dados->senha;
 
-    // Conectando ao banco de dados
-    $conexao = new mysqli($host, $usuario, $senha, $banco);
-    // Verificando a conexão
-    if ($conexao->connect_error) {
-        die("Erro na conexão: " . $conexao->connect_error);
+    try {
+        // Conectando ao banco de dados usando PDO
+        $pdo = new PDO("mysql:host=$host;dbname=$banco", $usuario, $senha);
+        
+        // Configurando o PDO para lançar exceções em caso de erro
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        
+        // Consulta SQL preparada
+        $query = "SELECT * FROM `admin` WHERE emailAdmin = :email AND senhaAdmin = :senha";
+        $stmt = $pdo->prepare($query);
+        $stmt->bindValue(':email', $email);
+        $stmt->bindValue(':senha', $pass);
+        
+        // Executando a consulta
+        $stmt->execute();
+        
+        // Verificando se a consulta encontrou um registro correspondente
+        if ($stmt->rowCount() > 0) {
+            $mensagem = true;
+        } else {
+            $mensagem = false;
+        }
+    } catch (PDOException $e) {
+        // Tratamento de erros
+        die("Erro na conexão: " . $e->getMessage());
     }
     
-    // Consulta SQL
-    $query = "SELECT * FROM `admin` WHERE emailAdmin = '$email' AND senhaAdmin = '$pass'";
+    // Fechando a conexão com o banco de dados (não é estritamente necessário com PDO)
+    $pdo = null;
     
-    // Executando a consulta
-    $resultado = $conexao->query($query);
-    
-    // Verificando se a consulta encontrou um registro correspondente
-    if ($resultado && $resultado->num_rows > 0) {
-        $mensagem = true;
-    } else {
-        $mensagem = false;
-    }
-
-    // Fechando a conexão com o banco de dados
-    $conexao->close();
     echo json_encode($mensagem);
 }
 ?>
-
