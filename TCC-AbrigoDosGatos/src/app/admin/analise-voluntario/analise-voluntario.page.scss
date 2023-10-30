@@ -54,7 +54,6 @@
   .dadosVoluntario{
     margin-top: 8vh;
      margin-left: 100px;
-    // margin-right: -50%;
   }
 
   .dataCadVoluntario, 
@@ -77,9 +76,10 @@
     border-style: solid;
     // border-width: 8px;
     background:white;
+    margin: 30px 450px;
     justify-content: center;
     align-items: center;
-    margin-top: 1.0em;    
+    bottom: 1.0em;
   }
   
   .titulo{

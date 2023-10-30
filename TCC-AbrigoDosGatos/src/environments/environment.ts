@@ -5,11 +5,15 @@
 export const environment = {
   production: false,
 
-  // // url para API (modelo do pc da etec), Duda, etc...
-  // baseApiUrl: `http://aula/API/`,
+  // // url para API modelo do pc da etec
+  baseApiUrl: `http://localhost/aula/API/`,
+  
+  // // url para API da Duda
+  //baseApiUrl: `http://aula/API/`,
+
 
   // url para o pc da Mabi
-  baseApiUrl: `http://casa/server/API/`,
+  // baseApiUrl: `http://casa/server/API/`,
 
 };
 

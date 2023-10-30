@@ -13,7 +13,7 @@
       <ion-title class="ion-text-center title-page">Abrigo dos Gatos</ion-title>
 
       <ion-buttons slot="end">
-        <ion-button [routerLink]="['/login']">
+        <ion-button [routerLink]="['/pages/login']">
           <ion-icon slot="icon-only" name="person-circle"></ion-icon>
         </ion-button>
       </ion-buttons>
@@ -35,9 +35,9 @@
     <ion-row>
       <ion-col size="12" size-sm="6" *ngIf="segmentModel === 'tutor'" class="card">
         <ion-card *ngIf="tutoresExibidos && tutoresExibidos.length > 0; else noTutor;" class="testando">
-          <ion-card-title style="text-align: center; margin: 1em;" class="teste">
+          <!-- <ion-card-title style="text-align: center; margin: 1em;" class="teste">
             Formulários de interesse para adoção
-          </ion-card-title>
+          </ion-card-title> -->
           <ion-card-header>
             <ion-row>
               <ion-col>
@@ -75,6 +75,7 @@
                 </ion-col>
               </ion-row>
             </ion-card-header>
+            <ion-card-content *ngFor="let tutor of tutoresExibidos" class="linha"></ion-card-content>
             <ion-card-content class="linha">
               <ion-row style="margin: 1em;">
                 <ion-col>
@@ -89,9 +90,9 @@
 
       <ion-col size="12" size-sm="6" *ngIf="segmentModel === 'voluntario'" class="card">
         <ion-card class="testando">
-          <ion-card-title style="text-align: center; margin: 1em;">
+          <!-- <ion-card-title style="text-align: center; margin: 1em;">
             Formulários de interesse para voluntários
-          </ion-card-title>
+          </ion-card-title> -->
           <ion-card-header>
             <ion-row>
               <ion-col>

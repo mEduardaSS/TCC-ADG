@@ -1,3 +1,5 @@
+import { environment } from 'src/environments/environment';
+
 import { Component, OnInit } from '@angular/core';
 import { FormGatoService } from 'src/app/services/formGato/form-gato.service';
 
@@ -7,13 +9,14 @@ import { FormGatoService } from 'src/app/services/formGato/form-gato.service';
   styleUrls: ['./gatos-adotados.page.scss'],
 })
 export class GatosAdotadosPage implements OnInit {
+  private readonly API = environment.baseApiUrl;
 
   constructor(private FormGatoService:FormGatoService) { }
 
   ngOnInit() {
     this.listDadosGato();
   }
-  upload: any = 'http://aula/API/dadosGato/';
+  upload: any = this.API+'/dadosGato/';
   gatosExibidos: any = [];
   listDadosGato(){
     this.FormGatoService.selectAdotados().subscribe((dadosGato:any) => {
