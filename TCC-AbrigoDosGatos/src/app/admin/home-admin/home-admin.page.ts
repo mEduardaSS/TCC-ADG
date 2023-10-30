@@ -6,7 +6,6 @@ import { FormAdocaoService } from '../../services/formAdocao/form-adocao.service
 import { FormGatoService } from '../../services/formGato/form-gato.service';
 import { FormVoluntarioService } from '../../services/formVoluntario/form-voluntario.service';
 import { Router } from '@angular/router';
-import { CompartilhaIdVoluntarioService } from '../../compartilha-id-voluntario.service';
 
 @Component({
   selector: 'app-home-admin',
@@ -21,8 +20,7 @@ export class HomeAdminPage implements OnInit {
   compartilhaIdVoluntario: any;
   
   constructor(private FormAdocaoService:FormAdocaoService, private router: Router, 
-    private FormGatoService:FormGatoService, 
-    compartilhaIdVoluntario: CompartilhaIdVoluntarioService, private formVoluntarioService:FormVoluntarioService ) {}
+    private FormGatoService:FormGatoService, private formVoluntarioService:FormVoluntarioService ) {}
 
   listagemVoluntarios: any[] = [];
 

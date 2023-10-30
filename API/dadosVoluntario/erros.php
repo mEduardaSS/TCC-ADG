@@ -1,1 +1,0 @@
-<preclass='xdebug-var-dump'dir='ltr'><small>C: \wamp64\AB\server\API\dadosVoluntario\login.php: 6: </small><b>array</b><i>(size=0)</i><i><fontcolor='#888a85'>empty</font></i></pre>
