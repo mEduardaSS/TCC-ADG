@@ -59,7 +59,7 @@ export class LoginPage implements OnInit {
       }
     }
 
-    return fetch(this.API+'/login/login.php',  options)
+    return fetch(this.API+'/login',  options)
 
     .then(res => {
       return res.json() ;

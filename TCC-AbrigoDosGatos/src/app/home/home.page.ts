@@ -1,3 +1,4 @@
+import { environment } from 'src/environments/environment';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGatoService } from '../services/formGato/form-gato.service';
@@ -8,6 +9,7 @@ import { FormGatoService } from '../services/formGato/form-gato.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  private readonly API = environment.baseApiUrl; 
 
   constructor( private router: Router, private FormGatoService:FormGatoService) {}
 
@@ -16,7 +18,7 @@ export class HomePage {
   }
 
   gatosExibidos: any = [];
-  upload: any = 'http://aula/API/dadosGato/';
+  upload: any = this.API+'dadosGato/';
   listDadosGato(){
     this.FormGatoService.select().subscribe((dadosGato:any) => {
       this.gatosExibidos = dadosGato.message;
