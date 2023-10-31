@@ -18,7 +18,6 @@ export class AppComponent implements OnInit {
 
   rotaAtual: any
 
-
   Clickmenu() {
     this.menu.close();
     this.rotaAtual = window.location.pathname
@@ -35,6 +34,6 @@ export class AppComponent implements OnInit {
   verificarMenu(){
     this.menu_admin = this.rotasAdmin.includes(this.rotaAtual) ? true : false
   }
-  rotasAdmin = ['/home-admin', '/ajuda-admin', '/editar-voluntario', '/analise-adocao', '/controle-voluntarios', '/admin/analise-voluntario', '/admin/cadastro-animal', '/gatos-adotados']
+  rotasAdmin = ['/home-admin', '/editar-voluntario', '/analise-adocao', '/controle-voluntarios', '/admin/analise-voluntario', '/admin/cadastro-animal', '/gatos-adotados']
 
 }

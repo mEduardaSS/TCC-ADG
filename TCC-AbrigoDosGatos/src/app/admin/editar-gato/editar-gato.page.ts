@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGatoService } from '../../services/formGato/form-gato.service';
 import { FormGroup , FormControl , Validators} from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-editar-gato',
@@ -11,7 +12,14 @@ export class EditarGatoPage implements OnInit {
 
   gatoSelecionado: any = [];
 
-  constructor(private FormGatoService:FormGatoService) {
+  selectedImage!:File;
+
+  onImageSelect(event: any) {
+    this.selectedImage = event.target.files[0];
+  }
+  
+
+  constructor(private FormGatoService:FormGatoService, private router:Router) {
     this.gatoSelecionado = this.FormGatoService.gatoSelecionado;
    }
 
@@ -36,7 +44,6 @@ export class EditarGatoPage implements OnInit {
 // form edit gatito
 
 FormEditGato!: FormGroup;
-
 
   createFormEditGato(){
     this.FormEditGato = new FormGroup({
@@ -69,30 +76,40 @@ FormEditGato!: FormGroup;
   get descricao(){
     return this.FormEditGato.get('descricao')!;
   }
-
-onFileSelected(event: any) {
-  const file: File = event.target.files[0];
-
-  this.FormEditGato.patchValue({image: file});
-
-}
-
-  submit_formEditGato(form:any){
-    console.log(form);
-    let dadosGato = [];
-    dadosGato[0] = {
-      idGato: this.gatoSelecionado.idGato,
-      nome: form.nome,
-      cor: form.cor,
-      raca: form.raca,
-      idade: form.idade,
-      descricao: form.descricao,
-      sexo: form.sexo,
-      imgGato: form.imgGato,
-    };
-    console.log(this.FormEditGato.value);
-    this.FormGatoService.update(dadosGato[0]).subscribe();
+  get imgGato(){
+    return this.FormEditGato.get('imgGato')!;
   }
+
+
+submit_formEditGato(form:any){
+  console.log(this.selectedImage);
+  console.log(form.value);
+  // console.log(this.gatoSelecionado.idGato)
+
+  if(form.valid){
+  let dadosGato = new FormData();
+  // dadosGato.append('idGato', this.gatoSelecionado.idGato);
+  dadosGato.append('imgGato', this.selectedImage);
+  dadosGato.append('nome', form.value.nome);
+  dadosGato.append('cor', form.value.cor);
+  dadosGato.append('raca', form.value.raca);
+  dadosGato.append('idade', form.value.idade);
+  dadosGato.append('descricao', form.value.descricao);
+  dadosGato.append('sexo', form.value.sexo);
+  // dadosGato[0] = {
+  //   nome: form.nome,
+  //   cor: form.cor,
+  //   raca: form.raca,
+  //   idade: form.idade,
+  //   descricao: form.descricao,
+  //   sexo: form.sexo,
+  //   imgGato: form.imgGato,
+  // };
+  console.log(dadosGato);
+  this.FormGatoService.update(dadosGato);
+  this.router.navigate(['/home-admin']);
+}
+}
 
 
 

@@ -28,6 +28,7 @@ try {
     $tutor_temTempo = htmlspecialchars(trim($dados->temTempo));
     $tutor_temAnimais = htmlspecialchars(trim($dados->possuiAnimais));
     $tutor_nomeGato = htmlspecialchars(trim($dados->nomeGato));
+    $tutor_dataPreenchimento = date('Y-m-d');
     $fk_IdGato = htmlspecialchars(trim($dados->fk_IdGato));
     $aprovado = 0;
 
@@ -41,7 +42,8 @@ try {
     temTempo,
     possuiAnimais,
     nomeGato,
-    aprovado
+    aprovado,
+    dataPreenchimento
     )
     VALUES (
     :telefoneAdocao,
@@ -53,7 +55,8 @@ try {
     :temTempo,
     :possuiAnimais,
     :nomeGato,
-    :aprovado
+    :aprovado,
+    :dataPreenchimento
     )";
 
     $stmt = $connection->prepare($sql);
@@ -67,6 +70,7 @@ try {
     $stmt->bindValue(':temTempo', $tutor_temTempo, PDO::PARAM_STR);
     $stmt->bindValue(':possuiAnimais', $tutor_temAnimais, PDO::PARAM_STR);
     $stmt->bindValue(':nomeGato', $tutor_nomeGato, PDO::PARAM_STR);
+    $stmt->bindValue(':dataPreenchimento', $tutor_dataPreenchimento, PDO::PARAM_STR);
     $stmt->bindValue(':aprovado', $aprovado, PDO::PARAM_STR);
 
 

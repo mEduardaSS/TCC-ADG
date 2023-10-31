@@ -49,8 +49,8 @@
             </ion-row>
           </ion-card-header>
 
-          <ion-card-content *ngFor="let tutor of tutoresExibidos" class="linha">
-            <ion-row style="margin: 1em;">
+          <ion-card-content class="linha" >
+            <ion-row style="margin: 1em;" *ngFor="let tutor of tutoresExibidos">
               <ion-col>
                 <ion-card-title><b>{{tutor.idAdocao}}</b></ion-card-title>
               </ion-col>
@@ -60,6 +60,7 @@
               <ion-icon name="eye-outline" class="olho" (click)="analisar_tutor(tutor.idAdocao)"></ion-icon>
             </ion-row>
           </ion-card-content>
+          
         </ion-card>
 
         <!-- Caso nenhum tutor esteja cadastrado -->
@@ -89,7 +90,7 @@
       </ion-col>
 
       <ion-col size="12" size-sm="6" *ngIf="segmentModel === 'voluntario'" class="card">
-        <ion-card class="testando">
+        <ion-card class="testando" *ngIf="voluntariosExibidos && voluntariosExibidos.length > 0; else noVoluntario;">
           <!-- <ion-card-title style="text-align: center; margin: 1em;">
             Formulários de interesse para voluntários
           </ion-card-title> -->
@@ -119,6 +120,29 @@
           </ion-card-content>
 
         </ion-card>
+
+        <ng-template #noVoluntario>
+          <ion-card>
+            <ion-card-header>
+              <ion-row>
+                <ion-col>
+                  <ion-card-title style="margin-left: 15px;">Ficha</ion-card-title>
+                </ion-col>
+                <ion-col>
+                  <ion-card-title style="margin-left: -10px;">Nome</ion-card-title>
+                </ion-col>
+              </ion-row>
+            </ion-card-header>
+            <ion-card-content *ngFor="let tutor of voluntariosExibidos" class="linha"></ion-card-content>
+            <ion-card-content class="linha">
+              <ion-row style="margin: 1em;">
+                <ion-col>
+                  <ion-card-title>Nenhum voluntario cadastrado</ion-card-title>
+                </ion-col>
+              </ion-row>
+            </ion-card-content>
+          </ion-card>
+        </ng-template>
       </ion-col>
 
     </ion-row>

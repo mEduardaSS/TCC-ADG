@@ -25,11 +25,8 @@ export class AnaliseVoluntarioPage implements OnInit {
     // console.log(indice);
   }
 
-
   aprovar(){
-
     this.FormVoluntarioService.aprovarVoluntario(this.voluntarioSelecionado.idVoluntario).subscribe();
-
     this.router.navigate(['/home-admin']);
   }
 }

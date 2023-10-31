@@ -22,12 +22,12 @@ export class HomeAdminPage implements OnInit {
   constructor(private FormAdocaoService:FormAdocaoService, private router: Router, 
     private FormGatoService:FormGatoService, private formVoluntarioService:FormVoluntarioService ) {}
 
-  listagemVoluntarios: any[] = [];
+  // listagemVoluntarios: any[] = [];
 
 
   async ngOnInit() {
-    this.listagemVoluntarios = await this.get();
-    console.log(this.listagemVoluntarios);
+    // this.listagemVoluntarios = await this.get();
+    // console.log(this.listagemVoluntarios);
   }
 
   ionViewDidEnter(){
@@ -102,26 +102,26 @@ export class HomeAdminPage implements OnInit {
   }
  
 
-  async get(){
-    const options = {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json'
-      }
+  // async get(){
+  //   const options = {
+  //     method: 'GET',
+  //     headers: {
+  //       'Content-Type': 'application/json'
+  //     }
 
-    }
+  //   }
     
     
-    return await fetch(this.API+`dadosVoluntario/listarInteresseVoluntario.php`, options)
-    .then(async res => {
-      return await res.json() ;
-    })
-    .catch(err => {
-      console.log(err.json()) ;
-    })
-  }
-  analisarVoluntario(id:any){
-    this.compartilhaIdVoluntario.idVoluntario = id
+  //   return await fetch(this.API+`dadosVoluntario/listarInteresseVoluntario.php`, options)
+  //   .then(async res => {
+  //     return await res.json() ;
+  //   })
+  //   .catch(err => {
+  //     console.log(err.json()) ;
+  //   })
+  // }
+  // analisarVoluntario(id:any){
+  //   this.compartilhaIdVoluntario.idVoluntario = id
 
-  }
+  // }
 }

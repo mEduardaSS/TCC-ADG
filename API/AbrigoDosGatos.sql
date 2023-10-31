@@ -85,6 +85,7 @@ create table SolicitacaoAdocao
     temTempo varchar(50),
     possuiAnimais varchar(5),
     nomeGato varchar(50),
+    dataPreenchimento date not null,
     aprovado boolean
     -- aprovado seria aprovado ou reprovado.
 );

@@ -34,8 +34,6 @@ $filePath = $uploadDirectory . $fileName;
 // Move o arquivo de imagem para o diretório de upload
 if (move_uploaded_file($_FILES['imgGato']['tmp_name'], $filePath)) {
 
-
-
 try {
     $gato_nome = htmlspecialchars(trim($_POST['nome']));
     $gato_cor = htmlspecialchars(trim($_POST['cor']));

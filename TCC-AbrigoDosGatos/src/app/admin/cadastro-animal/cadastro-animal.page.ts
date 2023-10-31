@@ -18,13 +18,6 @@ export class CadastroAnimalPage implements OnInit {
   onImageSelect(event: any) {
     this.selectedImage = event.target.files[0];
   }
-  
-  openFileInput() {
-    const fileInput = document.getElementById('file-input');
-    if (fileInput) {
-      fileInput.click();
-    }
-  }
 
   FormGato!: FormGroup;
 
@@ -90,6 +83,7 @@ export class CadastroAnimalPage implements OnInit {
     //   sexo: form.sexo,
     //   imgGato: form.imgGato,
     // };
+    
     console.log(dadosGato);
     this.FormGatoService.insert(dadosGato).subscribe();
     this.router.navigate(['/home-admin']);

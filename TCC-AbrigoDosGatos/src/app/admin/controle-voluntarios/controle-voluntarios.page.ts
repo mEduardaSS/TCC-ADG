@@ -16,38 +16,38 @@ export class ControleVoluntariosPage implements OnInit {
   constructor(private FormVoluntarioService:FormVoluntarioService) { }
 
   async ngOnInit(){
-    this.listagemVoluntarios = await this.get();
-    console.log( this.get());
-    this.listDadosVoluntarios();
+    // this.listagemVoluntarios = await this.get();
+    // console.log( this.get());
+    // this.listDadosVoluntarios();
   }
 
   voluntariosExibidos: any = [];
   listDadosVoluntarios(){
     this.FormVoluntarioService.selectAprovados().subscribe((dadosVoluntario:any) => {
       if(dadosVoluntario.success == 1){
-        this. voluntariosExibidos = dadosVoluntario.message;
-        console.log(this. voluntariosExibidos);
+        this.voluntariosExibidos = dadosVoluntario.message;
+        console.log(this.voluntariosExibidos);
         return;
       }
-      console.log(this. voluntariosExibidos);
-      this. voluntariosExibidos = [];
+      console.log(this.voluntariosExibidos);
+      this.voluntariosExibidos = [];
     })
   }
 
-  async get(){
-    const options = {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    }
+  // async get(){
+  //   const options = {
+  //     method: 'GET',
+  //     headers: {
+  //       'Content-Type': 'application/json'
+  //     }
+  //   }
     
-    return await fetch(this.API+`dadosVoluntario/getVoluntarioAprovado.php`, options)
-    .then(async res => {  
-      return await res.json() ;
-    })
-    .catch(err => {
-      console.log(err.json()) ;
-    })
-  }
+  //   return await fetch(this.API+`dadosVoluntario/getVoluntarioAprovado.php`, options)
+  //   .then(async res => {  
+  //     return await res.json() ;
+  //   })
+  //   .catch(err => {
+  //     console.log(err.json()) ;
+  //   })
+  // }
 }
