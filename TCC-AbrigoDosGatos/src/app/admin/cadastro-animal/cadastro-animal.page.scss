@@ -7,6 +7,9 @@
     list-style: none;
   }
 
+  .background{
+    --background:#D9D9D9;
+  }
   ion-label b{
     color:#3F0912;
   }
@@ -58,7 +61,8 @@
   .titulo{
     color: #3F0912;
     font-size: 20px;
-    margin-top: 1.0em;
+    margin-top: 2em;
+    margin-bottom: 1.5em;
   }
   
   .input{
@@ -69,6 +73,7 @@
   
   .input_cont{
     margin: 20px;
+    font-size:18px;
   }
   
   .nome{

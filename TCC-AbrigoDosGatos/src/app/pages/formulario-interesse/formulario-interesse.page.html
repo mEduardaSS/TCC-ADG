@@ -18,7 +18,7 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-content>
+  <ion-content class="background">
     <ion-row class="ion-padding ion-justify-content-center">
       <ion-col size=10 size-md="6" class="ion-padding conteudo">
         <ion-img class="logo-tcc"
@@ -46,7 +46,7 @@
 
           <ion-item class="input_cont" lines="none">
             <ion-label position="stacked" class="nome"><b>Data de nascimento</b></ion-label>
-            <ion-input class="input" type="date" name="data_nascimento" ngModel></ion-input>
+            <ion-input class="date" type="date" name="data_nascimento" ngModel></ion-input>
           </ion-item>
 
           <ion-item class="input_cont" lines="none">
@@ -66,10 +66,10 @@
 
             <ion-radio-group ngModel name="possuiAnimais" class="cont">
               <ion-radio class="cont_check"  class="checkbox" value="sim" label-placement="end">
-                Sim
+                <b>Sim</b>
               </ion-radio>
               <ion-radio value="nao" label-placement="end">
-                Não
+                <b>Não</b>
               </ion-radio>
             </ion-radio-group>
 
@@ -88,13 +88,13 @@
             <ion-col class="cont">
               <ion-radio-group ngModel name="temTempo">
                 <ion-radio class="cont_check" class="checkbox"    value="Tenho bastante tempo" label-placement="end">
-                  Tenho bastante tempo 
+                  <b>Tenho bastante tempo</b>
                 </ion-radio>
                 <ion-radio class="cont_check" class="checkbox" value="Tenho tempo o suficiente" label-placement="end">
-                  Tenho tempo o suficiente 
+                  <b>Tenho tempo o suficiente</b>
                 </ion-radio>
                 <ion-radio class="cont_check" class="checkbox" value="Não tenho muito tempo" label-placement="end">
-                  Não tenho muito tempo
+                  <b>Não tenho muito tempo</b>
                 </ion-radio>
               </ion-radio-group>
             </ion-col>

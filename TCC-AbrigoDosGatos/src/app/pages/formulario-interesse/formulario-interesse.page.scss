@@ -7,6 +7,9 @@
   list-style: none;
 }
 
+.background{
+  --background:#D9D9D9;
+}
 .title-page{
   font-family: 'Caveat', cursive;
   font-family: 'Philosopher', sans-serif;
@@ -19,19 +22,12 @@
   margin: 10px;
 }
 
-
-// .input{
-//   border-radius: 20px;
-//   background: #D9D9D9;
-// }
-
 .input_cont{
   margin: 20px;
   font-size:18px;
- 
 }
 
-ion-label b{
+ b{
   color:#3F0912;
 }
 
@@ -40,6 +36,12 @@ ion-input{
   --background: #D9D9D9;
   --color: #373737;
   text-indent: 15px;
+
+  .date{
+    border-radius: 20px;
+    --background: #D9D9D9;
+    text-indent: 7px;
+  }
 }
 
 .checkbox{
