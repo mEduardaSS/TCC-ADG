@@ -12,16 +12,34 @@ import { Component, OnInit } from '@angular/core';
 export class ControleVoluntariosPage implements OnInit {
   private readonly API = environment.baseApiUrl;
 
-  listagemVoluntarios: any[] = [];
-  constructor(private FormVoluntarioService:FormVoluntarioService) { }
+  listagemVoluntarios: any = [];
+  
+  voluntarioSelecionado:any = [];
+
+  constructor(private FormVoluntarioService:FormVoluntarioService, private Router:Router) {
+    this.voluntarioSelecionado = this.FormVoluntarioService.voluntarioSelecionado;
+   }
 
   async ngOnInit(){
     // this.listagemVoluntarios = await this.get();
     // console.log( this.get());
-    // this.listDadosVoluntarios();
+     this.listDadosVoluntarios();
+     console.log(this.voluntarioSelecionado);
+  }
+
+  ionViewDidEnter(){
+    this.listDadosVoluntarios();
+  }
+
+  
+  indiceDel: any;
+  apagar(indice: any) {
+    this.FormVoluntarioService.delete(indice).subscribe();
+    // console.log(indice);
   }
 
   voluntariosExibidos: any = [];
+  
   listDadosVoluntarios(){
     this.FormVoluntarioService.selectAprovados().subscribe((dadosVoluntario:any) => {
       if(dadosVoluntario.success == 1){
@@ -34,6 +52,15 @@ export class ControleVoluntariosPage implements OnInit {
     })
   }
 
+  analisar_voluntario(id:any){
+    this.FormVoluntarioService.voluntarioSelecionado = this.voluntariosExibidos.find((voluntario:any)=> voluntario.idVoluntario == id);
+    this.Router.navigate(['/admin/analise-voluntario'])
+  }
+
+  analisar_controleVoluntario(id:any){
+    this.FormVoluntarioService.voluntarioSelecionado = this.voluntariosExibidos.find((voluntario:any)=> voluntario.idVoluntario == id);
+    this.Router.navigate(['/analise-controle-voluntarios'])
+  }
   // async get(){
   //   const options = {
   //     method: 'GET',

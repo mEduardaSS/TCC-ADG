@@ -31,7 +31,7 @@
       </ion-col>
     </ion-row>
 
-    <ion-row *ngIf="gatosExibidos && gatosExibidos.length > 0" class="ion-padding ion-justify-content-center">
+    <ion-row *ngIf="gatosExibidos && gatosExibidos.length > 0; else noGatos" class="ion-padding ion-justify-content-center">
       <div class="card-gatos">
         <ion-card class="classecard" *ngFor="let gato of gatosExibidos">
           <img class="img-card" alt="Gato" src="{{this.upload}}{{gato.imgGato}}"/>
@@ -43,24 +43,18 @@
             <p class="texto">
               Tutor: {{gato.nomeTutor}}
             </p>
-            <ion-card-content class="conteudo-card">
-              <ion-button class="button_adotar"><ion-icon name="create-outline"></ion-icon>Editar</ion-button>
-             
-              
-            </ion-card-content>
+          
           </ion-card-header>
         </ion-card>
       </div>
     </ion-row>
     
     
-    <ng-template>
+    <ng-template #noGatos>
       <!-- Exibir mensagem quando não há gatos disponíveis -->
-      <ion-row class="ion-padding ion-justify-content-center" style="color: aliceblue; position: absolute;">
-        <ion-title>
-          Nenhum gato foi adotado ainda :(
+      <ion-row class="ion-padding ion-justify-content-center noGatos">
+        <ion-title class="ion-text-center">
+          Nenhum gato disponível!
         </ion-title>
       </ion-row>
     </ng-template>
-  </ion-content>
-</div>

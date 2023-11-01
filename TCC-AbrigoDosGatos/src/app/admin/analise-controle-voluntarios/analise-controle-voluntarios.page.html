@@ -1,0 +1,70 @@
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Philosopher:ital,wght@1,700&display=swap" rel="stylesheet">
+      
+      <div class="ion-page" id="main-content">
+        <ion-header class="menu">
+          <ion-toolbar>
+            <ion-buttons slot="start">
+              <ion-menu-button autoHide="false"></ion-menu-button>
+            </ion-buttons>
+            <ion-title class="ion-text-center title-page">Abrigo dos Gatos</ion-title>
+
+            <ion-buttons slot="end">
+              <ion-button [routerLink]="['/login']">
+                <ion-icon slot="icon-only" name="person-circle" ></ion-icon>
+              </ion-button>
+           </ion-buttons>
+
+          </ion-toolbar>
+        </ion-header>
+
+    <ion-content class="background">
+      <ion-row  class="ion-padding ion-justify-content-center">
+        <ion-col class="ion-padding conteudo">
+          <ion-row class="titulo ion-justify-content-center">
+            <b>Informações do Voluntário</b> 
+          </ion-row>
+  
+            <div class="dadosVoluntario">
+              <div class="dataCadVoluntario"><b>Data do cadastro: {{ voluntarioSelecionado.dataPreenchimento   }}</b></div>
+              <div class="nomeVoluntario"><b>Nome: {{voluntarioSelecionado.nomeVoluntario}}</b></div>
+              <div class="emailVoluntario"><b>Email: {{voluntarioSelecionado.emailVoluntario}}</b></div>
+              <div class="dtNascVoluntario"><b>Data de Nascimento: {{voluntarioSelecionado.dataNascVoluntario}}</b></div>
+              <div class="telVoluntario"><b>Telefone: {{voluntarioSelecionado.telefoneVoluntario}}</b></div>
+              <div class="dispoVoluntario"><b>Disponibilidade: Manhã 08h-11h</b></div>
+          </div>
+
+  
+          <ion-row class="containerBtn" size="12">
+            <!-- <ion-button class="btnAprovar" shape="round"  (click)="aprovar()">Aprovar</ion-button> -->
+            <ion-button class="btnRecusar" shape="round"  (click)="apagar(voluntarioSelecionado.idVoluntario)" [routerLink]="['/controle-voluntarios']">Excluir voluntário</ion-button>
+          </ion-row>
+         
+          </ion-col>
+        </ion-row>
+ 
+     </ion-content>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -67,9 +67,14 @@ const routes: Routes = [
   {
     path: 'editar-gato',
     loadChildren: () => import('./admin/editar-gato/editar-gato.module').then( m => m.EditarGatoPageModule)
-  },  {
+  },
+  {
     path: 'gatos-adotados',
     loadChildren: () => import('./admin/gatos-adotados/gatos-adotados.module').then( m => m.GatosAdotadosPageModule)
+  },
+  {
+    path: 'analise-controle-voluntarios',
+    loadChildren: () => import('./admin/analise-controle-voluntarios/analise-controle-voluntarios.module').then( m => m.AnaliseControleVoluntariosPageModule)
   },
 
 

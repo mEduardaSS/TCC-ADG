@@ -67,12 +67,12 @@ export class HomeAdminPage implements OnInit {
   listDadosVoluntarios(){
     this.formVoluntarioService.select().subscribe((dadosVoluntario:any) => {
       if(dadosVoluntario.success == 1){
-        this. voluntariosExibidos = dadosVoluntario.message;
+        this.voluntariosExibidos = dadosVoluntario.message;
         console.log(this. voluntariosExibidos);
         return;
       }
       console.log(this. voluntariosExibidos);
-      this. voluntariosExibidos = [];
+      this.voluntariosExibidos = [];
     })
   }
 
@@ -91,6 +91,8 @@ export class HomeAdminPage implements OnInit {
     this.formVoluntarioService.voluntarioSelecionado = this.voluntariosExibidos.find((voluntario:any)=> voluntario.idVoluntario == id);
     this.router.navigate(['/admin/analise-voluntario'])
   }
+
+  
 
   segmentModel = 'tutor'; // Valor inicial do ion-segment
 
