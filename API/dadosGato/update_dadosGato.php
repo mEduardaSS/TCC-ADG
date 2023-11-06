@@ -8,11 +8,11 @@ if ($method == "OPTIONS") {
     die();
 }
 
-if ($_SERVER['REQUEST_METHOD'] !== 'PUT'){
+if ($_SERVER['REQUEST_METHOD'] !== 'POST'){
     http_response_code(405);
     echo json_encode([
         'success' => 0,
-        'message' => 'Falha na requisição!. Somente o método PUT é permitido',
+        'message' => 'Falha na requisição!. Somente o método POST é permitido',
     ]);
     exit;
 }

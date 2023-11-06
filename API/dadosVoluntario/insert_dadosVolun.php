@@ -24,7 +24,7 @@ try {
     $voluntario_telefone = htmlspecialchars(trim($dados->telefone));
     $voluntario_email = htmlspecialchars(trim($dados->email));
     $voluntario_dataNasc = htmlspecialchars(trim($dados->data_nascimento));
-    $voluntario_Dis = "asd";
+    $voluntario_Dis = htmlspecialchars(trim($dados->disponibilidade));
     $dataPreenchimento = date ('Y-m-d');
     $aprovado = 0;
 

@@ -58,38 +58,38 @@
 
              <div class="flex-wrap: wrap;">
                <ion-col class="cont" >
-                 <ion-checkbox class="checkbox"></ion-checkbox>
+                 <ion-checkbox class="checkbox" name="dom" (ionChange)="atualizarDiasSelecionados('domingo')"></ion-checkbox>
                
                  <ion-label class="cont_check"><b>Dom.</b></ion-label>
                </ion-col>
                <ion-col class="cont" >
-                 <ion-checkbox class="checkbox"></ion-checkbox>
-               <ion-label class="cont_check" ><b>Seg.</b></ion-label>
+                 <ion-checkbox class="checkbox" name="seg" (ionChange)="atualizarDiasSelecionados('segunda')"></ion-checkbox>
+               <ion-label class="cont_check"  ><b>Seg.</b></ion-label>
                </ion-col>
                <ion-col class="cont">
-               <ion-checkbox class="checkbox"></ion-checkbox>
-               <ion-label class="cont_check" ><b>Ter.</b></ion-label>
+               <ion-checkbox class="checkbox" name="ter" (ionChange)="atualizarDiasSelecionados('terça')"></ion-checkbox>
+               <ion-label class="cont_check"  ><b>Ter.</b></ion-label>
                </ion-col>
              </div>
              <div>
                <ion-col class="cont" >
-                 <ion-checkbox class="checkbox"></ion-checkbox>
+                 <ion-checkbox class="checkbox" name="qua" (ionChange)="atualizarDiasSelecionados('quarta')"></ion-checkbox>
                
                  <ion-label class="cont_check"><b>Qua.</b></ion-label>
                </ion-col>
                <ion-col class="cont" >
-                 <ion-checkbox class="checkbox"></ion-checkbox>
-               <ion-label class="cont_check" ><b>Qui.</b></ion-label>
+                 <ion-checkbox class="checkbox" name="qui" (ionChange)="atualizarDiasSelecionados('quinta')"></ion-checkbox>
+               <ion-label class="cont_check"  ><b>Qui.</b></ion-label>
                </ion-col>
                <ion-col class="cont">
-               <ion-checkbox class="checkbox"></ion-checkbox>
+               <ion-checkbox class="checkbox" name="sex" (ionChange)="atualizarDiasSelecionados('sexta')"></ion-checkbox>
                <ion-label class="cont_check" ><b>Sex.</b></ion-label>
                </ion-col>
              </div>
              <div>
                <ion-col class="cont">
-               <ion-checkbox class="checkbox"></ion-checkbox>
-               <ion-label class="cont_check" ><b>Sab.</b></ion-label>
+               <ion-checkbox class="checkbox" name="sab" (ionChange)="atualizarDiasSelecionados('sábado')"></ion-checkbox>
+               <ion-label class="cont_check"><b>Sab.</b></ion-label>
                </ion-col>
              </div>
              

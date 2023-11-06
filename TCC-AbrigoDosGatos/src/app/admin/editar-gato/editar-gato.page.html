@@ -29,7 +29,7 @@
      <form (ngSubmit)="submit_formEditGato(formEditGato)" #formEditGato="ngForm">
 
       <ion-item>
-        <ion-input type="file" (change)="onImageSelect($event)" name="imgGato" [(ngModel)]="gatoSelecionado.imgGato" required></ion-input>
+        <ion-input type="file" (change)="onImageSelect($event)" name="imgGato" required></ion-input>
       </ion-item>
 
       <ion-item class="input_cont" lines="none">

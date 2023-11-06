@@ -84,11 +84,11 @@ FormEditGato!: FormGroup;
 submit_formEditGato(form:any){
   console.log(this.selectedImage);
   console.log(form.value);
-  // console.log(this.gatoSelecionado.idGato)
+  console.log(this.gatoSelecionado.idGato)
 
   if(form.valid){
   let dadosGato = new FormData();
-  // dadosGato.append('idGato', this.gatoSelecionado.idGato);
+  dadosGato.append('idGato', this.gatoSelecionado.idGato.toString());
   dadosGato.append('imgGato', this.selectedImage);
   dadosGato.append('nome', form.value.nome);
   dadosGato.append('cor', form.value.cor);
@@ -106,7 +106,7 @@ submit_formEditGato(form:any){
   //   imgGato: form.imgGato,
   // };
   console.log(dadosGato);
-  this.FormGatoService.update(dadosGato);
+  this.FormGatoService.update(dadosGato).subscribe();
   this.router.navigate(['/home-admin']);
 }
 }

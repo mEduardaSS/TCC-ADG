@@ -1,6 +1,7 @@
 import { environment } from 'src/environments/environment';
 import { FormVoluntarioService } from 'src/app/services/formVoluntario/form-voluntario.service';
 import { FormGroup , FormControl , Validators} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { ToastController } from '@ionic/angular';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
@@ -19,6 +20,31 @@ export class VoluntarioPage implements OnInit {
   }
 
   FormVoluntario!: FormGroup;
+
+  diasSelecionados: string = '';
+
+  dias: any = {
+
+  }
+
+  atualizarDiasSelecionados(diaSelecionado: any) {
+    console.log()
+    if(this.diasSelecionados.includes(diaSelecionado)){
+      this.diasSelecionados = this.diasSelecionados.replace(diaSelecionado, '')
+      console.log(this.diasSelecionados);
+      return
+    }
+    this.diasSelecionados += diaSelecionado + " ";
+    // if (this.domingo){ this.diasSelecionados += 'dom '}
+    // if (this.segunda){ this.diasSelecionados += 'seg '}
+    // if (this.terca){ this.diasSelecionados += 'ter '}
+    // if (this.quarta){ this.diasSelecionados += 'qua '}
+    // if (this.quinta){ this.diasSelecionados += 'qui '}
+    // if (this.sexta){ this.diasSelecionados += 'sex '}
+    // if (this.sabado){ this.diasSelecionados += 'sab '}
+
+    console.log(this.diasSelecionados);
+  }
 
   ngOnInit() {
     this.createFormVoluntario();
@@ -70,7 +96,7 @@ export class VoluntarioPage implements OnInit {
         email: form.email,
         data_nascimento: form.data_nascimento,
         telefone: form.telefone,
-        disponibilidade: form.disponibilidade,
+        disponibilidade: this.diasSelecionados,
        
       };
 
