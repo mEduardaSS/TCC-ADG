@@ -1,327 +1,94 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-  }
+  padding: 0;
+   margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
 
-  .card {
-    margin: 10px;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-  }
+.title-page{
+  font-family: 'Caveat', cursive;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 24px;
+  color: #A61C35;
+}
 
-  .testando {
-    border-radius: 10px;
-    border: #A61C35 10px solid;
-  }
-
-  .linha {
-    border-top: #A61C35 solid;
-  }
-  
-  .olho{
-    font-size: 20px;
-  }
-
-  #text_miaudote {
-    top: 1.5em;
-    font-size: 30px;
-    color: #3F0912;
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  .title-page{
-    font-family: 'Caveat', cursive;
-    font-family: 'Philosopher', sans-serif;
-    font-size: 24px;
-    color: #A61C35;
-  }
-  
-  .name{
-    font-weight: bold;
-    font-size: 20px;
-    text-align: center;
-  }
-  
-  ion-card-subtitle{
-    top: 0.1em;
-    font-weight: bold;
-    color: black;
-  }
-  
-  .texto{
-    color: black;
-    font-size: 15px;
+#text_miaudote {
+  top: 1.5em;
+  font-size: 30px;
+  color: #3F0912;
   text-align: center;
-    margin: 10px;
+  font-weight: bold;
+}
 
-  }
+.card-gatos{
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 100px;
+}
+
+.classecard {
+  width: calc(50% - 10px); /* 50% do contêiner, com espaçamento de 10px entre as colunas */
+  margin-bottom: 20px;
+}
+
+.name{
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+ion-card-subtitle{
+  top: 0.1em;
+  font-weight: bold;
+  color: black;
+}
+
+.texto{
+  color: black;
+  font-size: 15px;
+  text-align: center;
+  margin: 10px;
+}
+
+.mensagem{
+  margin-top: 4em;
+}
   
-  .card-gatos{
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 100px;
+@media (max-width: 600px) {
+  #text_miaudote {
+    top: 1.0em;
   }
 
-  .classecard {
-    width: calc(50% - 10px); /* 50% do contêiner, com espaçamento de 10px entre as colunas */
-    margin-bottom: 20px;
-  }
-  
-  // .img-card {
-  //   border-radius: 20px;
-  //   margin-top: 1.5em;
-  // }
-  
-  .button_adotar{
-    float: right;
-    padding: 1em;
-    margin-top: -70px;
-    --background: #D9D9D9;
-    --color: black;
-  }
-
-  .mensagem{
-    margin-top: 4em;
-  }
-  
-  #footer{
-    // top: 1.2em;
-    border-radius: 50px 50px 0 0;
-    background: #D9D9D9;
-    text-align: center;
-    // height: 15%;
-    // width: 100%;
-    text-align: center;
-    padding: 15px;
-  }
-  
-  .footer-content{
-    margin: auto;
-    align-items: center;
-    color: black;
-    font-weight: bold;
-    
-  }
-  .footer-title {
-    font-size: 20px;
-  }
-  
-  .footer-content ion-text{
+  .card-gatos {
     margin-top: 3em;
-    font-size: medium;
-  }
-  
-  .icon-{
-    &whatsapp{
-      color: green;
-      margin-right: 0.2em;
-    }
-    &facebook{
-      color: blue;
-      margin-right: 0.2em;
-    }
-    &instagram{
-      color: purple;
-      margin-right: 0.2em;
-    }
-    &mail{
-      margin-right: 0.2em;
-    }
-    &pessoa{
-      --color: #A61C35;
-      padding: 10px;
-    }
-  }
-  
-  
-   ion-button{
-    --color: rgb(49, 47, 47);
-  }
-  
-  .footer {
-    background-color: #3F0912;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    display: flex;
+    padding: 10px;
+    width: 100%;
   }
-  
-  #container {
+
+  ion-card-title{
     text-align: center;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
   }
-  
-  .logo-tcc {
-    width: 85px;
-    justify-content: center;
-    align-items: center;
-   
-  }
-  
-  #container strong {
-    font-size: 20px;
-    line-height: 26px;
-  }
-  
-  #container p {
-    font-size: 16px;
-    line-height: 22px;
-    color: #8c8c8c;
-    margin: 0;
-  }
-  
-  #container a {
-    text-decoration: none;
-  }
-  
-  @media (max-width: 600px) {
-    ion-card-title{
-      text-align: center;
-      }
       
-      ion-card-subtitle{
-       text-align: center;
-      }
-
-      .texto{
-        text-align: center;
-        margin: 10px;
-      }
-
-    #text_miaudote {
-     top: 1.0em;
-    }
-
-    .card {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 30%;
-      margin-top: 0 auto;
-     
-    }
-
-    .testando {
-      margin: 10%;
-    }
-
-  
-    .button_adotar{
-      margin-top: auto;
-      padding: 10px 0px;   
-    }
-
-    .card-gatos {
-     margin-top: 3em;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 10px;
-      width: 100%;
-    }
-
-    .conteudo-card {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  
-    .button_conheca{
-    display: flex;
-    font-size: 10px;
-    width: 60%;
-    height: 40%;
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    --background: #A61C35;
-    --color: white;
-  
-    #footer{
-      // top: 1.2em;
-      border-radius: 50px 50px 0 0;
-      background: #D9D9D9;
-      // height: 15%;
-      // width: 100%;
-      padding: 15px;
-    }
-    
-    .footer-content{
-      margin: auto;
-      align-items: center;
-      color: black;
-      font-weight: bold;
-      
-    }
-    .footer-title {
-      font-size: 5px;
-    }
-    
-    .footer-content ion-text{
-      margin-top: 3em;
-      font-size: 5em;
-    }
-    
-  }
-  
-  @media (max-width: 750px) {
-
-    #conteudo-banner {
-      text-align: center;
-      align-items: center;
-      justify-content: center;
-      font-size: 15px;
-  
-    }
-  
-  .sobre-nos {
-    --background: #A61C35;
-    --color: white;
-    margin-top: 0.5em;
-    justify-content: center;
-    align-items: center;
-    
+  ion-card-subtitle{
+    text-align: center;
   }
 
-
-  
-  
+  .texto{
+    text-align: center;
+    margin: 10px;
   }
+}
   
-  @media (max-width: 280px){
-    p {
-      margin-top: 5px;
-      padding-right: 20px;
-      font-size: 14px;
-    
-    }
-
-    
-    
-  
-    .sobre-nos {
-      --background: #A61C35;
-      --color: white;
-      margin-top: 0.3em;
-      justify-content: center;
-      align-items: center;
-      
-    }
-  
-    .button_conheca{
-      width: 80%;
-      
-    }
+@media (max-width: 280px){
+  p{
+    margin-top: 5px;
+    padding-right: 20px;
+    font-size: 14px;
   }
-  
-  
-  }
+}

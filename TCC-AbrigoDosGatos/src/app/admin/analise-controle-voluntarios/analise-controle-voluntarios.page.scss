@@ -47,7 +47,7 @@
 }
 
 .containerBtn{
-  margin-top: 4.0em;
+  margin-top: 8vh;
   justify-content: center;
   align-items: center;
   background:white;
@@ -62,31 +62,29 @@
   margin-bottom: 2em;
 }
   
-@media screen and (max-width:600px){
-  .conteudo{
-    border-radius: 30px;
-    border-color:  rgb(163, 50, 50);
-    border-style: solid;
-    background:white;
-    margin: 30px;
-    justify-content: center;
-    align-items: center;
-    bottom: 1.0em;
+@media screen and (max-width:999px){
+  .titulo{
+    font-size: 17px;
   }
 
-  .btnAprovar{
-    display: flex;
-    justify-content: center;
-    --background: #A61C35;
-    --color: white;
+  .dadosVoluntario{
+    margin-top: 7vh;
+    margin-left: 10px;
+  }
+
+  .dataCadVoluntario, .nomeVoluntario,
+  .emailVoluntario,.dtNascVoluntario, 
+  .telVoluntario, .dispoVoluntario{
+    font-size: 14px;
+  }
+  
+  .containerBtn{
+    margin-top: 7vh;
   }
 
   .btnRecusar{
-    display: flex;
-    justify-content: center;
-    margin-left: 5px;
-    margin-top:20px;
-    --background: #A61C35;
-    --color: white;
+    margin-left: 0px;
+    margin-bottom: 1em;
+    font-size: 71%;
   }
 }

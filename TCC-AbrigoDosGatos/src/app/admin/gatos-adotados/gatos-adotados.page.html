@@ -1,7 +1,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Philosopher:ital,wght@1,700&display=swap"
-  rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Philosopher:ital,wght@1,700&display=swap"rel="stylesheet">
 
 <!-- <ion-menu-adm></ion-menu-adm> -->
 <div class="ion-page" id="main-content">
@@ -21,13 +20,9 @@
   </ion-header>
 
   <ion-content>
-   
     <ion-row>
       <ion-col size="12" class="ion-text-center" id="text_miaudote">
-         <ion-label >
-            Gatos adotados
-          </ion-label>
-    
+         <ion-label>Gatos adotados</ion-label>
       </ion-col>
     </ion-row>
 
@@ -40,21 +35,17 @@
             <!-- <ion-card-subtitle class="name">{{gato.sexo}}</ion-card-subtitle> -->
             <ion-card-subtitle class="name">{{gato.sexo}}, {{gato.idadeGato}}</ion-card-subtitle>
             <ion-card-subtitle class="name">{{gato.raca}}</ion-card-subtitle>
-            <p class="texto">
-              Tutor: {{gato.nomeTutor}}
-            </p>
-          
+            <p class="texto">Tutor: {{gato.nomeTutor}}</p>
           </ion-card-header>
         </ion-card>
       </div>
     </ion-row>
     
-    
     <ng-template #noGatos>
       <!-- Exibir mensagem quando não há gatos disponíveis -->
       <ion-row class="ion-padding ion-justify-content-center noGatos">
-        <ion-title class="mensagem ion-text-center">
-          Nenhum gato adotado!
-        </ion-title>
+        <ion-title class="mensagem ion-text-center">Nenhum gato adotado!</ion-title>
       </ion-row>
     </ng-template>
+  </ion-content>
+</div>
