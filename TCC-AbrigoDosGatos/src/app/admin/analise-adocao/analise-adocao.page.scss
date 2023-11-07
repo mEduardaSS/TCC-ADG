@@ -16,8 +16,6 @@
   color: #A61C35;
 }
 
-
-  
   ion-button{
     --color: black;
   }
@@ -75,18 +73,22 @@
   //   margin-top: 25px;
   // }
 
-  .conteudo{
+  .conteudo {
     border-radius: 30px;
-    border-color:  rgb(163, 50, 50);
+    border-color: rgb(163, 50, 50);
     border-style: solid;
-    // border-width: 8px;
-    max-width: 450px;
-    background:white;
-    margin: auto;
+    background: white;
+    padding: 20px; /* Adicione margem interna (espaço) dentro da coluna. */
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    bottom: 1.0em;
+    max-width: 600px; /* Defina a largura máxima da coluna. Ajuste conforme necessário. */
+    // margin: 0 auto; /* Isso centraliza a coluna horizontalmente na tela. */
   }
+  
+  /* Resto do seu CSS permanece inalterado. */
+  
 
   .tema-pag {
     font-size: 140%;
@@ -96,17 +98,16 @@
     font-size: 100%;
   }
 
-  @media screen and (max-width:600px){
+  @media (max-width: 600px){
     .conteudo{
       border-radius: 30px;
       border-color:  rgb(163, 50, 50);
       border-style: solid;
       // border-width: 8px;
       background:white;
-      margin: 20px;
+      
       justify-content: center;
       align-items: center;
-      bottom: 1.0em;
     }
     .btnRecusar{
       display: flex;

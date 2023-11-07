@@ -19,14 +19,14 @@
           </ion-toolbar>
         </ion-header>
 
-    <ion-content class="background">
-      <ion-row class="ion-padding ion-justify-content-center conteudo">
-        <ion-col size="12" class="ion-padding">
+    <ion-content class="content-center">
+      <ion-row>
+        <ion-col size="12" class="ion-padding conteudo">
           <ion-row class="ion-justify-content-center tema-pag">
             <b class="titulo">Formulário de Adoção</b><br><br>
           </ion-row>
 
-            <ion-col class="teste">
+          
             <div class="dadosAdocao">
               <div class="dataCadTutor"><b>Data de preenchimento: {{tutorSelecionado.dataPreenchimento}}</b></div>
               <div class="nomeAnimal"><b>Nome gato: {{tutorSelecionado.nomeGato}} </b></div>
@@ -44,7 +44,7 @@
               <b>Você possui tempo suficiente para dar cuidados necessários?</b>
               <div class="respostaDois"><b>{{tutorSelecionado.temTempo}}</b></div>
           </div>
-          </ion-col>
+          
   
           <ion-row class="containerBtn" size="6">
             <ion-button class="btnAprovar" shape="round" (click)="aprovar()">Aprovar</ion-button>
