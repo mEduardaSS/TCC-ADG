@@ -1,3 +1,7 @@
+.background{
+  --background: #eeeeee
+}
+
 .title-page{
     font-family: 'Caveat', cursive;
     font-family: 'Philosopher', sans-serif;
@@ -9,28 +13,57 @@
     border-radius: 30px;
     border-color:  rgb(163, 50, 50);
     border-style: solid;
-    border-width: 8px;
     background:white;
-    margin: auto;
+    margin-top: 5em;
     justify-content: center;
     align-items: center;
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
+    bottom: 1.0em;
   }
+  .titulo{
+    color: #3F0912;
+    font-size: 20px;
+    margin-top: 1.0em;
+    margin-bottom: 1em;
+  }
+  ion-item b{
+    color:#3F0912;
+  }  
 
   .cont{
     margin-top: 40px;
+    margin-left: 1.5em;
   }
-
-  .button_voltar {
+  .button_voltar{
     justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
     margin: auto;
+    width: 23%;
     margin-bottom: 20px;
     --background: #A61C35;
     --color: white;
-    left: 20em;
-    margin-top: 80px;
+    margin-top: 75px;
+    font-size: 13px;
   }
-  .checkbox{
-    margin-right: 10px;
+
+  @media (max-width:768px){
+    .button_voltar {
+      width: 42%;
+      font-size: 12px;
+      margin-top: 40px;
+    }
+
+    .cont{
+      margin-top: 20px;
+      margin-left: 0px;
+    }
+
+    .titulo{
+      font-size: 10px;
+    }
+
+    .title-page{
+      font-size: 22px;
+    }
   }

@@ -2,79 +2,70 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Philosopher:ital,wght@1,700&display=swap" rel="stylesheet">
       
-      <div class="ion-page" id="main-content">
-        <ion-header class="menu">
-          <ion-toolbar>
-            <ion-buttons slot="start">
-              <ion-menu-button autoHide="false"></ion-menu-button>
-            </ion-buttons>
-            <ion-title class="ion-text-center title-page">Abrigo dos Gatos</ion-title>
+<div class="ion-page" id="main-content">
+  <ion-header class="menu">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button autoHide="false"></ion-menu-button>
+      </ion-buttons>
+      <ion-title class="ion-text-center title-page">Abrigo dos Gatos</ion-title>
 
-            <ion-buttons slot="end">
-              <ion-button [routerLink]="['/login']">
-                <ion-icon slot="icon-only" name="person-circle" ></ion-icon>
-              </ion-button>
-           </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button [routerLink]="['/login']">
+          <ion-icon slot="icon-only" name="person-circle" ></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
 
-          </ion-toolbar>
-        </ion-header>
-
-    <ion-content class="background">
-      <ion-row  class="ion-padding ion-justify-content-center">
-        <ion-col size-md=6 size="10" class="ion-padding conteudo">
-          <ion-row class="titulo ion-justify-content-center">
-            <b>Edição de Gatos</b>
-         </ion-row>
+  <ion-content class="background">
+    <ion-row  class="ion-padding ion-justify-content-center">
+      <ion-col size-md=6 size="10" class="ion-padding conteudo">
+        <ion-row class="titulo ion-justify-content-center">
+          <b>Edição de Gatos</b>
+        </ion-row>
         
-     <form (ngSubmit)="submit_formEditGato(formEditGato)" #formEditGato="ngForm">
+        <form (ngSubmit)="submit_formEditGato(formEditGato)" #formEditGato="ngForm">
+          <ion-item>
+            <ion-input type="file" (change)="onImageSelect($event)" name="imgGato" required></ion-input>
+          </ion-item>
 
-      <ion-item>
-        <ion-input type="file" (change)="onImageSelect($event)" name="imgGato" required></ion-input>
-      </ion-item>
-
-      <ion-item class="input_cont" lines="none">
-        <ion-label position="stacked" class="nome"><b>Nome</b></ion-label>
-       <ion-input class="input" name="nome" [(ngModel)]="gatoSelecionado.nome"></ion-input>
-     </ion-item>
+          <ion-item class="input_cont" lines="none">
+            <ion-label position="stacked" class="nome"><b>Nome</b></ion-label>
+            <ion-input class="input" name="nome" [(ngModel)]="gatoSelecionado.nome"></ion-input>
+          </ion-item>
  
-     <ion-item class="input_cont" lines="none">
-       <ion-label position="stacked" class="nome"><b>Cor</b></ion-label>
-       <ion-input class="input" name="cor" [(ngModel)]="gatoSelecionado.cor"></ion-input>
-   
-     </ion-item>
+          <ion-item class="input_cont" lines="none">
+            <ion-label position="stacked" class="nome"><b>Cor</b></ion-label>
+            <ion-input class="input" name="cor" [(ngModel)]="gatoSelecionado.cor"></ion-input>
+          </ion-item>
 
-     <ion-item class="input_cont" lines="none">
-       <ion-label position="stacked" class="nome"><b>Idade</b></ion-label>
-       <ion-input class="input" name="idade" [(ngModel)]="gatoSelecionado.idadeGato"></ion-input>
-     </ion-item>
+          <ion-item class="input_cont" lines="none">
+            <ion-label position="stacked" class="nome"><b>Idade</b></ion-label>
+            <ion-input class="input" name="idade" [(ngModel)]="gatoSelecionado.idadeGato"></ion-input>
+          </ion-item>
 
-     <ion-item class="input_cont" lines="none">
-       <ion-label position="stacked" class="nome"><b>Sexo</b></ion-label>
-       <ion-input class="input" name="sexo" [(ngModel)]="gatoSelecionado.sexo"></ion-input>
-     </ion-item>
+          <ion-item class="input_cont" lines="none">
+            <ion-label position="stacked" class="nome"><b>Sexo</b></ion-label>
+            <ion-input class="input" name="sexo" [(ngModel)]="gatoSelecionado.sexo"></ion-input>
+          </ion-item>
 
-     <ion-item class="input_cont" lines="none">
-       <ion-label position="stacked" class="nome"><b>Raça</b></ion-label>
-       <ion-input class="input" name="raca" [(ngModel)]="gatoSelecionado.racaGato"></ion-input>
-     </ion-item>
+          <ion-item class="input_cont" lines="none">
+            <ion-label position="stacked" class="nome"><b>Raça</b></ion-label>
+            <ion-input class="input" name="raca" [(ngModel)]="gatoSelecionado.racaGato"></ion-input>
+          </ion-item>
 
-     <ion-item class="input_cont" lines="none">
-       <ion-label position="stacked" class="nome"><b>Descrição</b></ion-label>
-       <ion-textarea class="input" name="descricao" [(ngModel)]="gatoSelecionado.descricao"></ion-textarea>
-     </ion-item>
+          <ion-item class="input_cont" lines="none">
+            <ion-label position="stacked" class="nome"><b>Descrição</b></ion-label>
+            <ion-textarea class="input" name="descricao" [(ngModel)]="gatoSelecionado.descricao"></ion-textarea>
+          </ion-item>
 
-     <ion-row class="ion-padding">
-       <ion-button class="button_voltar" shape="round" [routerLink]="['/home-admin']" (click)="apagar(gatoSelecionado.idGato)">Excluir gato</ion-button>
-       <ion-button class="button_voltar" shape="round" [routerLink]="['/home-admin']" type="submit">Alterar</ion-button>
-     </ion-row>
- 
-    </form>
-
-
-
-     </ion-col>
-   </ion-row>
-
-     </ion-content>
-  </div>
-
+          <ion-row class="ion-padding">
+            <ion-button class="button_voltar" shape="round" [routerLink]="['/home-admin']" (click)="apagar(gatoSelecionado.idGato)">Excluir gato</ion-button>
+            <ion-button class="button_voltar" shape="round" [routerLink]="['/home-admin']" type="submit">Alterar</ion-button>
+          </ion-row>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-content>
+</div>
