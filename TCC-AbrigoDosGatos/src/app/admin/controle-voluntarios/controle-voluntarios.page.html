@@ -1,9 +1,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Philosopher:ital,wght@1,700&display=swap"
-  rel="stylesheet"
-/>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Philosopher:ital,wght@1,700&display=swap" rel="stylesheet"/>
 
 <div class="ion-page" id="main-content">
   <ion-header class="menu">
@@ -12,7 +9,6 @@
         <ion-menu-button autoHide="false"></ion-menu-button>
       </ion-buttons>
       <ion-title class="ion-text-center title-page">Abrigo dos Gatos</ion-title>
-
       <ion-buttons slot="end">
         <ion-button [routerLink]="['/login']">
           <ion-icon slot="icon-only" name="person-circle"></ion-icon>
@@ -22,13 +18,10 @@
   </ion-header>
 
   <ion-content class="background">
-    <ion-row
-      class="ion-padding ion-justify-content-center"
-      style="margin-top: 7em"
-    >
+    <ion-row class="ion-padding ion-justify-content-center" style="margin-top: 7em">
       <ion-col size-md="6" size="12" class="ion-text-center  conteudo">
-        <ion-row class="ion-justify-content-center titulo" style="font-size: 1.5em">
-          <ion-text><b>Controle de Voluntários</b></ion-text>
+        <ion-row class="ion-justify-content-center titulo">
+          <b>Controle de Voluntários</b>
         </ion-row>
 
         <ion-list class="listagem">
@@ -36,6 +29,7 @@
             <ion-col size-md="4" size="4">
               <ion-text><b>Código</b></ion-text>
             </ion-col>
+
             <ion-col size-md="2" size="4">
               <ion-text><b>Nome</b></ion-text>
             </ion-col>
@@ -47,19 +41,16 @@
             <ion-col size-md="4" size="4" >
               <ion-text><b>{{solicitacaoVoluntario.idVoluntario}}</b></ion-text>
             </ion-col>
+
             <ion-col size-md="4" size="6">
               <ion-text><b>{{solicitacaoVoluntario.nomeVoluntario}}</b></ion-text>
             </ion-col>
+
             <ion-col size-md="4" size="2" class="ion-text-end" >
               <ion-text><b><ion-icon name="eye-outline" class="olho"  (click)="analisar_controleVoluntario(solicitacaoVoluntario.idVoluntario)"></ion-icon></b></ion-text>
             </ion-col>
           </ion-item>
         </ion-list>
-
-
-
-
-
       </ion-col>
     </ion-row>
   </ion-content>

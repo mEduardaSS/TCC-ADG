@@ -1,14 +1,3 @@
-.background{
-  --background:#D9D9D9;
-}
-
-.containerBtn{
-    background:white;
-    margin-top: 1.2em;
-    justify-content: center;
-    align-items: center;
-  }
-
 .title-page{
   font-family: 'Caveat', cursive;
   font-family: 'Philosopher', sans-serif;
@@ -16,41 +5,44 @@
   color: #A61C35;
 }
 
+.background{
+  --background:#eeeeee;
+}
+
+.conteudo{
+  border-radius: 30px;
+  border-color:  rgb(163, 50, 50);
+  border-style: solid;
+  background:white;
+  margin-top: 5em;
+  justify-content: center;
+  align-items: center;
+  bottom: 1.0em;
+}
+
 .titulo{
   color: #3F0912;
+  font-size: 20px;
+  margin-top: 1.0em;
+  margin-bottom: 1em;
 }
+
+.listagem{
+  margin-bottom: 6px;
+}
+
+@media (max-width:768px){
+  .title-page{
+    font-size: 22px;
+  }
   
-  ion-button{
-    --color: black;
+  .titulo{
+    font-size: 18px;
   }
-  .entrar{
-    --background: rgb(163, 50, 50);
-    --color: white;
-  }
-  .checkbox{
-    margin: 10px;
-    --border-radius: 20px;
-  }
-  .logo-tcc{
-    height: 85px;
-  }
-  #id {
-    margin-bottom: 1.2em;
-  }
-  .button-native {
-    --background: #D9D9D9;
-  }
-  .ion-padding{
-    margin-top: 25px;
-  }
-  .conteudo{
-    border-radius: 30px;
-    border-color:  rgb(163, 50, 50);
-    border-style: solid;
-    border-width: 9px;
-    background:white;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-  }
-    
+
+  ion-item b{
+    margin-top: 20px;
+    margin-left: 0px;
+    font-size: 15px;
+  }  
+}
