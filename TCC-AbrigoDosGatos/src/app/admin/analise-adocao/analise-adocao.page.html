@@ -19,10 +19,10 @@
           </ion-toolbar>
         </ion-header>
 
-    <ion-content class="content-center">
-      <ion-row>
-        <ion-col size="12" class="ion-padding conteudo">
-          <ion-row class="ion-justify-content-center tema-pag">
+    <ion-content class="background">
+      <ion-row class="ion-padding ion-justify-content-center">
+        <ion-col class="ion-padding conteudo">
+          <ion-row class="ion-justify-content-center">
             <b class="titulo">Formulário de Adoção</b><br><br>
           </ion-row>
 
@@ -46,7 +46,7 @@
           </div>
           
   
-          <ion-row class="containerBtn" size="6">
+          <ion-row class="containerBtn" size="12">
             <ion-button class="btnAprovar" shape="round" (click)="aprovar()">Aprovar</ion-button>
             <ion-button class="btnRecusar" shape="round" (click)="apagar(tutorSelecionado.idAdocao)" [routerLink]="['/home-admin']">Recusar</ion-button>
           </ion-row>

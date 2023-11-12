@@ -50,6 +50,16 @@ h1.titulo{
 
 }
 
+.name{
+  padding-left: 10px;
+  margin: 2px;
+}
+
+.texto{
+  padding-left: 10px;
+
+}
+
 p {
   margin-top: 10px;
   font-size: 20px;
@@ -340,11 +350,7 @@ p {
     width: 100%;
   }
 
-  .conteudo-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-  }
+ 
 
   #text_miaudote {
     // llll

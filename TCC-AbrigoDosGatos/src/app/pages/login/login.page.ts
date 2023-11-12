@@ -1,6 +1,6 @@
 // import do arquivo environments
 import { environment } from 'src/environments/environment';
-
+import { ToastController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup , FormControl , Validators} from '@angular/forms';
 import { Injectable } from '@angular/core';
@@ -17,9 +17,20 @@ export class LoginPage implements OnInit {
 
   login!:FormGroup;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private toastController: ToastController) { }
   senha:any
   email:any
+
+  async presentToast(message: any) {
+    const toast = await this.toastController.create({
+      message: message,
+      duration: 1500,
+      position: 'bottom',
+    });
+    await toast.present();
+  }
+
+  message: String = "";
 
   async validaLogin(){
     let dados:any ={
@@ -29,16 +40,17 @@ export class LoginPage implements OnInit {
       console.log(dados);
       let res=await this.post(dados);
       console.log(res);
-      if(res){
-        alert("Logado com sucesso");
+      if(res == "1"){
+        this.message = dados.message
         this.router.navigate(['/home-admin']);
       }else{
-        alert("Email ou senha incorretos")
+        this.presentToast("Email ou senha incorretos");
       }
-
+  
     console.log(this.login.value);
-
   }
+
+ 
 
   createFormLogin(){
     this.login = new FormGroup ({

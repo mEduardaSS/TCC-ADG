@@ -16,6 +16,10 @@ export class AppComponent implements OnInit {
     this.pegarRota()
   }
 
+  ionViewDidEnter(){
+    this.Clickmenu();
+  }
+
   rotaAtual: any
 
   Clickmenu() {

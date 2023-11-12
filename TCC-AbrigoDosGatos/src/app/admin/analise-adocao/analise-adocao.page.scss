@@ -3,31 +3,38 @@
 }
 
 .containerBtn{
+  margin-top: 4.0em;
+  justify-content: center;
+  align-items: center;
     background:white;
-    margin-top: 1.2em;
-    justify-content: center;
-    align-items: center;
+  }
+
+  .title-page{
+    font-family: 'Caveat', cursive;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 24px;
+    color: #A61C35;
   }
   
-.title-page{
-  font-family: 'Caveat', cursive;
-  font-family: 'Philosopher', sans-serif;
-  font-size: 24px;
-  color: #A61C35;
-}
-
   ion-button{
     --color: black;
   }
-  // .entrar{
-  //   --background: rgb(163, 50, 50);
-  //   --color: white;
-  // }
-  .checkbox{
-    margin: 10px;
-    --border-radius: 20px;
-    
+  .entrar{
+    --background: rgb(163, 50, 50);
+    --color: white;
   }
+  .checkbox{
+   justify-content: center;
+   align-items: center;
+  --border-radius: 20px;
+  --checkbox-background-checked: rgb(163, 50, 50);
+  }
+
+  ion-checkbox::part(container) {
+    border-radius: 20px;
+    border: 2px solid rgb(163, 50, 50);
+  }
+
   .logo-tcc{
     height: 85px;
   }
@@ -35,7 +42,6 @@
   #id {
     margin-bottom: 1.2em;
   }
-
   .button-native {
     --background: #D9D9D9;
   }
@@ -43,71 +49,84 @@
     display: flex;
     justify-content: center;
     margin-left: 30px;
-    --background: #A61C35;
-    --color: white;  
-
+    --background:  #A61C35;
+    --color: white
+    ;
 }
   .btnAprovar{
-        display: flex;
-        justify-content: center;
-        // margin-left: 230px;
-        --background: #A61C35;
-        --color: white;
-        
+    display: flex;
+    justify-content: center;
+    margin-left: 30px;
+    --background: #A61C35;
+    --color: white;
   }
-  
+  .dadosAdocao{
+    margin-top: 3vh;
+     margin-left: 50px;
+  }
 
   .dataCadTutor, 
   .nomeAnimal,
-   .emailVoluntario,
-   .nomeTutor, 
+  .nomeTutor,
+   .endereco,
    .dtNasc, 
    .telTutor, 
-   .endereco{
+   .dispoTutor{
     margin-top: 1em;
     color: #000;
     font-size: 17px;
   }
+  
+  .ion-padding{
+    margin-top: 10px;
+  }
 
-  // .ion-padding{
-  //   margin-top: 25px;
-  // }
-
-  .conteudo {
+  .conteudo{
     border-radius: 30px;
-    border-color: rgb(163, 50, 50);
+    border-color:  rgb(163, 50, 50);
     border-style: solid;
-    background: white;
-    padding: 20px; /* Adicione margem interna (espaço) dentro da coluna. */
-    display: flex;
-    flex-direction: column;
+    // border-width: 8px;
+    background:white;
+    margin: 30px 450px;
     justify-content: center;
     align-items: center;
-    max-width: 600px; /* Defina a largura máxima da coluna. Ajuste conforme necessário. */
-    // margin: 0 auto; /* Isso centraliza a coluna horizontalmente na tela. */
+    bottom: 1.0em;
+  
   }
   
-  /* Resto do seu CSS permanece inalterado. */
-  
-
-  .tema-pag {
-    font-size: 140%;
-}
-  
-  .moc{
-    font-size: 100%;
+  .titulo{
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 1em;
+    margin-bottom: 1em;
   }
-
-  @media (max-width: 600px){
+  
+  .button_voltar {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 20px;
+    --background: #A61C35;
+    --color: white;
+  }
+  
+  @media screen and (max-width:600px){
     .conteudo{
       border-radius: 30px;
       border-color:  rgb(163, 50, 50);
       border-style: solid;
       // border-width: 8px;
       background:white;
-      
+      margin: 30px;
       justify-content: center;
       align-items: center;
+      bottom: 1.0em;
     }
     .btnRecusar{
       display: flex;
@@ -126,10 +145,10 @@
           --color: white;
     }
     .tema-pag {
-      font-size: 120%;
+      font-size: 100%;
   }
-  .moc{
-    font-size: 70%;
-  }
+
     
   }
+
+  
